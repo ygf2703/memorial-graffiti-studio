@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
 import { nameFromFile, validateFiles, validName, readJson, batchSummary, caption } from "../public/batch.js";
-import { fitText, captionLines, POSTER_LAYOUT } from "../public/poster.js";
+import { fitText, captionLines, POSTER_LAYOUT, paintExactText } from "../public/poster.js";
 import { authorize, parsePortrait, generateImage, configured } from "../server/core.mjs";
 import health from "../netlify/functions/health.mjs";
 import generate from "../netlify/functions/generate.mjs";
@@ -18,6 +18,28 @@ test("font fitting measures the literal text and never truncates", () => {
   assert.equal(size, 94);
   assert.throws(() => fitText(text, () => ({ width: 2000, height: 100 }), 100, 940, 150), /ארוך מדי/u);
   assert.equal(POSTER_LAYOUT, "exact-text-v1");
+});
+test("poster renderer paints exact RTL name and both caption lines, using loaded fonts", async () => {
+  const painted = [], loaded = [];
+  const context = {
+    measureText(value) { return { width: value.length * 30, actualBoundingBoxLeft: value.length * 15, actualBoundingBoxRight: value.length * 15, actualBoundingBoxAscent: 50, actualBoundingBoxDescent: 10 }; },
+    strokeText() {}, drawImage() {},
+    fillText(value) { painted.push({ value, direction: this.direction, font: this.font }); },
+    createLinearGradient() { return { addColorStop() {} }; },
+  };
+  const savedDocument = Object.getOwnPropertyDescriptor(globalThis, "document"), savedFont = Object.getOwnPropertyDescriptor(globalThis, "FontFace");
+  try {
+    globalThis.document = { fonts: { add(font) { loaded.push(font.family); } }, createElement() { return { getContext() { return context; } }; } };
+    globalThis.FontFace = class { constructor(family) { this.family = family; } async load() { return this; } };
+    const name = "יהונתן־אליהו";
+    await paintExactText({ getContext() { return context; } }, {}, name);
+    assert.deepEqual(painted.map((line) => line.value), [name, ...captionLines]);
+    assert.ok(painted.every((line) => line.direction === "rtl"));
+    assert.deepEqual(loaded.sort(), ["MuralCaption", "MuralName"]);
+  } finally {
+    if (savedDocument) Object.defineProperty(globalThis, "document", savedDocument); else delete globalThis.document;
+    if (savedFont) Object.defineProperty(globalThis, "FontFace", savedFont); else delete globalThis.FontFace;
+  }
 });
 test("ten named photos pass; eleven are rejected", () => {
   const files = Array.from("אבגדהוזחטי", (x) => photo(`שם ${x}.jpg`));

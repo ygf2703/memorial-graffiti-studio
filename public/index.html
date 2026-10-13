@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אחים ואחיות לסמל | סטודיו גרפיטי</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">יום הזיכרון 2027</p>
+        <h1>סטודיו גרפיטי להנצחה</h1>
+        <p>מעלים עד 10 תמונות. שם הקובץ הופך לשם המונצח בפוסטר.</p>
+      </header>
+
+      <section class="panel connection-panel" aria-label="חיבור לסטודיו">
+        <label for="access-code">קוד כניסה לסטודיו</label>
+        <input id="access-code" type="password" autocomplete="current-password" dir="ltr" />
+        <button id="check-connection" type="button">בדיקת חיבור</button>
+        <p id="connection-status" role="status">בודק חיבור…</p>
+      </section>
+
+      <section class="panel upload-panel" aria-labelledby="upload-title">
+        <div>
+          <p class="section-kicker">שלב 1</p>
+          <h2 id="upload-title">בחרו תמונות מקור</h2>
+          <p class="muted">שנו את שמות הקבצים מראש, לדוגמה: <bdi>יהונתן אליהו.jpg</bdi>. הקבצים חייבים להכיל שם מלא, לא שם גנרי של WhatsApp או מצלמה.</p>
+        </div>
+        <label class="upload-dropzone" for="photos">
+          <span>העלאת תמונות</span>
+          <small>JPG, PNG או WEBP · עד 10 קבצים · עד 20MB לכל קובץ</small>
+          <input id="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple />
+        </label>
+        <p id="validation" class="validation" aria-live="polite"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="batch-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">שלב 2</p>
+            <h2 id="batch-title">האצווה שלך</h2>
+          </div>
+          <span id="batch-count" class="count" dir="ltr">0 / 10</span>
+        </div>
+        <div id="photo-list" class="photo-list empty-state">עדיין לא נבחרו תמונות.</div>
+      </section>
+
+      <section class="panel reference-panel" aria-labelledby="reference-title">
+        <div>
+          <p class="section-kicker">שפת העיצוב הקבועה</p>
+          <h2 id="reference-title">רפרנסים</h2>
+          <p class="muted">כל פוסטר מותאם לתמונה ולשם, אך נשאר באותה שפה חזותית.</p>
+        </div>
+        <div class="reference-grid">
+          <img src="/references/style-01.png" alt="רפרנס גרפיטי 1" />
+          <img src="/references/style-02.png" alt="רפרנס גרפיטי 2" />
+          <img src="/references/style-03.png" alt="רפרנס גרפיטי 3" />
+        </div>
+      </section>
+
+      <section class="panel rules" aria-label="כללי הפקה">
+        <span>1080×1080</span>
+        <span>שם מהקובץ</span>
+        <span>אחים ואחיות לסמל לא שוכחים</span>
+      </section>
+
+      <button id="generate" class="generate" type="button" disabled>יצירת פוסטרים</button>
+      <button id="restore" class="restore" type="button" hidden>שחזור תוצאות מהפעלה קודמת</button>
+      <p id="progress" class="progress" aria-live="polite"></p>
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

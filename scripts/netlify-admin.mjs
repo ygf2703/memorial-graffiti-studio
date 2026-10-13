@@ -37,7 +37,12 @@ if (action === "create") {
       values = parseEnv(content);
     }
     const variables = ["OPENAI_API_KEY", "STUDIO_ACCESS_CODE"].map((key) => ({ key, scopes: ["functions"], values: [{ context: "all", value: values[key] || "" }] }));
-    await api(`/accounts/${site.account_id}/env?site_id=${siteId}`, "POST", variables);
+    variables.push({ key: "STUDIO_SITE_URL", scopes: ["functions"], values: [{ context: "all", value: site.ssl_url || site.url }] });
+    const existing = await api(`/accounts/${site.account_id}/env?site_id=${siteId}`);
+    for (const variable of variables) {
+      if (existing.some((x) => x.key === variable.key)) await api(`/accounts/${site.account_id}/env/${variable.key}?site_id=${siteId}`, "PUT", variable);
+      else await api(`/accounts/${site.account_id}/env?site_id=${siteId}`, "POST", [variable]);
+    }
     console.log(JSON.stringify({ variables: variables.map((x) => ({ key: x.key, configured: Boolean(x.values[0].value) })) }));
   } else if (action === "status") {
     const deploys = await api(`/sites/${siteId}/deploys?per_page=3`);

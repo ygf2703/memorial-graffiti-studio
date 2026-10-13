@@ -10,7 +10,7 @@ export default async (request) => {
   const claim = await store.set(`${id}/claimed`, "true", { onlyIfNew: true });
   if (!claim.modified) return;
   try {
-    await store.setJSON(id, { ...job, status: "processing" });
+    await store.setJSON(id, { ...job, status: "processing", startedAt: Date.now() });
     const input = await store.get(`${id}/input`, { type: "json" });
     if (!input) throw new Error("תמונת המקור לא זמינה. יש להעלות אותה מחדש.");
     const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name);

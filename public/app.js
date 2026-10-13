@@ -100,7 +100,7 @@ function showResult(name, poster) {
   const card = node("article", "", "result-card"), image = node("img"), info = node("div"), link = node("a", "הורדת PNG");
   image.src = poster; image.alt = `פוסטר גרפיטי של ${name}`;
   link.download = `${name}-1080.png`; link.href = poster;
-  info.append(node("strong", name), link); card.append(image, info); results.append(card);
+  info.append(node("strong", name), link); card.append(image, info, node("p", "לפני פרסום: בדקו את השם ואת המשפט אחים ואחיות לסמל לא שוכחים.", "review-note")); results.append(card);
 }
 function showError(name, message) {
   const card = node("article", "", "error-card");

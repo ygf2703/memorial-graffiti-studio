@@ -13,6 +13,6 @@ export default async (request) => {
     const stream = await store.get(`${id}/result`, { type: "stream" });
     return new Response(stream, { headers: { "content-type": "image/jpeg", "cache-control": "no-store" } });
   }
-  if (["queued", "processing"].includes(job.status) && Date.now() - job.createdAt > 15 * 60 * 1000) return json({ ...job, status: "failed", error: "זמן העיבוד הסתיים ללא תוצאה. אין ניסיון חוזר אוטומטי." });
+  if (["queued", "processing"].includes(job.status) && Date.now() - (job.startedAt || job.createdAt) > 15 * 60 * 1000) return json({ ...job, status: "failed", error: "זמן העיבוד הסתיים ללא תוצאה. אין ניסיון חוזר אוטומטי." });
   return json(job);
 };

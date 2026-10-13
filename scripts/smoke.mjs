@@ -10,7 +10,8 @@ if (mode === "start") {
   if (forbidden.status !== 401) throw new Error("Unauthorized generation was not blocked");
   const health = await fetch(`${base}/api/health`, { headers });
   if (!(await health.json()).authorized) throw new Error("Studio not authorized");
-  const form = new FormData(), id = randomUUID();
+  const previous = await readFile(".netlify/smoke-job.json", "utf8").then(JSON.parse).catch(() => null);
+  const form = new FormData(), id = previous?.id || randomUUID();
   const source = await readFile(process.argv[3]);
   form.append("id", id); form.append("name", "יהונתן אליהו");
   form.append("image", new Blob([source], { type: "image/jpeg" }), "portrait.jpg");

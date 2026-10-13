@@ -5,6 +5,7 @@ button, input, select, textarea { font: inherit; }
 .connection-panel button, .restore { border: 1px solid #47769a; border-radius: 8px; background: #17385d; color: #fff; padding: 10px 16px; cursor: pointer; }
 .connection-panel p { flex-basis: 100%; margin: 4px 0 0; color: #ffd76a; }
 .restore { margin-top: 12px; }
+.review-note { margin: 0; padding: 0 12px 12px; color: #bbd2e4; font-size: .9rem; }
 * { box-sizing: border-box; }
 body { margin: 0; background: radial-gradient(circle at top, #17385d, #081426 42rem); }
 .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 52px 0 80px; }

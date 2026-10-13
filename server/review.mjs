@@ -1,14 +1,14 @@
 import { caption } from "../public/batch.js";
 
 const normalize = (text) => text.normalize("NFC").replace(/\s+/gu, " ").trim();
-export function compareReading(reading, name) {
+export function compareReading(reading, name, fixedCaption = false) {
   if (!reading || typeof reading.name !== "string" || typeof reading.caption !== "string" || typeof reading.uncertain !== "boolean" || typeof reading.flagPresent !== "boolean") return { status: "unavailable" };
   const nameMatches = normalize(reading.name) === normalize(name);
-  const captionMatches = normalize(reading.caption) === normalize(caption);
+  const captionMatches = fixedCaption ? normalize(reading.caption) === "" : normalize(reading.caption) === normalize(caption);
   return { status: nameMatches && captionMatches && !reading.uncertain && reading.flagPresent ? "matched" : "needs_review", nameMatches, captionMatches, name: reading.name, caption: reading.caption, uncertain: reading.uncertain, flagPresent: reading.flagPresent };
 }
 
-export async function reviewImage(imageBase64, name, fetcher = fetch) {
+export async function reviewImage(imageBase64, name, fetcher = fetch, fixedCaption = false) {
   // Blind transcription: the reader does NOT receive the expected spelling.
   // This reduces confirmation bias, but is not proof of visual correctness.
   try {
@@ -31,6 +31,6 @@ export async function reviewImage(imageBase64, name, fetcher = fetch) {
     if (data.status !== "completed") return { status: "unavailable" };
     const chunks = (data.output || []).flatMap((item) => item.type === "message" ? item.content || [] : []).filter((item) => item.type === "output_text");
     if (chunks.length !== 1) return { status: "unavailable" };
-    return compareReading(JSON.parse(chunks[0].text), name);
+    return compareReading(JSON.parse(chunks[0].text), name, fixedCaption);
   } catch { return { status: "unavailable" }; }
 }

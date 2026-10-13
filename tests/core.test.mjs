@@ -11,6 +11,36 @@ import { paintSprayText } from "../public/spray.js";
 import health from "../netlify/functions/health.mjs";
 import generate from "../netlify/functions/generate.mjs";
 import job from "../netlify/functions/job.mjs";
+import { captionVariant, CAPTION_LAYOUT } from "../public/design.js";
+import { paintFixedCaption } from "../public/captions.js";
+import { readFileSync } from "node:fs";
+test("five fixed caption choices are stable, bounded and all reachable", () => {
+  const choices = new Set();
+  for (let i = 0; i < 1000; i++) { const seed = `job-${i}`, value = captionVariant(seed); assert.equal(value, captionVariant(seed)); assert.ok(value >= 1 && value <= 5); choices.add(value); }
+  assert.equal(choices.size, 5);
+  assert.equal(requiresApproval({ layoutVersion: CAPTION_LAYOUT }), true);
+  for (const choice of choices) { const png = readFileSync(new URL(`../public/captions/caption-${choice}.png`, import.meta.url)); assert.equal(png.subarray(1, 4).toString(), "PNG"); assert.equal(png[25], 6); }
+});
+test("fixed caption prompt reserves wall and does not generate the slogan", () => {
+  const prompt = muralPrompt("seed", "יהונתן אליהו", true);
+  assert.match(prompt, /bottom 32%/); assert.match(prompt, /יהונתן אליהו/);
+  assert.ok(!prompt.includes(caption));
+  assert.equal(compareReading({ name: "יהונתן אליהו", caption: "", uncertain: false, flagPresent: true }, "יהונתן אליהו", true).status, "matched");
+  assert.equal(compareReading({ name: "יהונתן אליהו", caption, uncertain: false, flagPresent: true }, "יהונתן אליהו", true).status, "needs_review");
+});
+test("fixed caption renderer places one asset inside its reserved area and fails closed", async () => {
+  const previous = globalThis.Image, calls = [];
+  try {
+    globalThis.Image = class { naturalWidth = 2000; naturalHeight = 800; async decode() {} };
+    const canvas = { getContext() { return { save() {}, restore() {}, drawImage(...args) { calls.push(args); } }; } };
+    await paintFixedCaption(canvas, 3);
+    assert.equal(calls.length, 1); assert.equal(calls[0][0].src, "/captions/caption-3.png");
+    const [, x, y, width, height] = calls[0]; assert.ok(x >= 0 && y >= 1080 * .68 && x + width <= 1080 && y + height <= 1080);
+    await assert.rejects(paintFixedCaption(canvas, 6));
+    globalThis.Image = class { async decode() { throw new Error("missing"); } };
+    await assert.rejects(paintFixedCaption(canvas, 1), /לא נטען/);
+  } finally { if (previous) globalThis.Image = previous; else delete globalThis.Image; }
+});
 const photo = (name = "יהונתן אליהו.jpg") => ({ name, type: "image/jpeg", size: 100 });
 test("filename supplies the exact name without rewriting letters or separators", () => {
   for (const name of ["יהונתן-אליהו", "יהונתן אליהו", "שם_משפחה", "בן־עמי", "שֵׁם  מָלֵא"]) assert.equal(nameFromFile(photo(`${name}.jpeg`)), name);

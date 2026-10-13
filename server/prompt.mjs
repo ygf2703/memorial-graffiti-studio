@@ -1,7 +1,8 @@
 import { muralDesign } from "../public/design.js";
 import { caption } from "../public/batch.js";
 
-export function muralPrompt(seed, name) {
+export function muralPrompt(seed, name, fixedCaption = false) {
+  if (fixedCaption) return muralPrompt(seed, name).split("INTEGRATED HEBREW GRAFFITI:")[0] + `NAME GRAFFITI: Paint ONLY the exact name ${JSON.stringify(name)} once, above the portrait, inside the top 22% of the canvas. Expressive readable Hebrew aerosol graffiti with navy outlines and blue/yellow/chalk fills. Characters: ${JSON.stringify(Array.from(name || ""))}. No other words or inscriptions. Do NOT copy any slogan or lettering from the references.\nCOMPOSITION: Keep the face, shoulders and complete Israeli flag inside the top 65% of the square. The bottom 32% must be uninterrupted lightly weathered bare wall with subtle spray traces, no face, flag, writing, symbols or large objects. A prepared transparent graffiti caption will be composited there after generation; do NOT generate it. Keep the wall texture continuous, no banner or box. Four flat inks. Variation ${seed}.`;
   const design = muralDesign(seed);
   return `MEDIUM: Real aerosol street graffiti, a bold four-pass cut-paper stencil portrait sprayed on an urban wall. Match the GRAPHIC SIMPLICITY of images 2–4, not fine-art painting.
 BACKGROUND VARIATION: ${design.wall}; ${design.wear}; ${design.marks}. Invent an original arrangement of cracks, paint chips, sprayed arrows and abstract non-letter tags. Do NOT copy a reference background or default to the same centered flag across the whole wall.

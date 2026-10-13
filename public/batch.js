@@ -1,11 +1,11 @@
 export const caption = "אחים ואחיות לסמל לא שוכחים";
 export const MAX_FILE_BYTES = 20 * 1024 * 1024;
 export function nameFromFile(file) {
-  return file.name.replace(/\.[^.]+$/u, "").normalize("NFC").replace(/[_-]+/gu, " ").replace(/\s+/gu, " ").trim();
+  return file.name.replace(/\.[^.]+$/u, "");
 }
 export function validName(name) {
   return typeof name === "string" && name.length >= 2 && name.length <= 80 &&
-    /^[\p{L}\p{M} '\u2019\u05f3\u05f4".-]+$/u.test(name) &&
+    /^[\p{L}\p{M} '\u2019\u05f3\u05f4\u05be"._-]+$/u.test(name) && /\p{L}/u.test(name) && name === name.trim() &&
     !/^(?:whatsapp|img|image|photo|dsc|pxl|screenshot)(?:\s|$)/iu.test(name);
 }
 export function validateFiles(files) {

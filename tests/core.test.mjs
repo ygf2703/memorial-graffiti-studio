@@ -1,19 +1,30 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
-import { nameFromFile, validateFiles, validName, readJson, batchSummary } from "../public/batch.js";
+import { nameFromFile, validateFiles, validName, readJson, batchSummary, caption } from "../public/batch.js";
+import { fitText, captionLines, POSTER_LAYOUT } from "../public/poster.js";
 import { authorize, parsePortrait, generateImage, configured } from "../server/core.mjs";
 import health from "../netlify/functions/health.mjs";
 import generate from "../netlify/functions/generate.mjs";
 import job from "../netlify/functions/job.mjs";
 const photo = (name = "יהונתן אליהו.jpg") => ({ name, type: "image/jpeg", size: 100 });
-test("filename supplies the Hebrew name", () => assert.equal(nameFromFile(photo("יהונתן-אליהו.jpeg")), "יהונתן אליהו"));
+test("filename supplies the exact name without rewriting letters or separators", () => {
+  for (const name of ["יהונתן-אליהו", "יהונתן אליהו", "שם_משפחה", "בן־עמי", "שֵׁם  מָלֵא"]) assert.equal(nameFromFile(photo(`${name}.jpeg`)), name);
+});
+test("caption contains every required word exactly once", () => assert.equal(captionLines.join(" "), caption));
+test("font fitting measures the literal text and never truncates", () => {
+  const text = "יהונתן אליהו";
+  const size = fitText(text, (value, pixels) => { assert.equal(value, text); return { width: pixels * 10, height: pixels }; }, 176, 940, 150);
+  assert.equal(size, 94);
+  assert.throws(() => fitText(text, () => ({ width: 2000, height: 100 }), 100, 940, 150), /ארוך מדי/u);
+  assert.equal(POSTER_LAYOUT, "exact-text-v1");
+});
 test("ten named photos pass; eleven are rejected", () => {
   const files = Array.from("אבגדהוזחטי", (x) => photo(`שם ${x}.jpg`));
   assert.deepEqual(validateFiles(files), []);
   assert.ok(validateFiles([...files, photo("שם נוסף.jpg")]).length);
 });
-test("duplicate normalized names block the entire batch", () => assert.ok(validateFiles([photo(), photo("יהונתן-אליהו.png")]).length));
+test("duplicate names block the entire batch", () => assert.ok(validateFiles([photo(), photo("יהונתן אליהו.png")]).length));
 test("generic, numbered and markup names are blocked", () => {
   for (const name of ["080", "WhatsApp Image", "נועה מרציאנו 3", '<img src=x onerror="bad">']) assert.equal(validName(name), false);
 });
@@ -57,12 +68,14 @@ test("server rejects disguised files and accepts matching image signature", asyn
   await assert.rejects(parsePortrait(request("<html>")), /אינו תמונת/u);
   assert.equal((await parsePortrait(request(new Uint8Array([255,216,255,224])))).name, "יהונתן אליהו");
 });
-test("OpenAI request includes portrait, three references and exact required wording", async () => {
+test("OpenAI request preserves portrait geometry and reserves text for exact renderer", async () => {
   const result = await generateImage({ bytes: new Uint8Array([255,216,255]), type: "image/jpeg" }, "יהונתן אליהו", async (url, options) => {
     assert.equal(url, "https://api.openai.com/v1/images/edits");
     assert.equal(options.body.getAll("image[]").length, 4);
-    assert.match(options.body.get("prompt"), /אחים ואחיות לסמל לא שוכחים/u);
-    assert.match(options.body.get("prompt"), /יהונתן אליהו/u);
+    assert.match(options.body.get("prompt"), /NO TEXT/);
+    assert.match(options.body.get("prompt"), /Simplify tonal detail, NOT facial geometry/);
+    assert.match(options.body.get("prompt"), /NEVER substitute a military uniform/);
+    assert.equal(options.body.get("input_fidelity"), "high");
     return Response.json({ data: [{ b64_json: "test-image" }] });
   });
   assert.equal(result, "test-image");

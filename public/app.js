@@ -1,4 +1,5 @@
 import { nameFromFile, validateFiles, readJson, batchSummary } from "./batch.js";
+import { POSTER_LAYOUT, paintExactText } from "./poster.js";
 const $ = (selector) => document.querySelector(selector);
 const fileInput = $("#photos"), photoList = $("#photo-list"), validation = $("#validation"), count = $("#batch-count"), generateButton = $("#generate"), progress = $("#progress"), results = $("#results");
 let batch = [], busy = false, ready = false, invalid = false;
@@ -67,10 +68,11 @@ async function prepareUpload(file) {
   if (!blob || blob.size > 3 * 1024 * 1024) throw new Error("לא ניתן להכין את התמונה לשליחה. נסו תמונה קטנה יותר.");
   return blob;
 }
-async function exportPoster(blob) {
+async function exportPoster(blob, job) {
   const image = await loadImage(blob), canvas = document.createElement("canvas");
   canvas.width = 1080; canvas.height = 1080;
   canvas.getContext("2d").drawImage(image, 0, 0, 1080, 1080);
+  if (job.layoutVersion === POSTER_LAYOUT) await paintExactText(canvas, image, job.name);
   const png = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
   if (!png) throw new Error("שמירת הפוסטר נכשלה.");
   const url = URL.createObjectURL(png); outputUrls.push(url); return url;
@@ -89,7 +91,7 @@ async function waitForJob(id) {
     if (job.status === "completed") {
       const response = await fetch(`/api/job?id=${encodeURIComponent(id)}&image=1`, { headers: headers(), signal: AbortSignal.timeout(60000) });
       if (!response.ok || !response.headers.get("content-type")?.startsWith("image/")) throw new Error("הפוסטר נוצר אך ההורדה נכשלה. לחצו על שחזור תוצאות.");
-      return exportPoster(await response.blob());
+      return exportPoster(await response.blob(), job);
     }
     if (job.status === "failed") throw new Error(job.error || "היצירה נכשלה.");
     await new Promise((resolve) => setTimeout(resolve, 4000));

@@ -1,7 +1,7 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { validName, caption } from "../public/batch.js";
+import { validName } from "../public/batch.js";
 
 export const MAX_UPLOAD = 3 * 1024 * 1024;
 export const validId = (id) => /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(id || "");
@@ -23,7 +23,7 @@ export const validWorker = (id, token) => Boolean(process.env.STUDIO_ACCESS_CODE
 export async function parsePortrait(request) {
   if (Number(request.headers.get("content-length")) > MAX_UPLOAD + 16384) throw new Error("התמונה גדולה מדי לשליחה.");
   const form = await request.formData();
-  const portrait = form.get("image"), name = String(form.get("name") || "").normalize("NFC"), id = String(form.get("id") || "");
+  const portrait = form.get("image"), name = String(form.get("name") || ""), id = String(form.get("id") || "");
   if (!validId(id) || !validName(name)) throw new Error("שם או מזהה בקשה לא תקינים.");
   if (!(portrait instanceof File) || !portrait.size || portrait.size > MAX_UPLOAD) throw new Error("התמונה גדולה מדי או ריקה.");
   const bytes = Buffer.from(await portrait.arrayBuffer());
@@ -46,7 +46,7 @@ export async function generateImage(portrait, name, fetcher = fetch) {
     const bytes = await readFile(resolve("netlify/functions/references", filename));
     form.append("image[]", new Blob([bytes], { type: "image/png" }), filename);
   }
-  form.append("prompt", `Create ONE square memorial graffiti mural matching the three STYLE reference images, using ONLY the FIRST photo as the portrait identity. Reference portraits, their names and their personal details must NOT be copied. Make the face visibly hand-painted stencil street art: broad simplified blue/yellow/off-white colour planes, heavy navy contours, limited shading, no photographic skin detail, pores or glossy airbrush. Preserve recognizability, expression, hair and glasses from the source. Weathered peeling beige concrete wall, integrated distressed Israeli flag, spray paint, drips and restrained street tags. Paint the exact Hebrew name ${JSON.stringify(name)} as large dimensional graffiti letters with navy outlines and blue/yellow/white fill. Also paint the mandatory phrase ${JSON.stringify(caption)} ONCE, fully legible in Hebrew, as an integral part of the mural. The phrase consists of these words in RTL reading order: אחים | ואחיות | לסמל | לא | שוכחים. Allocate sufficient space for ALL words, no omissions or repetitions. Name can be at top, caption at bottom or beside the portrait. No blank text bands. Keep all text inside a safe 5% margin. Do not add extra people, unverified uniforms, unit insignia, logos, dates, English slogans or biographies. The final must look like a photographed real graffiti wall with an ILLUSTRATED portrait.`);
+  form.append("prompt", `Create ONE square memorial graffiti mural. The FIRST image is the sole identity and geometry reference; the other THREE are STYLE ONLY. Do not borrow any facial feature, clothing or text from the style references. Preserve the FIRST portrait's head angle and tilt, gaze direction, eye spacing and eyelid shape, eyebrows, nose width and length, lip shape, mouth opening, facial asymmetry, jaw outline, hairline, hair length, exact moustache and beard boundaries, glasses and expression. Do not beautify, age, symmetrize, thicken the beard or invent a smile. Keep the original clothing neckline; NEVER substitute a military uniform or insignia. Simplify tonal detail, NOT facial geometry: recognizable hand-painted stencil portrait, broad blue/yellow/off-white paint planes, confident navy contours, limited shading. No photographic skin, pores or glossy airbrush. Match the references' weathered peeling beige wall, integrated distressed Israeli flag, spray overspray and drips. Front-facing wall plane, square crop. LAYOUT: reserve the upper 24% of the wall and bottom 22% for typography added separately. These areas must be continuous textured beige wall with subtle blue/yellow overspray, not flat rectangles or panels. Place the full head between y=27% and y=65%, shoulders ending by y=77%, keeping the silhouette recognizable. NO TEXT, letters, names, numbers, lettering-like tags, watermarks or captions anywhere: all lettering is added by our renderer. Do not paint the person's name. No extra people, unit logos, dates, English slogans or biographies. Result: photographed real weathered wall with an ILLUSTRATED portrait, not a photograph pasted onto a wall.`);
   let response;
   try {
     response = await fetcher("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(12 * 60 * 1000) });

@@ -4,7 +4,8 @@ import { randomUUID } from "node:crypto";
 import { nameFromFile, validateFiles, validName, readJson, batchSummary, caption } from "../public/batch.js";
 import { fitText, captionLines, POSTER_LAYOUT, paintExactText } from "../public/poster.js";
 import { authorize, parsePortrait, generateImage, configured } from "../server/core.mjs";
-import { muralDesign, seededRandom } from "../public/design.js";
+import { muralDesign, seededRandom, requiresApproval, INTEGRATED_LAYOUT, SPRAY_LAYOUT } from "../public/design.js";
+import { compareReading, reviewImage } from "../server/review.mjs";
 import { muralPrompt } from "../server/prompt.mjs";
 import { paintSprayText } from "../public/spray.js";
 import health from "../netlify/functions/health.mjs";
@@ -24,7 +25,7 @@ test("backgrounds vary per job but remain stable when restoring the same job", (
 });
 test("every variation requires the Israeli flag, four flat inks and unchanged palette", () => {
   for (let i = 0; i < 50; i++) {
-    const prompt = muralPrompt(`job-${i}`);
+    const prompt = muralPrompt(`job-${i}`, "יהונתן אליהו");
     assert.match(prompt, /TWO BLUE stripes and ONE correctly formed six-pointed blue Star of David/);
     assert.match(prompt, /FOUR SPRAY LAYERS ONLY/);
     for (const colour of ["#082e49", "#207ba6", "#e6c62e", "#f5f1da"]) assert.ok(prompt.includes(colour));
@@ -113,17 +114,50 @@ test("server rejects disguised files and accepts matching image signature", asyn
   await assert.rejects(parsePortrait(request("<html>")), /אינו תמונת/u);
   assert.equal((await parsePortrait(request(new Uint8Array([255,216,255,224])))).name, "יהונתן אליהו");
 });
-test("OpenAI request preserves portrait geometry and reserves text for exact renderer", async () => {
+test("OpenAI request generates both literal inscriptions as part of one mural", async () => {
   const result = await generateImage({ bytes: new Uint8Array([255,216,255]), type: "image/jpeg" }, "יהונתן אליהו", async (url, options) => {
     assert.equal(url, "https://api.openai.com/v1/images/edits");
     assert.equal(options.body.getAll("image[]").length, 4);
-    assert.match(options.body.get("prompt"), /NO TEXT/);
+    assert.match(options.body.get("prompt"), /ONE coherent mural/);
+    assert.match(options.body.get("prompt"), /יהונתן אליהו/u);
+    assert.match(options.body.get("prompt"), /אחים ואחיות לסמל לא שוכחים/u);
+    assert.doesNotMatch(options.body.get("prompt"), /Our renderer adds|NO TEXT|for separately rendered lettering/);
     assert.match(options.body.get("prompt"), /Simplify tonal detail, NOT facial geometry/);
     assert.match(options.body.get("prompt"), /NEVER substitute a military uniform/);
     assert.equal(options.body.get("input_fidelity"), "high");
     return Response.json({ data: [{ b64_json: "test-image" }] });
   });
   assert.equal(result, "test-image");
+});
+test("new integrated murals require human approval even after matching OCR", () => {
+  assert.equal(requiresApproval({ layoutVersion: INTEGRATED_LAYOUT, review: { status: "matched" } }), true);
+  for (const layoutVersion of [undefined, POSTER_LAYOUT, SPRAY_LAYOUT]) assert.equal(requiresApproval({ layoutVersion }), false);
+});
+test("reading comparison rejects wrong letters, missing words, uncertainty and missing flag", () => {
+  const reading = { name: "יהונתן אליהו", caption, uncertain: false, flagPresent: true };
+  assert.equal(compareReading(reading, reading.name).status, "matched");
+  assert.equal(compareReading({ ...reading, caption: "אחים ואחיות\nלסמל לא שוכחים" }, reading.name).status, "matched");
+  for (const patch of [{ name: "יונתן אליהו" }, { caption: "אחים ואחיות לסמל שוכחים" }, { uncertain: true }, { flagPresent: false }]) assert.equal(compareReading({ ...reading, ...patch, status: "matched" }, reading.name).status, "needs_review");
+  assert.equal(compareReading({ name: reading.name }, reading.name).status, "unavailable");
+});
+test("vision reader receives only the generated image, not expected text", async () => {
+  const reading = { name: "יהונתן אליהו", caption, uncertain: false, flagPresent: true };
+  const result = await reviewImage("image-bytes", reading.name, async (url, options) => {
+    assert.equal(url, "https://api.openai.com/v1/responses");
+    const body = JSON.parse(options.body);
+    assert.equal(body.store, false);
+    assert.equal(body.model, "gpt-4.1-mini");
+    assert.equal(body.input[0].content[0].image_url, "data:image/jpeg;base64,image-bytes");
+    assert.equal(body.text.format.strict, true);
+    assert.ok(!options.body.includes(reading.name) && !options.body.includes(caption));
+    return Response.json({ status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: JSON.stringify(reading) }] }] });
+  });
+  assert.equal(result.status, "matched");
+});
+test("review errors and refusals never masquerade as matched and never leak details", async () => {
+  for (const payload of [{ status: "incomplete" }, { status: "completed", output: [{ type: "message", content: [{ type: "refusal", refusal: "private" }] }] }, { status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: "not json private" }] }] }]) assert.deepEqual(await reviewImage("test", "שם מלא", async () => Response.json(payload)), { status: "unavailable" });
+  assert.deepEqual(await reviewImage("test", "שם מלא", async () => { throw new Error("secret"); }), { status: "unavailable" });
+  assert.deepEqual(await reviewImage("test", "שם מלא", async () => Response.json({ error: "secret" }, { status: 429 })), { status: "unavailable" });
 });
 test("upstream credentials/errors are not leaked to client", async () => {
   await assert.rejects(generateImage({ bytes: new Uint8Array([255,216,255]), type: "image/jpeg" }, "שם מלא", async () => Response.json({ error: { message: "private-upstream-detail" } }, { status: 401 })), (error) => !error.message.includes("private-upstream-detail") && error.message.includes("מפתח"));

@@ -1,6 +1,6 @@
 import { getStore } from "@netlify/blobs";
 import { authorize, json, parsePortrait, workerToken } from "../../server/core.mjs";
-import { SPRAY_LAYOUT } from "../../public/design.js";
+import { INTEGRATED_LAYOUT } from "../../public/design.js";
 export default async (request) => {
   if (request.method !== "POST") return json({ error: "הפעולה אינה נתמכת." }, 405);
   const denied = authorize(request);
@@ -11,7 +11,7 @@ export default async (request) => {
   if (!base) return json({ error: "כתובת שירות הרקע לא הוגדרה בשרת." }, 503);
   const store = getStore({ name: "graffiti-jobs", consistency: "strong" });
   try {
-    const created = await store.setJSON(input.id, { status: "queued", name: input.name, layoutVersion: SPRAY_LAYOUT, designSeed: input.id, createdAt: Date.now() }, { onlyIfNew: true });
+    const created = await store.setJSON(input.id, { status: "queued", name: input.name, layoutVersion: INTEGRATED_LAYOUT, designSeed: input.id, createdAt: Date.now() }, { onlyIfNew: true });
     if (!created.modified) {
       const existing = await store.get(input.id, { type: "json" });
       if (existing.status !== "queued") return json({ id: input.id }, 202);

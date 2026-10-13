@@ -1,6 +1,7 @@
 import { getStore } from "@netlify/blobs";
 import { generateImage, validId, validWorker } from "../../server/core.mjs";
-import { SPRAY_LAYOUT } from "../../public/design.js";
+import { INTEGRATED_LAYOUT } from "../../public/design.js";
+import { reviewImage } from "../../server/review.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -17,7 +18,8 @@ export default async (request) => {
     const designSeed = job.designSeed || id;
     const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed);
     await store.set(`${id}/result`, Buffer.from(imageBase64, "base64"));
-    await store.setJSON(id, { ...job, layoutVersion: SPRAY_LAYOUT, designSeed, status: "completed" });
+    const review = await reviewImage(imageBase64, input.name);
+    await store.setJSON(id, { ...job, layoutVersion: INTEGRATED_LAYOUT, designSeed, review, status: "completed" });
   } catch (error) {
     await store.setJSON(id, { ...job, status: "failed", error: /^(שירות|מפתח|החיבור|אין יתרה|לחשבון)/u.test(error.message) ? error.message : "יצירת התמונה נכשלה. בדקו את החיבור ונסו שוב." });
   } finally {

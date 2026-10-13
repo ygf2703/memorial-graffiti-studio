@@ -1,5 +1,9 @@
 :root { color-scheme: dark; font-family: 'Assistant', sans-serif; background: #081426; color: #f7f4ea; }
 button, input, select, textarea { font: inherit; }
+.approval { display: flex; align-items: flex-start; gap: 8px; padding: 12px; color: #f7f4ea; }
+.approval input { margin-top: 5px; flex-shrink: 0; }
+.reject-result { margin: 0 12px 12px; border: 1px solid #a77e54; border-radius: 8px; padding: 8px 12px; background: transparent; color: #ffd76a; cursor: pointer; }
+.reject-result:disabled { opacity: .5; cursor: default; }
 .connection-panel { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .connection-panel input { background: #081426; color: #fff; border: 1px solid #47769a; border-radius: 8px; padding: 10px; max-width: 100%; }
 .connection-panel button, .restore { border: 1px solid #47769a; border-radius: 8px; background: #17385d; color: #fff; padding: 10px 16px; cursor: pointer; }

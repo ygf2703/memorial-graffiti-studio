@@ -47,7 +47,7 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
     const bytes = await readFile(resolve("netlify/functions/references", filename));
     form.append("image[]", new Blob([bytes], { type: "image/png" }), filename);
   }
-  form.append("prompt", muralPrompt(designSeed));
+  form.append("prompt", muralPrompt(designSeed, name));
   let response;
   try {
     response = await fetcher("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(12 * 60 * 1000) });

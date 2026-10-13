@@ -1,6 +1,6 @@
 import { nameFromFile, validateFiles, readJson, batchSummary } from "./batch.js";
 import { POSTER_LAYOUT, paintExactText } from "./poster.js";
-import { SPRAY_LAYOUT } from "./design.js";
+import { SPRAY_LAYOUT, requiresApproval } from "./design.js";
 import { paintSprayText } from "./spray.js";
 const $ = (selector) => document.querySelector(selector);
 const fileInput = $("#photos"), photoList = $("#photo-list"), validation = $("#validation"), count = $("#batch-count"), generateButton = $("#generate"), progress = $("#progress"), results = $("#results");
@@ -94,18 +94,39 @@ async function waitForJob(id) {
     if (job.status === "completed") {
       const response = await fetch(`/api/job?id=${encodeURIComponent(id)}&image=1`, { headers: headers(), signal: AbortSignal.timeout(60000) });
       if (!response.ok || !response.headers.get("content-type")?.startsWith("image/")) throw new Error("הפוסטר נוצר אך ההורדה נכשלה. לחצו על שחזור תוצאות.");
-      return exportPoster(await response.blob(), job);
+      return { poster: await exportPoster(await response.blob(), job), job };
     }
     if (job.status === "failed") throw new Error(job.error || "היצירה נכשלה.");
     await new Promise((resolve) => setTimeout(resolve, 4000));
   }
   throw new Error("ההמתנה הסתיימה. אפשר לבדוק שוב באמצעות שחזור תוצאות, ללא יצירה נוספת.");
 }
-function showResult(name, poster) {
+function showResult(name, { poster, job }) {
   const card = node("article", "", "result-card"), image = node("img"), info = node("div"), link = node("a", "הורדת PNG");
   image.src = poster; image.alt = `פוסטר גרפיטי של ${name}`;
   link.download = `${name}-1080.png`; link.href = poster;
-  info.append(node("strong", name), link); card.append(image, info, node("p", "לפני פרסום: בדקו את השם ואת המשפט אחים ואחיות לסמל לא שוכחים.", "review-note")); results.append(card);
+  info.append(node("strong", name), link); card.append(image, info);
+  if (requiresApproval(job)) {
+    // Review is an editorial safeguard, not an access-control boundary.
+    link.hidden = true;
+    const review = job.review || { status: "unavailable" };
+    const message = review.status === "matched" ? "בדיקת האיות האוטומטית מצאה התאמה. זו אינה הבטחה — נדרש אישור חזותי לפני הורדה." : review.status === "needs_review" ? "אזהרה: הבדיקה האוטומטית מצאה חוסר התאמה או כיתוב לא ברור. אין לאשר אם חסרה או שגויה אפילו אות אחת." : "בדיקת האיות האוטומטית לא זמינה. יש לבדוק ידנית כל אות לפני אישור.";
+    card.append(node("p", message, "review-note"));
+    card.append(node("p", `הכיתוב הנדרש: ${job.name} | אחים ואחיות לסמל לא שוכחים`, "review-note"));
+    if (typeof review.name === "string") card.append(node("p", `קריאה אוטומטית (עלולה לטעות): ${review.name} | ${review.caption}`, "review-note"));
+    const label = node("label", "", "approval"), checkbox = node("input");
+    checkbox.type = "checkbox";
+    label.append(checkbox, node("span", "בדקתי אות־אות: השם והמשפט מלאים ומדויקים, הדגל גלוי והדמות מתאימה."));
+    checkbox.addEventListener("change", () => { link.hidden = !checkbox.checked; });
+    const reject = node("button", "פסילת התוצאה", "reject-result");
+    reject.type = "button";
+    reject.addEventListener("click", () => {
+      checkbox.checked = false; checkbox.disabled = true; link.hidden = true; reject.disabled = true;
+      card.append(node("p", "התוצאה נפסלה. אפשר ליצור ניסיון חדש מהתמונה שנבחרה; פעולה זו מחייבת יצירה נוספת. אין ניסיון חוזר אוטומטי.", "review-note"));
+    });
+    card.append(label, reject);
+  } else card.append(node("p", "לפני פרסום: בדקו את השם ואת המשפט אחים ואחיות לסמל לא שוכחים.", "review-note"));
+  results.append(card);
 }
 function showError(name, message) {
   const card = node("article", "", "error-card");

@@ -1,4 +1,6 @@
 export const SPRAY_LAYOUT = "spray-stencil-v2";
+export const INTEGRATED_LAYOUT = "integrated-mural-v3";
+export const requiresApproval = (job) => job.layoutVersion === INTEGRATED_LAYOUT;
 export function seededRandom(seed) {
   let state = 2166136261;
   for (const character of String(seed)) state = Math.imul(state ^ character.charCodeAt(0), 16777619);

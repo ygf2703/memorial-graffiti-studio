@@ -1,6 +1,6 @@
 import { nameFromFile, validateFiles, readJson, batchSummary } from "./batch.js";
 import { POSTER_LAYOUT, paintExactText } from "./poster.js";
-import { SPRAY_LAYOUT, CAPTION_LAYOUT, requiresApproval } from "./design.js";
+import { SPRAY_LAYOUT, CAPTION_LAYOUT, COMPOSITED_LAYOUT, requiresApproval } from "./design.js";
 import { paintFixedCaption } from "./captions.js";
 import { paintSprayText } from "./spray.js";
 const $ = (selector) => document.querySelector(selector);
@@ -115,7 +115,7 @@ function showResult(name, { poster, job }) {
     const message = review.status === "matched" ? "בדיקת האיות האוטומטית מצאה התאמה. זו אינה הבטחה — נדרש אישור חזותי לפני הורדה." : review.status === "needs_review" ? "אזהרה: הבדיקה האוטומטית מצאה חוסר התאמה או כיתוב לא ברור. אין לאשר אם חסרה או שגויה אפילו אות אחת." : "בדיקת האיות האוטומטית לא זמינה. יש לבדוק ידנית כל אות לפני אישור.";
     card.append(node("p", message, "review-note"));
     card.append(node("p", `הכיתוב הנדרש: ${job.name} | אחים ואחיות לסמל לא שוכחים`, "review-note"));
-    if (typeof review.name === "string") card.append(node("p", job.layoutVersion === CAPTION_LAYOUT ? `קריאה אוטומטית של השם (עלולה לטעות): ${review.name}. המשפט נוסף מקובץ קבוע, גרסה ${job.captionVariant} מתוך 5, ואינו נבדק בקריאה זו.` : `קריאה אוטומטית (עלולה לטעות): ${review.name} | ${review.caption}`, "review-note"));
+    if (typeof review.name === "string") card.append(node("p", [CAPTION_LAYOUT, COMPOSITED_LAYOUT].includes(job.layoutVersion) ? `קריאה אוטומטית של השם (עלולה לטעות): ${review.name}. המשפט נוסף מקובץ קבוע, גרסה ${job.captionVariant} מתוך 5, ואינו נבדק בקריאה זו.` : `קריאה אוטומטית (עלולה לטעות): ${review.name} | ${review.caption}`, "review-note"));
     const label = node("label", "", "approval"), checkbox = node("input");
     checkbox.type = "checkbox";
     label.append(checkbox, node("span", "בדקתי אות־אות: השם והמשפט מלאים ומדויקים, הדגל גלוי והדמות מתאימה."));

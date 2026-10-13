@@ -1,5 +1,7 @@
 import { nameFromFile, validateFiles, readJson, batchSummary } from "./batch.js";
 import { POSTER_LAYOUT, paintExactText } from "./poster.js";
+import { SPRAY_LAYOUT } from "./design.js";
+import { paintSprayText } from "./spray.js";
 const $ = (selector) => document.querySelector(selector);
 const fileInput = $("#photos"), photoList = $("#photo-list"), validation = $("#validation"), count = $("#batch-count"), generateButton = $("#generate"), progress = $("#progress"), results = $("#results");
 let batch = [], busy = false, ready = false, invalid = false;
@@ -73,6 +75,7 @@ async function exportPoster(blob, job) {
   canvas.width = 1080; canvas.height = 1080;
   canvas.getContext("2d").drawImage(image, 0, 0, 1080, 1080);
   if (job.layoutVersion === POSTER_LAYOUT) await paintExactText(canvas, image, job.name);
+  if (job.layoutVersion === SPRAY_LAYOUT) await paintSprayText(canvas, image, job.name, job.designSeed);
   const png = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
   if (!png) throw new Error("שמירת הפוסטר נכשלה.");
   const url = URL.createObjectURL(png); outputUrls.push(url); return url;

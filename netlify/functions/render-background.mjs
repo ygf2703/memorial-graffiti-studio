@@ -1,6 +1,6 @@
 import { getStore } from "@netlify/blobs";
 import { generateImage, validId, validWorker } from "../../server/core.mjs";
-import { POSTER_LAYOUT } from "../../public/poster.js";
+import { SPRAY_LAYOUT } from "../../public/design.js";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -14,9 +14,10 @@ export default async (request) => {
     await store.setJSON(id, { ...job, status: "processing", startedAt: Date.now() });
     const input = await store.get(`${id}/input`, { type: "json" });
     if (!input) throw new Error("תמונת המקור לא זמינה. יש להעלות אותה מחדש.");
-    const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name);
+    const designSeed = job.designSeed || id;
+    const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed);
     await store.set(`${id}/result`, Buffer.from(imageBase64, "base64"));
-    await store.setJSON(id, { ...job, layoutVersion: POSTER_LAYOUT, status: "completed" });
+    await store.setJSON(id, { ...job, layoutVersion: SPRAY_LAYOUT, designSeed, status: "completed" });
   } catch (error) {
     await store.setJSON(id, { ...job, status: "failed", error: /^(שירות|מפתח|החיבור|אין יתרה|לחשבון)/u.test(error.message) ? error.message : "יצירת התמונה נכשלה. בדקו את החיבור ונסו שוב." });
   } finally {

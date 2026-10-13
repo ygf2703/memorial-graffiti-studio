@@ -1,7 +1,8 @@
-import { createHmac, timingSafeEqual } from "node:crypto";
+import { createHmac, timingSafeEqual, randomUUID } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { validName } from "../public/batch.js";
+import { muralPrompt } from "./prompt.mjs";
 
 export const MAX_UPLOAD = 3 * 1024 * 1024;
 export const validId = (id) => /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(id || "");
@@ -33,7 +34,7 @@ export async function parsePortrait(request) {
   if (!actualType || actualType !== portrait.type) throw new Error("הקובץ אינו תמונת JPG, PNG או WEBP תקינה.");
   return { id, name, bytes, type: actualType };
 }
-export async function generateImage(portrait, name, fetcher = fetch) {
+export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID()) {
   const form = new FormData();
   form.append("model", "gpt-image-1.5");
   form.append("size", "1024x1024");
@@ -46,7 +47,7 @@ export async function generateImage(portrait, name, fetcher = fetch) {
     const bytes = await readFile(resolve("netlify/functions/references", filename));
     form.append("image[]", new Blob([bytes], { type: "image/png" }), filename);
   }
-  form.append("prompt", `Create ONE square memorial graffiti mural. STRICT PORTRAIT PALETTE: deep navy #082e49, saturated blue #207ba6, golden yellow #e6c62e, chalk white #f5f1da ONLY. Repaint ALL skin, lips, hair and clothing using these four inks; NO peach, pink, brown skin tones or natural green clothing. Beige is allowed ONLY in the wall. Bold graphic stencil street art like the THREE style references, NOT a realistic colour portrait with a texture filter. The FIRST image is the sole identity and geometry reference; the other THREE are STYLE ONLY. Do not borrow any facial feature, clothing or text from the style references. Preserve the FIRST portrait's head angle and tilt, gaze direction, eye spacing and eyelid shape, eyebrows, nose width and length, lip shape, mouth opening, facial asymmetry, jaw outline, hairline, hair length, exact moustache and beard boundaries, glasses and expression. Do not beautify, age, symmetrize, thicken the beard or invent a smile. Keep the original clothing neckline but recolour it to the four inks; NEVER substitute a military uniform or insignia. Simplify tonal detail, NOT facial geometry: recognizable hand-painted stencil portrait, broad blue/yellow/off-white paint planes, heavy navy contours, hard-edged limited shading. No photographic skin, pores, subtle skin gradients or glossy airbrush. Match the references' weathered peeling beige wall, integrated distressed Israeli flag, spray overspray and drips. Front-facing wall plane, square crop. LAYOUT: reserve the upper 24% of the wall and bottom 22% for typography added separately. These areas must be continuous textured beige wall with subtle blue/yellow overspray, not flat rectangles or panels. Place the full head between y=27% and y=65%, shoulders ending by y=77%, keeping the silhouette recognizable. NO TEXT, letters, names, numbers, lettering-like tags, watermarks or captions anywhere: all lettering is added by our renderer. Do not paint the person's name. No extra people, unit logos, dates, English slogans or biographies. Final check: the face must be visibly blue, yellow, white and navy, never natural skin coloured. Result: photographed real weathered wall with an ILLUSTRATED portrait, not a photograph pasted onto a wall.`);
+  form.append("prompt", muralPrompt(designSeed));
   let response;
   try {
     response = await fetcher("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(12 * 60 * 1000) });

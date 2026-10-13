@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "netlify dev --port 4173",
-    "check": "node --check public/app.js && node --check public/poster.js && node --check server/core.mjs && node --check netlify/functions/generate.mjs && node --check netlify/functions/render-background.mjs",
+    "check": "node --check public/app.js && node --check public/poster.js && node --check public/spray.js && node --check public/design.js && node --check server/prompt.mjs && node --check server/core.mjs && node --check netlify/functions/generate.mjs && node --check netlify/functions/render-background.mjs",
     "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {

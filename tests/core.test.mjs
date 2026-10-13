@@ -4,6 +4,9 @@ import { randomUUID } from "node:crypto";
 import { nameFromFile, validateFiles, validName, readJson, batchSummary, caption } from "../public/batch.js";
 import { fitText, captionLines, POSTER_LAYOUT, paintExactText } from "../public/poster.js";
 import { authorize, parsePortrait, generateImage, configured } from "../server/core.mjs";
+import { muralDesign, seededRandom } from "../public/design.js";
+import { muralPrompt } from "../server/prompt.mjs";
+import { paintSprayText } from "../public/spray.js";
 import health from "../netlify/functions/health.mjs";
 import generate from "../netlify/functions/generate.mjs";
 import job from "../netlify/functions/job.mjs";
@@ -12,6 +15,21 @@ test("filename supplies the exact name without rewriting letters or separators",
   for (const name of ["יהונתן-אליהו", "יהונתן אליהו", "שם_משפחה", "בן־עמי", "שֵׁם  מָלֵא"]) assert.equal(nameFromFile(photo(`${name}.jpeg`)), name);
 });
 test("caption contains every required word exactly once", () => assert.equal(captionLines.join(" "), caption));
+test("backgrounds vary per job but remain stable when restoring the same job", () => {
+  const designs = Array.from({ length: 50 }, (_, i) => muralDesign(`job-${i}`));
+  assert.deepEqual(muralDesign("job-3"), designs[3]);
+  for (const key of ["wall", "flag", "marks", "wear"]) assert.ok(new Set(designs.map((x) => x[key])).size >= 4);
+  const a = seededRandom("same-job"), b = seededRandom("same-job");
+  for (let i = 0; i < 20000; i++) { const value = a(); assert.equal(value, b()); assert.ok(value >= 0 && value < 1); }
+});
+test("every variation requires the Israeli flag, four flat inks and unchanged palette", () => {
+  for (let i = 0; i < 50; i++) {
+    const prompt = muralPrompt(`job-${i}`);
+    assert.match(prompt, /TWO BLUE stripes and ONE correctly formed six-pointed blue Star of David/);
+    assert.match(prompt, /FOUR SPRAY LAYERS ONLY/);
+    for (const colour of ["#082e49", "#207ba6", "#e6c62e", "#f5f1da"]) assert.ok(prompt.includes(colour));
+  }
+});
 test("font fitting measures the literal text and never truncates", () => {
   const text = "יהונתן אליהו";
   const size = fitText(text, (value, pixels) => { assert.equal(value, text); return { width: pixels * 10, height: pixels }; }, 176, 940, 150);
@@ -23,7 +41,8 @@ test("poster renderer paints exact RTL name and both caption lines, using loaded
   const painted = [], loaded = [];
   const context = {
     measureText(value) { return { width: value.length * 30, actualBoundingBoxLeft: value.length * 15, actualBoundingBoxRight: value.length * 15, actualBoundingBoxAscent: 50, actualBoundingBoxDescent: 10 }; },
-    strokeText() {}, drawImage() {},
+    strokeText() {}, drawImage() {}, save() {}, restore() {}, translate() {}, rotate() {}, transform() {}, beginPath() {}, rect() {}, clip() {}, fillRect() {}, moveTo() {}, lineTo() {}, stroke() {},
+    getImageData() { return { data: new Uint8ClampedArray(1080 * 1080 * 4) }; },
     fillText(value) { painted.push({ value, direction: this.direction, font: this.font }); },
     createLinearGradient() { return { addColorStop() {} }; },
   };
@@ -36,6 +55,10 @@ test("poster renderer paints exact RTL name and both caption lines, using loaded
     assert.deepEqual(painted.map((line) => line.value), [name, ...captionLines]);
     assert.ok(painted.every((line) => line.direction === "rtl"));
     assert.deepEqual(loaded.sort(), ["MuralCaption", "MuralName"]);
+    painted.length = 0;
+    await paintSprayText({ getContext() { return context; } }, {}, name, "test-job");
+    assert.deepEqual(painted.map((line) => line.value), [name, name, captionLines[0], captionLines[0], captionLines[1], captionLines[1]]);
+    assert.ok(painted.every((line) => line.direction === "rtl" && line.font.includes("StreetLetters")));
   } finally {
     if (savedDocument) Object.defineProperty(globalThis, "document", savedDocument); else delete globalThis.document;
     if (savedFont) Object.defineProperty(globalThis, "FontFace", savedFont); else delete globalThis.FontFace;

@@ -1,4 +1,4 @@
-import { nameFromFile, validateFiles, readJson, batchSummary } from "./batch.js";
+import { nameFromFile, validateFiles, validName, readJson, batchSummary } from "./batch.js";
 import { POSTER_LAYOUT, paintExactText } from "./poster.js";
 import { SPRAY_LAYOUT, CAPTION_LAYOUT, COMPOSITED_LAYOUT, requiresApproval } from "./design.js";
 import { paintFixedCaption } from "./captions.js";
@@ -7,6 +7,7 @@ const $ = (selector) => document.querySelector(selector);
 const fileInput = $("#photos"), photoList = $("#photo-list"), validation = $("#validation"), count = $("#batch-count"), generateButton = $("#generate"), progress = $("#progress"), results = $("#results");
 let batch = [], busy = false, ready = false, invalid = false;
 const outputUrls = [];
+const sourceFiles = new Map();
 const headers = () => $("#access-code").value ? { Authorization: `Bearer ${$("#access-code").value}` } : {};
 function node(tag, text, className) {
   const element = document.createElement(tag);
@@ -15,7 +16,8 @@ function node(tag, text, className) {
   return element;
 }
 function buttons() {
-  generateButton.disabled = busy || !ready || invalid || !batch.length;
+  generateButton.disabled = busy || !ready || invalid || !batch.length || batch.some((item) => !validName(item.name));
+  for (const input of photoList.querySelectorAll("input")) input.disabled = busy;
   fileInput.disabled = busy;
   $("#check-connection").disabled = busy;
   $("#access-code").disabled = busy;
@@ -41,16 +43,25 @@ function renderBatch() {
   for (const item of batch) {
     const card = node("article", "", "photo-card"), img = node("img"), details = node("div");
     img.src = item.preview; img.alt = `תצוגה מקדימה של ${item.name}`;
-    details.append(node("strong", item.name), node("small", item.file.name));
+    const nameLabel = node("label", "השם שיופיע בגרפיטי"), nameInput = node("input");
+    nameInput.type = "text"; nameInput.value = item.name; nameInput.dir = "rtl";
+    nameInput.required = true; nameInput.maxLength = 80;
+    nameInput.addEventListener("input", () => {
+      item.name = nameInput.value;
+      nameInput.setCustomValidity(validName(item.name) ? "" : "יש להזין שם תקין.");
+      buttons();
+    });
+    nameLabel.append(nameInput);
+    details.append(node("small", item.file.name), nameLabel);
     card.append(img, details); photoList.append(card);
   }
   buttons();
 }
 fileInput.addEventListener("change", () => {
   for (const item of batch) URL.revokeObjectURL(item.preview);
-  const files = [...fileInput.files], errors = validateFiles(files);
+  const files = [...fileInput.files], errors = validateFiles(files, false);
   invalid = errors.length > 0;
-  batch = files.slice(0, 10).map((file) => ({ file, name: nameFromFile(file), preview: URL.createObjectURL(file) }));
+  batch = files.slice(0, 10).map((file) => ({ file, name: validName(nameFromFile(file)) ? nameFromFile(file) : "", preview: URL.createObjectURL(file) }));
   validation.textContent = errors.join(" ");
   renderBatch();
 });
@@ -122,11 +133,51 @@ function showResult(name, { poster, job }) {
     checkbox.addEventListener("change", () => { link.hidden = !checkbox.checked; });
     const reject = node("button", "פסילת התוצאה", "reject-result");
     reject.type = "button";
+    const correctionPanel = node("div", "", "correction-panel"), reason = node("select"), reasonLabel = node("label", "סיבת הפסילה"), repair = node("button", "תיקון חד־פעמי"), status = node("p", "", "review-note");
+    for (const [value, text] of [["", "בחרו סיבה"], ["portrait", "תמונה לא מדויקת"], ["name", "שם שלא כתוב כראוי"]]) {
+      const option = node("option", text); option.value = value; reason.append(option);
+    }
+    reasonLabel.append(reason);
+    const sourceLabel = node("label", "תמונת המקור לתיקון"), source = node("input");
+    source.type = "file"; source.accept = "image/jpeg,image/png,image/webp";
+    sourceLabel.append(source); sourceLabel.hidden = sourceFiles.has(job.id);
+    repair.type = "button";
+    correctionPanel.append(reasonLabel, sourceLabel, node("p", "ניסיון אחד בלבד, כרוך בקריאת API נוספת. אין הבטחת דיוק ואין תיקון אוטומטי נוסף.", "review-note"), repair, status);
+    correctionPanel.hidden = true;
+    if (job.parentId) {
+      correctionPanel.replaceChildren(node("p", "ניסיון התיקון היחיד נוצל. אפשר לפסול תוצאה זו, אך לא לתקן אותה שוב.", "review-note"));
+    } else if (job.correction) {
+      repair.textContent = "הצגת ניסיון התיקון הקיים";
+      reason.value = job.correction.reason; reason.disabled = true; sourceLabel.hidden = true;
+    }
+    repair.addEventListener("click", async () => {
+      if (busy) { status.textContent = "המתינו לסיום הפעולה הנוכחית."; return; }
+      const file = sourceFiles.get(job.id) || source.files[0];
+      if (!job.correction && (!reason.value || !file)) { status.textContent = "בחרו סיבת פסילה ותמונת מקור."; return; }
+      busy = true; buttons(); repair.disabled = true; reason.disabled = true; source.disabled = true;
+      status.textContent = "מעבד תיקון… הפעולה עשויה להימשך כמה דקות.";
+      try {
+        let id = job.correction?.id;
+        if (!id) {
+          const form = new FormData();
+          form.append("image", await prepareUpload(file), "portrait.jpg"); form.append("name", job.name); form.append("id", job.id);
+          const accepted = await readJson(await fetch(`/api/correct?reason=${reason.value}`, { method: "POST", headers: headers(), body: form, signal: AbortSignal.timeout(30000) }));
+          id = accepted.id; job.correction = { id, reason: reason.value };
+        } else {
+          await readJson(await fetch(`/api/correct?resume=${encodeURIComponent(job.id)}`, { method: "POST", headers: headers(), signal: AbortSignal.timeout(30000) }));
+        }
+        saveJob({ id, name: job.name });
+        showResult(job.name, await waitForJob(id));
+        status.textContent = "התיקון מוצג בכרטיס חדש ומחייב בדיקה ואישור.";
+      } catch (error) { status.textContent = error.message; }
+      finally { busy = false; buttons(); repair.disabled = false; reason.disabled = Boolean(job.correction); source.disabled = false; if (job.correction) repair.textContent = "הצגת ניסיון התיקון הקיים"; }
+    });
     reject.addEventListener("click", () => {
       checkbox.checked = false; checkbox.disabled = true; link.hidden = true; reject.disabled = true;
-      card.append(node("p", "התוצאה נפסלה. אפשר ליצור ניסיון חדש מהתמונה שנבחרה; פעולה זו מחייבת יצירה נוספת. אין ניסיון חוזר אוטומטי.", "review-note"));
+      correctionPanel.hidden = false;
     });
-    card.append(label, reject);
+    card.append(label, reject, correctionPanel);
+    if (job.correction) reject.click();
   } else card.append(node("p", "לפני פרסום: בדקו את השם ואת המשפט אחים ואחיות לסמל לא שוכחים.", "review-note"));
   results.append(card);
 }
@@ -146,6 +197,7 @@ async function run(items, restore = false) {
         let id = item.id;
         if (!restore) {
           id = crypto.randomUUID();
+          sourceFiles.set(id, item.file);
           const form = new FormData();
           form.append("image", await prepareUpload(item.file), "portrait.jpg"); form.append("name", item.name); form.append("id", id);
           // Save before sending so an uncertain network outcome can be checked without another paid call.

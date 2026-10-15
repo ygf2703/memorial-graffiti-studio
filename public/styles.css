@@ -1,5 +1,13 @@
 :root { color-scheme: dark; font-family: 'Assistant', sans-serif; background: #081426; color: #f7f4ea; }
 button, input, select, textarea { font: inherit; }
+[hidden] { display: none !important; }
+.photo-card { flex-direction: column; }
+.photo-card > div { width: 100%; min-width: 0; }
+.photo-card small { overflow-wrap: anywhere; }
+.photo-card label, .correction-panel label { display: grid; gap: 6px; width: 100%; }
+.photo-card input, .correction-panel input, .correction-panel select { width: 100%; min-width: 0; background: #081426; color: #fff; border: 1px solid #47769a; border-radius: 8px; padding: 8px; }
+.result-card .correction-panel { display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+.correction-panel button { background: #17385d; color: #fff; border: 1px solid #47769a; border-radius: 8px; padding: 10px; cursor: pointer; }
 .approval { display: flex; align-items: flex-start; gap: 8px; padding: 12px; color: #f7f4ea; }
 .approval input { margin-top: 5px; flex-shrink: 0; }
 .reject-result { margin: 0 12px 12px; border: 1px solid #a77e54; border-radius: 8px; padding: 8px 12px; background: transparent; color: #ffd76a; cursor: pointer; }

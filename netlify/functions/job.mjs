@@ -24,5 +24,7 @@ export default async (request) => {
     return new Response(stream, { headers: { "content-type": "image/jpeg", "cache-control": "no-store" } });
   }
   if (["queued", "processing"].includes(job.status) && Date.now() - (job.startedAt || job.createdAt) > 15 * 60 * 1000) return json({ ...job, status: "failed", error: "זמן העיבוד הסתיים ללא תוצאה. אין ניסיון חוזר אוטומטי." });
-  return json(deliveredJob(job));
+  const correction = !job.parentId ? await store.get(`${id}/correction`, { type: "json" }) : null;
+  const correctionReady = correction && await store.get(correction.id, { type: "json" });
+  return json({ ...deliveredJob(job), id, correction: correctionReady ? correction : null });
 };

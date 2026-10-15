@@ -17,7 +17,10 @@ export default async (request) => {
     if (!input) throw new Error("תמונת המקור לא זמינה. יש להעלות אותה מחדש.");
     const designSeed = job.designSeed || id;
     const fixedCaption = job.layoutVersion === CAPTION_LAYOUT;
-    const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption);
+    const previous = job.parentId ? await store.get(`${job.parentId}/result`, { type: "arrayBuffer" }) : null;
+    if (job.parentId && !previous) throw new Error("Missing original result");
+    const correction = previous ? { bytes: Buffer.from(previous), reason: job.correctionReason } : null;
+    const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction);
     await store.set(`${id}/result`, Buffer.from(imageBase64, "base64"));
     const review = await reviewImage(imageBase64, input.name, fetch, fixedCaption);
     await store.setJSON(id, { ...job, layoutVersion: fixedCaption ? CAPTION_LAYOUT : INTEGRATED_LAYOUT, designSeed, review, status: "completed" });

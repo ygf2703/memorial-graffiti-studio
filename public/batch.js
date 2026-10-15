@@ -8,14 +8,14 @@ export function validName(name) {
     /^[\p{L}\p{M} '\u2019\u05f3\u05f4\u05be"._-]+$/u.test(name) && /\p{L}/u.test(name) && name === name.trim() &&
     !/^(?:whatsapp|img|image|photo|dsc|pxl|screenshot)(?:\s|$)/iu.test(name);
 }
-export function validateFiles(files) {
+export function validateFiles(files, checkNames = true) {
   const errors = [];
   const names = new Set();
   if (files.length > 10) errors.push("אפשר להעלות עד 10 תמונות בכל אצווה.");
   for (const file of files) {
     const name = nameFromFile(file);
-    if (!validName(name)) errors.push(`יש לתת לקובץ ${file.name} שם מלא, ללא מספרי תמונה או תאריכים.`);
-    if (names.has(name.toLocaleLowerCase())) errors.push(`השם ${name} מופיע יותר מפעם אחת.`);
+    if (checkNames && !validName(name)) errors.push(`יש לתת לקובץ ${file.name} שם מלא, ללא מספרי תמונה או תאריכים.`);
+    if (checkNames && names.has(name.toLocaleLowerCase())) errors.push(`השם ${name} מופיע יותר מפעם אחת.`);
     names.add(name.toLocaleLowerCase());
     if (!["image/jpeg", "image/png", "image/webp"].includes(file.type) || !file.size || file.size > MAX_FILE_BYTES) errors.push(`הקובץ ${file.name} חייב להיות JPG, PNG או WEBP ועד 20MB.`);
   }

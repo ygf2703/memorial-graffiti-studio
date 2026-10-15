@@ -25,7 +25,7 @@ export default async (request) => {
     const correction = previous ? { bytes: Buffer.from(previous), reason: job.correctionReason } : null;
     const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName);
     let result = Buffer.from(imageBase64, "base64");
-    const variant = job.correctionReason === "name" ? nameVariant(designSeed) % 5 + 1 : nameVariant(designSeed);
+    const variant = job.nameVariant || nameVariant(designSeed);
     if (exactName) {
       await store.set(`${id}/base`, result);
       result = await compositeExactName(result, input.name, designSeed, variant);

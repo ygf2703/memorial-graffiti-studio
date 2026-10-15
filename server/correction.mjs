@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
-import { CAPTION_LAYOUT, EXACT_NAME_LAYOUT, captionVariant } from "../public/design.js";
+import { CAPTION_LAYOUT, EXACT_NAME_LAYOUT, NAME_STYLE_COUNT, captionVariant } from "../public/design.js";
+import { nameVariant } from "./exact-name.mjs";
 
 export const correctionReasons = ["portrait", "name"];
 export function correctionInstruction(reason, name, exactName = false) {
@@ -24,6 +25,7 @@ export async function queueCorrection(store, parentId, input, reason) {
   await store.setJSON(claim.id, {
     status: "queued", name: parent.name, parentId, correctionReason: claim.reason,
     layoutVersion: parent.layoutVersion === EXACT_NAME_LAYOUT ? EXACT_NAME_LAYOUT : CAPTION_LAYOUT, captionVariant: parent.captionVariant || captionVariant(parentId),
+    ...(parent.layoutVersion === EXACT_NAME_LAYOUT ? { nameVariant: claim.reason === "name" ? (parent.nameVariant || nameVariant(parent.designSeed || parentId)) % NAME_STYLE_COUNT + 1 : parent.nameVariant || nameVariant(parent.designSeed || parentId), nameStyleCount: NAME_STYLE_COUNT } : {}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),
   }, { onlyIfNew: true });
   return { id: claim.id, status: "queued" };

@@ -8,11 +8,20 @@ import { EXACT_NAME_LAYOUT } from "../public/design.js";
 
 test("literal-name corrections preserve the new pipeline without asking AI to redraw letters", async () => {
   const { data, store, input } = fixture();
-  data.set("original", { ...data.get("original"), layoutVersion: EXACT_NAME_LAYOUT });
+  data.set("original", { ...data.get("original"), layoutVersion: EXACT_NAME_LAYOUT, nameVariant: 10 });
   const { id } = await queueCorrection(store, "original", input, "name");
   assert.equal(data.get(id).layoutVersion, EXACT_NAME_LAYOUT);
+  assert.equal(data.get(id).nameVariant, 1);
+  assert.equal(data.get(id).nameStyleCount, 10);
   assert.match(correctionInstruction("name", input.name, true), /Do not generate ANY text/);
   assert.ok(!correctionInstruction("name", input.name, true).includes(input.name));
+});
+
+test("portrait correction retains the original chosen name style", async () => {
+  const { data, store, input } = fixture();
+  data.set("original", { ...data.get("original"), layoutVersion: EXACT_NAME_LAYOUT, nameVariant: 7 });
+  const { id } = await queueCorrection(store, "original", input, "portrait");
+  assert.equal(data.get(id).nameVariant, 7);
 });
 
 function fixture() {

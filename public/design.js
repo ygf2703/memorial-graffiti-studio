@@ -3,6 +3,7 @@ export const INTEGRATED_LAYOUT = "integrated-mural-v3";
 export const CAPTION_LAYOUT = "fixed-caption-v4";
 export const COMPOSITED_LAYOUT = "server-caption-v5";
 export const EXACT_NAME_LAYOUT = "server-exact-name-v6";
+export const NAME_STYLE_COUNT = 10;
 export const requiresApproval = (job) => [INTEGRATED_LAYOUT, CAPTION_LAYOUT, COMPOSITED_LAYOUT, EXACT_NAME_LAYOUT].includes(job.layoutVersion);
 export const deliveredJob = (job) => job.layoutVersion === CAPTION_LAYOUT ? { ...job, layoutVersion: COMPOSITED_LAYOUT } : job;
 export function captionVariant(seed) { return 1 + Math.floor(seededRandom(`caption:${seed}`)() * 5); }

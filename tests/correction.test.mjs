@@ -4,6 +4,16 @@ import { queueCorrection, correctionInstruction } from "../server/correction.mjs
 import { generateImage } from "../server/core.mjs";
 import { validateFiles, validName } from "../public/batch.js";
 import correct from "../netlify/functions/correct.mjs";
+import { EXACT_NAME_LAYOUT } from "../public/design.js";
+
+test("literal-name corrections preserve the new pipeline without asking AI to redraw letters", async () => {
+  const { data, store, input } = fixture();
+  data.set("original", { ...data.get("original"), layoutVersion: EXACT_NAME_LAYOUT });
+  const { id } = await queueCorrection(store, "original", input, "name");
+  assert.equal(data.get(id).layoutVersion, EXACT_NAME_LAYOUT);
+  assert.match(correctionInstruction("name", input.name, true), /Do not generate ANY text/);
+  assert.ok(!correctionInstruction("name", input.name, true).includes(input.name));
+});
 
 function fixture() {
   const data = new Map([["original", { name: "אור אבני", status: "completed", captionVariant: 3, designSeed: "same" }]]);

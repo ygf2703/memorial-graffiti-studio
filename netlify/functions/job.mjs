@@ -1,6 +1,6 @@
 import { getStore } from "@netlify/blobs";
 import { authorize, json, validId } from "../../server/core.mjs";
-import { CAPTION_LAYOUT, deliveredJob } from "../../public/design.js";
+import { CAPTION_LAYOUT, EXACT_NAME_LAYOUT, deliveredJob } from "../../public/design.js";
 import { compositeCaption } from "../../server/composite.mjs";
 export default async (request) => {
   if (request.method !== "GET") return json({ error: "הפעולה אינה נתמכת." }, 405);
@@ -21,7 +21,8 @@ export default async (request) => {
       } catch { return json({ error: "חיבור הכיתוב לתמונה נכשל. שחזרו את התוצאה ללא יצירה נוספת." }, 503); }
     }
     const stream = await store.get(`${id}/result`, { type: "stream" });
-    return new Response(stream, { headers: { "content-type": "image/jpeg", "cache-control": "no-store" } });
+    if (!stream) return json({ error: "התוצאה אינה זמינה." }, 503);
+    return new Response(stream, { headers: { "content-type": job.layoutVersion === EXACT_NAME_LAYOUT ? "image/png" : "image/jpeg", "cache-control": "no-store" } });
   }
   if (["queued", "processing"].includes(job.status) && Date.now() - (job.startedAt || job.createdAt) > 15 * 60 * 1000) return json({ ...job, status: "failed", error: "זמן העיבוד הסתיים ללא תוצאה. אין ניסיון חוזר אוטומטי." });
   const correction = !job.parentId ? await store.get(`${id}/correction`, { type: "json" }) : null;

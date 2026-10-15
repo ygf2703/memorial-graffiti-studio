@@ -27,7 +27,19 @@ if (action === "create") {
 } else {
   const { siteId } = JSON.parse(await readFile(".netlify/state.json", "utf8"));
   const site = await api(`/sites/${siteId}`);
-  if (action === "env") {
+  if (action === "rotate-access") {
+    // Explicit admin action only: update the shared credential, never the OpenAI key.
+    const accessCode = randomBytes(12).toString("hex").match(/.{6}/g).join("-");
+    const content = await readFile(".env", "utf8");
+    await writeFile(".env", content.replace(/^STUDIO_ACCESS_CODE=.*\r?\n?/gm, "").trimEnd() + `\nSTUDIO_ACCESS_CODE=${accessCode}\n`);
+    await mkdir(".netlify", { recursive: true });
+    await writeFile(".netlify/studio-access.txt", accessCode + "\n");
+    const variable = { key: "STUDIO_ACCESS_CODE", scopes: ["functions"], values: [{ context: "all", value: accessCode }] };
+    const existing = await api(`/accounts/${site.account_id}/env?site_id=${siteId}`);
+    if (existing.some((x) => x.key === variable.key)) await api(`/accounts/${site.account_id}/env/${variable.key}?site_id=${siteId}`, "PUT", variable);
+    else await api(`/accounts/${site.account_id}/env?site_id=${siteId}`, "POST", [variable]);
+    console.log(JSON.stringify({ sharedAccessUpdated: true, credentialFile: ".netlify/studio-access.txt", redeployRequired: true }));
+  } else if (action === "env") {
     let content = await readFile(".env", "utf8");
     let values = parseEnv(content);
     if (!values.STUDIO_ACCESS_CODE || values.STUDIO_ACCESS_CODE.length < 12) {

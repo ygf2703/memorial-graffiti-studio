@@ -26,6 +26,7 @@ export async function queueCorrection(store, parentId, input, reason) {
     status: "queued", name: parent.name, parentId, correctionReason: claim.reason,
     layoutVersion: parent.layoutVersion === EXACT_NAME_LAYOUT ? EXACT_NAME_LAYOUT : CAPTION_LAYOUT, captionVariant: parent.captionVariant || captionVariant(parentId),
     ...(parent.layoutVersion === EXACT_NAME_LAYOUT ? { nameVariant: claim.reason === "name" ? (parent.nameVariant || nameVariant(parent.designSeed || parentId)) % NAME_STYLE_COUNT + 1 : parent.nameVariant || nameVariant(parent.designSeed || parentId), nameStyleCount: NAME_STYLE_COUNT } : {}),
+    ...(parent.nameStyleVersion ? { nameStyleVersion: parent.nameStyleVersion } : {}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),
   }, { onlyIfNew: true });
   return { id: claim.id, status: "queued" };

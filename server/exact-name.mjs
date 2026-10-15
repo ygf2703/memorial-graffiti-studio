@@ -21,9 +21,13 @@ export const nameVariant = (seed) => 1 + Math.floor(seededRandom(`name:${seed}`)
 
 // Literal Pango/HarfBuzz glyphs: never reverse, abbreviate or redraw the user's name.
 export async function nameGlyph(name, variant = 1) {
-  if (!validName(name)) throw new Error("Invalid name");
   const style = nameStyles[variant - 1];
   if (!style) throw new Error("Invalid name variant");
+  return literalGlyph(name, style);
+}
+
+export async function literalGlyph(name, style) {
+  if (!validName(name)) throw new Error("Invalid name");
   const fontfile = resolve(`public/fonts/${style.file}`);
   await access(fontfile); // Fail closed instead of silently using a machine-specific fallback.
   const escaped = name.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
@@ -65,8 +69,12 @@ export async function exactNameLayer(name, seed = "name", variant = nameVariant(
 }
 
 export async function compositeExactName(bytes, name, seed, variant = nameVariant(seed)) {
-  const base = await sharp(bytes).resize(1080, 1080).png().toBuffer();
   const layer = await exactNameLayer(name, seed, variant);
+  return compositeNameLayer(bytes, layer);
+}
+
+export async function compositeNameLayer(bytes, layer) {
+  const base = await sharp(bytes).resize(1080, 1080).png().toBuffer();
   // Actual wall grain/cracks show through the paint, not a separate flat panel.
   const wall = await sharp(base).extract({ left: 0, top: 0, width: 1080, height: 250 }).removeAlpha().greyscale().raw().toBuffer();
   const { data, info } = await sharp(layer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });

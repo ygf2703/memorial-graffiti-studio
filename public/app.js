@@ -3,11 +3,15 @@ import { POSTER_LAYOUT, paintExactText } from "./poster.js";
 import { SPRAY_LAYOUT, CAPTION_LAYOUT, COMPOSITED_LAYOUT, requiresApproval } from "./design.js";
 import { paintFixedCaption } from "./captions.js";
 import { paintSprayText } from "./spray.js";
+import { savedAccessCode, rememberAccessCode } from "./access.js";
 const $ = (selector) => document.querySelector(selector);
 const fileInput = $("#photos"), photoList = $("#photo-list"), validation = $("#validation"), count = $("#batch-count"), generateButton = $("#generate"), progress = $("#progress"), results = $("#results");
 let batch = [], busy = false, ready = false, invalid = false;
 const outputUrls = [];
 const sourceFiles = new Map();
+let accessStorage;
+try { accessStorage = window.localStorage; } catch { /* Storage may be blocked. */ }
+$("#access-code").value = savedAccessCode(accessStorage);
 const headers = () => $("#access-code").value ? { Authorization: `Bearer ${$("#access-code").value}` } : {};
 function node(tag, text, className) {
   const element = document.createElement(tag);
@@ -20,6 +24,7 @@ function buttons() {
   for (const input of photoList.querySelectorAll("input")) input.disabled = busy;
   fileInput.disabled = busy;
   $("#check-connection").disabled = busy;
+  $("#forget-access").disabled = busy;
   $("#access-code").disabled = busy;
   $("#restore").disabled = busy || !ready;
 }
@@ -31,6 +36,7 @@ async function checkConnection() {
     const state = await readJson(await fetch("/api/health", { headers: headers(), cache: "no-store", signal: AbortSignal.timeout(15000) }));
     ready = state.ready && state.authorized;
     $("#connection-status").textContent = ready ? "הסטודיו מחובר. אפשר ליצור פוסטרים." : state.message || "הזינו את קוד הכניסה לסטודיו ולחצו על בדיקת חיבור.";
+    if (ready && !rememberAccessCode(accessStorage, $("#access-code").value)) $("#connection-status").textContent += " הדפדפן אינו מאפשר לשמור את הקוד; בכניסה הבאה יהיה צורך להזינו שוב.";
   } catch (error) { $("#connection-status").textContent = error.message; }
   buttons();
   return ready;
@@ -67,6 +73,11 @@ fileInput.addEventListener("change", () => {
 });
 $("#check-connection").addEventListener("click", checkConnection);
 $("#access-code").addEventListener("input", () => { ready = false; buttons(); });
+$("#forget-access").addEventListener("click", () => {
+  const removed = rememberAccessCode(accessStorage, "");
+  $("#access-code").value = ""; ready = false; buttons();
+  $("#connection-status").textContent = removed ? "קוד הכניסה נמחק מהדפדפן הזה." : "השדה נוקה. להסרת הקוד השמור יש לנקות את נתוני האתר בהגדרות הדפדפן.";
+});
 
 async function loadImage(blob) {
   const url = URL.createObjectURL(blob), image = new Image();
@@ -218,4 +229,5 @@ async function run(items, restore = false) {
 generateButton.addEventListener("click", () => run([...batch]));
 $("#restore").addEventListener("click", () => run(savedJobs(), true));
 $("#restore").hidden = !savedJobs().length;
-checkConnection();
+$("#connection-status").textContent = $("#access-code").value ? "קוד הכניסה השמור נטען. לחצו על בדיקת חיבור." : "הזינו את קוד הכניסה ולחצו על בדיקת חיבור. לאחר אימות הוא יישמר בדפדפן הזה.";
+buttons();

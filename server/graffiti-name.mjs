@@ -35,7 +35,7 @@ export async function graffitiNameLayer(name, seed, variant) {
   // Irregular overspray behind the word, with no rectangular panel or banner.
   for (let i = 0; i < 24; i++) {
     const cx = x + random() * glyph.info.width, cy = y + 15 + random() * (glyph.info.height - 10);
-    halo.push(`<ellipse cx="${cx}" cy="${cy}" rx="${12 + random() * 37}" ry="${12 + random() * 35}" fill="${i % 4 ? style.cloud : blue}" opacity="${.06 + random() * .22}"/>`);
+    halo.push(`<ellipse cx="${cx}" cy="${cy}" rx="${12 + random() * 37}" ry="${12 + random() * 35}" fill="${i % 4 ? style.cloud : blue}" opacity="${.12 + random() * .32}"/>`);
   }
   for (let i = 0; i < 1600; i++) {
     const cx = x - 25 + random() * (glyph.info.width + 50), cy = 18 + random() * 204;
@@ -73,7 +73,7 @@ export async function graffitiNameLayer(name, seed, variant) {
     <filter id="shine" x="-10%" y="-30%" width="120%" height="160%"><feOffset in="SourceAlpha" dx="3" dy="4" result="shift"/><feComposite in="SourceAlpha" in2="shift" operator="out" result="edge"/><feFlood flood-color="${white}"/><feComposite in2="edge" operator="in"/></filter></defs>
     <g clip-path="url(#safe)"><g filter="url(#haze)">${halo.join("")}</g>${dust.join("")}${flashes.join("")}
     <g mask="url(#wear)" opacity=".95">${shadow}<use href="#shape" filter="url(#rim)"/><use href="#shape" filter="url(#outline)"/>
-    <g mask="url(#letters)"><rect width="1080" height="250" fill="${style.fill}"/>${style.lower ? `<path d="M0 113L1080 143V250H0Z" fill="${style.lower}"/>` : ""}${style.stencil ? `<path d="M0 91L1080 97M0 145L1080 139" stroke="${navy}" opacity=".2" stroke-width="2"/>` : ""}</g>
+    <g mask="url(#letters)"><rect width="1080" height="250" fill="${style.fill}"/>${style.lower ? `<path d="M0 ${y + glyph.info.height * .45 - 7}L1080 ${y + glyph.info.height * .45 + 7}V250H0Z" fill="${style.lower}"/>` : ""}${style.stencil ? `<path d="M0 91L1080 97M0 145L1080 139" stroke="${navy}" opacity=".2" stroke-width="2"/>` : ""}</g>
     ${style.shine ? '<use href="#shape" filter="url(#shine)" opacity=".85"/>' : ""}</g>${runs.join("")}${under}</g></svg>`;
   return sharp(Buffer.from(svg)).png().toBuffer();
 }

@@ -176,7 +176,8 @@ test("vision reader receives only the generated image, not expected text", async
     assert.equal(url, "https://api.openai.com/v1/responses");
     const body = JSON.parse(options.body);
     assert.equal(body.store, false);
-    assert.equal(body.model, "gpt-4.1-mini");
+    assert.equal(body.model, "gpt-6-luna");
+    assert.equal(body.reasoning.effort, "none");
     assert.equal(body.input[0].content[0].image_url, "data:image/jpeg;base64,image-bytes");
     assert.equal(body.text.format.strict, true);
     assert.ok(!options.body.includes(reading.name) && !options.body.includes(caption));

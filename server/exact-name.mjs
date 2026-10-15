@@ -11,7 +11,7 @@ export const nameStyles = [
   { font: "Karantina Bold", file: "Karantina-Bold.ttf", fill: "#207ba6", lower: "#e6c62e", border: "#f5f1da", slant: 4, opacity: .93 },
   { font: "Karantina Bold", file: "Karantina-Bold.ttf", fill: "#f5f1da", lower: "#207ba6", border: "#e6c62e", slant: -3, opacity: .9 },
   { font: "Rubik Heavy", file: "Rubik-Variable.ttf", fill: "#207ba6", lower: "#207ba6", border: "#e6c62e", slant: -7, opacity: .94, height: 118, outline: 9, rim: 15, depth: 10, runs: 25, runLength: 32, wear: 1800 },
-  { font: "Solitreo", file: "Solitreo-Regular.ttf", fill: "#e6c62e", lower: "#f5f1da", border: "#207ba6", slant: 7, opacity: .88, height: 140, outline: 3, rim: 6, depth: 2, runs: 30, runLength: 36, wear: 1900, split: 100 },
+  { font: "Solitreo", file: "Solitreo-Regular.ttf", fill: "#e6c62e", lower: "#f5f1da", border: "#207ba6", slant: 7, opacity: .88, height: 140, stretch: 1.65, outline: 3, rim: 6, depth: 2, runs: 30, runLength: 36, wear: 1900, split: 100 },
   { font: "Suez One", file: "SuezOne-Regular.ttf", fill: "#f5f1da", lower: "#e6c62e", border: "#207ba6", slant: 0, opacity: .93, height: 128, outline: 5, rim: 10, depth: 3, runs: 10, runLength: 20, wear: 2100, split: 128 },
   { font: "Secular One", file: "SecularOne-Regular.ttf", fill: "#082e49", lower: "#082e49", border: "#e6c62e", slant: 5, opacity: .92, height: 116, outline: 4, rim: 11, depth: 6, runs: 20, runLength: 28, wear: 1800, contour: "#f5f1da" },
   { font: "Amatic SC Bold", file: "AmaticSC-Bold.ttf", fill: "#207ba6", lower: "#082e49", border: "#f5f1da", slant: -12, opacity: .9, height: 144, outline: 3, rim: 6, depth: 7, runs: 26, runLength: 30, wear: 1500, split: 145, accent: true },
@@ -27,8 +27,9 @@ export async function nameGlyph(name, variant = 1) {
   const fontfile = resolve(`public/fonts/${style.file}`);
   await access(fontfile); // Fail closed instead of silently using a machine-specific fallback.
   const escaped = name.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
-  const glyph = await sharp({ text: { text: `<span foreground="#ffffff">${escaped}</span>`, font: `${style.font} 200`, fontfile, rgba: true } })
+  let glyph = await sharp({ text: { text: `<span foreground="#ffffff">${escaped}</span>`, font: `${style.font} 200`, fontfile, rgba: true } })
     .resize({ width: 880, height: style.height || 144, fit: "inside" }).png().toBuffer({ resolveWithObject: true });
+  if (style.stretch) glyph = await sharp(glyph.data).resize({ width: Math.min(880, Math.round(glyph.info.width * style.stretch)), height: glyph.info.height, fit: "fill" }).png().toBuffer({ resolveWithObject: true });
   if (glyph.info.height < 48) throw new Error("השם ארוך מדי לכיתוב קריא בשורה אחת.");
   return glyph;
 }

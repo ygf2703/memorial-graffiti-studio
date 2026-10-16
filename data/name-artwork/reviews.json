@@ -223,23 +223,45 @@
   },
   {
     "name": "רואי אליאס",
-    "sha256": "baaa996b2a654a59ded0cbffc5a45f0fee737ad522654be5c53a207b7df5b13a",
-    "spellingChecked": false,
+    "sha256": "9b3515ee1528c6c129000b0494fee5b7242bd3e64924944b06a39eec15988294",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-0.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-12.png; layer-12.png; ea3bb0ed00e05493fecc-light.png; ea3bb0ed00e05493fecc-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "ea3bb0ed00e05493fecc-v3.png",
+    "style": 3,
     "ocr": {
-      "sha256": "baaa996b2a654a59ded0cbffc5a45f0fee737ad522654be5c53a207b7df5b13a",
-      "status": "needs_review",
-      "text": "דואיי אליאס",
+      "sha256": "9b3515ee1528c6c129000b0494fee5b7242bd3e64924944b06a39eec15988294",
+      "status": "matched",
+      "text": "רואי אליאס",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:30:06.917Z"
+      "checkedAt": "2026-10-16T17:34:18.173Z"
     },
-    "notes": "השם הפרטי נראה דואיי/רואיי ולא רואי; נדרשת גרסה מתוקנת."
+    "previousReview": {
+      "name": "רואי אליאס",
+      "sha256": "baaa996b2a654a59ded0cbffc5a45f0fee737ad522654be5c53a207b7df5b13a",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-0.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "baaa996b2a654a59ded0cbffc5a45f0fee737ad522654be5c53a207b7df5b13a",
+        "status": "needs_review",
+        "text": "דואיי אליאס",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:30:06.917Z"
+      },
+      "notes": "השם הפרטי נראה דואיי/רואיי ולא רואי; נדרשת גרסה מתוקנת."
+    }
   },
   {
     "name": "גיל עוז אנזה",
@@ -376,23 +398,45 @@
   },
   {
     "name": "אור ברנדס",
-    "sha256": "c98cf6678a08f23c4b36c5acaccca55efc020b7fe870a9ff06ef4b0cfed17dba",
-    "spellingChecked": false,
+    "sha256": "fad0a3e1420a52b6416ab6570ea12cc7aca71a46d843a89e3f81a86d4aa34ab4",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-0.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-12.png; layer-12.png; 642cb74234b5d60348db-light.png; 642cb74234b5d60348db-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "642cb74234b5d60348db-v2.png",
+    "style": 1,
     "ocr": {
-      "sha256": "c98cf6678a08f23c4b36c5acaccca55efc020b7fe870a9ff06ef4b0cfed17dba",
-      "status": "needs_review",
-      "text": "אור בונדס",
+      "sha256": "fad0a3e1420a52b6416ab6570ea12cc7aca71a46d843a89e3f81a86d4aa34ab4",
+      "status": "matched",
+      "text": "אור ברנדס",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:36:58.276Z"
+      "checkedAt": "2026-10-16T17:34:03.281Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "אור ברנדס",
+      "sha256": "c98cf6678a08f23c4b36c5acaccca55efc020b7fe870a9ff06ef4b0cfed17dba",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-0.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "c98cf6678a08f23c4b36c5acaccca55efc020b7fe870a9ff06ef4b0cfed17dba",
+        "status": "needs_review",
+        "text": "אור בונדס",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T06:36:58.276Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "שי חיון ביטון",
@@ -653,43 +697,88 @@
   },
   {
     "name": "אייל טויטו-מבורך",
-    "sha256": "81aa7cdb99a1f6f304a36bb1b2d3101eeb7da07cb2c19d802f1a36b309e2831b",
-    "spellingChecked": false,
+    "sha256": "67157dbe27b62716963312e48146ecbaa8c7314187e2333c5e6c485f72fb8f8d",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-8.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-12.png; layer-12.png; ba6de6d198ced9fb495e-light.png; ba6de6d198ced9fb495e-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "ba6de6d198ced9fb495e-v2.png",
+    "style": 6,
     "ocr": {
-      "sha256": "81aa7cdb99a1f6f304a36bb1b2d3101eeb7da07cb2c19d802f1a36b309e2831b",
-      "status": "needs_review",
-      "text": "איייל טויטו-מבורך",
-      "uncertain": false,
+      "sha256": "67157dbe27b62716963312e48146ecbaa8c7314187e2333c5e6c485f72fb8f8d",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:40:04.461Z"
+      "checkedAt": "2026-10-16T17:35:08.107Z",
+      "overrideReason": "הקורא לא החזיר תשובה. בהגדלה נראות בדיוק שתי י׳ באייל, מקף בין טויטו למבורך ורגל ך סופית יורדת. הרצף המלא נבדק מול המקור ובשכבת היישום."
     },
-    "notes": "נראות שלוש אותיות י' באייל במקום שתיים."
+    "previousReview": {
+      "name": "אייל טויטו-מבורך",
+      "sha256": "81aa7cdb99a1f6f304a36bb1b2d3101eeb7da07cb2c19d802f1a36b309e2831b",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-8.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "81aa7cdb99a1f6f304a36bb1b2d3101eeb7da07cb2c19d802f1a36b309e2831b",
+        "status": "needs_review",
+        "text": "איייל טויטו-מבורך",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T06:40:04.461Z"
+      },
+      "notes": "נראות שלוש אותיות י' באייל במקום שתיים."
+    }
   },
   {
     "name": "מאור גרציאני",
-    "sha256": "9d0666ab2aa730ff90bf9e7b36e758edce3c028acaacc6abca5114d220736477",
-    "spellingChecked": false,
+    "sha256": "1431b8dfe7b15747fd287a539a3c013dfbadbd18092c191f2c081465fba87d56",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-8.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-18.png; layer-18.png; 702f8fde33156a54d252-light.png; 702f8fde33156a54d252-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "702f8fde33156a54d252-v2.png",
+    "style": 7,
     "ocr": {
-      "sha256": "9d0666ab2aa730ff90bf9e7b36e758edce3c028acaacc6abca5114d220736477",
-      "status": "needs_review",
-      "text": "מאור גרציאניי",
+      "sha256": "1431b8dfe7b15747fd287a539a3c013dfbadbd18092c191f2c081465fba87d56",
+      "status": "matched",
+      "text": "מאור גרציאני",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:40:22.668Z"
+      "checkedAt": "2026-10-16T17:34:16.578Z"
     },
-    "notes": "חשד לתוספת י' בסוף גרציאני."
+    "previousReview": {
+      "name": "מאור גרציאני",
+      "sha256": "9d0666ab2aa730ff90bf9e7b36e758edce3c028acaacc6abca5114d220736477",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-8.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "9d0666ab2aa730ff90bf9e7b36e758edce3c028acaacc6abca5114d220736477",
+        "status": "needs_review",
+        "text": "מאור גרציאניי",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T06:40:22.668Z"
+      },
+      "notes": "חשד לתוספת י' בסוף גרציאני."
+    }
   },
   {
     "name": "אורי משה בורנשטיין",
@@ -1103,23 +1192,45 @@
   },
   {
     "name": "יהב וינר",
-    "sha256": "d1d379a1104e7082566e4d72e018ef803ec7d295f16576510a4ccb645b37ebbb",
-    "spellingChecked": false,
+    "sha256": "e3700e3fca1c9dc28a3c3cef7c12e27a3d69b7b0ec1edbb4d6c49cc6348ddb90",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-16.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-18.png; layer-18.png; 282250f7e0b8a21c2a1d-light.png; 282250f7e0b8a21c2a1d-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "282250f7e0b8a21c2a1d-v3.png",
+    "style": 10,
     "ocr": {
-      "sha256": "d1d379a1104e7082566e4d72e018ef803ec7d295f16576510a4ccb645b37ebbb",
-      "status": "needs_review",
-      "text": "יהב ויכר",
-      "uncertain": true,
+      "sha256": "e3700e3fca1c9dc28a3c3cef7c12e27a3d69b7b0ec1edbb4d6c49cc6348ddb90",
+      "status": "matched",
+      "text": "יהב וינר",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:25:23.437Z"
+      "checkedAt": "2026-10-16T17:34:50.151Z"
     },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (יהב ויכר)."
+    "previousReview": {
+      "name": "יהב וינר",
+      "sha256": "d1d379a1104e7082566e4d72e018ef803ec7d295f16576510a4ccb645b37ebbb",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-16.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "d1d379a1104e7082566e4d72e018ef803ec7d295f16576510a4ccb645b37ebbb",
+        "status": "needs_review",
+        "text": "יהב ויכר",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:25:23.437Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (יהב ויכר)."
+    }
   },
   {
     "name": "קרין ורניקוב",
@@ -1455,23 +1566,45 @@
   },
   {
     "name": "ארז איתן בצלאל",
-    "sha256": "bd65e8f29b287d5d1c58f6738a914303f5a1b4445512a6dddf908469ffed9a5a",
-    "spellingChecked": false,
+    "sha256": "1927652a0ec09d72cbdf014cd0f2ab9176cd7c208719c8eba5f29a0ddd7b6f64",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-16.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-18.png; layer-18.png; 39202f0d89ddf8971659-light.png; 39202f0d89ddf8971659-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "39202f0d89ddf8971659-v2.png",
+    "style": 9,
     "ocr": {
-      "sha256": "bd65e8f29b287d5d1c58f6738a914303f5a1b4445512a6dddf908469ffed9a5a",
-      "status": "needs_review",
-      "text": "ארו איתן בצלאל",
-      "uncertain": true,
+      "sha256": "1927652a0ec09d72cbdf014cd0f2ab9176cd7c208719c8eba5f29a0ddd7b6f64",
+      "status": "matched",
+      "text": "ארז איתן בצלאל",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:47:25.770Z"
+      "checkedAt": "2026-10-16T17:34:40.836Z"
     },
-    "notes": "חשד לתוספת י' באיתן."
+    "previousReview": {
+      "name": "ארז איתן בצלאל",
+      "sha256": "bd65e8f29b287d5d1c58f6738a914303f5a1b4445512a6dddf908469ffed9a5a",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-16.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "bd65e8f29b287d5d1c58f6738a914303f5a1b4445512a6dddf908469ffed9a5a",
+        "status": "needs_review",
+        "text": "ארו איתן בצלאל",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T06:47:25.770Z"
+      },
+      "notes": "חשד לתוספת י' באיתן."
+    }
   },
   {
     "name": "אורן מנצור",
@@ -1776,23 +1909,45 @@
   },
   {
     "name": "מאור מאיר גנון",
-    "sha256": "c6bcb3735c22ac6300cbd2a92de9bbda6916809257d4f22e7503bb1858b2e27b",
-    "spellingChecked": false,
+    "sha256": "b8182d17c207b7233349f6c0165ff6ec23d39070cf29542f34d7904ded5030ac",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-24.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-18.png; layer-18.png; 92b1fd0cd70958fa0932-light.png; 92b1fd0cd70958fa0932-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "92b1fd0cd70958fa0932-v2.png",
+    "style": 6,
     "ocr": {
-      "sha256": "c6bcb3735c22ac6300cbd2a92de9bbda6916809257d4f22e7503bb1858b2e27b",
-      "status": "needs_review",
-      "text": "מאויר מאיר גנון",
+      "sha256": "b8182d17c207b7233349f6c0165ff6ec23d39070cf29542f34d7904ded5030ac",
+      "status": "matched",
+      "text": "מאור מאיר גנון",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:52:21.371Z"
+      "checkedAt": "2026-10-16T17:35:20.193Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "מאור מאיר גנון",
+      "sha256": "c6bcb3735c22ac6300cbd2a92de9bbda6916809257d4f22e7503bb1858b2e27b",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-24.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "c6bcb3735c22ac6300cbd2a92de9bbda6916809257d4f22e7503bb1858b2e27b",
+        "status": "needs_review",
+        "text": "מאויר מאיר גנון",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T06:52:21.371Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "מאיה חיים",
@@ -1814,23 +1969,45 @@
   },
   {
     "name": "סיון שדה",
-    "sha256": "d25ff1f7cce3b3c54a4988b8a2e3859431e63c46ac42cce03084764ed45e3a0c",
-    "spellingChecked": false,
+    "sha256": "230dd5b71678c73306392409922fcb633d942016f95a04345b25f64e8d57b21d",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-24.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-18.png; layer-18.png; 595ff59de6ea46c1d15e-light.png; 595ff59de6ea46c1d15e-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "595ff59de6ea46c1d15e-v2.png",
+    "style": 8,
     "ocr": {
-      "sha256": "d25ff1f7cce3b3c54a4988b8a2e3859431e63c46ac42cce03084764ed45e3a0c",
-      "status": "needs_review",
-      "text": "סיון שלה",
+      "sha256": "230dd5b71678c73306392409922fcb633d942016f95a04345b25f64e8d57b21d",
+      "status": "matched",
+      "text": "סיון שדה",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:52:21.179Z"
+      "checkedAt": "2026-10-16T17:35:16.609Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "סיון שדה",
+      "sha256": "d25ff1f7cce3b3c54a4988b8a2e3859431e63c46ac42cce03084764ed45e3a0c",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-24.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "d25ff1f7cce3b3c54a4988b8a2e3859431e63c46ac42cce03084764ed45e3a0c",
+        "status": "needs_review",
+        "text": "סיון שלה",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T06:52:21.179Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "אסף חממי",
@@ -1929,23 +2106,45 @@
   },
   {
     "name": "דרור אלטון",
-    "sha256": "4b946f224d6e81221539d59b591ab943b10ddcaee39bef35353d99bb0c23f0af",
-    "spellingChecked": false,
+    "sha256": "55368dd02a370d545cb78338a9cba6c3c9fb731ba675bafed2c7067c53d2696a",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-24.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-18.png; layer-18.png; 54f3fbe927324740acf5-light.png; 54f3fbe927324740acf5-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "54f3fbe927324740acf5-v3.png",
+    "style": 4,
     "ocr": {
-      "sha256": "4b946f224d6e81221539d59b591ab943b10ddcaee39bef35353d99bb0c23f0af",
-      "status": "needs_review",
-      "text": "זרור אלטון",
-      "uncertain": true,
+      "sha256": "55368dd02a370d545cb78338a9cba6c3c9fb731ba675bafed2c7067c53d2696a",
+      "status": "matched",
+      "text": "דרור אלטון",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:26:23.039Z"
+      "checkedAt": "2026-10-16T17:35:32.962Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "דרור אלטון",
+      "sha256": "4b946f224d6e81221539d59b591ab943b10ddcaee39bef35353d99bb0c23f0af",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-24.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "4b946f224d6e81221539d59b591ab943b10ddcaee39bef35353d99bb0c23f0af",
+        "status": "needs_review",
+        "text": "זרור אלטון",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:26:23.039Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "גלעד הראל",
@@ -1985,23 +2184,45 @@
   },
   {
     "name": "מיכל סמרט פוזיילוב",
-    "sha256": "528520ae62c93de9b402ac10982688428bef4170e1c0546c528007253373fd0b",
-    "spellingChecked": false,
+    "sha256": "531a8caf9f92145704c9049cdf3fc5b6c927d0ccf6b0c2e5f960977213ec93d6",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-32.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-24.png; layer-24.png; 8241b7676a502dfe2f86-light.png; 8241b7676a502dfe2f86-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "8241b7676a502dfe2f86-v3.png",
+    "style": 7,
     "ocr": {
-      "sha256": "528520ae62c93de9b402ac10982688428bef4170e1c0546c528007253373fd0b",
-      "status": "needs_review",
-      "text": "מיכל סמרט פוזייילוב",
+      "sha256": "531a8caf9f92145704c9049cdf3fc5b6c927d0ccf6b0c2e5f960977213ec93d6",
+      "status": "matched",
+      "text": "מיכל סמרט פוזיילוב",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:55:03.657Z"
+      "checkedAt": "2026-10-16T18:06:03.192Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "מיכל סמרט פוזיילוב",
+      "sha256": "528520ae62c93de9b402ac10982688428bef4170e1c0546c528007253373fd0b",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-32.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "528520ae62c93de9b402ac10982688428bef4170e1c0546c528007253373fd0b",
+        "status": "needs_review",
+        "text": "מיכל סמרט פוזייילוב",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T06:55:03.657Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "אמיר טוילי",
@@ -2192,23 +2413,45 @@
   },
   {
     "name": "צפריר בר אור",
-    "sha256": "8d7cb16da3cec5f60967ff66ca212285655df85265c789e283b942d4c98cfecc",
-    "spellingChecked": false,
+    "sha256": "bf23c97d2622623b529ba9db1f50073298504343e5eb3a7531207953f2ef7c5e",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-32.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-24.png; layer-24.png; 8ee1cb3023521c6e3143-light.png; 8ee1cb3023521c6e3143-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "8ee1cb3023521c6e3143-v2.png",
+    "style": 8,
     "ocr": {
-      "sha256": "8d7cb16da3cec5f60967ff66ca212285655df85265c789e283b942d4c98cfecc",
-      "status": "needs_review",
-      "text": "צפיריור בר אור",
-      "uncertain": true,
+      "sha256": "bf23c97d2622623b529ba9db1f50073298504343e5eb3a7531207953f2ef7c5e",
+      "status": "matched",
+      "text": "צפריר בר אור",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:05:19.562Z"
+      "checkedAt": "2026-10-16T17:36:02.683Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "צפריר בר אור",
+      "sha256": "8d7cb16da3cec5f60967ff66ca212285655df85265c789e283b942d4c98cfecc",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-32.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "8d7cb16da3cec5f60967ff66ca212285655df85265c789e283b942d4c98cfecc",
+        "status": "needs_review",
+        "text": "צפיריור בר אור",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:05:19.562Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "אורי טשרניחובסקי",
@@ -2250,23 +2493,46 @@
   },
   {
     "name": "חנן דרורי",
-    "sha256": "82fdb1a9dba938c38194928d35659e411946da88a893081e4bb36dcd111610a1",
-    "spellingChecked": false,
+    "sha256": "39a71e9907f5904de743baeefdb1a8e884a46d9c1048e3a0f3519163420d679d",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-32.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-24.png; layer-24.png; ed4958ec9f6da481949f-light.png; ed4958ec9f6da481949f-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "ed4958ec9f6da481949f-v2.png",
+    "style": 1,
     "ocr": {
-      "sha256": "82fdb1a9dba938c38194928d35659e411946da88a893081e4bb36dcd111610a1",
+      "sha256": "39a71e9907f5904de743baeefdb1a8e884a46d9c1048e3a0f3519163420d679d",
       "status": "needs_review",
-      "text": "הנן דרורי",
+      "text": "חנן דרורי",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:05:33.286Z"
+      "checkedAt": "2026-10-16T17:36:26.457Z",
+      "overrideReason": "הקריאה העיוורת תואמת אך מסומנת בספק. בהגדלה רואים גג ח׳ מחובר לשתי הרגליים, אחריו נ׳ ון׳ סופית יורדת; בדרורי חמש אותיות ד-ר-ו-ר-י ללא תוספת."
     },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (הנן דרורי)."
+    "previousReview": {
+      "name": "חנן דרורי",
+      "sha256": "82fdb1a9dba938c38194928d35659e411946da88a893081e4bb36dcd111610a1",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-32.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "82fdb1a9dba938c38194928d35659e411946da88a893081e4bb36dcd111610a1",
+        "status": "needs_review",
+        "text": "הנן דרורי",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:05:33.286Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (הנן דרורי)."
+    }
   },
   {
     "name": "דולב יהוד",
@@ -2291,23 +2557,45 @@
   },
   {
     "name": "יוֹבֵל מוריוסף",
-    "sha256": "dbdbcba6c479cb90d5b47c8cbbb82350c0545ddf4d7950404b2f467346824b65",
-    "spellingChecked": false,
+    "sha256": "197db5d2a1cc10f88df21d61498221824fb164888e21881d7bd77ff8806a4c48",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-40.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-24.png; layer-24.png; abf2416bd79f5eb3577d-light.png; abf2416bd79f5eb3577d-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "abf2416bd79f5eb3577d-v2.png",
+    "style": 3,
     "ocr": {
-      "sha256": "dbdbcba6c479cb90d5b47c8cbbb82350c0545ddf4d7950404b2f467346824b65",
-      "status": "needs_review",
-      "text": "יוֹבָל מורייוסף",
-      "uncertain": true,
+      "sha256": "197db5d2a1cc10f88df21d61498221824fb164888e21881d7bd77ff8806a4c48",
+      "status": "matched",
+      "text": "יוֹבֵל מוריוסף",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:06:27.311Z"
+      "checkedAt": "2026-10-16T17:36:17.387Z"
     },
-    "notes": "הניקוד בתוצר אינו תואם יוֹבֵל; אין לפרסם."
+    "previousReview": {
+      "name": "יוֹבֵל מוריוסף",
+      "sha256": "dbdbcba6c479cb90d5b47c8cbbb82350c0545ddf4d7950404b2f467346824b65",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-40.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "dbdbcba6c479cb90d5b47c8cbbb82350c0545ddf4d7950404b2f467346824b65",
+        "status": "needs_review",
+        "text": "יוֹבָל מורייוסף",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:06:27.311Z"
+      },
+      "notes": "הניקוד בתוצר אינו תואם יוֹבֵל; אין לפרסם."
+    }
   },
   {
     "name": "אלקנה ספז",
@@ -2503,23 +2791,45 @@
   },
   {
     "name": "לידור חיים פדל",
-    "sha256": "a1f44a11556cd968a4137bc02aee38ecf5b3f4165f358615f028924d43a08cc2",
-    "spellingChecked": false,
+    "sha256": "a3c782a8ccd0ea710a8e33be062057017cd5abc341d467c2a0ac8cc724059346",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-40.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-24.png; layer-24.png; 5fcf4d1e6a8ca2c7981f-light.png; 5fcf4d1e6a8ca2c7981f-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "5fcf4d1e6a8ca2c7981f-v2.png",
+    "style": 4,
     "ocr": {
-      "sha256": "a1f44a11556cd968a4137bc02aee38ecf5b3f4165f358615f028924d43a08cc2",
-      "status": "needs_review",
-      "text": "לידור היים פלל",
-      "uncertain": true,
+      "sha256": "a3c782a8ccd0ea710a8e33be062057017cd5abc341d467c2a0ac8cc724059346",
+      "status": "matched",
+      "text": "לידור חיים פדל",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:09:07.495Z"
+      "checkedAt": "2026-10-16T17:36:30.413Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "לידור חיים פדל",
+      "sha256": "a1f44a11556cd968a4137bc02aee38ecf5b3f4165f358615f028924d43a08cc2",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-40.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "a1f44a11556cd968a4137bc02aee38ecf5b3f4165f358615f028924d43a08cc2",
+        "status": "needs_review",
+        "text": "לידור היים פלל",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:09:07.495Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "שוהם יעקב",
@@ -2561,23 +2871,45 @@
   },
   {
     "name": "גבריאל יעקב בלום",
-    "sha256": "7dea168d72477ef703609fd7c7c61b1e2155cff2835bcc8a0fe782df937bbc18",
-    "spellingChecked": false,
+    "sha256": "55075cb55e10ac298d85c2fcbc85ab57f480f0aff3bafb2c9c86703bf48fd54b",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-48.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-24.png; layer-24.png; 1719da2f5549685ff4d4-light.png; 1719da2f5549685ff4d4-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "1719da2f5549685ff4d4-v2.png",
+    "style": 7,
     "ocr": {
-      "sha256": "7dea168d72477ef703609fd7c7c61b1e2155cff2835bcc8a0fe782df937bbc18",
-      "status": "needs_review",
-      "text": "גבריאל ייעקב בלום",
-      "uncertain": true,
+      "sha256": "55075cb55e10ac298d85c2fcbc85ab57f480f0aff3bafb2c9c86703bf48fd54b",
+      "status": "matched",
+      "text": "גבריאל יעקב בלום",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:09:37.232Z"
+      "checkedAt": "2026-10-16T17:36:37.887Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "גבריאל יעקב בלום",
+      "sha256": "7dea168d72477ef703609fd7c7c61b1e2155cff2835bcc8a0fe782df937bbc18",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-48.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "7dea168d72477ef703609fd7c7c61b1e2155cff2835bcc8a0fe782df937bbc18",
+        "status": "needs_review",
+        "text": "גבריאל ייעקב בלום",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:09:37.232Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "דולב קידר",
@@ -2751,23 +3083,45 @@
   },
   {
     "name": "מתן גוטליב",
-    "sha256": "76a9af06116f6757defe571f7586ec633e382d3c6793e0554883a11fa3bda0c6",
-    "spellingChecked": false,
+    "sha256": "ada3f48dc437984d42d8f1105793fc13adbda02de49a28eb732b7ef3ef63cf1d",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-48.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-30.png; layer-30.png; eacfc1f352817410975f-light.png; eacfc1f352817410975f-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "eacfc1f352817410975f-v2.png",
+    "style": 7,
     "ocr": {
-      "sha256": "76a9af06116f6757defe571f7586ec633e382d3c6793e0554883a11fa3bda0c6",
-      "status": "needs_review",
-      "text": "מתן גוטלייב",
-      "uncertain": true,
+      "sha256": "ada3f48dc437984d42d8f1105793fc13adbda02de49a28eb732b7ef3ef63cf1d",
+      "status": "matched",
+      "text": "מתן גוטליב",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:11:28.190Z"
+      "checkedAt": "2026-10-16T17:36:35.999Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "מתן גוטליב",
+      "sha256": "76a9af06116f6757defe571f7586ec633e382d3c6793e0554883a11fa3bda0c6",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-48.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "76a9af06116f6757defe571f7586ec633e382d3c6793e0554883a11fa3bda0c6",
+        "status": "needs_review",
+        "text": "מתן גוטלייב",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:11:28.190Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "גיא לוי",
@@ -2942,23 +3296,45 @@
   },
   {
     "name": "יוני גולן",
-    "sha256": "1a9771fdea928fa8b70a9dd10a462e91608aaed3442af81887dc30087e686ea5",
-    "spellingChecked": false,
+    "sha256": "5a4c37153b00be50d7275a80dbe9a00601166216ecbc09319f9052593ed118e8",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-56.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-30.png; layer-30.png; 903517d0edd87d61faf3-light.png; 903517d0edd87d61faf3-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "903517d0edd87d61faf3-v3.png",
+    "style": 7,
     "ocr": {
-      "sha256": "1a9771fdea928fa8b70a9dd10a462e91608aaed3442af81887dc30087e686ea5",
-      "status": "needs_review",
-      "text": "יוכי גולן",
+      "sha256": "5a4c37153b00be50d7275a80dbe9a00601166216ecbc09319f9052593ed118e8",
+      "status": "matched",
+      "text": "יוני גולן",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:26:59.722Z"
+      "checkedAt": "2026-10-16T17:36:45.638Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "יוני גולן",
+      "sha256": "1a9771fdea928fa8b70a9dd10a462e91608aaed3442af81887dc30087e686ea5",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-56.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "1a9771fdea928fa8b70a9dd10a462e91608aaed3442af81887dc30087e686ea5",
+        "status": "needs_review",
+        "text": "יוכי גולן",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:26:59.722Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "תומר מזרחי",
@@ -3335,23 +3711,45 @@
   },
   {
     "name": "מדרכי חיים אמויאל",
-    "sha256": "54ded0d253882f73e9e470876a65f4e20370edb9c7e9166c7d916feaef56c25d",
-    "spellingChecked": false,
+    "sha256": "c67ae8beed02b184f5cfdd88f7503c25a0aaf63857fdcf1227ddb55e6e3d6c47",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-56.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-30.png; layer-30.png; 43dbe0ac56bc66a7d443-light.png; 43dbe0ac56bc66a7d443-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "43dbe0ac56bc66a7d443-v3.png",
+    "style": 8,
     "ocr": {
-      "sha256": "54ded0d253882f73e9e470876a65f4e20370edb9c7e9166c7d916feaef56c25d",
-      "status": "unavailable",
-      "text": "",
-      "uncertain": true,
+      "sha256": "c67ae8beed02b184f5cfdd88f7503c25a0aaf63857fdcf1227ddb55e6e3d6c47",
+      "status": "matched",
+      "text": "מדרכי חיים אמויאל",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:31:37.004Z"
+      "checkedAt": "2026-10-16T18:05:32.181Z"
     },
-    "notes": "התוצר החליף את סדר האותיות מדרכי למרדכי, בניגוד לשם המקור."
+    "previousReview": {
+      "name": "מדרכי חיים אמויאל",
+      "sha256": "54ded0d253882f73e9e470876a65f4e20370edb9c7e9166c7d916feaef56c25d",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-56.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "54ded0d253882f73e9e470876a65f4e20370edb9c7e9166c7d916feaef56c25d",
+        "status": "unavailable",
+        "text": "",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:31:37.004Z"
+      },
+      "notes": "התוצר החליף את סדר האותיות מדרכי למרדכי, בניגוד לשם המקור."
+    }
   },
   {
     "name": "יוסף (יוסקה) ישראלי",
@@ -3710,23 +4108,45 @@
   },
   {
     "name": "דניאל מימון טואף",
-    "sha256": "87b4a8d998684fddb24a3587538f2184c60fe1e5873b35ce46ae966c62a8ecb9",
-    "spellingChecked": false,
+    "sha256": "c69533d496e4e7aad03cb97d9732d4dbffe3fe9c42ba870a4e1ca66b748d4547",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-64.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-30.png; layer-30.png; 0398ef5beb4b85f82a40-light.png; 0398ef5beb4b85f82a40-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "0398ef5beb4b85f82a40-v2.png",
+    "style": 8,
     "ocr": {
-      "sha256": "87b4a8d998684fddb24a3587538f2184c60fe1e5873b35ce46ae966c62a8ecb9",
-      "status": "needs_review",
-      "text": "דנהאל מימון טואף",
+      "sha256": "c69533d496e4e7aad03cb97d9732d4dbffe3fe9c42ba870a4e1ca66b748d4547",
+      "status": "matched",
+      "text": "דניאל מימון טואף",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:35:06.454Z"
+      "checkedAt": "2026-10-16T17:37:15.319Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "דניאל מימון טואף",
+      "sha256": "87b4a8d998684fddb24a3587538f2184c60fe1e5873b35ce46ae966c62a8ecb9",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-64.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "87b4a8d998684fddb24a3587538f2184c60fe1e5873b35ce46ae966c62a8ecb9",
+        "status": "needs_review",
+        "text": "דנהאל מימון טואף",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:35:06.454Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "גיל אבני",
@@ -3822,43 +4242,87 @@
   },
   {
     "name": "חיים סבח",
-    "sha256": "e59456a18fa2a0f6f8eebbc1d9513e31887a1a105e46732a5f0551b6aebc72b4",
-    "spellingChecked": false,
+    "sha256": "a2a499897255a415b62b5c1210d876ac838880d3eb9ddb10fdb2897ee3b68bac",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-64.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-30.png; layer-30.png; ab27e977ed2b4c562f52-light.png; ab27e977ed2b4c562f52-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "ab27e977ed2b4c562f52-v3.png",
+    "style": 4,
     "ocr": {
-      "sha256": "e59456a18fa2a0f6f8eebbc1d9513e31887a1a105e46732a5f0551b6aebc72b4",
-      "status": "needs_review",
-      "text": "חיים סבה",
-      "uncertain": true,
-      "model": "gpt-6.1-sol",
-      "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:27:27.851Z"
-    },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (חיים סבה)."
-  },
-  {
-    "name": "נועם מדמוני",
-    "sha256": "d9f182be8f0b352ac5f49964731cb8ba2b41848dece8b4b41ffbae1d0821a5e0",
-    "spellingChecked": false,
-    "visualChecked": true,
-    "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-72.png",
-    "reviewSession": "remaining-197-2026-10-16",
-    "ocr": {
-      "sha256": "d9f182be8f0b352ac5f49964731cb8ba2b41848dece8b4b41ffbae1d0821a5e0",
-      "status": "needs_review",
-      "text": "נועם מדמווני",
+      "sha256": "a2a499897255a415b62b5c1210d876ac838880d3eb9ddb10fdb2897ee3b68bac",
+      "status": "matched",
+      "text": "חיים סבח",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:36:20.145Z"
+      "checkedAt": "2026-10-16T17:37:33.85Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "חיים סבח",
+      "sha256": "e59456a18fa2a0f6f8eebbc1d9513e31887a1a105e46732a5f0551b6aebc72b4",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-64.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "e59456a18fa2a0f6f8eebbc1d9513e31887a1a105e46732a5f0551b6aebc72b4",
+        "status": "needs_review",
+        "text": "חיים סבה",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:27:27.851Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (חיים סבה)."
+    }
+  },
+  {
+    "name": "נועם מדמוני",
+    "sha256": "b337c702a293e9a9cbf5a6eebf57c9fca7872886ba1e95307abff3b4393d582c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-30.png; layer-30.png; 5ac2802bdc98f9206ee2-light.png; 5ac2802bdc98f9206ee2-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "5ac2802bdc98f9206ee2-v2.png",
+    "style": 5,
+    "ocr": {
+      "sha256": "b337c702a293e9a9cbf5a6eebf57c9fca7872886ba1e95307abff3b4393d582c",
+      "status": "matched",
+      "text": "נועם מדמוני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T17:37:57.096Z"
+    },
+    "previousReview": {
+      "name": "נועם מדמוני",
+      "sha256": "d9f182be8f0b352ac5f49964731cb8ba2b41848dece8b4b41ffbae1d0821a5e0",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-72.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "d9f182be8f0b352ac5f49964731cb8ba2b41848dece8b4b41ffbae1d0821a5e0",
+        "status": "needs_review",
+        "text": "נועם מדמווני",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:36:20.145Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "ניתאי מטודי",
@@ -3982,23 +4446,46 @@
   },
   {
     "name": "עידו אבן",
-    "sha256": "c023b8bb6a00058adc960f9ec20bd401f5b8010ccfe121c3cad91836e6e4c154",
-    "spellingChecked": false,
+    "sha256": "7ad8e7972e434b2ce4f90a66e8360fdeee867f70387393c3c68f5a83c34a0c0c",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-72.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-36.png; layer-36.png; 5655bcd34fe77e1e8c44-light.png; 5655bcd34fe77e1e8c44-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "5655bcd34fe77e1e8c44-v2.png",
+    "style": 2,
     "ocr": {
-      "sha256": "c023b8bb6a00058adc960f9ec20bd401f5b8010ccfe121c3cad91836e6e4c154",
+      "sha256": "7ad8e7972e434b2ce4f90a66e8360fdeee867f70387393c3c68f5a83c34a0c0c",
       "status": "needs_review",
-      "text": "עיהו אבן",
+      "text": "עידו אבן",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:37:45.917Z"
+      "checkedAt": "2026-10-16T17:38:17.421Z",
+      "overrideReason": "התמלול תואם אך הקורא סימן ספק. במקור המוגדל ד׳ בעידו בעלת גג מחובר לרגל ימין; באבן נראים א-ב-ן והן׳ יורדת מתחת לשורה. נבדקה גם הקריאות לאחר הרינדור."
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "עידו אבן",
+      "sha256": "c023b8bb6a00058adc960f9ec20bd401f5b8010ccfe121c3cad91836e6e4c154",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-72.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "c023b8bb6a00058adc960f9ec20bd401f5b8010ccfe121c3cad91836e6e4c154",
+        "status": "needs_review",
+        "text": "עיהו אבן",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:37:45.917Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "אביתר-משה תורגמן",
@@ -4406,23 +4893,46 @@
   },
   {
     "name": "עידו פרץ",
-    "sha256": "1581f552e2a32fe563f77209856a8deb2c4c5557d8893d284b47a08861171d7f",
-    "spellingChecked": false,
+    "sha256": "86bd66b24e7588b5e80d83c0d645762b36da095810df3b1222672c2a99643a53",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-96.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-36.png; layer-36.png; e02a29741e1619125520-light.png; e02a29741e1619125520-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "e02a29741e1619125520-v2.png",
+    "style": 3,
     "ocr": {
-      "sha256": "1581f552e2a32fe563f77209856a8deb2c4c5557d8893d284b47a08861171d7f",
-      "status": "matched",
+      "sha256": "86bd66b24e7588b5e80d83c0d645762b36da095810df3b1222672c2a99643a53",
+      "status": "needs_review",
       "text": "עידו פרץ",
-      "uncertain": false,
+      "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:42:52.161Z"
+      "checkedAt": "2026-10-16T17:38:29.586Z",
+      "overrideReason": "התמלול תואם אך הקורא סימן ספק. המקור המוגדל מציג ץ סופית בעלת הסתעפות עליונה ורגל ארוכה יורדת, לא א׳; בפרץ שלוש אותיות פ-ר-ץ ובעידו ארבע."
     },
-    "notes": "האות האחרונה בפרץ זוויתית ונראית כא'; נדרשת בדיקה מוגדלת."
+    "previousReview": {
+      "name": "עידו פרץ",
+      "sha256": "1581f552e2a32fe563f77209856a8deb2c4c5557d8893d284b47a08861171d7f",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-96.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "1581f552e2a32fe563f77209856a8deb2c4c5557d8893d284b47a08861171d7f",
+        "status": "matched",
+        "text": "עידו פרץ",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:42:52.161Z"
+      },
+      "notes": "האות האחרונה בפרץ זוויתית ונראית כא'; נדרשת בדיקה מוגדלת."
+    }
   },
   {
     "name": "עידו נעים",
@@ -4747,43 +5257,87 @@
   },
   {
     "name": "דור ירחי",
-    "sha256": "5b53f7377cd5702ffce4d0d77f5dc312eefb2f54fd6c3e2592311c2099a75f18",
-    "spellingChecked": false,
+    "sha256": "6586108ecdc10e7be981bfbe0171fa304c077a173145b7751a92a3cff9b1723a",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-112.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-36.png; layer-36.png; d78e3eab1815c84115d5-light.png; d78e3eab1815c84115d5-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "d78e3eab1815c84115d5-v3.png",
+    "style": 10,
     "ocr": {
-      "sha256": "5b53f7377cd5702ffce4d0d77f5dc312eefb2f54fd6c3e2592311c2099a75f18",
-      "status": "needs_review",
-      "text": "דוב ירחי",
-      "uncertain": true,
+      "sha256": "6586108ecdc10e7be981bfbe0171fa304c077a173145b7751a92a3cff9b1723a",
+      "status": "matched",
+      "text": "דור ירחי",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:46:28.994Z"
+      "checkedAt": "2026-10-16T18:05:27.246Z"
     },
-    "notes": "דור נראה דוב בגלל צורת ר' הסגורה בתחתית."
+    "previousReview": {
+      "name": "דור ירחי",
+      "sha256": "5b53f7377cd5702ffce4d0d77f5dc312eefb2f54fd6c3e2592311c2099a75f18",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-112.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "5b53f7377cd5702ffce4d0d77f5dc312eefb2f54fd6c3e2592311c2099a75f18",
+        "status": "needs_review",
+        "text": "דוב ירחי",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:46:28.994Z"
+      },
+      "notes": "דור נראה דוב בגלל צורת ר' הסגורה בתחתית."
+    }
   },
   {
     "name": "איתי לבני",
-    "sha256": "d6a60f581fdc3d401d05eae2040d73d13cfadc79b9c5c1f938c8b10e6b24b9bd",
-    "spellingChecked": false,
+    "sha256": "4a3a737897aa6f01aa39616363602aafef2cc5044c3d710980cd54693955b829",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-112.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-36.png; layer-36.png; b23b7fab8c553cf9f6b5-light.png; b23b7fab8c553cf9f6b5-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "b23b7fab8c553cf9f6b5-v2.png",
+    "style": 1,
     "ocr": {
-      "sha256": "d6a60f581fdc3d401d05eae2040d73d13cfadc79b9c5c1f938c8b10e6b24b9bd",
-      "status": "needs_review",
-      "text": "איליכו לבכו",
-      "uncertain": true,
+      "sha256": "4a3a737897aa6f01aa39616363602aafef2cc5044c3d710980cd54693955b829",
+      "status": "matched",
+      "text": "איתי לבני",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:46:22.211Z"
+      "checkedAt": "2026-10-16T17:38:30.152Z"
     },
-    "notes": "התוצר אינו קריא כאיתי לבני; נראות אותיות נוספות ושגויות."
+    "previousReview": {
+      "name": "איתי לבני",
+      "sha256": "d6a60f581fdc3d401d05eae2040d73d13cfadc79b9c5c1f938c8b10e6b24b9bd",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-112.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "d6a60f581fdc3d401d05eae2040d73d13cfadc79b9c5c1f938c8b10e6b24b9bd",
+        "status": "needs_review",
+        "text": "איליכו לבכו",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T07:46:22.211Z"
+      },
+      "notes": "התוצר אינו קריא כאיתי לבני; נראות אותיות נוספות ושגויות."
+    }
   },
   {
     "name": "אלון אבן",
@@ -4827,43 +5381,87 @@
   },
   {
     "name": "דנה זמורסקי",
-    "sha256": "56f71b82e0187c711cc60c4846c2f3ea0294ffbe6b3481298aacdc73491c8aef",
-    "spellingChecked": false,
+    "sha256": "c6743692b1de36112e689ad855b091b7ace4a69cc4351b763a819fc06319c1ab",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-120.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-36.png; layer-36.png; 847540ff8d9e0c88bf14-light.png; 847540ff8d9e0c88bf14-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "847540ff8d9e0c88bf14-v2.png",
+    "style": 4,
     "ocr": {
-      "sha256": "56f71b82e0187c711cc60c4846c2f3ea0294ffbe6b3481298aacdc73491c8aef",
-      "status": "needs_review",
-      "text": "דנה זמורטקי",
+      "sha256": "c6743692b1de36112e689ad855b091b7ace4a69cc4351b763a819fc06319c1ab",
+      "status": "matched",
+      "text": "דנה זמורסקי",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:27:48.927Z"
+      "checkedAt": "2026-10-16T17:38:52.01Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "דנה זמורסקי",
+      "sha256": "56f71b82e0187c711cc60c4846c2f3ea0294ffbe6b3481298aacdc73491c8aef",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-120.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "56f71b82e0187c711cc60c4846c2f3ea0294ffbe6b3481298aacdc73491c8aef",
+        "status": "needs_review",
+        "text": "דנה זמורטקי",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:27:48.927Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "אריק קראוניק",
-    "sha256": "78e406e173f70e5491f0850b59538e84e98d47a19260d934a4588a003f7f19da",
-    "spellingChecked": false,
+    "sha256": "ffdd33fa3be52be707e7c7786d25332bfa0112b9816669234360c8ba5858d476",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-120.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-36.png; layer-36.png; 0440653d77a71abb03bd-light.png; 0440653d77a71abb03bd-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "0440653d77a71abb03bd-v3.png",
+    "style": 5,
     "ocr": {
-      "sha256": "78e406e173f70e5491f0850b59538e84e98d47a19260d934a4588a003f7f19da",
-      "status": "needs_review",
-      "text": "אריק קראונניק",
+      "sha256": "ffdd33fa3be52be707e7c7786d25332bfa0112b9816669234360c8ba5858d476",
+      "status": "matched",
+      "text": "אריק קראוניק",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:28:01.326Z"
+      "checkedAt": "2026-10-16T18:05:49.724Z"
     },
-    "notes": "חשד לשתי נ' בקראוניק; נדרשת בדיקה מוגדלת."
+    "previousReview": {
+      "name": "אריק קראוניק",
+      "sha256": "78e406e173f70e5491f0850b59538e84e98d47a19260d934a4588a003f7f19da",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-120.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "78e406e173f70e5491f0850b59538e84e98d47a19260d934a4588a003f7f19da",
+        "status": "needs_review",
+        "text": "אריק קראונניק",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:28:01.326Z"
+      },
+      "notes": "חשד לשתי נ' בקראוניק; נדרשת בדיקה מוגדלת."
+    }
   },
   {
     "name": "בן רובינשטיין",
@@ -4988,23 +5586,45 @@
   },
   {
     "name": "שי נרדי",
-    "sha256": "c6b35bed8ea3a5ebdcd8e89a0ce36c0744659752be249c00653cab39ce124146",
-    "spellingChecked": false,
+    "sha256": "a104e13db7c088a99fa27589cdd0084865d7a6e7ba607876fa24cbe115451d98",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-128.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-42.png; layer-42.png; 68ef9a05bd3e136e8421-light.png; 68ef9a05bd3e136e8421-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "68ef9a05bd3e136e8421-v2.png",
+    "style": 2,
     "ocr": {
-      "sha256": "c6b35bed8ea3a5ebdcd8e89a0ce36c0744659752be249c00653cab39ce124146",
-      "status": "needs_review",
-      "text": "שי כלדי",
+      "sha256": "a104e13db7c088a99fa27589cdd0084865d7a6e7ba607876fa24cbe115451d98",
+      "status": "matched",
+      "text": "שי נרדי",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:29:20.117Z"
+      "checkedAt": "2026-10-16T17:39:33.292Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "שי נרדי",
+      "sha256": "c6b35bed8ea3a5ebdcd8e89a0ce36c0744659752be249c00653cab39ce124146",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-128.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "c6b35bed8ea3a5ebdcd8e89a0ce36c0744659752be249c00653cab39ce124146",
+        "status": "needs_review",
+        "text": "שי כלדי",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:29:20.117Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "ברוך פויר בולק",
@@ -5068,23 +5688,45 @@
   },
   {
     "name": "דניאל שיינקרמן",
-    "sha256": "fb4856395e48a764ce96dd88ab5f1335229f498fde600370592fa4063608c2eb",
-    "spellingChecked": false,
+    "sha256": "6cb02d924310f909a48db74207647e554356e9a67c6de5959f6676b0bedbf1a0",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-128.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-42.png; layer-42.png; ac51c2527d92f2167085-light.png; ac51c2527d92f2167085-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "ac51c2527d92f2167085-v2.png",
+    "style": 6,
     "ocr": {
-      "sha256": "fb4856395e48a764ce96dd88ab5f1335229f498fde600370592fa4063608c2eb",
-      "status": "needs_review",
-      "text": "דניאל שייינקרמן",
+      "sha256": "6cb02d924310f909a48db74207647e554356e9a67c6de5959f6676b0bedbf1a0",
+      "status": "matched",
+      "text": "דניאל שיינקרמן",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:30:09.208Z"
+      "checkedAt": "2026-10-16T17:40:14.565Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "דניאל שיינקרמן",
+      "sha256": "fb4856395e48a764ce96dd88ab5f1335229f498fde600370592fa4063608c2eb",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-128.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "fb4856395e48a764ce96dd88ab5f1335229f498fde600370592fa4063608c2eb",
+        "status": "needs_review",
+        "text": "דניאל שייינקרמן",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:30:09.208Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "תומר שפירר",
@@ -5270,43 +5912,87 @@
   },
   {
     "name": "איתי מרקוביץ",
-    "sha256": "0223882dc61c9659136f59fc78d03fa26adb99620c7844e105854127d693a361",
-    "spellingChecked": false,
+    "sha256": "423183d5833f67749479802e3438e6750fb9f418e967ebae97b260f7f25734ae",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-136.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-42.png; layer-42.png; 47770dff568a0aca9ed1-light.png; 47770dff568a0aca9ed1-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "47770dff568a0aca9ed1-v2.png",
+    "style": 6,
     "ocr": {
-      "sha256": "0223882dc61c9659136f59fc78d03fa26adb99620c7844e105854127d693a361",
+      "sha256": "423183d5833f67749479802e3438e6750fb9f418e967ebae97b260f7f25734ae",
       "status": "matched",
       "text": "איתי מרקוביץ",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:31:39.057Z"
+      "checkedAt": "2026-10-16T17:39:11.108Z"
     },
-    "notes": "האות ץ בסוף מרקוביץ מעוצבת כא'; אין ודאות מספקת לקריאות."
+    "previousReview": {
+      "name": "איתי מרקוביץ",
+      "sha256": "0223882dc61c9659136f59fc78d03fa26adb99620c7844e105854127d693a361",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-136.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "0223882dc61c9659136f59fc78d03fa26adb99620c7844e105854127d693a361",
+        "status": "matched",
+        "text": "איתי מרקוביץ",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:31:39.057Z"
+      },
+      "notes": "האות ץ בסוף מרקוביץ מעוצבת כא'; אין ודאות מספקת לקריאות."
+    }
   },
   {
     "name": "ברק ניגרקר",
-    "sha256": "f8512f12ad3cc05df2cb320403e183bfb196cdaf58c5ecba18dec5c87968c80f",
-    "spellingChecked": false,
+    "sha256": "0e3d0c7795bf8f04802f3f64cc8714ae198c51f74e6a1739764842a9ef3fab42",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-144.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-42.png; layer-42.png; d4d1962dbee397797325-light.png; d4d1962dbee397797325-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "d4d1962dbee397797325-v2.png",
+    "style": 7,
     "ocr": {
-      "sha256": "f8512f12ad3cc05df2cb320403e183bfb196cdaf58c5ecba18dec5c87968c80f",
-      "status": "needs_review",
-      "text": "ברק נאוקקר",
-      "uncertain": true,
+      "sha256": "0e3d0c7795bf8f04802f3f64cc8714ae198c51f74e6a1739764842a9ef3fab42",
+      "status": "matched",
+      "text": "ברק ניגרקר",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:32:37.105Z"
+      "checkedAt": "2026-10-16T17:39:48.915Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "ברק ניגרקר",
+      "sha256": "f8512f12ad3cc05df2cb320403e183bfb196cdaf58c5ecba18dec5c87968c80f",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-144.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "f8512f12ad3cc05df2cb320403e183bfb196cdaf58c5ecba18dec5c87968c80f",
+        "status": "needs_review",
+        "text": "ברק נאוקקר",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:32:37.105Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "נתן פנץ",
@@ -5350,23 +6036,46 @@
   },
   {
     "name": "רן-נתן דולב חיימוביץ",
-    "sha256": "d9eacb6db8fd37f4c5e239af2b1a01f5eac01d1bc2254beadc85666a60d35e92",
-    "spellingChecked": false,
+    "sha256": "d34defdfa7aa6d5f32796526c77f5d50495557248fee92f722561f5816da39ae",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-144.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-42.png; layer-42.png; fb3ed790fd9f73181369-light.png; fb3ed790fd9f73181369-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "fb3ed790fd9f73181369-v3.png",
+    "style": 10,
     "ocr": {
-      "sha256": "d9eacb6db8fd37f4c5e239af2b1a01f5eac01d1bc2254beadc85666a60d35e92",
-      "status": "needs_review",
-      "text": "רן-כתן דולב חיימוביץ",
+      "sha256": "d34defdfa7aa6d5f32796526c77f5d50495557248fee92f722561f5816da39ae",
+      "status": "unavailable",
+      "text": null,
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:33:30.666Z"
+      "checkedAt": "2026-10-16T18:07:02.344Z",
+      "overrideReason": "הקורא לא החזיר תשובה. המקור v3 נבדק בהגדלה ובשכבת היישום: רן-נתן כולל ר׳ פתוחה, מקף ושתי ן סופיות יורדות; חיימוביץ כולל ח-י-י-מ-ו-ב-י-ץ עם ץ סופית מסועפת ויורדת, ללא אות נוספת."
     },
-    "notes": "האות הסופית בחיימוביץ זוויתית מאוד; לבדוק קריאות בנפרד."
+    "previousReview": {
+      "name": "רן-נתן דולב חיימוביץ",
+      "sha256": "d9eacb6db8fd37f4c5e239af2b1a01f5eac01d1bc2254beadc85666a60d35e92",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-144.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "d9eacb6db8fd37f4c5e239af2b1a01f5eac01d1bc2254beadc85666a60d35e92",
+        "status": "needs_review",
+        "text": "רן-כתן דולב חיימוביץ",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:33:30.666Z"
+      },
+      "notes": "האות הסופית בחיימוביץ זוויתית מאוד; לבדוק קריאות בנפרד."
+    }
   },
   {
     "name": "מרדכי מוטי שמיר",
@@ -5390,23 +6099,46 @@
   },
   {
     "name": "רועי מלדסי",
-    "sha256": "168b4088b3baf97ce6eebdc719909583677c5a416f6bbd1601d67fc85fd17d63",
-    "spellingChecked": false,
+    "sha256": "e822c8173da87b3fc1e3099430451ef8ef635f8d5f93656805fb39c251cb4b1f",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-144.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-42.png; layer-42.png; ac6f3beed8c918af607b-light.png; ac6f3beed8c918af607b-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "ac6f3beed8c918af607b-v3.png",
+    "style": 2,
     "ocr": {
-      "sha256": "168b4088b3baf97ce6eebdc719909583677c5a416f6bbd1601d67fc85fd17d63",
-      "status": "needs_review",
-      "text": "רועי מלויסי",
+      "sha256": "e822c8173da87b3fc1e3099430451ef8ef635f8d5f93656805fb39c251cb4b1f",
+      "status": "unavailable",
+      "text": null,
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:34:04.646Z"
+      "checkedAt": "2026-10-16T18:07:19.933Z",
+      "overrideReason": "הקורא לא החזיר תשובה. בהגדלת v3 נבדקו ר-ו-ע-י ומ-ל-ד-ס-י: אין י׳ נוספת בין ל׳ לד׳, וס׳ סגורה ומובחנת. אותו רצף נשאר קריא בשכבת היישום."
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "רועי מלדסי",
+      "sha256": "168b4088b3baf97ce6eebdc719909583677c5a416f6bbd1601d67fc85fd17d63",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-144.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "168b4088b3baf97ce6eebdc719909583677c5a416f6bbd1601d67fc85fd17d63",
+        "status": "needs_review",
+        "text": "רועי מלויסי",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:34:04.646Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "רועי (חיים) וייזר",
@@ -5430,23 +6162,45 @@
   },
   {
     "name": "יואב פפר",
-    "sha256": "1c419e4be6b2d68e1ab7876af54556783f5592de4a96ec06003fdb9c95f0e7a8",
-    "spellingChecked": false,
+    "sha256": "7d59eae7d53f56ff80cd3afa29f7e8225f33fae9864874a3d48c828a746e699a",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-144.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-48.png; layer-48.png; 3e22cf57faaf98f61a68-light.png; 3e22cf57faaf98f61a68-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "3e22cf57faaf98f61a68-v3.png",
+    "style": 4,
     "ocr": {
-      "sha256": "1c419e4be6b2d68e1ab7876af54556783f5592de4a96ec06003fdb9c95f0e7a8",
-      "status": "needs_review",
-      "text": "יואב פפיר",
-      "uncertain": true,
+      "sha256": "7d59eae7d53f56ff80cd3afa29f7e8225f33fae9864874a3d48c828a746e699a",
+      "status": "matched",
+      "text": "יואב פפר",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:34:38.994Z"
+      "checkedAt": "2026-10-16T18:06:25.192Z"
     },
-    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    "previousReview": {
+      "name": "יואב פפר",
+      "sha256": "1c419e4be6b2d68e1ab7876af54556783f5592de4a96ec06003fdb9c95f0e7a8",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-144.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "1c419e4be6b2d68e1ab7876af54556783f5592de4a96ec06003fdb9c95f0e7a8",
+        "status": "needs_review",
+        "text": "יואב פפיר",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:34:38.994Z"
+      },
+      "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
+    }
   },
   {
     "name": "אלכס טוקר",
@@ -5511,23 +6265,46 @@
   },
   {
     "name": "אלון פרקס",
-    "sha256": "5e0d9feb932fe7b42a2b80ee067ef85e719629ef3c36ef57dc321d85080c92a4",
-    "spellingChecked": false,
-    "visualChecked": false,
+    "sha256": "9952e8e25400bda3b925c6533c74d6428c4eecad65bd98bdfba7225bd950edde",
+    "spellingChecked": true,
+    "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-152.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-48.png; layer-48.png; 89529035777a8a679a20-light.png; 89529035777a8a679a20-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "89529035777a8a679a20-v2.png",
+    "style": 8,
     "ocr": {
-      "sha256": "5e0d9feb932fe7b42a2b80ee067ef85e719629ef3c36ef57dc321d85080c92a4",
+      "sha256": "9952e8e25400bda3b925c6533c74d6428c4eecad65bd98bdfba7225bd950edde",
       "status": "needs_review",
-      "text": "אלור פרקס",
+      "text": "אלון פרקס",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:35:26.430Z"
+      "checkedAt": "2026-10-16T17:41:49.779Z",
+      "overrideReason": "הקריאה תואמת אך מסומנת בספק. בהגדלת המקור ן סופית באלון יורדת מתחת לשורה; ס׳ בפרקס היא לולאה סגורה בעלת פינות מעוגלות. הרסס שקוף ומשתלב ברקע ולא מלבן אטום."
     },
-    "notes": "השם/ן הסופית אינם חד-משמעיים ונראית הילה רחבה שאינה משתלבת כרסס בקיר."
+    "previousReview": {
+      "name": "אלון פרקס",
+      "sha256": "5e0d9feb932fe7b42a2b80ee067ef85e719629ef3c36ef57dc321d85080c92a4",
+      "spellingChecked": false,
+      "visualChecked": false,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-152.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "5e0d9feb932fe7b42a2b80ee067ef85e719629ef3c36ef57dc321d85080c92a4",
+        "status": "needs_review",
+        "text": "אלור פרקס",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:35:26.430Z"
+      },
+      "notes": "השם/ן הסופית אינם חד-משמעיים ונראית הילה רחבה שאינה משתלבת כרסס בקיר."
+    }
   },
   {
     "name": "משה מלאכי רוזנפלד",
@@ -5672,43 +6449,87 @@
   },
   {
     "name": "עדי אוחנה",
-    "sha256": "a445a0a7b4fe0ce9a1b8106cfd6bb8ad5d858e980a62d41009e2e0a2493b8861",
-    "spellingChecked": false,
+    "sha256": "c6bb4ca9e0f0815eb7c937bdc77651a83345a01620bcc72bc1bbd421677dbaec",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-160.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-48.png; layer-48.png; 42598aa297df8ac00c5c-light.png; 42598aa297df8ac00c5c-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "42598aa297df8ac00c5c-v2.png",
+    "style": 6,
     "ocr": {
-      "sha256": "a445a0a7b4fe0ce9a1b8106cfd6bb8ad5d858e980a62d41009e2e0a2493b8861",
-      "status": "needs_review",
-      "text": "עדי איוחנה",
+      "sha256": "c6bb4ca9e0f0815eb7c937bdc77651a83345a01620bcc72bc1bbd421677dbaec",
+      "status": "matched",
+      "text": "עדי אוחנה",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:37:07.041Z"
+      "checkedAt": "2026-10-16T17:41:22.353Z"
     },
-    "notes": "בתוצר נראית י' נוספת אחרי א' באוחנה."
+    "previousReview": {
+      "name": "עדי אוחנה",
+      "sha256": "a445a0a7b4fe0ce9a1b8106cfd6bb8ad5d858e980a62d41009e2e0a2493b8861",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-160.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "a445a0a7b4fe0ce9a1b8106cfd6bb8ad5d858e980a62d41009e2e0a2493b8861",
+        "status": "needs_review",
+        "text": "עדי איוחנה",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:37:07.041Z"
+      },
+      "notes": "בתוצר נראית י' נוספת אחרי א' באוחנה."
+    }
   },
   {
     "name": "שלמה סלמן קוזרי",
-    "sha256": "ba9f13018b966f431bf45f46c341f8753d907e286fd28c092129bb26c2236c17",
-    "spellingChecked": false,
+    "sha256": "49f92f8b175bba2b97d86bcdb125978050726227b53b7bfddadb275aa84ebeeb",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-160.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-48.png; layer-48.png; cb6401178b37125ddb5b-light.png; cb6401178b37125ddb5b-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "cb6401178b37125ddb5b-v2.png",
+    "style": 7,
     "ocr": {
-      "sha256": "ba9f13018b966f431bf45f46c341f8753d907e286fd28c092129bb26c2236c17",
-      "status": "needs_review",
-      "text": "שלמה סלמןי קוזרי",
-      "uncertain": true,
+      "sha256": "49f92f8b175bba2b97d86bcdb125978050726227b53b7bfddadb275aa84ebeeb",
+      "status": "matched",
+      "text": "שלמה סלמן קוזרי",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:37:44.471Z"
+      "checkedAt": "2026-10-16T17:41:40.617Z"
     },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (שלמה סלמןי קוזרי)."
+    "previousReview": {
+      "name": "שלמה סלמן קוזרי",
+      "sha256": "ba9f13018b966f431bf45f46c341f8753d907e286fd28c092129bb26c2236c17",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-160.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "ba9f13018b966f431bf45f46c341f8753d907e286fd28c092129bb26c2236c17",
+        "status": "needs_review",
+        "text": "שלמה סלמןי קוזרי",
+        "uncertain": true,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:37:44.471Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (שלמה סלמןי קוזרי)."
+    }
   },
   {
     "name": "ברק טל",
@@ -5732,83 +6553,171 @@
   },
   {
     "name": "עומרי תמרי",
-    "sha256": "1da8007ed5237c5ff369e14d6d4d554e87c322709fc15051fe78b481fcc95520",
-    "spellingChecked": false,
+    "sha256": "7e055a414632d08a4b643f3b3265b9ecfefa62523e0c491b13adfdfff7b6a5b7",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-160.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-48.png; layer-48.png; a5d93c29989875c4eaed-light.png; a5d93c29989875c4eaed-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "a5d93c29989875c4eaed-v3.png",
+    "style": 9,
     "ocr": {
-      "sha256": "1da8007ed5237c5ff369e14d6d4d554e87c322709fc15051fe78b481fcc95520",
-      "status": "needs_review",
-      "text": "עמרי תמרי",
+      "sha256": "7e055a414632d08a4b643f3b3265b9ecfefa62523e0c491b13adfdfff7b6a5b7",
+      "status": "matched",
+      "text": "עומרי תמרי",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:37:35.354Z"
+      "checkedAt": "2026-10-16T18:06:50.525Z"
     },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (עמרי תמרי)."
+    "previousReview": {
+      "name": "עומרי תמרי",
+      "sha256": "1da8007ed5237c5ff369e14d6d4d554e87c322709fc15051fe78b481fcc95520",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-160.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "1da8007ed5237c5ff369e14d6d4d554e87c322709fc15051fe78b481fcc95520",
+        "status": "needs_review",
+        "text": "עמרי תמרי",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:37:35.354Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (עמרי תמרי)."
+    }
   },
   {
     "name": "שמעון רוימי",
-    "sha256": "620c7f1e90a50b05362b5000f5c3dcec900ef383d2843b2001de820a58db208c",
-    "spellingChecked": false,
+    "sha256": "b9033113c4ca86e039dead608e9cc863a2848977146c5d3bf7e310511ea09abc",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-160.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-48.png; layer-48.png; 802ea6d002a035341cee-light.png; 802ea6d002a035341cee-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "802ea6d002a035341cee-v4.png",
+    "style": 1,
     "ocr": {
-      "sha256": "620c7f1e90a50b05362b5000f5c3dcec900ef383d2843b2001de820a58db208c",
-      "status": "needs_review",
-      "text": "שמעון חימי",
+      "sha256": "b9033113c4ca86e039dead608e9cc863a2848977146c5d3bf7e310511ea09abc",
+      "status": "matched",
+      "text": "שמעון רוימי",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:37:57.397Z"
+      "checkedAt": "2026-10-16T18:18:27.992Z"
     },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (שמעון חימי)."
+    "previousReview": {
+      "name": "שמעון רוימי",
+      "sha256": "620c7f1e90a50b05362b5000f5c3dcec900ef383d2843b2001de820a58db208c",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-160.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "620c7f1e90a50b05362b5000f5c3dcec900ef383d2843b2001de820a58db208c",
+        "status": "needs_review",
+        "text": "שמעון חימי",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:37:57.397Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (שמעון חימי)."
+    }
   },
   {
     "name": "אביהוא קינן",
-    "sha256": "39d10d2d088fcad4c23ad6f5f692ae79e7d9139aef997d1a6b2e0cab2f2ea811",
-    "spellingChecked": false,
+    "sha256": "0e95e70b8e102c995f40b42ccdf2310f14729030f3ad25e4f1c7c73271c741a4",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-168.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-54.png; layer-54.png; bcdeddfb07b2a9c53d22-light.png; bcdeddfb07b2a9c53d22-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "bcdeddfb07b2a9c53d22-v2.png",
+    "style": 1,
     "ocr": {
-      "sha256": "39d10d2d088fcad4c23ad6f5f692ae79e7d9139aef997d1a6b2e0cab2f2ea811",
-      "status": "needs_review",
-      "text": "אביהוא קיכו",
+      "sha256": "0e95e70b8e102c995f40b42ccdf2310f14729030f3ad25e4f1c7c73271c741a4",
+      "status": "matched",
+      "text": "אביהוא קינן",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:38:08.160Z"
+      "checkedAt": "2026-10-16T17:42:08.25Z"
     },
-    "notes": "האות האחרונה בקינן נראית ו' במקום ן; דורש בדיקה נפרדת."
+    "previousReview": {
+      "name": "אביהוא קינן",
+      "sha256": "39d10d2d088fcad4c23ad6f5f692ae79e7d9139aef997d1a6b2e0cab2f2ea811",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-168.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "39d10d2d088fcad4c23ad6f5f692ae79e7d9139aef997d1a6b2e0cab2f2ea811",
+        "status": "needs_review",
+        "text": "אביהוא קיכו",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:38:08.160Z"
+      },
+      "notes": "האות האחרונה בקינן נראית ו' במקום ן; דורש בדיקה נפרדת."
+    }
   },
   {
     "name": "אריאל הרוש",
-    "sha256": "301f43902160e1dcb75810181c8b83ac366817ae20897cebbe9a22c2d2910ff6",
-    "spellingChecked": false,
+    "sha256": "8ec0c4382214fbf3f3d65080c0cae630ca4f96267b4e0c58b0ee73dc5a015896",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-168.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-54.png; layer-54.png; eca72db0da79551b8a85-light.png; eca72db0da79551b8a85-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "eca72db0da79551b8a85-v2.png",
+    "style": 2,
     "ocr": {
-      "sha256": "301f43902160e1dcb75810181c8b83ac366817ae20897cebbe9a22c2d2910ff6",
-      "status": "needs_review",
-      "text": "אריאלי הרוש",
+      "sha256": "8ec0c4382214fbf3f3d65080c0cae630ca4f96267b4e0c58b0ee73dc5a015896",
+      "status": "matched",
+      "text": "אריאל הרוש",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:38:13.980Z"
+      "checkedAt": "2026-10-16T17:42:10.469Z"
     },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (אריאלי הרוש)."
+    "previousReview": {
+      "name": "אריאל הרוש",
+      "sha256": "301f43902160e1dcb75810181c8b83ac366817ae20897cebbe9a22c2d2910ff6",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-168.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "301f43902160e1dcb75810181c8b83ac366817ae20897cebbe9a22c2d2910ff6",
+        "status": "needs_review",
+        "text": "אריאלי הרוש",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:38:13.980Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (אריאלי הרוש)."
+    }
   },
   {
     "name": "אבישי בן חמו",
@@ -5832,23 +6741,45 @@
   },
   {
     "name": "איתן פיש",
-    "sha256": "6d9a611653c926f822ab6d48e05572123f0e5940e8f942cffb61613c3eb81421",
-    "spellingChecked": false,
+    "sha256": "2a6ab4c8b76e0735486f0cdacd4535b2b4b988dbf34b0e0c5b3ee6b64d29583b",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-168.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-54.png; layer-54.png; 7f38fa6d61cdd2bf8023-light.png; 7f38fa6d61cdd2bf8023-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "7f38fa6d61cdd2bf8023-v2.png",
+    "style": 4,
     "ocr": {
-      "sha256": "6d9a611653c926f822ab6d48e05572123f0e5940e8f942cffb61613c3eb81421",
-      "status": "needs_review",
-      "text": "איתן פייש",
+      "sha256": "2a6ab4c8b76e0735486f0cdacd4535b2b4b988dbf34b0e0c5b3ee6b64d29583b",
+      "status": "matched",
+      "text": "איתן פיש",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:38:38.899Z"
+      "checkedAt": "2026-10-16T17:42:31.53Z"
     },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (איתן פייש)."
+    "previousReview": {
+      "name": "איתן פיש",
+      "sha256": "6d9a611653c926f822ab6d48e05572123f0e5940e8f942cffb61613c3eb81421",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-168.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "6d9a611653c926f822ab6d48e05572123f0e5940e8f942cffb61613c3eb81421",
+        "status": "needs_review",
+        "text": "איתן פייש",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:38:38.899Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (איתן פייש)."
+    }
   },
   {
     "name": "עמית בונצל",
@@ -5932,23 +6863,45 @@
   },
   {
     "name": "מתן שי ישינובסקי",
-    "sha256": "bb0beb8715bf10e0f943a22b175fd242a1567d488b8ec4e7ea917da3cfa99bb7",
-    "spellingChecked": false,
+    "sha256": "8269b19051ad2a720d360e53fb73d920c2da3799b7523dcf6922cee92d35d9a5",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-176.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-54.png; layer-54.png; d699a2f8e34db844ff90-light.png; d699a2f8e34db844ff90-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "d699a2f8e34db844ff90-v2.png",
+    "style": 9,
     "ocr": {
-      "sha256": "bb0beb8715bf10e0f943a22b175fd242a1567d488b8ec4e7ea917da3cfa99bb7",
-      "status": "needs_review",
-      "text": "מתן שי ישיגובסקי",
+      "sha256": "8269b19051ad2a720d360e53fb73d920c2da3799b7523dcf6922cee92d35d9a5",
+      "status": "matched",
+      "text": "מתן שי ישינובסקי",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:39:36.448Z"
+      "checkedAt": "2026-10-16T17:42:41.87Z"
     },
-    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (מתן שי ישיגובסקי)."
+    "previousReview": {
+      "name": "מתן שי ישינובסקי",
+      "sha256": "bb0beb8715bf10e0f943a22b175fd242a1567d488b8ec4e7ea917da3cfa99bb7",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-176.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "bb0beb8715bf10e0f943a22b175fd242a1567d488b8ec4e7ea917da3cfa99bb7",
+        "status": "needs_review",
+        "text": "מתן שי ישיגובסקי",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:39:36.448Z"
+      },
+      "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (מתן שי ישיגובסקי)."
+    }
   },
   {
     "name": "דניאל קסטיאל",
@@ -6276,43 +7229,87 @@
   },
   {
     "name": "חיים טורג'מן",
-    "sha256": "045c4103c1e9cc0bdf982b81ac5c7eff80e8f742616d8f8a16a64b7c57fc8d34",
-    "spellingChecked": false,
+    "sha256": "f3957cf974a14d8704b5a3a75a987303a99b62a00caabff8f0c99715a4db6d0a",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-192.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-54.png; layer-54.png; 12cce214627286e31d0b-light.png; 12cce214627286e31d0b-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "12cce214627286e31d0b-v2.png",
+    "style": 1,
     "ocr": {
-      "sha256": "045c4103c1e9cc0bdf982b81ac5c7eff80e8f742616d8f8a16a64b7c57fc8d34",
+      "sha256": "f3957cf974a14d8704b5a3a75a987303a99b62a00caabff8f0c99715a4db6d0a",
       "status": "matched",
       "text": "חיים טורג'מן",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:43:18.670Z"
+      "checkedAt": "2026-10-16T17:42:47.073Z"
     },
-    "notes": "הגרש בטורג'מן אינו מובחן דיו."
+    "previousReview": {
+      "name": "חיים טורג'מן",
+      "sha256": "045c4103c1e9cc0bdf982b81ac5c7eff80e8f742616d8f8a16a64b7c57fc8d34",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-192.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "045c4103c1e9cc0bdf982b81ac5c7eff80e8f742616d8f8a16a64b7c57fc8d34",
+        "status": "matched",
+        "text": "חיים טורג'מן",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:43:18.670Z"
+      },
+      "notes": "הגרש בטורג'מן אינו מובחן דיו."
+    }
   },
   {
     "name": "ישראל יודקין",
-    "sha256": "c9be74efaa6144cb75595068c59496001653dd3fc121fda6c2dc9732864edac8",
-    "spellingChecked": false,
+    "sha256": "880ac5e603d7eed4e2725d89b85997bcb9ef6a8883b71259b49d733641cf01e9",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-enlarged-visual-review",
-    "evidence": "pending-source-192.png",
-    "reviewSession": "remaining-197-2026-10-16",
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-54.png; layer-54.png; 92816573763aabd8dd27-light.png; 92816573763aabd8dd27-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "92816573763aabd8dd27-v3.png",
+    "style": 2,
     "ocr": {
-      "sha256": "c9be74efaa6144cb75595068c59496001653dd3fc121fda6c2dc9732864edac8",
+      "sha256": "880ac5e603d7eed4e2725d89b85997bcb9ef6a8883b71259b49d733641cf01e9",
       "status": "matched",
       "text": "ישראל יודקין",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T13:43:12.263Z"
+      "checkedAt": "2026-10-16T18:07:58.809Z"
     },
-    "notes": "האות הסופית ביודקין נראית ו' במקום ן; דורש בדיקה נפרדת."
+    "previousReview": {
+      "name": "ישראל יודקין",
+      "sha256": "c9be74efaa6144cb75595068c59496001653dd3fc121fda6c2dc9732864edac8",
+      "spellingChecked": false,
+      "visualChecked": true,
+      "renderChecked": true,
+      "reviewedBy": "codex-enlarged-visual-review",
+      "evidence": "pending-source-192.png",
+      "reviewSession": "remaining-197-2026-10-16",
+      "ocr": {
+        "sha256": "c9be74efaa6144cb75595068c59496001653dd3fc121fda6c2dc9732864edac8",
+        "status": "matched",
+        "text": "ישראל יודקין",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-10-16T13:43:12.263Z"
+      },
+      "notes": "האות הסופית ביודקין נראית ו' במקום ן; דורש בדיקה נפרדת."
+    }
   },
   {
     "name": "אדיר פורטוגל",
@@ -6353,5 +7350,337 @@
       "checkedAt": "2026-10-16T13:43:57.112Z"
     },
     "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
+  },
+  {
+    "name": "מאיר שחר",
+    "sha256": "4f05fff4ee2e961f837eaf88c0af5aa15c76f35fd5aab004dbd8f6bdaf0b02fd",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-0.png; layer-0.png; 56efe5158591f511092a-light.png; 56efe5158591f511092a-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "56efe5158591f511092a.png",
+    "style": 6,
+    "ocr": {
+      "sha256": "4f05fff4ee2e961f837eaf88c0af5aa15c76f35fd5aab004dbd8f6bdaf0b02fd",
+      "status": "matched",
+      "text": "מאיר שחר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:56:36.248Z"
+    }
+  },
+  {
+    "name": "אילן סביאטקובסקי",
+    "sha256": "a38205748301ccd8fbf58c70d2b752e996fadde8578ea38dfe03fe2987205763",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-0.png; layer-0.png; 84a2962bc4dd58a863f9-light.png; 84a2962bc4dd58a863f9-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "84a2962bc4dd58a863f9.png",
+    "style": 7,
+    "ocr": {
+      "sha256": "a38205748301ccd8fbf58c70d2b752e996fadde8578ea38dfe03fe2987205763",
+      "status": "matched",
+      "text": "אילן סביאטקובסקי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:56:46.46Z"
+    }
+  },
+  {
+    "name": "שי ארווס",
+    "sha256": "44280ef8d7f96f4d16ee5f780ec921ce21b2cbcc225557bf11f39a798f4552ef",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-0.png; layer-0.png; f52aeae84bf638b1ff9b-light.png; f52aeae84bf638b1ff9b-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "f52aeae84bf638b1ff9b-v2.png",
+    "style": 8,
+    "ocr": {
+      "sha256": "44280ef8d7f96f4d16ee5f780ec921ce21b2cbcc225557bf11f39a798f4552ef",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T18:08:32.579Z",
+      "overrideReason": "הקורא לא החזיר תשובה. המקור בגרסה v2 נבדק בהגדלה: א-ר-ו-ו-ס, שתי ו׳ נפרדות וס׳ סגורה ומעוגלת; שי כולל ש׳ וי׳ יחידה. נבדקה גם שכבת היישום המוקטנת."
+    }
+  },
+  {
+    "name": "רועי שלו",
+    "sha256": "99d8e63743768bbab3fe93c2b3b888df9f7d743adbeac20dc42003d412f03ba0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-0.png; layer-0.png; ebc5de580b8e47ad1800-light.png; ebc5de580b8e47ad1800-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "ebc5de580b8e47ad1800-v2.png",
+    "style": 9,
+    "ocr": {
+      "sha256": "99d8e63743768bbab3fe93c2b3b888df9f7d743adbeac20dc42003d412f03ba0",
+      "status": "matched",
+      "text": "רועי שלו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T18:07:46.574Z"
+    }
+  },
+  {
+    "name": "אלירז גבאי",
+    "sha256": "e3082ae48d70628fa97b56752a705fbf5cc839344e34b2671eab3951a7e740cf",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-0.png; layer-0.png; be7f9e1daad7fdc50896-light.png; be7f9e1daad7fdc50896-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "be7f9e1daad7fdc50896.png",
+    "style": 10,
+    "ocr": {
+      "sha256": "e3082ae48d70628fa97b56752a705fbf5cc839344e34b2671eab3951a7e740cf",
+      "status": "matched",
+      "text": "אלירז גבאי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:57:23.695Z"
+    }
+  },
+  {
+    "name": "רון אפרימי",
+    "sha256": "2ecb393b31c22e8fe02359514763f6220622d808372fa713d3c82941628504b6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-0.png; layer-0.png; 0b38797b5ae7f7a960a5-light.png; 0b38797b5ae7f7a960a5-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "0b38797b5ae7f7a960a5.png",
+    "style": 4,
+    "ocr": {
+      "sha256": "2ecb393b31c22e8fe02359514763f6220622d808372fa713d3c82941628504b6",
+      "status": "matched",
+      "text": "רון אפרימי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:57:15.265Z"
+    }
+  },
+  {
+    "name": "תומר רון",
+    "sha256": "560ea80b47eb32c43128e7cb076af4129fc0aca13edc05da63d4a42bffa7ede6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-6.png; layer-6.png; ce2837def7ea1b2b481c-light.png; ce2837def7ea1b2b481c-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "ce2837def7ea1b2b481c.png",
+    "style": 5,
+    "ocr": {
+      "sha256": "560ea80b47eb32c43128e7cb076af4129fc0aca13edc05da63d4a42bffa7ede6",
+      "status": "matched",
+      "text": "תומר רון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:57:48.803Z"
+    }
+  },
+  {
+    "name": "ירין גהלי",
+    "sha256": "424053338587d70ed77fa90272a8c417562f04bccde08906b77efbbd49069e99",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-6.png; layer-6.png; 0e296bbb3caecbe303b0-light.png; 0e296bbb3caecbe303b0-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "0e296bbb3caecbe303b0.png",
+    "style": 6,
+    "ocr": {
+      "sha256": "424053338587d70ed77fa90272a8c417562f04bccde08906b77efbbd49069e99",
+      "status": "matched",
+      "text": "ירין גהלי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:58:05.246Z"
+    }
+  },
+  {
+    "name": "איתן קופלוביץ'",
+    "sha256": "9e4091020d7518f5536ef5ad18a3071c6cc4881983b0cd11ae535811cc241121",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-6.png; layer-6.png; 14c86c322d2fe81ad7f9-light.png; 14c86c322d2fe81ad7f9-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "14c86c322d2fe81ad7f9.png",
+    "style": 7,
+    "ocr": {
+      "sha256": "9e4091020d7518f5536ef5ad18a3071c6cc4881983b0cd11ae535811cc241121",
+      "status": "needs_review",
+      "text": "איתן קופלוביץ'",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:58:44.901Z",
+      "overrideReason": "הקורא תמלל את השם המדויק אך סימן ספק. בהגדלת המקור נבדקו רצף ק-ו-פ-ל-ו-ב-י-ץ וגרש נפרד מעל משמאל ל־ץ; ץ סופית יורדת מתחת לשורה. גם איתן נקרא ללא תוספת אות."
+    }
+  },
+  {
+    "name": "איתי יהודה",
+    "sha256": "7e2e56193a226c55817b286bd73448a76179db3fd9b3546dd1d0f529061e6495",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-6.png; layer-6.png; 5e7da088e13d55f6affd-light.png; 5e7da088e13d55f6affd-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "5e7da088e13d55f6affd-v2.png",
+    "style": 8,
+    "ocr": {
+      "sha256": "7e2e56193a226c55817b286bd73448a76179db3fd9b3546dd1d0f529061e6495",
+      "status": "matched",
+      "text": "איתי יהודה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T18:07:58.086Z"
+    }
+  },
+  {
+    "name": "אריה שרוני בלומנטל",
+    "sha256": "326f1708af0e1ea157fc734f0bc50b55c2a6b11c1d548b84ede4c222bcd786f5",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-6.png; layer-6.png; 945b591b537e10eaff82-light.png; 945b591b537e10eaff82-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "945b591b537e10eaff82.png",
+    "style": 9,
+    "ocr": {
+      "sha256": "326f1708af0e1ea157fc734f0bc50b55c2a6b11c1d548b84ede4c222bcd786f5",
+      "status": "matched",
+      "text": "אריה שרוני בלומנטל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:58:30.085Z"
+    }
+  },
+  {
+    "name": "איתי סעדון",
+    "sha256": "d4da153c7d3082ac2dd42941f835d886657e4a713fafc36e87e23c8aca508c19",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-6.png; layer-6.png; b7c155515c1eeec2ce64-light.png; b7c155515c1eeec2ce64-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "b7c155515c1eeec2ce64.png",
+    "style": 10,
+    "ocr": {
+      "sha256": "d4da153c7d3082ac2dd42941f835d886657e4a713fafc36e87e23c8aca508c19",
+      "status": "matched",
+      "text": "איתי סעדון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:59:12.448Z"
+    }
+  },
+  {
+    "name": "אורי מויאל",
+    "sha256": "5825e14dd962bb339df92cc4fd925f1d7e0576f51d39c50544c4b7b8741f40f4",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-12.png; layer-12.png; 7de2f4c0dc9e4dabeaca-light.png; 7de2f4c0dc9e4dabeaca-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "7de2f4c0dc9e4dabeaca.png",
+    "style": 1,
+    "ocr": {
+      "sha256": "5825e14dd962bb339df92cc4fd925f1d7e0576f51d39c50544c4b7b8741f40f4",
+      "status": "matched",
+      "text": "אורי מויאל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:58:58.266Z"
+    }
+  },
+  {
+    "name": "יהודה נתן כהן",
+    "sha256": "4bfb846837366ff388c2d3634c2e530a12a55c802dfcde5973fc0f23b41db9e8",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-12.png; layer-12.png; deb256909c04ef96d55d-light.png; deb256909c04ef96d55d-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "deb256909c04ef96d55d-v2.png",
+    "style": 2,
+    "ocr": {
+      "sha256": "4bfb846837366ff388c2d3634c2e530a12a55c802dfcde5973fc0f23b41db9e8",
+      "status": "matched",
+      "text": "יהודה נתן כהן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T18:08:22.718Z"
+    }
+  },
+  {
+    "name": "אברהם רפאל",
+    "sha256": "628fa21653ce5642b6d9889d3081decfaf985d2ef5f28addcb5a42b39e1bbd41",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "evidence": ".netlify/name-review-1930/source-12.png; layer-12.png; 04f0eb3a87ec4a3ee6c0-light.png; 04f0eb3a87ec4a3ee6c0-dark.png",
+    "reviewSession": "completion-1930-2026-10-16",
+    "notes": "נבדקו המקור המוגדל, צורת האותיות מול שם המקור, שקיפות, פלטת הגרפיטי ושכבת היישום לאחר הקטנה; רינדור 1080 על רקע בהיר וכהה עבר. זו ביקורת חזותית, לא הבטחת דיוק מוחלט לפוסטר הסופי.",
+    "sourceFile": "04f0eb3a87ec4a3ee6c0.png",
+    "style": 4,
+    "ocr": {
+      "sha256": "628fa21653ce5642b6d9889d3081decfaf985d2ef5f28addcb5a42b39e1bbd41",
+      "status": "matched",
+      "text": "אברהם רפאל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T16:59:13.881Z"
+    }
   }
 ]

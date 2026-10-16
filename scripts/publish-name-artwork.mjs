@@ -23,6 +23,21 @@ export function reviewedCatalog(report, reviews, names, { partial = false } = {}
   return catalog;
 }
 
+// An expansion cannot remove a published name or silently replace its pixels.
+export function extendCatalog(previous, candidate, names) {
+  validateReleaseCatalog(previous, names);
+  validateReleaseCatalog(candidate, names);
+  const entries = new Map(previous.entries.map((item) => [item.name, item]));
+  for (const item of candidate.entries) {
+    const existing = entries.get(item.name);
+    if (existing && (existing.sha256 !== item.sha256 || existing.file !== item.file)) throw new Error(`Published artwork replacement requires a separate review: ${item.name}`);
+    if (!existing) entries.set(item.name, item);
+  }
+  const catalog = { version: 1, mode: "partial", sourceCount: new Set(names).size, entries: [...new Set(names)].filter((name) => entries.has(name)).map((name) => entries.get(name)) };
+  validateReleaseCatalog(catalog, names);
+  return catalog;
+}
+
 if (process.argv[1] && resolve(process.argv[1]) === resolve(import.meta.filename)) {
   const { names } = await sourceNames();
   if (process.argv.includes("--verify-published")) {
@@ -37,12 +52,19 @@ if (process.argv[1] && resolve(process.argv[1]) === resolve(import.meta.filename
   } else {
     const report = JSON.parse(await readFile(resolve(".netlify/name-library-review/report.json"), "utf8"));
     const reviews = JSON.parse(await readFile(resolve("data/name-artwork/reviews.json"), "utf8"));
-    const catalog = reviewedCatalog(report, reviews, names, { partial: process.argv.includes("--partial") });
+    let catalog = reviewedCatalog(report, reviews, names, { partial: process.argv.includes("--partial") });
+    const previous = await releaseCatalog();
+    const update = process.argv.includes("--update");
+    if (update && !previous) throw new Error("No published release to expand");
+    if (previous && update) catalog = extendCatalog(previous, catalog, names);
     if (!process.argv.includes("--publish")) console.log(`Ready: ${catalog.entries.length} assets. No publication performed.`);
     else {
+      if (previous && !update) throw new Error("Release already exists; use --update for an additive expansion");
+      if (previous) for (const item of previous.entries) await loadArtwork(previous, item.name);
       const root = resolve("public/name-artwork"); await mkdir(root, { recursive: true });
       for (const item of catalog.entries) {
         const check = report.checks.find((row) => row.name === item.name && row.sha256 === item.sha256);
+        if (previous?.entries.some((row) => row.name === item.name && row.sha256 === item.sha256)) continue;
         if (!new RegExp(`^${artworkId(item.name)}(?:-v[0-9]+)?\\.png$`, "u").test(check.file)) throw new Error("Invalid candidate path");
         const source = resolve(".netlify/name-library-drafts", check.file);
         if (createHash("sha256").update(await readFile(source)).digest("hex") !== item.sha256) throw new Error(`Changed after review: ${item.name}`);
@@ -53,9 +75,11 @@ if (process.argv[1] && resolve(process.argv[1]) === resolve(import.meta.filename
         }
         await loadArtwork(catalog, item.name, root);
       }
-      await writeFile(resolve(root, "catalog.json"), JSON.stringify({ sourceCount: names.length, names: catalog.entries.map((item) => item.name) }, null, 2) + "\n", { flag: "wx" });
-      // Release manifest is written last and never replaces an existing release.
-      await writeFile(resolve("data/name-artwork/release.json"), JSON.stringify(catalog, null, 2) + "\n", { flag: "wx" });
+      // These are local Git working-tree manifests, not a live storage mutation.
+      // Publish both together in one commit; source PNGs remain immutable.
+      const flag = update ? "w" : "wx";
+      await writeFile(resolve(root, "catalog.json"), JSON.stringify({ sourceCount: names.length, names: catalog.entries.map((item) => item.name) }, null, 2) + "\n", { flag });
+      await writeFile(resolve("data/name-artwork/release.json"), JSON.stringify(catalog, null, 2) + "\n", { flag });
       console.log(`Published ${catalog.entries.length} immutable artwork files locally. Git/deployment still required.`);
     }
   }

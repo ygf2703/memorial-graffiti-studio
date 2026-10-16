@@ -5,7 +5,7 @@ import { selectArtwork, validateCompleteCatalog, validateReleaseCatalog, artwork
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { validName } from "../public/batch.js";
-import { reviewedCatalog } from "../scripts/publish-name-artwork.mjs";
+import { reviewedCatalog, extendCatalog } from "../scripts/publish-name-artwork.mjs";
 import { artworkId } from "../scripts/name-artwork-inventory.mjs";
 
 const entry = (name, sha256 = "b".repeat(64)) => ({ name, file: "a".repeat(20) + ".png", sha256, status: "verified", spellingChecked: true, visualChecked: true, renderChecked: true, ocr: { status: "matched", text: name, uncertain: false, sha256 } });
@@ -78,6 +78,17 @@ test("partial publisher excludes stale, unchecked and OCR-disagreed artwork with
   assert.deepEqual(catalog.entries.map((item) => item.name), [names[0]]);
   assert.equal(catalog.sourceCount, 3);
   assert.throws(() => reviewedCatalog({ checks }, reviews.slice(1), names, { partial: true }));
+});
+test("catalog expansion retains every published asset and rejects replacement or unknown names", () => {
+  const names = ["שם אחד", "שם שני", "שם שלישי"];
+  const previous = { version: 1, mode: "partial", sourceCount: 3, entries: [entry(names[0])] };
+  const candidate = { ...previous, entries: [entry(names[1])] };
+  const expanded = extendCatalog(previous, candidate, names);
+  assert.deepEqual(expanded.entries.map((item) => item.name), names.slice(0, 2));
+  assert.equal(expanded.entries[0], previous.entries[0]);
+  assert.throws(() => extendCatalog(previous, { ...candidate, entries: [entry(names[0], "c".repeat(64))] }, names));
+  assert.throws(() => extendCatalog(previous, { ...candidate, entries: [entry("שם זר")] }, names));
+  assert.throws(() => extendCatalog(previous, { ...candidate, entries: [{ ...entry(names[1]), visualChecked: false }] }, names));
 });
 test("OCR disagreement requires an explicit visual override bound to the reviewed asset", () => {
   const candidate = entry("שם");

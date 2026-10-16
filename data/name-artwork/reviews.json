@@ -55,21 +55,23 @@
   },
   {
     "name": "בן בנציון חסיד",
-    "sha256": "d302bbd50325b6b0cca4db69f05b1606f9592b73f387c2958dba7782669bfe19",
-    "spellingChecked": false,
+    "sha256": "12d0a5698c5a72f16d8e3a9e7cf4ce2edb0a915f23d8fbb96ff3f74fca341de1",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-0.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-0.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "d302bbd50325b6b0cca4db69f05b1606f9592b73f387c2958dba7782669bfe19",
-      "status": "needs_review",
-      "text": "בן בנצייון חסיד",
-      "uncertain": true,
+      "sha256": "12d0a5698c5a72f16d8e3a9e7cf4ce2edb0a915f23d8fbb96ff3f74fca341de1",
+      "status": "matched",
+      "text": "בן בנציון חסיד",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:29:05.087Z"
-    }
+      "checkedAt": "2026-10-16T07:29:48.229Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "נאיל פוארסה",
@@ -110,12 +112,12 @@
   {
     "name": "עומרי חיים יעקובוביץ, אלמקייס",
     "sha256": "bd1c948ce8b0f62113135db8f1f70e6ec042833ff05319d221067ced95dfaf0d",
-    "spellingChecked": false,
-    "visualChecked": false,
+    "spellingChecked": true,
+    "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-0.png",
-    "note": "יש לבדוק מחדש אותיות ופיסוק בשם הארוך",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-0.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "bd1c948ce8b0f62113135db8f1f70e6ec042833ff05319d221067ced95dfaf0d",
       "status": "matched",
@@ -124,7 +126,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:28:59.474Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "גברי-אל ישי בראל",
@@ -182,21 +185,23 @@
   },
   {
     "name": "רועי ברקת",
-    "sha256": "39d44b23e226e5a3e6ed888f45c4c1cab73823d7aa15fa9033e7ddb4884336b8",
-    "spellingChecked": false,
+    "sha256": "6f3029a8da657a671be53f5e7f5e3abea501fd12437c9cda82277e5b17b19b85",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-8.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-0.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "39d44b23e226e5a3e6ed888f45c4c1cab73823d7aa15fa9033e7ddb4884336b8",
-      "status": "needs_review",
-      "text": "רוועי ברקת",
+      "sha256": "6f3029a8da657a671be53f5e7f5e3abea501fd12437c9cda82277e5b17b19b85",
+      "status": "matched",
+      "text": "רועי ברקת",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:34:58.526Z"
-    }
+      "checkedAt": "2026-10-16T13:24:11.459Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "גאיה אורן",
@@ -218,40 +223,43 @@
   },
   {
     "name": "רואי אליאס",
-    "sha256": "1c2d07160618f4b3c896cbf515668c99cdc21d5c1b103659c0ba1c22e02f934c",
+    "sha256": "baaa996b2a654a59ded0cbffc5a45f0fee737ad522654be5c53a207b7df5b13a",
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-8.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-0.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "1c2d07160618f4b3c896cbf515668c99cdc21d5c1b103659c0ba1c22e02f934c",
+      "sha256": "baaa996b2a654a59ded0cbffc5a45f0fee737ad522654be5c53a207b7df5b13a",
       "status": "needs_review",
-      "text": "רואי אלאם",
-      "uncertain": true,
+      "text": "דואיי אליאס",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:35:46.49Z"
-    }
+      "checkedAt": "2026-10-16T07:30:06.917Z"
+    },
+    "notes": "השם הפרטי נראה דואיי/רואיי ולא רואי; נדרשת גרסה מתוקנת."
   },
   {
     "name": "גיל עוז אנזה",
-    "sha256": "7d1825905330ae38f6660dd1a2e593f084d9312a52297401226861048cf886e3",
-    "spellingChecked": false,
-    "visualChecked": false,
+    "sha256": "e83851c9cb3e9bbf89f38cd6110ba48e3728eac5bf564d0a9a57babc06762595",
+    "spellingChecked": true,
+    "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-8.png",
-    "note": "יש לבדוק מחדש קריאות כתב היד",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-0.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "7d1825905330ae38f6660dd1a2e593f084d9312a52297401226861048cf886e3",
-      "status": "needs_review",
-      "text": "גיל עחה אבזה",
-      "uncertain": true,
+      "sha256": "e83851c9cb3e9bbf89f38cd6110ba48e3728eac5bf564d0a9a57babc06762595",
+      "status": "matched",
+      "text": "גיל עוז אנזה",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:36:01.315Z"
-    }
+      "checkedAt": "2026-10-16T07:29:59.854Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אלדד רגב",
@@ -274,20 +282,23 @@
   {
     "name": "אליה אליהו אילוז",
     "sha256": "bee01f0ebbdac77916d2ae0ee5dddb1af5daf7143ad52bdbfed6d320e615ada7",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-8.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-0.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "bee01f0ebbdac77916d2ae0ee5dddb1af5daf7143ad52bdbfed6d320e615ada7",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:37:11.34Z"
-    }
+      "checkedAt": "2026-10-16T06:37:11.340Z",
+      "overrideReason": "בבדיקה המוגדלת נקראו שלוש המילים אליה, אליהו ואילוז; ההבדל בין י' הקצרה לו' הארוכה נשמר, ללא אות חסרה."
+    },
+    "notes": "בבדיקה המוגדלת נקראו שלוש המילים אליה, אליהו ואילוז; ההבדל בין י' הקצרה לו' הארוכה נשמר, ללא אות חסרה."
   },
   {
     "name": "יוסי שרעבי",
@@ -309,21 +320,23 @@
   },
   {
     "name": "ניסים אלגרבלי",
-    "sha256": "16e0b07bcefe303b24ff089d7e9c7a6b54ecc3de600ba244fc066202db865d8b",
-    "spellingChecked": false,
+    "sha256": "0565d07b6cfdc2ae9546795e05d770b44451ce8897aef7718bf829a970d265c1",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-16.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-0.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "16e0b07bcefe303b24ff089d7e9c7a6b54ecc3de600ba244fc066202db865d8b",
-      "status": "needs_review",
-      "text": "ניסים אלגובלי",
+      "sha256": "0565d07b6cfdc2ae9546795e05d770b44451ce8897aef7718bf829a970d265c1",
+      "status": "matched",
+      "text": "ניסים אלגרבלי",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:36:28.771Z"
-    }
+      "checkedAt": "2026-10-16T13:24:16.820Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "שלמה (שלומי) יהונתן חזוט",
@@ -367,8 +380,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-16.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-0.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "c98cf6678a08f23c4b36c5acaccca55efc020b7fe870a9ff06ef4b0cfed17dba",
       "status": "needs_review",
@@ -377,7 +391,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:36:58.276Z"
-    }
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "שי חיון ביטון",
@@ -562,38 +577,43 @@
   {
     "name": "עומר יעקובזון",
     "sha256": "5778cca84f556b4f8ecf0ac3aaafc6faa29dd816dca1d5867f2a5053fd1778c8",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-24.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-8.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "5778cca84f556b4f8ecf0ac3aaafc6faa29dd816dca1d5867f2a5053fd1778c8",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:39:53.765Z"
-    }
+      "checkedAt": "2026-10-16T06:39:53.765Z",
+      "overrideReason": "נקרא עומר יעקובזון; ז' באמצע שם המשפחה ושתי ו' משני צדדיה מובחנות, ון סופית יורדת מתחת לשורה."
+    },
+    "notes": "נקרא עומר יעקובזון; ז' באמצע שם המשפחה ושתי ו' משני צדדיה מובחנות, ון סופית יורדת מתחת לשורה."
   },
   {
     "name": "ספיר בילמס",
-    "sha256": "839bcfbdb90d3d6d66c8c7a7f465b3cac41a4bf59305ab5a08ff5ea829715218",
-    "spellingChecked": false,
+    "sha256": "ed6e19860b48b0054ef65c2691a25919c6faec4dbfe92459688fee14c8428713",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-32.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-8.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "839bcfbdb90d3d6d66c8c7a7f465b3cac41a4bf59305ab5a08ff5ea829715218",
-      "status": "needs_review",
-      "text": "ספיר בילמם",
-      "uncertain": true,
+      "sha256": "ed6e19860b48b0054ef65c2691a25919c6faec4dbfe92459688fee14c8428713",
+      "status": "matched",
+      "text": "ספיר בילמס",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:39:33.157Z"
-    }
+      "checkedAt": "2026-10-16T07:30:36.933Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "מיכאל (מיקי) נחום",
@@ -637,8 +657,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-32.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-8.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "81aa7cdb99a1f6f304a36bb1b2d3101eeb7da07cb2c19d802f1a36b309e2831b",
       "status": "needs_review",
@@ -647,7 +668,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:40:04.461Z"
-    }
+    },
+    "notes": "נראות שלוש אותיות י' באייל במקום שתיים."
   },
   {
     "name": "מאור גרציאני",
@@ -655,8 +677,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-32.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-8.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "9d0666ab2aa730ff90bf9e7b36e758edce3c028acaacc6abca5114d220736477",
       "status": "needs_review",
@@ -665,25 +688,29 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:40:22.668Z"
-    }
+    },
+    "notes": "חשד לתוספת י' בסוף גרציאני."
   },
   {
     "name": "אורי משה בורנשטיין",
     "sha256": "cdbaad611d899053858e8576f74856933af04b3b1d48ddbaf4967b7de2664eba",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-32.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-8.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "cdbaad611d899053858e8576f74856933af04b3b1d48ddbaf4967b7de2664eba",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:40:32.504Z"
-    }
+      "checkedAt": "2026-10-16T06:40:32.504Z",
+      "overrideReason": "נבדקו שלוש המילים אורי משה בורנשטיין, כולל שתי י' רצופות לפני ן סופית בשם המשפחה; אין צורך להשלים אות."
+    },
+    "notes": "נבדקו שלוש המילים אורי משה בורנשטיין, כולל שתי י' רצופות לפני ן סופית בשם המשפחה; אין צורך להשלים אות."
   },
   {
     "name": "טל פיליבה",
@@ -742,11 +769,12 @@
   {
     "name": "איתי אילוז",
     "sha256": "b306a733e6db8540ab17afd6a951ee059e8da593fb370fc03b9c00d634ec0aaa",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-40.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-8.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "b306a733e6db8540ab17afd6a951ee059e8da593fb370fc03b9c00d634ec0aaa",
       "status": "needs_review",
@@ -754,8 +782,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:41:27.473Z"
-    }
+      "checkedAt": "2026-10-16T06:41:27.473Z",
+      "overrideReason": "איתי מופיע בשתי י' קצרות משני צדי ת'; אילוז כולל י' קצרה וו' ארוכה נפרדות. התמלול תואם אך סומן כספק."
+    },
+    "notes": "איתי מופיע בשתי י' קצרות משני צדי ת'; אילוז כולל י' קצרה וו' ארוכה נפרדות. התמלול תואם אך סומן כספק."
   },
   {
     "name": "דורון לב",
@@ -921,21 +951,24 @@
   },
   {
     "name": "זיו פנקר",
-    "sha256": "65252611c83cc748ab109332e9c0203ac73a0d2550094e54dce39d3686a835f7",
-    "spellingChecked": false,
+    "sha256": "d877af0bab6d119adfecdc2dc0c9a88585c66e4bfc0a00be9090c0c05c5ad480",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-48.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-8.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "65252611c83cc748ab109332e9c0203ac73a0d2550094e54dce39d3686a835f7",
+      "sha256": "d877af0bab6d119adfecdc2dc0c9a88585c66e4bfc0a00be9090c0c05c5ad480",
       "status": "needs_review",
-      "text": "זיו פניקר",
-      "uncertain": false,
+      "text": "זיו פנקר",
+      "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:42:51.722Z"
-    }
+      "checkedAt": "2026-10-16T13:24:40.918Z",
+      "overrideReason": "בגרסת התיקון נקרא זיו פנקר: בפנקר אין י' נוספת בין נ' לק'; הקריאה תואמת אך הקורא סימן ספק."
+    },
+    "notes": "בגרסת התיקון נקרא זיו פנקר: בפנקר אין י' נוספת בין נ' לק'; הקריאה תואמת אך הקורא סימן ספק."
   },
   {
     "name": "אורן לוצאטו",
@@ -958,11 +991,12 @@
   {
     "name": "אורן חנוך",
     "sha256": "999a9898f993cb24dd6277a1f5992746207974d54e796862a48fb4c350711c4d",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-48.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-8.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "999a9898f993cb24dd6277a1f5992746207974d54e796862a48fb4c350711c4d",
       "status": "needs_review",
@@ -970,8 +1004,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:43:21.328Z"
-    }
+      "checkedAt": "2026-10-16T06:43:21.328Z",
+      "overrideReason": "אורן מסתיים בן יורדת; חנוך מסתיים בך ארוכה ולא בר', ושתי המילים נקראות במלואן. התמלול עצמו תואם."
+    },
+    "notes": "אורן מסתיים בן יורדת; חנוך מסתיים בך ארוכה ולא בר', ושתי המילים נקראות במלואן. התמלול עצמו תואם."
   },
   {
     "name": "ליאם בן חמו",
@@ -1029,22 +1065,23 @@
   },
   {
     "name": "אורי ניסנוביץ'",
-    "sha256": "08ca456970bf8a3b87f48214fc9fcd6dd759713556b2ba84095940ebf269de9d",
-    "spellingChecked": false,
-    "visualChecked": false,
+    "sha256": "a7a3ae05a8f4777e207481d8ffea9d39291897a077d71bd7311a57fe829778b5",
+    "spellingChecked": true,
+    "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-56.png",
-    "note": "בדיקה חוזרת של רצף האותיות נדרשת",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-16.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "08ca456970bf8a3b87f48214fc9fcd6dd759713556b2ba84095940ebf269de9d",
-      "status": "needs_review",
-      "text": "אורי ביסננוביץ'",
+      "sha256": "a7a3ae05a8f4777e207481d8ffea9d39291897a077d71bd7311a57fe829778b5",
+      "status": "matched",
+      "text": "אורי ניסנוביץ'",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:44:19.211Z"
-    }
+      "checkedAt": "2026-10-16T13:24:36.111Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ציון בן שושן",
@@ -1066,21 +1103,23 @@
   },
   {
     "name": "יהב וינר",
-    "sha256": "6b59db68b14940c21bdd51a119b1a91a012c1e632bbd358cbabb5f152b7914ba",
+    "sha256": "d1d379a1104e7082566e4d72e018ef803ec7d295f16576510a4ccb645b37ebbb",
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-56.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-16.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "6b59db68b14940c21bdd51a119b1a91a012c1e632bbd358cbabb5f152b7914ba",
+      "sha256": "d1d379a1104e7082566e4d72e018ef803ec7d295f16576510a4ccb645b37ebbb",
       "status": "needs_review",
-      "text": "יהב ויינר",
-      "uncertain": false,
+      "text": "יהב ויכר",
+      "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:43:51.452Z"
-    }
+      "checkedAt": "2026-10-16T13:25:23.437Z"
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (יהב ויכר)."
   },
   {
     "name": "קרין ורניקוב",
@@ -1247,11 +1286,12 @@
   {
     "name": "עידו ברוך",
     "sha256": "bd84cfc21a3cb5bee7a482792011841693137e8d5354994aaf108b133e0c1072",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-64.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-16.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "bd84cfc21a3cb5bee7a482792011841693137e8d5354994aaf108b133e0c1072",
       "status": "needs_review",
@@ -1259,8 +1299,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:46:09.889Z"
-    }
+      "checkedAt": "2026-10-16T06:46:09.889Z",
+      "overrideReason": "עידו נקרא בארבע אותיות, וברוך כולל ר' פתוחה וך סופית יורדת. לא נמצאה סטייה למרות דגל הספק."
+    },
+    "notes": "עידו נקרא בארבע אותיות, וברוך כולל ר' פתוחה וך סופית יורדת. לא נמצאה סטייה למרות דגל הספק."
   },
   {
     "name": "תובל (תולי) גבירצמן",
@@ -1337,12 +1379,12 @@
   {
     "name": "סיון ווייל",
     "sha256": "fe320c78cab59d0f672c28ffc1c7fd55648ac269c73209f2e0252e9d733a7385",
-    "spellingChecked": false,
-    "visualChecked": false,
+    "spellingChecked": true,
+    "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-72.png",
-    "note": "בדיקה חוזרת של רצף האותיות נדרשת",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-16.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "fe320c78cab59d0f672c28ffc1c7fd55648ac269c73209f2e0252e9d733a7385",
       "status": "matched",
@@ -1351,7 +1393,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:46:23.467Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "איתי זפרני",
@@ -1392,20 +1435,23 @@
   {
     "name": "נצר שמחי",
     "sha256": "1043a2fe288cf6e04a533e49a9972a9347506d94949efd2e841a53343b9c1fb4",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-72.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-16.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "1043a2fe288cf6e04a533e49a9972a9347506d94949efd2e841a53343b9c1fb4",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:47:53.531Z"
-    }
+      "checkedAt": "2026-10-16T06:47:53.531Z",
+      "overrideReason": "נצר כולל צ' אמצעית ור' פתוחה; שמחי מסתיים בי' קצרה. כל שבע האותיות נקראו ללא השלמה."
+    },
+    "notes": "נצר כולל צ' אמצעית ור' פתוחה; שמחי מסתיים בי' קצרה. כל שבע האותיות נקראו ללא השלמה."
   },
   {
     "name": "ארז איתן בצלאל",
@@ -1413,8 +1459,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-72.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-16.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "bd65e8f29b287d5d1c58f6738a914303f5a1b4445512a6dddf908469ffed9a5a",
       "status": "needs_review",
@@ -1422,26 +1469,30 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:47:25.77Z"
-    }
+      "checkedAt": "2026-10-16T06:47:25.770Z"
+    },
+    "notes": "חשד לתוספת י' באיתן."
   },
   {
     "name": "אורן מנצור",
     "sha256": "926eb3865676174ca99b51aef22f48e37f57c02754e15615785d51b8ef13a5d9",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-72.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-16.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "926eb3865676174ca99b51aef22f48e37f57c02754e15615785d51b8ef13a5d9",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:48:21.898Z"
-    }
+      "checkedAt": "2026-10-16T06:48:21.898Z",
+      "overrideReason": "אורן מסתיים בן סופית, ומנצור מכיל צ' וו' נפרדות ור' בסוף. שתי המילים נקראו מול המקור."
+    },
+    "notes": "אורן מסתיים בן סופית, ומנצור מכיל צ' וו' נפרדות ור' בסוף. שתי המילים נקראו מול המקור."
   },
   {
     "name": "איתי סבירסקי",
@@ -1463,21 +1514,23 @@
   },
   {
     "name": "אמיר מימוני",
-    "sha256": "434924cdfebc2f616c5fa48528c056177e910444988be23aa39e32ee2509f318",
-    "spellingChecked": false,
+    "sha256": "3ba5a3dc29200c8f9262d3bc91ea0f425d3a7969e276862342d8f83098be24a2",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-80.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-16.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "434924cdfebc2f616c5fa48528c056177e910444988be23aa39e32ee2509f318",
-      "status": "needs_review",
-      "text": "אמיר מלמוני",
-      "uncertain": true,
+      "sha256": "3ba5a3dc29200c8f9262d3bc91ea0f425d3a7969e276862342d8f83098be24a2",
+      "status": "matched",
+      "text": "אמיר מימוני",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:48:35.368Z"
-    }
+      "checkedAt": "2026-10-16T13:25:15.021Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יואב שדמי",
@@ -1644,12 +1697,12 @@
   {
     "name": "אריאל מרדכי וולפסטל",
     "sha256": "66fdd64581a07e0c6c1130a86571441c387a31694744d3f44b65536027802cd7",
-    "spellingChecked": false,
-    "visualChecked": false,
+    "spellingChecked": true,
+    "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-88.png",
-    "note": "בדיקה חוזרת של ו׳ כפולה בשם המשפחה",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-24.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "66fdd64581a07e0c6c1130a86571441c387a31694744d3f44b65536027802cd7",
       "status": "matched",
@@ -1658,16 +1711,18 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:50:57.556Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "גידי חיאל",
     "sha256": "d3005ed3bb160b4a344be3b7620dcbae367543d1405a99db5b30b2c08d69e50d",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-88.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-24.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "d3005ed3bb160b4a344be3b7620dcbae367543d1405a99db5b30b2c08d69e50d",
       "status": "needs_review",
@@ -1675,17 +1730,20 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:50:49.723Z"
-    }
+      "checkedAt": "2026-10-16T06:50:49.723Z",
+      "overrideReason": "גידי נקרא בג' ושתי י' קצרות משני צדי ד'; חיאל מתחיל בח' סגורה ונשמרת י' אחריה. התמלול תואם."
+    },
+    "notes": "גידי נקרא בג' ושתי י' קצרות משני צדי ד'; חיאל מתחיל בח' סגורה ונשמרת י' אחריה. התמלול תואם."
   },
   {
     "name": "בנימין (בני) לחזיאל",
     "sha256": "071b446cbf0d693d65cf9deabc2826d69f1f4a0185b850c2b10fd4be731eaee6",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-88.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-24.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "071b446cbf0d693d65cf9deabc2826d69f1f4a0185b850c2b10fd4be731eaee6",
       "status": "needs_review",
@@ -1693,8 +1751,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:51:36.069Z"
-    }
+      "checkedAt": "2026-10-16T06:51:36.069Z",
+      "overrideReason": "נבדקו בנימין, הכינוי בני בתוך זוג סוגריים ולחזיאל; י' וז' בשם המשפחה מובחנות. התמלול זהה וסומן כספק בלבד."
+    },
+    "notes": "נבדקו בנימין, הכינוי בני בתוך זוג סוגריים ולחזיאל; י' וז' בשם המשפחה מובחנות. התמלול זהה וסומן כספק בלבד."
   },
   {
     "name": "נגב דגן",
@@ -1720,8 +1780,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-88.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-24.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "c6bcb3735c22ac6300cbd2a92de9bbda6916809257d4f22e7503bb1858b2e27b",
       "status": "needs_review",
@@ -1730,7 +1791,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:52:21.371Z"
-    }
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "מאיה חיים",
@@ -1756,8 +1818,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-96.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-24.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "d25ff1f7cce3b3c54a4988b8a2e3859431e63c46ac42cce03084764ed45e3a0c",
       "status": "needs_review",
@@ -1766,7 +1829,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:52:21.179Z"
-    }
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "אסף חממי",
@@ -1825,56 +1889,63 @@
   {
     "name": "יהונתן דויטש",
     "sha256": "1f174ed68e7588641f6e6d73725b3e0c5f54fa4a84aab26ef54932f4de1f4802",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-96.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-24.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "1f174ed68e7588641f6e6d73725b3e0c5f54fa4a84aab26ef54932f4de1f4802",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:53:51.449Z"
-    }
+      "checkedAt": "2026-10-16T06:53:51.449Z",
+      "overrideReason": "יהונתן מסתיים בנתן ולא בתוספת אות; דויטש נקרא בד', ו', י', ט', ש' לפי הסדר, ללא י' נוספת."
+    },
+    "notes": "יהונתן מסתיים בנתן ולא בתוספת אות; דויטש נקרא בד', ו', י', ט', ש' לפי הסדר, ללא י' נוספת."
   },
   {
     "name": "נריה זיסק",
-    "sha256": "56221d4d761317a12715a2dcb3a28252708f91bed8dc374033b1ff3835858866",
-    "spellingChecked": false,
+    "sha256": "c36ac942f199d2271f432475c94a75cad5ed5fb476bbc6aa2dca49257c4b8684",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-96.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-24.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "56221d4d761317a12715a2dcb3a28252708f91bed8dc374033b1ff3835858866",
-      "status": "needs_review",
-      "text": "כריה זיסק",
-      "uncertain": true,
-      "model": "gpt-6.1-sol",
-      "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:53:44.821Z"
-    }
-  },
-  {
-    "name": "דרור אלטון",
-    "sha256": "24744a88977f5cc8d7a484069a1571d598fb3b30d60462f1ea6aea0422a3af58",
-    "spellingChecked": false,
-    "visualChecked": true,
-    "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-96.png",
-    "ocr": {
-      "sha256": "24744a88977f5cc8d7a484069a1571d598fb3b30d60462f1ea6aea0422a3af58",
-      "status": "needs_review",
-      "text": "דרור אלסון",
+      "sha256": "c36ac942f199d2271f432475c94a75cad5ed5fb476bbc6aa2dca49257c4b8684",
+      "status": "matched",
+      "text": "נריה זיסק",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:54:01.293Z"
-    }
+      "checkedAt": "2026-10-16T13:25:13.794Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
+  },
+  {
+    "name": "דרור אלטון",
+    "sha256": "4b946f224d6e81221539d59b591ab943b10ddcaee39bef35353d99bb0c23f0af",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-24.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4b946f224d6e81221539d59b591ab943b10ddcaee39bef35353d99bb0c23f0af",
+      "status": "needs_review",
+      "text": "זרור אלטון",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:26:23.039Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "גלעד הראל",
@@ -1918,9 +1989,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-104.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-32.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "528520ae62c93de9b402ac10982688428bef4170e1c0546c528007253373fd0b",
       "status": "needs_review",
@@ -1929,7 +2000,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T06:55:03.657Z"
-    }
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "אמיר טוילי",
@@ -1969,22 +2041,23 @@
   },
   {
     "name": "עמית פרידמן",
-    "sha256": "588f7f679ea66df368a05847bfbf4ca3a1249311c5a31fa6a755247d849e25f0",
-    "spellingChecked": false,
+    "sha256": "e6b4804884290b3eeb3c34c4d460c322ef4ec05b0d91e5bd57ceb0e64ba16e60",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-104.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-32.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "588f7f679ea66df368a05847bfbf4ca3a1249311c5a31fa6a755247d849e25f0",
-      "status": "needs_review",
-      "text": "עמית פריידמן",
+      "sha256": "e6b4804884290b3eeb3c34c4d460c322ef4ec05b0d91e5bd57ceb0e64ba16e60",
+      "status": "matched",
+      "text": "עמית פרידמן",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:55:20.238Z"
-    }
+      "checkedAt": "2026-10-16T13:25:33.035Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אמיתי אבן שושן",
@@ -2006,22 +2079,23 @@
   },
   {
     "name": "נועה מרציאנו",
-    "sha256": "4a0a59251ebf7531de9fc4b793c6cf37440eb8fb66738f22f0b0bae0672c33a6",
-    "spellingChecked": false,
+    "sha256": "3d4e3596abe18e049182c0e639765e0daa63625ca0b7bb9ecbbd82713364fd93",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-104.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-32.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "4a0a59251ebf7531de9fc4b793c6cf37440eb8fb66738f22f0b0bae0672c33a6",
-      "status": "needs_review",
-      "text": "נועיה מרציאנו",
+      "sha256": "3d4e3596abe18e049182c0e639765e0daa63625ca0b7bb9ecbbd82713364fd93",
+      "status": "matched",
+      "text": "נועה מרציאנו",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:55:50.728Z"
-    }
+      "checkedAt": "2026-10-16T13:25:46.820Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אסף ביתן",
@@ -2044,21 +2118,23 @@
   {
     "name": "קים יחזקאל-לבנגרונד",
     "sha256": "7fb6345bbc8b6d18798f4b75dfd04ee4a82533212887f1a14a341b4348bcd5ad",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-112.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-32.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "7fb6345bbc8b6d18798f4b75dfd04ee4a82533212887f1a14a341b4348bcd5ad",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T06:56:50.307Z"
-    }
+      "checkedAt": "2026-10-16T06:56:50.307Z",
+      "overrideReason": "נבדקו קים ושם המשפחה יחזקאל-לבנגרונד, כולל המקף, נ' לפני ג' וו' לפני נ' האחרונה. כל חלקי השם מופיעים."
+    },
+    "notes": "נבדקו קים ושם המשפחה יחזקאל-לבנגרונד, כולל המקף, נ' לפני ג' וו' לפני נ' האחרונה. כל חלקי השם מופיעים."
   },
   {
     "name": "אברהם טיברג",
@@ -2120,8 +2196,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-112.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-32.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "8d7cb16da3cec5f60967ff66ca212285655df85265c789e283b942d4c98cfecc",
       "status": "needs_review",
@@ -2130,25 +2207,28 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:05:19.562Z"
-    }
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "אורי טשרניחובסקי",
-    "sha256": "2fbce6e305be48aa8c5af6f3a33c276e916184a38d22278b6dfc129e9ffce9ab",
-    "spellingChecked": false,
+    "sha256": "b8241b5f5c8d7b4badd85778143d5ea6562a1a86256d32599c45bf0626141266",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-112.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-32.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "2fbce6e305be48aa8c5af6f3a33c276e916184a38d22278b6dfc129e9ffce9ab",
-      "status": "needs_review",
-      "text": "א'ורי טשרניחובסקי",
-      "uncertain": true,
+      "sha256": "b8241b5f5c8d7b4badd85778143d5ea6562a1a86256d32599c45bf0626141266",
+      "status": "matched",
+      "text": "אורי טשרניחובסקי",
+      "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:04:45.01Z"
-    }
+      "checkedAt": "2026-10-16T13:26:12.839Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אורי ג'רבי",
@@ -2174,8 +2254,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-120.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-32.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "82fdb1a9dba938c38194928d35659e411946da88a893081e4bb36dcd111610a1",
       "status": "needs_review",
@@ -2184,16 +2265,18 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:05:33.286Z"
-    }
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (הנן דרורי)."
   },
   {
     "name": "דולב יהוד",
     "sha256": "b2e5fb2a47fbddc3cba8dfdbfd58778a3f562a765a727f2c829b2019e75d52e2",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-120.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-32.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "b2e5fb2a47fbddc3cba8dfdbfd58778a3f562a765a727f2c829b2019e75d52e2",
       "status": "needs_review",
@@ -2201,8 +2284,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:05:49.214Z"
-    }
+      "checkedAt": "2026-10-16T07:05:49.214Z",
+      "overrideReason": "דולב כולל ו' אחת בין ד' לל'; יהוד כולל י' בתחילתו וד' בסופו. הקריאה האוטומטית עצמה תואמת לשתי המילים."
+    },
+    "notes": "דולב כולל ו' אחת בין ד' לל'; יהוד כולל י' בתחילתו וד' בסופו. הקריאה האוטומטית עצמה תואמת לשתי המילים."
   },
   {
     "name": "יוֹבֵל מוריוסף",
@@ -2210,9 +2295,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-120.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-40.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "dbdbcba6c479cb90d5b47c8cbbb82350c0545ddf4d7950404b2f467346824b65",
       "status": "needs_review",
@@ -2221,16 +2306,18 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:06:27.311Z"
-    }
+    },
+    "notes": "הניקוד בתוצר אינו תואם יוֹבֵל; אין לפרסם."
   },
   {
     "name": "אלקנה ספז",
     "sha256": "34e415a29441dabf90d6c6f243b549a9455b3d78cfa8c93cf687d402dc6b31e8",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-120.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-40.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "34e415a29441dabf90d6c6f243b549a9455b3d78cfa8c93cf687d402dc6b31e8",
       "status": "needs_review",
@@ -2238,17 +2325,20 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:06:11.187Z"
-    }
+      "checkedAt": "2026-10-16T07:06:11.187Z",
+      "overrideReason": "אלקנה נקרא בחמש אותיות, וספז בס', פ', ז' ללא ו' נוספת. הספק אינו מתבטא בשינוי בתמלול."
+    },
+    "notes": "אלקנה נקרא בחמש אותיות, וספז בס', פ', ז' ללא ו' נוספת. הספק אינו מתבטא בשינוי בתמלול."
   },
   {
     "name": "עידו יהושע",
     "sha256": "dd33b3277405fa9d57c6e98a4d3a785eb2a8d109a8e4833e6a0959c08caa3c93",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-120.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-40.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "dd33b3277405fa9d57c6e98a4d3a785eb2a8d109a8e4833e6a0959c08caa3c93",
       "status": "needs_review",
@@ -2256,8 +2346,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:06:49.661Z"
-    }
+      "checkedAt": "2026-10-16T07:06:49.661Z",
+      "overrideReason": "עידו כולל ד' ולא ה', ויהושע נקרא ביהושע ללא אות נוספת; התמלול תואם ונבדקו צורות האותיות."
+    },
+    "notes": "עידו כולל ד' ולא ה', ויהושע נקרא ביהושע ללא אות נוספת; התמלול תואם ונבדקו צורות האותיות."
   },
   {
     "name": "אלעד אלישיב",
@@ -2315,21 +2407,23 @@
   },
   {
     "name": "אילן משה יעקב",
-    "sha256": "111edb8b2ac9b00201781c8376f34034e4efd7afca9afbf6f146de4ffad9329a",
-    "spellingChecked": false,
+    "sha256": "317e68b05f866e7435754153b8fc11fbb165ec56c8effa5c00b5973502c1fcba",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-128.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-40.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "111edb8b2ac9b00201781c8376f34034e4efd7afca9afbf6f146de4ffad9329a",
-      "status": "needs_review",
-      "text": "אילן משב יעקב",
+      "sha256": "317e68b05f866e7435754153b8fc11fbb165ec56c8effa5c00b5973502c1fcba",
+      "status": "matched",
+      "text": "אילן משה יעקב",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:07:20.857Z"
-    }
+      "checkedAt": "2026-10-16T13:26:09.432Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "חן בוכריס",
@@ -2352,12 +2446,12 @@
   {
     "name": "חגי ז'ורנו",
     "sha256": "6580af187187a187d5f7930c50f6055af32cd58a0a07c6d68102fd7f7949db28",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-128.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-40.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "6580af187187a187d5f7930c50f6055af32cd58a0a07c6d68102fd7f7949db28",
       "status": "matched",
@@ -2366,7 +2460,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:07:48.583Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אבי נגבקר",
@@ -2389,12 +2484,12 @@
   {
     "name": "גיא כרמיאל",
     "sha256": "616e32daed69aa855eab7e3f0fff1e6859afde945a4d97f0b8d945f829b1bd80",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-128.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-40.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "616e32daed69aa855eab7e3f0fff1e6859afde945a4d97f0b8d945f829b1bd80",
       "status": "matched",
@@ -2403,7 +2498,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:08:39.604Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "לידור חיים פדל",
@@ -2411,8 +2507,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-128.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-40.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "a1f44a11556cd968a4137bc02aee38ecf5b3f4165f358615f028924d43a08cc2",
       "status": "needs_review",
@@ -2421,7 +2518,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:09:07.495Z"
-    }
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "שוהם יעקב",
@@ -2444,12 +2542,12 @@
   {
     "name": "שנהב יעקב",
     "sha256": "2d351c44a3f10a1f93f1070f502d4f7dd2adb52785df87b788e25d5fab490653",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-128.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-40.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "2d351c44a3f10a1f93f1070f502d4f7dd2adb52785df87b788e25d5fab490653",
       "status": "matched",
@@ -2458,7 +2556,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:08:44.149Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "גבריאל יעקב בלום",
@@ -2466,8 +2565,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-136.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-48.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "7dea168d72477ef703609fd7c7c61b1e2155cff2835bcc8a0fe782df937bbc18",
       "status": "needs_review",
@@ -2476,7 +2576,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:09:37.232Z"
-    }
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "דולב קידר",
@@ -2498,39 +2599,45 @@
   },
   {
     "name": "שנדה-שי חנוכייב",
-    "sha256": "3674cb2aa4c0dce1df386d388a0a6d08252b85f87b7138ffa99595df65b24c43",
-    "spellingChecked": false,
+    "sha256": "9cb8b7fc48d41edce1276c75e013c2f40284fbb8cf6950d6f06ca0e845f39191",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-136.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-48.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "3674cb2aa4c0dce1df386d388a0a6d08252b85f87b7138ffa99595df65b24c43",
-      "status": "needs_review",
-      "text": "שנדה-שי תנוכייב",
-      "uncertain": false,
+      "sha256": "9cb8b7fc48d41edce1276c75e013c2f40284fbb8cf6950d6f06ca0e845f39191",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:09:33.122Z"
-    }
+      "checkedAt": "2026-10-16T13:27:39.602Z",
+      "overrideReason": "נבדקו שנדה-שי עם מקף גלוי וחנוכייב בשתי י' קצרות לפני ב'. גרסת התיקון נבדקה מול כל אות במקור."
+    },
+    "notes": "נבדקו שנדה-שי עם מקף גלוי וחנוכייב בשתי י' קצרות לפני ב'. גרסת התיקון נבדקה מול כל אות במקור."
   },
   {
     "name": "אוהד כהן",
     "sha256": "b5bbf44232d8068ffac32511b44b1adad6289e019a93848b76cbb704ee6c360b",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-136.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-48.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "b5bbf44232d8068ffac32511b44b1adad6289e019a93848b76cbb704ee6c360b",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:10:37.572Z"
-    }
+      "checkedAt": "2026-10-16T07:10:37.572Z",
+      "overrideReason": "אוהד מכיל ה' עם רגל נפרדת; כהן מסתיים בן ארוכה. שתי המילים נקראות בבירור אף ששירות הקריאה לא החזיר תמלול."
+    },
+    "notes": "אוהד מכיל ה' עם רגל נפרדת; כהן מסתיים בן ארוכה. שתי המילים נקראות בבירור אף ששירות הקריאה לא החזיר תמלול."
   },
   {
     "name": "ניב-שמואל יעקבי",
@@ -2607,12 +2714,12 @@
   {
     "name": "גל מיזלס",
     "sha256": "6a21d311f4f700e7657a92e6f36ff9401ec00dd6d4d6425804fe1d9176b8d86e",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-144.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-48.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "6a21d311f4f700e7657a92e6f36ff9401ec00dd6d4d6425804fe1d9176b8d86e",
       "status": "matched",
@@ -2621,7 +2728,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:10:48.255Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "דוד (דידי) אילוז",
@@ -2647,8 +2755,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-144.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-48.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "76a9af06116f6757defe571f7586ec633e382d3c6793e0554883a11fa3bda0c6",
       "status": "needs_review",
@@ -2656,8 +2765,9 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:11:28.19Z"
-    }
+      "checkedAt": "2026-10-16T07:11:28.190Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "גיא לוי",
@@ -2680,12 +2790,12 @@
   {
     "name": "שמאי טיכר",
     "sha256": "14cba887ae81d12979329437f1a2f056411eb634d691d12430b3d6a959a4b72a",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-144.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-48.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "14cba887ae81d12979329437f1a2f056411eb634d691d12430b3d6a959a4b72a",
       "status": "matched",
@@ -2694,44 +2804,49 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:11:43.945Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "נפתלי בן ציון לנצקרון",
     "sha256": "ea780dd04637b9a19f85b1446c30afb92f20a53318dfd3e3777d9a59e791afdc",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-144.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-48.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "ea780dd04637b9a19f85b1446c30afb92f20a53318dfd3e3777d9a59e791afdc",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:12:37.576Z"
-    }
+      "checkedAt": "2026-10-16T07:12:37.576Z",
+      "overrideReason": "נבדקו ארבע המילים נפתלי בן ציון לנצקרון, כולל נ' וצ' בתחילת שם המשפחה ון סופית. אין קיצור של השם הארוך."
+    },
+    "notes": "נבדקו ארבע המילים נפתלי בן ציון לנצקרון, כולל נ' וצ' בתחילת שם המשפחה ון סופית. אין קיצור של השם הארוך."
   },
   {
     "name": "רועי מונדר",
-    "sha256": "271b0bd4116fb33c8d5295b1f669767a41ed832f1d5f0fb842ac52a99b55a298",
-    "spellingChecked": false,
+    "sha256": "f81f8eceebf604d9747558ed08dbd8eea779da920554a20d5485ccf3ffe2e599",
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-144.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-48.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "271b0bd4116fb33c8d5295b1f669767a41ed832f1d5f0fb842ac52a99b55a298",
-      "status": "needs_review",
-      "text": "רועי מוננדר",
+      "sha256": "f81f8eceebf604d9747558ed08dbd8eea779da920554a20d5485ccf3ffe2e599",
+      "status": "matched",
+      "text": "רועי מונדר",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:12:09.352Z"
-    }
+      "checkedAt": "2026-10-16T13:26:39.399Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יותם יצחק פלד",
@@ -2754,12 +2869,12 @@
   {
     "name": "דניאל טשוקטרן",
     "sha256": "b087ab70e32b7f1b76f7936b9f0c8d1139f5eab0234e53aaa3fcdec8ab937d11",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-152.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-56.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "b087ab70e32b7f1b76f7936b9f0c8d1139f5eab0234e53aaa3fcdec8ab937d11",
       "status": "matched",
@@ -2768,7 +2883,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:13:26.135Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עמית מוסט",
@@ -2826,21 +2942,23 @@
   },
   {
     "name": "יוני גולן",
-    "sha256": "01479b4e007275b7db7ac802440ba058b495097ff105cefd9bdc4006d458ea02",
+    "sha256": "1a9771fdea928fa8b70a9dd10a462e91608aaed3442af81887dc30087e686ea5",
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-152.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-56.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "01479b4e007275b7db7ac802440ba058b495097ff105cefd9bdc4006d458ea02",
+      "sha256": "1a9771fdea928fa8b70a9dd10a462e91608aaed3442af81887dc30087e686ea5",
       "status": "needs_review",
-      "text": "יובי גולן",
+      "text": "יוכי גולן",
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:13:43.557Z"
-    }
+      "checkedAt": "2026-10-16T13:26:59.722Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "תומר מזרחי",
@@ -2863,12 +2981,12 @@
   {
     "name": "רם (רמי) יוגב",
     "sha256": "e4bb219d6fe2300994c8f2ffc5b38175a3e3c79ba288b939c8158ba02e1253e9",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-152.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-56.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "e4bb219d6fe2300994c8f2ffc5b38175a3e3c79ba288b939c8158ba02e1253e9",
       "status": "matched",
@@ -2877,25 +2995,29 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:14:05.069Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "נתנאל הרשקוביץ",
     "sha256": "9466225e0463c2570cd700cec5e5bbf0ca5ef98bcce4bf2c9c6d3c966569335c",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-152.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-56.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "9466225e0463c2570cd700cec5e5bbf0ca5ef98bcce4bf2c9c6d3c966569335c",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:15:13.639Z"
-    }
+      "checkedAt": "2026-10-16T07:15:13.639Z",
+      "overrideReason": "נתנאל נקרא בחמש אותיות; הרשקוביץ מסתיים בי' וץ סופית. כל הרצף הושווה חזותית, ללא הסרת אותיות."
+    },
+    "notes": "נתנאל נקרא בחמש אותיות; הרשקוביץ מסתיים בי' וץ סופית. כל הרצף הושווה חזותית, ללא הסרת אותיות."
   },
   {
     "name": "שילה יוסף אמיר",
@@ -2918,12 +3040,12 @@
   {
     "name": "סהר ציון מחלוף",
     "sha256": "86d3d5a5c8595763d985d6857fa005f60b211c33d11c690b8abab038866c481e",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-160.png",
-    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-56.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "86d3d5a5c8595763d985d6857fa005f60b211c33d11c690b8abab038866c481e",
       "status": "matched",
@@ -2932,7 +3054,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:15:03.599Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עמית זיו",
@@ -3009,11 +3132,12 @@
   {
     "name": "גל נבון",
     "sha256": "5f77ee84da916b81a3036fe154e43ad90fa056cbff92bdfa7220482909a866ff",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-160.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-56.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "5f77ee84da916b81a3036fe154e43ad90fa056cbff92bdfa7220482909a866ff",
       "status": "needs_review",
@@ -3021,8 +3145,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:16:03.838Z"
-    }
+      "checkedAt": "2026-10-16T07:16:03.838Z",
+      "overrideReason": "גל נקרא בשתי אותיות, ונבון כולל נ' בתחילה, ב', ו' ון סופית; התמלול תואם למרות דגל הספק."
+    },
+    "notes": "גל נקרא בשתי אותיות, ונבון כולל נ' בתחילה, ב', ו' ון סופית; התמלול תואם למרות דגל הספק."
   },
   {
     "name": "איתי גלאה",
@@ -3189,11 +3315,12 @@
   {
     "name": "עמית הוד זיו",
     "sha256": "012b3d7d788fab28839f5535c968d1d96739e8ce88a72b4699ff852e2febda80",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-176.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-56.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "012b3d7d788fab28839f5535c968d1d96739e8ce88a72b4699ff852e2febda80",
       "status": "needs_review",
@@ -3201,8 +3328,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:30:58.856Z"
-    }
+      "checkedAt": "2026-10-16T07:30:58.856Z",
+      "overrideReason": "נבדקו שלוש המילים עמית הוד זיו; זיו מסתיים בו' ארוכה, ולא בי' נוספת, והוד כולל ד' פתוחה. התמלול תואם."
+    },
+    "notes": "נבדקו שלוש המילים עמית הוד זיו; זיו מסתיים בו' ארוכה, ולא בי' נוספת, והוד כולל ד' פתוחה. התמלול תואם."
   },
   {
     "name": "מדרכי חיים אמויאל",
@@ -3210,18 +3339,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-176.png",
-    "notes": "Requires enlarged letter review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-56.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "54ded0d253882f73e9e470876a65f4e20370edb9c7e9166c7d916feaef56c25d",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:31:37.004Z"
-    }
+    },
+    "notes": "התוצר החליף את סדר האותיות מדרכי למרדכי, בניגוד לשם המקור."
   },
   {
     "name": "יוסף (יוסקה) ישראלי",
@@ -3280,20 +3410,23 @@
   {
     "name": "מרדכי נווה",
     "sha256": "b569124dbc8726d7f3aadba2d106672c357e937ab029ec2590506cc9bdb65f6e",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-176.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-64.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "b569124dbc8726d7f3aadba2d106672c357e937ab029ec2590506cc9bdb65f6e",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:32:28.915Z"
-    }
+      "checkedAt": "2026-10-16T07:32:28.915Z",
+      "overrideReason": "מרדכי נקרא בסדר ר' לפני ד', בהתאם למקור המסוים הזה; נווה מכיל שתי ו' נפרדות לפני ה'. אין שינוי איות."
+    },
+    "notes": "מרדכי נקרא בסדר ר' לפני ד', בהתאם למקור המסוים הזה; נווה מכיל שתי ו' נפרדות לפני ה'. אין שינוי איות."
   },
   {
     "name": "אלעד סימן טוב",
@@ -3352,11 +3485,12 @@
   {
     "name": "אסף גביש",
     "sha256": "ca2a32407e63f9392fef3d00b938c49f7b6fdc1087e9bc820d016bb80790f51a",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-184.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-64.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "ca2a32407e63f9392fef3d00b938c49f7b6fdc1087e9bc820d016bb80790f51a",
       "status": "needs_review",
@@ -3364,8 +3498,10 @@
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:32:49.061Z"
-    }
+      "checkedAt": "2026-10-16T07:32:49.061Z",
+      "overrideReason": "אסף כולל ף סופית ארוכה, וגביש כולל י' קצרה לפני ש'; התמלול תואם למקור אף שסומן כספק."
+    },
+    "notes": "אסף כולל ף סופית ארוכה, וגביש כולל י' קצרה לפני ש'; התמלול תואם למקור אף שסומן כספק."
   },
   {
     "name": "דולב מלכה",
@@ -3388,12 +3524,12 @@
   {
     "name": "ארז-עזרא חדד",
     "sha256": "586e382b27056716bc9dfe70778c79395cef2595f5e7430eeaf879250a269cfd",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-184.png",
-    "notes": "Requires enlarged letter review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-64.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "586e382b27056716bc9dfe70778c79395cef2595f5e7430eeaf879250a269cfd",
       "status": "matched",
@@ -3402,7 +3538,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:33:08.197Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אלון פרנקס",
@@ -3425,20 +3562,23 @@
   {
     "name": "טיגטו-גיא אברה",
     "sha256": "bcedd5db2ee9d3256a3dc7f91115df1bb69d2abc510fb126d29e8a8bbaa6f324",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-184.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-64.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "bcedd5db2ee9d3256a3dc7f91115df1bb69d2abc510fb126d29e8a8bbaa6f324",
       "status": "unavailable",
-      "text": null,
+      "text": "",
       "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:34:19.141Z"
-    }
+      "checkedAt": "2026-10-16T07:34:19.141Z",
+      "overrideReason": "נבדקו טיגטו-גיא עם מקף ועם שתי ט', ואברה בארבע אותיות. סדר האותיות הלא שכיח נשמר."
+    },
+    "notes": "נבדקו טיגטו-גיא עם מקף ועם שתי ט', ואברה בארבע אותיות. סדר האותיות הלא שכיח נשמר."
   },
   {
     "name": "חן נחמיאס",
@@ -3515,12 +3655,12 @@
   {
     "name": "אור אשכר",
     "sha256": "cc757c13b63bbc188e47b228c5fd26cb57402ba2f7b59f90faf798b9f387c6ca",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-192.png",
-    "notes": "Requires enlarged letter review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-64.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "cc757c13b63bbc188e47b228c5fd26cb57402ba2f7b59f90faf798b9f387c6ca",
       "status": "matched",
@@ -3529,7 +3669,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:34:19.779Z"
-    }
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "נאור סיבוני",
@@ -3573,8 +3714,9 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-192.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-64.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "87b4a8d998684fddb24a3587538f2184c60fe1e5873b35ce46ae966c62a8ecb9",
       "status": "needs_review",
@@ -3583,7 +3725,8 @@
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T07:35:06.454Z"
-    }
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "גיל אבני",
@@ -3642,12 +3785,12 @@
   {
     "name": "טובאל יוסף ליפשיץ",
     "sha256": "848e501b4a12443eaef2c3ac4898bcea70976d71340764e2f5bc9e2d7ec2a6ba",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-200.png",
-    "notes": "Requires enlarged letter review before approval.",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-64.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
       "sha256": "848e501b4a12443eaef2c3ac4898bcea70976d71340764e2f5bc9e2d7ec2a6ba",
       "status": "matched",
@@ -3655,8 +3798,9 @@
       "uncertain": false,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:35:42.34Z"
-    }
+      "checkedAt": "2026-10-16T07:35:42.340Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ירון פיקהולץ",
@@ -3678,30 +3822,43 @@
   },
   {
     "name": "חיים סבח",
-    "sha256": "5d7c7acc00a84d8a11ea40e1628e9ab853296e9d928007a08cb94f7cb6bee746",
+    "sha256": "e59456a18fa2a0f6f8eebbc1d9513e31887a1a105e46732a5f0551b6aebc72b4",
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-200.png",
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-64.png",
+    "reviewSession": "remaining-197-2026-10-16",
     "ocr": {
-      "sha256": "5d7c7acc00a84d8a11ea40e1628e9ab853296e9d928007a08cb94f7cb6bee746",
+      "sha256": "e59456a18fa2a0f6f8eebbc1d9513e31887a1a105e46732a5f0551b6aebc72b4",
       "status": "needs_review",
       "text": "חיים סבה",
-      "uncertain": false,
+      "uncertain": true,
       "model": "gpt-6.1-sol",
       "version": "blind-artwork-v4-sol-light-wall",
-      "checkedAt": "2026-10-16T07:35:42.901Z"
-    }
+      "checkedAt": "2026-10-16T13:27:27.851Z"
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (חיים סבה)."
   },
   {
     "name": "נועם מדמוני",
     "sha256": "d9f182be8f0b352ac5f49964731cb8ba2b41848dece8b4b41ffbae1d0821a5e0",
-    "spellingChecked": true,
+    "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-200.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-72.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "d9f182be8f0b352ac5f49964731cb8ba2b41848dece8b4b41ffbae1d0821a5e0",
+      "status": "needs_review",
+      "text": "נועם מדמווני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:36:20.145Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "ניתאי מטודי",
@@ -3709,8 +3866,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-200.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-72.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "a22738803bc0780b7270e0daf76453826a00bf3bb370377fcd6208f6e19110e5",
+      "status": "matched",
+      "text": "ניתאי מטודי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:36:30.922Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רועי עידן",
@@ -3718,8 +3886,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-200.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-72.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "d42fdd5de0e69e726dc72e4fdfe623fa5ec80bc095efd75be90de414c1fb70f9",
+      "status": "matched",
+      "text": "רועי עידן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:36:18.572Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עמי וייס",
@@ -3727,8 +3906,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-200.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-72.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "42d67b2f5de49a9f797ecbbb413cb173247be55716dbeccf04226371ae2cf3f9",
+      "status": "matched",
+      "text": "עמי וייס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:36:44.078Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ניתאי עמאר",
@@ -3736,8 +3926,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-208.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-72.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "af96835e4b8a62ca4c7ac6355b84aaf68bd31e1571c673a477b6b58d6ca71a56",
+      "status": "matched",
+      "text": "ניתאי עמאר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:36:44.160Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יאיר אשכנזי",
@@ -3745,8 +3946,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-208.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-72.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "7388c225022328a6c764b758fa2d90d174e1b775fb496000c13c9e4d3c67c8f9",
+      "status": "matched",
+      "text": "יאיר אשכנזי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:37:29.253Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אבי עמר",
@@ -3754,17 +3966,39 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-208.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-72.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "08885044fbde27bcfa3e14c113a0ed0ad182ce2c3d052ff4874e4707c4e0f4e1",
+      "status": "matched",
+      "text": "אבי עמר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:37:00.231Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עידו אבן",
     "sha256": "c023b8bb6a00058adc960f9ec20bd401f5b8010ccfe121c3cad91836e6e4c154",
-    "spellingChecked": true,
+    "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-208.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-72.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "c023b8bb6a00058adc960f9ec20bd401f5b8010ccfe121c3cad91836e6e4c154",
+      "status": "needs_review",
+      "text": "עיהו אבן",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:37:45.917Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "אביתר-משה תורגמן",
@@ -3772,8 +4006,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-208.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-80.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "b0f27cfa324cc946491b2d001f93cc998ec190392f754a9acffa2f35d1a46c78",
+      "status": "matched",
+      "text": "אביתר-משה תורגמן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:37:23.991Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רוני פטרובסקי",
@@ -3781,8 +4026,20 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-208.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-80.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "f1f3f09aa8173d99c64969e71179c2569f9a5e29edd78b5e766dd38ecd90e7fc",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:38:54.057Z",
+      "overrideReason": "רוני כולל ו' אחת ונ' ולא כ'; פטרובסקי נקרא בפ', ט', ר', ו', ב', ס', ק', י' לפי הסדר."
+    },
+    "notes": "רוני כולל ו' אחת ונ' ולא כ'; פטרובסקי נקרא בפ', ט', ר', ו', ב', ס', ק', י' לפי הסדר."
   },
   {
     "name": "אילן פיורנטינו",
@@ -3790,8 +4047,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-208.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-80.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "c2621f8d9b9fd59a0bce3e8396a1c7bdc2aebb7527e98f45d3ddd7395e45ae28",
+      "status": "matched",
+      "text": "אילן פיורנטינו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:38:11.660Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ברק דניאל הלפרן",
@@ -3799,8 +4067,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-208.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-80.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "60033d24eed0a4e7e255d2622f5fe0e0d8ba6d5cd4985a6a5624367a2fbd2d15",
+      "status": "matched",
+      "text": "ברק דניאל הלפרן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:38:51.306Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אוהד נחום",
@@ -3808,8 +4087,20 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-216.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-80.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "aaaf764008416070286692e3d59324a4c7236f57cc4bd458b5d44491efa529b2",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:39:41.728Z",
+      "overrideReason": "אוהד נקרא עם ה' ורגל מופרדת, ונחום מסתיים בם סופית סגורה. אין אות נוספת בין שתי המילים."
+    },
+    "notes": "אוהד נקרא עם ה' ורגל מופרדת, ונחום מסתיים בם סופית סגורה. אין אות נוספת בין שתי המילים."
   },
   {
     "name": "עמית בן יגאל",
@@ -3817,8 +4108,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-216.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-80.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "fc923599d934d110d7c940ff59f02e79fbf85b781572ab5b3863ed4008f27c82",
+      "status": "matched",
+      "text": "עמית בן יגאל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:39:22.691Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "דביר פימה",
@@ -3826,8 +4128,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-216.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-80.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "122502c6ab8a770e387b2768772da2421e4d0760cd247ea2ada0702fb67f38fa",
+      "status": "matched",
+      "text": "דביר פימה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:39:08.542Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "שחר בן נון",
@@ -3835,8 +4148,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-216.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-80.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "0c4304cf28915e77dce984e3c8631a8c857bf77e472408b71e6147511514ab3e",
+      "status": "matched",
+      "text": "שחר בן נון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:40:10.044Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "מאיר מנדלסון",
@@ -3844,8 +4168,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-216.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-88.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "f94ef1b9204ac19f600a6069e1d9ce18b3f19b46a44f33fc1cf2b7d0203e70a1",
+      "status": "matched",
+      "text": "מאיר מנדלסון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:40:08.972Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ערן אלכאוי",
@@ -3853,8 +4188,20 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-216.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-88.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "69063e8a95e410f506d07c90a7e1b346bb0751b01164b9b227d1e480c6c6506a",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:41:11.790Z",
+      "overrideReason": "ערן כולל ן סופית יורדת, ואלכאוי מסתיים בו' ארוכה ואז י' קצרה. נבדק האיות הלא שגרתי ללא תיקון אוטומטי."
+    },
+    "notes": "ערן כולל ן סופית יורדת, ואלכאוי מסתיים בו' ארוכה ואז י' קצרה. נבדק האיות הלא שגרתי ללא תיקון אוטומטי."
   },
   {
     "name": "ישי פיטוסי",
@@ -3862,8 +4209,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-216.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-88.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "008b58cbce3cca239ed14e9e9a48711bc6300070e241be2f52901760baad6a37",
+      "status": "matched",
+      "text": "ישי פיטוסי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:40:32.312Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עומרי ניב פיירשטיין",
@@ -3871,8 +4229,20 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-216.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-88.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "bbda758c90f3d1c1ddd3f1515288187d8be6d57ce9ae17e590c0ca4a143b90f0",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:41:40.117Z",
+      "overrideReason": "נבדקו עומרי ניב פיירשטיין, כולל שתי י' אחרי פ' ושתי י' לפני ן; שלוש המילים מופיעות ללא השמטה."
+    },
+    "notes": "נבדקו עומרי ניב פיירשטיין, כולל שתי י' אחרי פ' ושתי י' לפני ן; שלוש המילים מופיעות ללא השמטה."
   },
   {
     "name": "גל בכר",
@@ -3880,8 +4250,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-224.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-88.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "f0518bd5f32d82c47e71da046a8344163e040fcedaf24783ca510ce465cfcc04",
+      "status": "matched",
+      "text": "גל בכר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:40:51.374Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עמית צדיקוב",
@@ -3889,8 +4270,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-224.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-88.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "db49366c2d0e38430b7a8a6339b209b73e080ab98beed1cfebb5f7941cd67e2b",
+      "status": "matched",
+      "text": "עמית צדיקוב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:41:26.525Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יוסף חיים (יוסי) הרשקוביץ'",
@@ -3898,8 +4290,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-224.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-88.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "88a6327ef0055f8f04f48c29b392dffdd7138f13b99a60d40bc534e65420bf67",
+      "status": "matched",
+      "text": "יוסף חיים (יוסי) הרשקוביץ'",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:41:55.769Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "דניאל פלד",
@@ -3907,8 +4310,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-224.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-88.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "8a951d036732e39997cefbb539ee36978b2b432fd031260be3c7021f1b005efa",
+      "status": "matched",
+      "text": "דניאל פלד",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:41:53.526Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אברהם (אבי) בן-מיור",
@@ -3916,8 +4330,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-224.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-96.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "8f1fd450382a0611c46538cab77bccbba0384b105962c49e3d161232e449feef",
+      "status": "matched",
+      "text": "אברהם (אבי) בן-מיור",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:42:14.216Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ולרי פרידמן",
@@ -3925,8 +4350,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-224.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-96.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4a1b9ecdbbd547eedb8cc9d509bccac1990b9a3c346873f69fc4b743eca01570",
+      "status": "matched",
+      "text": "ולרי פרידמן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:42:12.926Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ליאור ניב",
@@ -3934,8 +4370,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-224.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-96.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "2a401422ffb77d997823d7b9d75b687a942b10db9504672d6cfe4ddbaf3aeb0a",
+      "status": "matched",
+      "text": "ליאור ניב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:42:05.279Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יעקב בר שלום",
@@ -3943,17 +4390,39 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-224.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-96.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "ccb5edbc7462ab20ee5fe02576f6bbc2faa1ae1667cbf8d6ae495d62f0270531",
+      "status": "matched",
+      "text": "יעקב בר שלום",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:42:28.625Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עידו פרץ",
     "sha256": "1581f552e2a32fe563f77209856a8deb2c4c5557d8893d284b47a08861171d7f",
-    "spellingChecked": true,
+    "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-232.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-96.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "1581f552e2a32fe563f77209856a8deb2c4c5557d8893d284b47a08861171d7f",
+      "status": "matched",
+      "text": "עידו פרץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:42:52.161Z"
+    },
+    "notes": "האות האחרונה בפרץ זוויתית ונראית כא'; נדרשת בדיקה מוגדלת."
   },
   {
     "name": "עידו נעים",
@@ -3961,8 +4430,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-232.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-96.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4d0c4447a663af11eca554f86edb4e8d3a0979f7670a6bafe8f81b433b48aad4",
+      "status": "matched",
+      "text": "עידו נעים",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:42:33.813Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "שחר רוזנברג",
@@ -3970,8 +4450,20 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-232.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-96.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "71fce1f511195ade96ae5811855a94a6f8558ec73bb9397c74436e4e4ed3d112",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:43:58.705Z",
+      "overrideReason": "שחר כולל ח' ולא ה'; רוזנברג נקרא בר', ו', ז', נ', ב', ר', ג' ואין אות נוספת במעבר בין נ' לב'."
+    },
+    "notes": "שחר כולל ח' ולא ה'; רוזנברג נקרא בר', ו', ז', נ', ב', ר', ג' ואין אות נוספת במעבר בין נ' לב'."
   },
   {
     "name": "יניב בר-און",
@@ -3979,8 +4471,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-232.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-96.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "eb2ebecfc1f07f02f3f4a0022389a174b8f12a3b976a781a0cc9c96c282f2e2e",
+      "status": "matched",
+      "text": "יניב בר-און",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:42:48.669Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אמנון נסים",
@@ -3988,8 +4491,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-232.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-104.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4967d9cf94c24d4b5400c9dbad059fa204b98dc2a59727978545224d74abe223",
+      "status": "matched",
+      "text": "אמנון נסים",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:43:28.211Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רועי פילוסוף",
@@ -3997,8 +4511,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-232.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-104.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "befed4a76aa43741601e184809a61891961be84200cd757a70f44aaf71beb012",
+      "status": "matched",
+      "text": "רועי פילוסוף",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:43:37.733Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "חיים בכר",
@@ -4006,8 +4531,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-232.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-104.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "df143e5e1b4427012f84555c8236b5236fb2d1c7786223cc390bf535064c0dc5",
+      "status": "matched",
+      "text": "חיים בכר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:43:47.040Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "מאור כהן איזנקוט",
@@ -4015,8 +4551,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-232.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-104.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "f05dcf66a0eeb2f0987692c03a891dcd3c7b8b184c4e7bef9d314bdabaf0de1f",
+      "status": "matched",
+      "text": "מאור כהן איזנקוט",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:44:21.194Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "נועם ברזילי",
@@ -4024,8 +4571,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-240.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-104.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "87493c4f709e3535fb3dfc161ea1469432033de918217dd8d24833513247bbd1",
+      "status": "matched",
+      "text": "נועם ברזילי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:44:12.511Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עמית יצחק",
@@ -4033,8 +4591,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-240.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-104.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "8edebacc276a7019f051d1249a669fa0e42a3882d46e29628398cdfb599b05d9",
+      "status": "matched",
+      "text": "עמית יצחק",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:44:46.983Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אפיק טרי",
@@ -4042,8 +4611,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-240.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-104.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "6d5e379fd565086fd988f9715fa6b40cc90f88b40528b95223380aa1ab0991a7",
+      "status": "matched",
+      "text": "אפיק טרי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:44:39.500Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יובל סולומון",
@@ -4051,8 +4631,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-240.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-104.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "f24d79ff84df86777f170145910b5ebc74a07454093dafea7186eac2d2c38c1f",
+      "status": "matched",
+      "text": "יובל סולומון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:44:33.389Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עמית דוד חבורה",
@@ -4060,8 +4651,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-240.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-112.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "b6e833bba7967c3526c1671e95bd8d6a503c3b22886a48d6f877b6c13c4b0099",
+      "status": "matched",
+      "text": "עמית דוד חבורה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:45:05.387Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רון צרפתי",
@@ -4069,8 +4671,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-240.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-112.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "1a024eaaf158f5fc96d87240922cbf177abc7edc0f6daec509d611f5c1047d27",
+      "status": "matched",
+      "text": "רון צרפתי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:45:02.085Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עדי שני",
@@ -4078,8 +4691,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-240.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-112.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "e417263f427168bbd1bcd5d04d8bd1dff6f810b9fa5dd0596438f4699f646c42",
+      "status": "matched",
+      "text": "עדי שני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:45:06.631Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "איתמר אלחרר",
@@ -4087,8 +4711,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-240.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-112.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "e6a3c58c0b7cde5bf6468fdb6d1ef17faab0ab07a90675ba67fce3ab39d6fd17",
+      "status": "matched",
+      "text": "איתמר אלחרר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:46:01.737Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יניב פוז'אריק",
@@ -4096,8 +4731,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-248.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-112.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "3a611200ee29c87896561064f967cd143440ae9616701fd484d84128e8255575",
+      "status": "matched",
+      "text": "יניב פוז'אריק",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:45:25.589Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "דור ירחי",
@@ -4105,9 +4751,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-248.png",
-    "notes": "Requires clearer glyph anatomy before approval."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-112.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "5b53f7377cd5702ffce4d0d77f5dc312eefb2f54fd6c3e2592311c2099a75f18",
+      "status": "needs_review",
+      "text": "דוב ירחי",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:46:28.994Z"
+    },
+    "notes": "דור נראה דוב בגלל צורת ר' הסגורה בתחתית."
   },
   {
     "name": "איתי לבני",
@@ -4115,9 +4771,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-248.png",
-    "notes": "Requires clearer glyph anatomy before approval."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-112.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "d6a60f581fdc3d401d05eae2040d73d13cfadc79b9c5c1f938c8b10e6b24b9bd",
+      "status": "needs_review",
+      "text": "איליכו לבכו",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:46:22.211Z"
+    },
+    "notes": "התוצר אינו קריא כאיתי לבני; נראות אותיות נוספות ושגויות."
   },
   {
     "name": "אלון אבן",
@@ -4125,8 +4791,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-248.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-112.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "28e62284729988a652ba474a9f45cf39514e9c855a5ff3262194c601f1a36070",
+      "status": "matched",
+      "text": "אלון אבן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:46:36.041Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רותם שני",
@@ -4134,26 +4811,59 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-248.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-120.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "67d82489b33b0e62b51224a42a4bb889f72c9284ccdadd353020316479b4482a",
+      "status": "matched",
+      "text": "רותם שני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:46:37.228Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "דנה זמורסקי",
     "sha256": "56f71b82e0187c711cc60c4846c2f3ea0294ffbe6b3481298aacdc73491c8aef",
-    "spellingChecked": true,
+    "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-248.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-120.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "56f71b82e0187c711cc60c4846c2f3ea0294ffbe6b3481298aacdc73491c8aef",
+      "status": "needs_review",
+      "text": "דנה זמורטקי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:27:48.927Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "אריק קראוניק",
     "sha256": "78e406e173f70e5491f0850b59538e84e98d47a19260d934a4588a003f7f19da",
-    "spellingChecked": true,
+    "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-248.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-120.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "78e406e173f70e5491f0850b59538e84e98d47a19260d934a4588a003f7f19da",
+      "status": "needs_review",
+      "text": "אריק קראונניק",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:28:01.326Z"
+    },
+    "notes": "חשד לשתי נ' בקראוניק; נדרשת בדיקה מוגדלת."
   },
   {
     "name": "בן רובינשטיין",
@@ -4161,8 +4871,20 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-248.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-120.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "a210f71d2dd75d108c64569103edee2d8d43f5b52905c850828d9bd1a5086edd",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:28:08.996Z",
+      "overrideReason": "בן מסתיים בן סופית, ורובינשטיין נבדק כולל י' לפני נ' ושתי י' לפני ן הסופית; השם אינו מקוצר."
+    },
+    "notes": "בן מסתיים בן סופית, ורובינשטיין נבדק כולל י' לפני נ' ושתי י' לפני ן הסופית; השם אינו מקוצר."
   },
   {
     "name": "עדן פרוביזור",
@@ -4170,8 +4892,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-256.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-120.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "bc7cd705db55188be4f91f2308f6afff5c519dcac13b53e78aa625c00841320c",
+      "status": "matched",
+      "text": "עדן פרוביזור",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:28:24.642Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "שרון רחמני",
@@ -4179,8 +4912,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-256.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-120.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "1ed3d16d0513bfc158a6aeb1f2566ddc8e4c199ba62170fdd2300eb0751b618b",
+      "status": "matched",
+      "text": "שרון רחמני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:29:10.580Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "מייקל אגרנובסקי",
@@ -4188,8 +4932,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-256.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-120.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4ccac681f5fe5c074c28333d7853e10590f3c14186df0b83ab89d2f9c20f5b8d",
+      "status": "matched",
+      "text": "מייקל אגרנובסקי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:46:54.190Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "איציק אלגרט",
@@ -4197,8 +4952,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-256.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-120.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "de57f0ac60ad4fbbc7deb379dac23cbb7b897350babacc3f5ba63d248eda67f1",
+      "status": "matched",
+      "text": "איציק אלגרט",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:47:16.022Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "נתנאל מושיאשוילי",
@@ -4206,17 +4972,39 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-256.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-128.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4c660e18f10e150d9b264ff5571585f02540c286d15059f7daa79e936e0d42d1",
+      "status": "matched",
+      "text": "נתנאל מושיאשוילי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:28:29.123Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "שי נרדי",
     "sha256": "c6b35bed8ea3a5ebdcd8e89a0ce36c0744659752be249c00653cab39ce124146",
-    "spellingChecked": true,
+    "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-256.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-128.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "c6b35bed8ea3a5ebdcd8e89a0ce36c0744659752be249c00653cab39ce124146",
+      "status": "needs_review",
+      "text": "שי כלדי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:29:20.117Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "ברוך פויר בולק",
@@ -4224,8 +5012,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-256.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-128.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "94b4e868a4ede64391df5d46d6f42c5b78d1a3262eb322dab6b860146910fd1e",
+      "status": "matched",
+      "text": "ברוך פויר בולק",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:29:20.451Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "בן שלי",
@@ -4233,8 +5032,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-256.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-128.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "c51875e3f3d95a48bd4bd4973875dad1c2cb0069ab8182d52bc4b1c42613c3f2",
+      "status": "matched",
+      "text": "בן שלי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:29:20.980Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "דור רידר",
@@ -4242,17 +5052,39 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-264.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-128.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "53ac5320aaba8297d8fdebe843e633719ecb6a55a8d343ae83f815779aa6381c",
+      "status": "matched",
+      "text": "דור רידר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:29:38.242Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "דניאל שיינקרמן",
     "sha256": "fb4856395e48a764ce96dd88ab5f1335229f498fde600370592fa4063608c2eb",
-    "spellingChecked": true,
+    "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-264.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-128.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "fb4856395e48a764ce96dd88ab5f1335229f498fde600370592fa4063608c2eb",
+      "status": "needs_review",
+      "text": "דניאל שייינקרמן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:30:09.208Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "תומר שפירר",
@@ -4260,8 +5092,20 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-264.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-128.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "60c26ac854c33ef6750e090865356ccad5e29827c4bbbab8c3b676b733ddbc14",
+      "status": "needs_review",
+      "text": "תומר שפירר",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:30:24.633Z",
+      "overrideReason": "תומר שפירר נבדק עם שתי ר' רצופות בסוף שם המשפחה, כפי שנכתב במקור. התמלול זהה ורק דגל ספק הוחזר."
+    },
+    "notes": "תומר שפירר נבדק עם שתי ר' רצופות בסוף שם המשפחה, כפי שנכתב במקור. התמלול זהה ורק דגל ספק הוחזר."
   },
   {
     "name": "ליאם שרם",
@@ -4269,8 +5113,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-264.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-128.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4e80e53ac2a64a0e64ee0a948df6277d4e215f18e700ccb4d273498af8815c3d",
+      "status": "matched",
+      "text": "ליאם שרם",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:30:23.470Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אייל וייס",
@@ -4278,8 +5133,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-264.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-136.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "441b02d145f855fbeda1f73965e90680c22ddcad938cc1e3d663ca082d8c3981",
+      "status": "matched",
+      "text": "אייל וייס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:30:22.878Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אלעד ראובני",
@@ -4287,8 +5153,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-264.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-136.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "c1ce5bb5c4266fa111b1ae2848dfa4dec6252c0f9c46417117f716d7cca7b746",
+      "status": "matched",
+      "text": "אלעד ראובני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:31:01.177Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אלירן יגר",
@@ -4296,8 +5173,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-264.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-136.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "bf4066b6a8faeb082cd0132b3e39d0f30333c699caa3d706dd48ed43dfb27a02",
+      "status": "matched",
+      "text": "אלירן יגר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:30:48.816Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "שון מונדשיין",
@@ -4305,8 +5193,20 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-264.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-136.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "d37d77eb520929f5725c0e5372cdeebfca616efeb229d00ae50c8b394886a17f",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:31:54.799Z",
+      "overrideReason": "שון כולל ן סופית ארוכה; מונדשיין נבדק עם שתי י' בסיום לפני ן, ללא י' נוספת. המקור המלא נקרא."
+    },
+    "notes": "שון כולל ן סופית ארוכה; מונדשיין נבדק עם שתי י' בסיום לפני ן, ללא י' נוספת. המקור המלא נקרא."
   },
   {
     "name": "אורן צלניק",
@@ -4314,8 +5214,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-272.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-136.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "86d9b2afe4844362ac91a2fd50ada518aee51a18880a16b8c933d58717d51fa6",
+      "status": "matched",
+      "text": "אורן צלניק",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:31:06.144Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יותם חיים",
@@ -4323,8 +5234,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-272.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-136.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "150c761a14d2c9e8b49e6301ba8701d59f31809630ed0802026d92f1f6d16862",
+      "status": "matched",
+      "text": "יותם חיים",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:31:18.930Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "בר תומר",
@@ -4332,8 +5254,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-272.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-136.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "9fa0a96f01f19504b764fc80bbd18b7edea8144b0bd7757ed8225d1b461b1ddd",
+      "status": "matched",
+      "text": "בר תומר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:31:26.800Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "איתי מרקוביץ",
@@ -4341,9 +5274,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-272.png",
-    "notes": "Requires clearer glyph anatomy before approval."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-136.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "0223882dc61c9659136f59fc78d03fa26adb99620c7844e105854127d693a361",
+      "status": "matched",
+      "text": "איתי מרקוביץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:31:39.057Z"
+    },
+    "notes": "האות ץ בסוף מרקוביץ מעוצבת כא'; אין ודאות מספקת לקריאות."
   },
   {
     "name": "ברק ניגרקר",
@@ -4351,9 +5294,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-272.png",
-    "notes": "Requires clearer glyph anatomy before approval."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-144.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "f8512f12ad3cc05df2cb320403e183bfb196cdaf58c5ecba18dec5c87968c80f",
+      "status": "needs_review",
+      "text": "ברק נאוקקר",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:32:37.105Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "נתן פנץ",
@@ -4361,8 +5314,19 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-272.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-144.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "f497b6b3022518f0d132141e13e0eae1aa9329da0a5610790c2c41c803efbeb2",
+      "status": "matched",
+      "text": "נתן פנץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:32:55.768Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ליאור קולרן",
@@ -4370,27 +5334,59 @@
     "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-272.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-144.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "03c2c515b48d8bc11938ceb66a6c9a73739d8921a1f4bd73b6584302bed6e65b",
+      "status": "matched",
+      "text": "ליאור קולרן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:32:19.336Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רן-נתן דולב חיימוביץ",
     "sha256": "d9eacb6db8fd37f4c5e239af2b1a01f5eac01d1bc2254beadc85666a60d35e92",
-    "spellingChecked": true,
+    "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-272.png"
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-144.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "d9eacb6db8fd37f4c5e239af2b1a01f5eac01d1bc2254beadc85666a60d35e92",
+      "status": "needs_review",
+      "text": "רן-כתן דולב חיימוביץ",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:33:30.666Z"
+    },
+    "notes": "האות הסופית בחיימוביץ זוויתית מאוד; לבדוק קריאות בנפרד."
   },
   {
     "name": "מרדכי מוטי שמיר",
     "sha256": "c75f4b41f62658a494a1f329894fdc1269eeaf35cb3deeb1aafe6054015af411",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-280.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-144.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "c75f4b41f62658a494a1f329894fdc1269eeaf35cb3deeb1aafe6054015af411",
+      "status": "matched",
+      "text": "מרדכי מוטי שמיר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:32:58.920Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רועי מלדסי",
@@ -4398,19 +5394,39 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-280.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-144.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "168b4088b3baf97ce6eebdc719909583677c5a416f6bbd1601d67fc85fd17d63",
+      "status": "needs_review",
+      "text": "רועי מלויסי",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:34:04.646Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "רועי (חיים) וייזר",
     "sha256": "567be1b4bfa636754319c962a94173508091032a10a36db1c0ed4ec1d1a025cb",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-280.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-144.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "567be1b4bfa636754319c962a94173508091032a10a36db1c0ed4ec1d1a025cb",
+      "status": "matched",
+      "text": "רועי (חיים) וייזר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:33:41.538Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יואב פפר",
@@ -4418,119 +5434,241 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-280.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-144.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "1c419e4be6b2d68e1ab7876af54556783f5592de4a96ec06003fdb9c95f0e7a8",
+      "status": "needs_review",
+      "text": "יואב פפיר",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:34:38.994Z"
+    },
+    "notes": "הקריאה העיוורת זיהתה אות שונה או נוספת; בבדיקה המוגדלת הצורה אינה חד-משמעית מספיק לפרסום."
   },
   {
     "name": "אלכס טוקר",
     "sha256": "8eb86f10b8b02ec27c27e6ca27343972cb297a491f18865ffb57c2d9f23b5e01",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-280.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-152.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "8eb86f10b8b02ec27c27e6ca27343972cb297a491f18865ffb57c2d9f23b5e01",
+      "status": "matched",
+      "text": "אלכס טוקר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:34:26.882Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יוסף (יוסי) בן-עזרא",
     "sha256": "4bdb0d55a8c4f70b4ec400e00613b25573e75008617e558c33b561c40cee49ac",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-280.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-152.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4bdb0d55a8c4f70b4ec400e00613b25573e75008617e558c33b561c40cee49ac",
+      "status": "matched",
+      "text": "יוסף (יוסי) בן-עזרא",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:34:25.970Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עומר מקסים נאוטרה",
     "sha256": "e9bd9483f029ec8f5fba7be8baae7408e5afd9f07285397d1975c53fda58e057",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-280.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-152.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "e9bd9483f029ec8f5fba7be8baae7408e5afd9f07285397d1975c53fda58e057",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:35:56.105Z",
+      "overrideReason": "שלוש המילים עומר מקסים נאוטרה נקראו; נאוטרה כולל א' וו' נפרדות וט' לפני ר'. אין קיצור או השמטה."
+    },
+    "notes": "שלוש המילים עומר מקסים נאוטרה נקראו; נאוטרה כולל א' וו' נפרדות וט' לפני ר'. אין קיצור או השמטה."
   },
   {
     "name": "אלון פרקס",
     "sha256": "5e0d9feb932fe7b42a2b80ee067ef85e719629ef3c36ef57dc321d85080c92a4",
     "spellingChecked": false,
-    "visualChecked": true,
+    "visualChecked": false,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-280.png",
-    "notes": "חשד לתוספת י' בשם הפרטי; לבדוק מקור בהגדלה."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-152.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "5e0d9feb932fe7b42a2b80ee067ef85e719629ef3c36ef57dc321d85080c92a4",
+      "status": "needs_review",
+      "text": "אלור פרקס",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:35:26.430Z"
+    },
+    "notes": "השם/ן הסופית אינם חד-משמעיים ונראית הילה רחבה שאינה משתלבת כרסס בקיר."
   },
   {
     "name": "משה מלאכי רוזנפלד",
     "sha256": "324a3a5e5a1ca59774c6a9b9838af1532dbd84d21a4b1eb2eb9cfc53bf0a53d6",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-288.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-152.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "324a3a5e5a1ca59774c6a9b9838af1532dbd84d21a4b1eb2eb9cfc53bf0a53d6",
+      "status": "matched",
+      "text": "משה מלאכי רוזנפלד",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:35:00.318Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יאיר יעקב שושן",
     "sha256": "59456d64aec4c5d7457ccb6992f55e81f8c36a7f2871a5dbc8ea3f12bdd88dbf",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-288.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-152.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "59456d64aec4c5d7457ccb6992f55e81f8c36a7f2871a5dbc8ea3f12bdd88dbf",
+      "status": "needs_review",
+      "text": "יאיר יעקב שושן",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:36:04.733Z",
+      "overrideReason": "יאיר כולל שתי י' במיקומים הנכונים, יעקב נקרא ללא י' נוספת, ושושן מסתיים בן. התמלול תואם והספק בלבד."
+    },
+    "notes": "יאיר כולל שתי י' במיקומים הנכונים, יעקב נקרא ללא י' נוספת, ושושן מסתיים בן. התמלול תואם והספק בלבד."
   },
   {
     "name": "שלמה ציטרין",
     "sha256": "373b3ca72894043610badd75ffda047cea5a84652686ab386b55c1193da2f6b8",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-288.png",
-    "notes": "חשד לתוספת ו' בסוף ציטרין; לבדוק בהגדלה."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-152.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "373b3ca72894043610badd75ffda047cea5a84652686ab386b55c1193da2f6b8",
+      "status": "matched",
+      "text": "שלמה ציטרין",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:35:39.918Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רועי ניסים",
     "sha256": "1a5c816b029f14a29993b18598737689d27dc6d0970e0fd000678a212e87379d",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-288.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-152.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "1a5c816b029f14a29993b18598737689d27dc6d0970e0fd000678a212e87379d",
+      "status": "matched",
+      "text": "רועי ניסים",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:36:42.190Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ערן-עזרא שוחט",
     "sha256": "3a5647642b847497688dabcca1eb8656b8050389f32e8f5631125bda70b7613f",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-288.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-160.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "3a5647642b847497688dabcca1eb8656b8050389f32e8f5631125bda70b7613f",
+      "status": "matched",
+      "text": "ערן-עזרא שוחט",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:36:17.785Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יותם בן בסט",
     "sha256": "d4b7e1ac66d5e1a0a100fe018bae3ce2cbdaaf362d4c0e4b89dd3f6d17ee7ff7",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-288.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-160.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "d4b7e1ac66d5e1a0a100fe018bae3ce2cbdaaf362d4c0e4b89dd3f6d17ee7ff7",
+      "status": "matched",
+      "text": "יותם בן בסט",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:36:36.657Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עמית כהן",
     "sha256": "1182b2d290586c7444d746499713ec1707a3e3553e2d4e2d1099171fc2d43a1a",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-288.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-160.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "1182b2d290586c7444d746499713ec1707a3e3553e2d4e2d1099171fc2d43a1a",
+      "status": "matched",
+      "text": "עמית כהן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:36:27.856Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עדי אוחנה",
@@ -4538,9 +5676,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-288.png",
-    "notes": "חשד לתוספת י' אחרי א' באוחנה."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-160.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "a445a0a7b4fe0ce9a1b8106cfd6bb8ad5d858e980a62d41009e2e0a2493b8861",
+      "status": "needs_review",
+      "text": "עדי איוחנה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:37:07.041Z"
+    },
+    "notes": "בתוצר נראית י' נוספת אחרי א' באוחנה."
   },
   {
     "name": "שלמה סלמן קוזרי",
@@ -4548,19 +5696,39 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-296.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-160.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "ba9f13018b966f431bf45f46c341f8753d907e286fd28c092129bb26c2236c17",
+      "status": "needs_review",
+      "text": "שלמה סלמןי קוזרי",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:37:44.471Z"
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (שלמה סלמןי קוזרי)."
   },
   {
     "name": "ברק טל",
     "sha256": "3a65ddbc4991f8814b356a7fcf35d8c974e26db573ff7dc99c659f6ee48f7d7f",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-296.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-160.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "3a65ddbc4991f8814b356a7fcf35d8c974e26db573ff7dc99c659f6ee48f7d7f",
+      "status": "matched",
+      "text": "ברק טל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:37:08.300Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עומרי תמרי",
@@ -4568,9 +5736,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-296.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-160.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "1da8007ed5237c5ff369e14d6d4d554e87c322709fc15051fe78b481fcc95520",
+      "status": "needs_review",
+      "text": "עמרי תמרי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:37:35.354Z"
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (עמרי תמרי)."
   },
   {
     "name": "שמעון רוימי",
@@ -4578,9 +5756,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-296.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-160.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "620c7f1e90a50b05362b5000f5c3dcec900ef383d2843b2001de820a58db208c",
+      "status": "needs_review",
+      "text": "שמעון חימי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:37:57.397Z"
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (שמעון חימי)."
   },
   {
     "name": "אביהוא קינן",
@@ -4588,9 +5776,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-296.png",
-    "notes": "הנ' הסופית בקינן נראית כו'; נדרשת בדיקה מוגדלת."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-168.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "39d10d2d088fcad4c23ad6f5f692ae79e7d9139aef997d1a6b2e0cab2f2ea811",
+      "status": "needs_review",
+      "text": "אביהוא קיכו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:38:08.160Z"
+    },
+    "notes": "האות האחרונה בקינן נראית ו' במקום ן; דורש בדיקה נפרדת."
   },
   {
     "name": "אריאל הרוש",
@@ -4598,19 +5796,39 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-296.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-168.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "301f43902160e1dcb75810181c8b83ac366817ae20897cebbe9a22c2d2910ff6",
+      "status": "needs_review",
+      "text": "אריאלי הרוש",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:38:13.980Z"
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (אריאלי הרוש)."
   },
   {
     "name": "אבישי בן חמו",
     "sha256": "7a77c9ab1b4a509085052675ad296f1593dc4fce81228a156bb464089819e4e6",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-296.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-168.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "7a77c9ab1b4a509085052675ad296f1593dc4fce81228a156bb464089819e4e6",
+      "status": "matched",
+      "text": "אבישי בן חמו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:39:09.274Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "איתן פיש",
@@ -4618,49 +5836,99 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-296.png",
-    "notes": "חשד לתוספת ו' בפיש."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-168.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "6d9a611653c926f822ab6d48e05572123f0e5940e8f942cffb61613c3eb81421",
+      "status": "needs_review",
+      "text": "איתן פייש",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:38:38.899Z"
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (איתן פייש)."
   },
   {
     "name": "עמית בונצל",
     "sha256": "40885eddc107320b723737d92a22fe13f8d1a99dbc6669b69c44185613b44d32",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-304.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-168.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "40885eddc107320b723737d92a22fe13f8d1a99dbc6669b69c44185613b44d32",
+      "status": "matched",
+      "text": "עמית בונצל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:38:39.453Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "נדב עמיקם",
     "sha256": "19a82f3a3e0f83fb69166141a33be606f189b3cd0f16a0bfed3cffb9d0d33e65",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-304.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-168.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "19a82f3a3e0f83fb69166141a33be606f189b3cd0f16a0bfed3cffb9d0d33e65",
+      "status": "matched",
+      "text": "נדב עמיקם",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:38:55.781Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "מעוז מורל",
     "sha256": "855e97625cd92ce6c2a7ba1905add1d05a35f6c7dd95ed17dffd11a390f3b3a6",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-304.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-168.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "855e97625cd92ce6c2a7ba1905add1d05a35f6c7dd95ed17dffd11a390f3b3a6",
+      "status": "matched",
+      "text": "מעוז מורל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:39:10.392Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עומר חג'אג'",
     "sha256": "5ec8cb879cd6fc314ee5502b15b6e6042910c183a0a32cf174958e97c9ed413a",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-304.png",
-    "notes": "הגרש הסופי וסדר הסימנים מחייבים בדיקה מוגדלת."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-168.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "5ec8cb879cd6fc314ee5502b15b6e6042910c183a0a32cf174958e97c9ed413a",
+      "status": "matched",
+      "text": "עומר חג'אג'",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:39:23.967Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "מתן שי ישינובסקי",
@@ -4668,169 +5936,343 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-304.png",
-    "notes": "שם ארוך; נדרשת ספירת י'/ו' מול המקור בהגדלה."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-176.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "bb0beb8715bf10e0f943a22b175fd242a1567d488b8ec4e7ea917da3cfa99bb7",
+      "status": "needs_review",
+      "text": "מתן שי ישיגובסקי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:39:36.448Z"
+    },
+    "notes": "לא אושר: צורת אות אינה חד-משמעית או הקריאה העיוורת אינה תואמת (מתן שי ישיגובסקי)."
   },
   {
     "name": "דניאל קסטיאל",
     "sha256": "fc49721bb9ee349eee48a64ec655f23f58bb9ec4cb707aae4612e9f14c8e4ae7",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-304.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-176.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "fc49721bb9ee349eee48a64ec655f23f58bb9ec4cb707aae4612e9f14c8e4ae7",
+      "status": "matched",
+      "text": "דניאל קסטיאל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:40:27.883Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יותם (יות'קה) ויסברג",
     "sha256": "25f65e30b84d6cad6a41232c4e5acef06826304886983790f9bc7f1146613bad",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-304.png",
-    "notes": "נדרשת בדיקת גרש וסוגריים והבחנה בין ו' לי'."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-176.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "25f65e30b84d6cad6a41232c4e5acef06826304886983790f9bc7f1146613bad",
+      "status": "needs_review",
+      "text": "יותם (יות'קה) ויסברג",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:40:06.761Z",
+      "overrideReason": "נבדקו יותם והכינוי יות'קה עם גרש אחרי ת' וזוג סוגריים; ויסברג מתחיל בו' ואחריה י' קצרה. התמלול תואם."
+    },
+    "notes": "נבדקו יותם והכינוי יות'קה עם גרש אחרי ת' וזוג סוגריים; ויסברג מתחיל בו' ואחריה י' קצרה. התמלול תואם."
   },
   {
     "name": "שמשון רוזי",
     "sha256": "ac0525a223bacc1deaed777cd6135c28618e62b61eca513cf1ba9bdbb295aa08",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-304.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-176.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "ac0525a223bacc1deaed777cd6135c28618e62b61eca513cf1ba9bdbb295aa08",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:41:06.612Z",
+      "overrideReason": "שמשון כולל שתי ש' ון סופית ארוכה; רוזי כולל ו' וז' נפרדות ומסתיים בי' קצרה. שתי המילים נקראו ללא השלמה."
+    },
+    "notes": "שמשון כולל שתי ש' ון סופית ארוכה; רוזי כולל ו' וז' נפרדות ומסתיים בי' קצרה. שתי המילים נקראו ללא השלמה."
   },
   {
     "name": "תומר פרץ",
     "sha256": "4bcc7d4e5be31aaef8538c3840b75287a7c58cf616a4bf18511ff4c777ddead6",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-312.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-176.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4bcc7d4e5be31aaef8538c3840b75287a7c58cf616a4bf18511ff4c777ddead6",
+      "status": "matched",
+      "text": "תומר פרץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:40:27.536Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "שילה סימן טוב",
     "sha256": "1dfdc14e6b9d5a47af15b25443ed5a9f9d823d68a799ebb0eae7e53b3e7894c3",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-312.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-176.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "1dfdc14e6b9d5a47af15b25443ed5a9f9d823d68a799ebb0eae7e53b3e7894c3",
+      "status": "matched",
+      "text": "שילה סימן טוב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:41:22.216Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "יקיר יצחק",
     "sha256": "0ba57828a2c012b798f76445f3e0945b65ef232103774099b194d9a2d0f51a52",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-312.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-176.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "0ba57828a2c012b798f76445f3e0945b65ef232103774099b194d9a2d0f51a52",
+      "status": "matched",
+      "text": "יקיר יצחק",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:40:50.438Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אביחי לוי",
     "sha256": "21cf5bbb2623e0de970695c11d85791e654eccfc253d88f56e54983db973579f",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-312.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-176.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "21cf5bbb2623e0de970695c11d85791e654eccfc253d88f56e54983db973579f",
+      "status": "matched",
+      "text": "אביחי לוי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:41:03.317Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "שאול צ'נסי",
     "sha256": "d6925e71717be25db3989a0aa4780d503235b76091f04c585c33b7e576baffc6",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-312.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-184.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "d6925e71717be25db3989a0aa4780d503235b76091f04c585c33b7e576baffc6",
+      "status": "needs_review",
+      "text": "שאול צ'נסי",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:42:12.337Z",
+      "overrideReason": "שאול נקרא בשלמותו; בצ'נסי יש גרש גלוי אחרי צ' וי' קצרה בסיום. התמלול עצמו תואם, עם דגל ספק בלבד."
+    },
+    "notes": "שאול נקרא בשלמותו; בצ'נסי יש גרש גלוי אחרי צ' וי' קצרה בסיום. התמלול עצמו תואם, עם דגל ספק בלבד."
   },
   {
     "name": "עידו קסלסי",
     "sha256": "80c231090100e679c07a61f148f52fc4f9bf9d15e84dca8b7c2bdbd5de3edbc8",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-312.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-184.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "80c231090100e679c07a61f148f52fc4f9bf9d15e84dca8b7c2bdbd5de3edbc8",
+      "status": "matched",
+      "text": "עידו קסלסי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:41:46.826Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עומר בלווה",
     "sha256": "aa5873948353acc71f4292387ef6895d505818863b089af5ab73a77727b8a3a2",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-312.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-184.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "aa5873948353acc71f4292387ef6895d505818863b089af5ab73a77727b8a3a2",
+      "status": "matched",
+      "text": "עומר בלווה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:41:35.671Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אלון סמוכה",
     "sha256": "c1bc76debc519d93bda656551e7fae2e8151b6b38d4548c6a62ab363eb0523e5",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-312.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-184.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "c1bc76debc519d93bda656551e7fae2e8151b6b38d4548c6a62ab363eb0523e5",
+      "status": "matched",
+      "text": "אלון סמוכה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:41:59.087Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "עדי שאולי",
     "sha256": "6af6721dcdc7a8a507568137dbeee2a66843e88c770c8e1056278356be5c4f58",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-320.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-184.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "6af6721dcdc7a8a507568137dbeee2a66843e88c770c8e1056278356be5c4f58",
+      "status": "matched",
+      "text": "עדי שאולי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:41:58.392Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "ליאור הררי",
     "sha256": "bc51a76656811d63e4bb1af426cfee73ec1d555b0ecbacffa2805ede7584b550",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-320.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-184.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "bc51a76656811d63e4bb1af426cfee73ec1d555b0ecbacffa2805ede7584b550",
+      "status": "matched",
+      "text": "ליאור הררי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:42:21.131Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "רום הכט",
     "sha256": "025bfdeb80e38707dd66fe6f6f9c3e1411e70ce013089e28714d428a74864ac1",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-320.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-184.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "025bfdeb80e38707dd66fe6f6f9c3e1411e70ce013089e28714d428a74864ac1",
+      "status": "needs_review",
+      "text": "רום הכט",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:43:03.729Z",
+      "overrideReason": "רום מסתיים בם סופית סגורה, והכט נקרא בה', כ', ט' ללא תוספת. שתי המילים והתמלול תואמים."
+    },
+    "notes": "רום מסתיים בם סופית סגורה, והכט נקרא בה', כ', ט' ללא תוספת. שתי המילים והתמלול תואמים."
   },
   {
     "name": "תומר חזן",
     "sha256": "4764dd8d354788e56c6c25f4230b47dbcfd16a4e4c384c3a8d7b41f1769dcea9",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-320.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-184.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "4764dd8d354788e56c6c25f4230b47dbcfd16a4e4c384c3a8d7b41f1769dcea9",
+      "status": "matched",
+      "text": "תומר חזן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:42:45.901Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "משה כהן",
     "sha256": "75ba33d16b8c2839f507a2cb9242b1ae6de3e66b608c1c18059e2d5fe716bd0f",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-320.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-192.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "75ba33d16b8c2839f507a2cb9242b1ae6de3e66b608c1c18059e2d5fe716bd0f",
+      "status": "matched",
+      "text": "משה כהן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:42:32.714Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "חיים טורג'מן",
@@ -4838,9 +6280,19 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-320.png",
-    "notes": "הגרש נראה חסר או נבלע; אין לאשר עד בירור."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-192.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "045c4103c1e9cc0bdf982b81ac5c7eff80e8f742616d8f8a16a64b7c57fc8d34",
+      "status": "matched",
+      "text": "חיים טורג'מן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:43:18.670Z"
+    },
+    "notes": "הגרש בטורג'מן אינו מובחן דיו."
   },
   {
     "name": "ישראל יודקין",
@@ -4848,28 +6300,58 @@
     "spellingChecked": false,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-320.png",
-    "notes": "חשד לקריאה יודקיו במקום יודקין."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-192.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "c9be74efaa6144cb75595068c59496001653dd3fc121fda6c2dc9732864edac8",
+      "status": "matched",
+      "text": "ישראל יודקין",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:43:12.263Z"
+    },
+    "notes": "האות הסופית ביודקין נראית ו' במקום ן; דורש בדיקה נפרדת."
   },
   {
     "name": "אדיר פורטוגל",
     "sha256": "3a65622d0a4efadc657d2dead1b2d58c0692d57c809082afa865bdfce70c4237",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-320.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-192.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "3a65622d0a4efadc657d2dead1b2d58c0692d57c809082afa865bdfce70c4237",
+      "status": "matched",
+      "text": "אדיר פורטוגל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:43:22.695Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   },
   {
     "name": "אבירם-חי זילבר",
     "sha256": "b82695aa4bff418e6d2b1f48bdfd17100fa440f4311aadeea0ddcf720a7eb3d7",
-    "spellingChecked": false,
+    "spellingChecked": true,
     "visualChecked": true,
     "renderChecked": true,
-    "reviewedBy": "codex-visual-review",
-    "evidence": "sheet-328.png",
-    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+    "reviewedBy": "codex-enlarged-visual-review",
+    "evidence": "pending-source-192.png",
+    "reviewSession": "remaining-197-2026-10-16",
+    "ocr": {
+      "sha256": "b82695aa4bff418e6d2b1f48bdfd17100fa440f4311aadeea0ddcf720a7eb3d7",
+      "status": "matched",
+      "text": "אבירם-חי זילבר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T13:43:57.112Z"
+    },
+    "notes": "נקראו כל אותיות השם מול המקור ברינדור המוגדל; התאמת קריאה עיוורת תקפה לאותו SHA."
   }
 ]

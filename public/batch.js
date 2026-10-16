@@ -5,7 +5,7 @@ export function nameFromFile(file) {
 }
 export function validName(name) {
   return typeof name === "string" && name.length >= 2 && name.length <= 80 &&
-    /^[\p{L}\p{M} '\u2019\u05f3\u05f4\u05be"._-]+$/u.test(name) && /\p{L}/u.test(name) && name === name.trim() &&
+    /^[\p{L}\p{M} '\u2019\u05f3\u05f4\u05be".,()_-]+$/u.test(name) && /\p{L}/u.test(name) && name === name.trim() &&
     !/^(?:whatsapp|img|image|photo|dsc|pxl|screenshot)(?:\s|$)/iu.test(name);
 }
 export function validateFiles(files, checkNames = true) {

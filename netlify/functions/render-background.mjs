@@ -5,6 +5,7 @@ import { reviewImage } from "../../server/review.mjs";
 import { compositeExactName, nameVariant } from "../../server/exact-name.mjs";
 import { compositeCaption } from "../../server/composite.mjs";
 import { compositeGraffitiName, NAME_STYLE_VERSION, graffitiStyles } from "../../server/graffiti-name.mjs";
+import { fetchArtwork, compositeArtwork } from "../../server/name-artwork.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -18,6 +19,8 @@ export default async (request) => {
     await store.setJSON(id, { ...job, status: "processing", startedAt: Date.now() });
     const input = await store.get(`${id}/input`, { type: "json" });
     if (!input) throw new Error("תמונת המקור לא זמינה. יש להעלות אותה מחדש.");
+    if (job.nameArtwork && job.nameArtwork.name !== input.name) throw new Error("Artwork name mismatch");
+    const artwork = job.nameArtwork ? await fetchArtwork(job.nameArtwork) : null;
     const designSeed = job.designSeed || id;
     const exactName = job.layoutVersion === EXACT_NAME_LAYOUT;
     const fixedCaption = job.layoutVersion === CAPTION_LAYOUT;
@@ -29,12 +32,12 @@ export default async (request) => {
     const variant = job.nameVariant || nameVariant(designSeed);
     if (exactName) {
       await store.set(`${id}/base`, result);
-      result = job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant) : await compositeExactName(result, input.name, designSeed, variant);
+      result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant) : await compositeExactName(result, input.name, designSeed, variant);
       result = await compositeCaption(result, job.captionVariant);
     }
     await store.set(`${id}/result`, result);
     const review = await reviewImage(result.toString("base64"), input.name, fetch, fixedCaption, exactName ? "image/png" : "image/jpeg");
-    await store.setJSON(id, { ...job, layoutVersion: exactName ? EXACT_NAME_LAYOUT : fixedCaption ? CAPTION_LAYOUT : INTEGRATED_LAYOUT, ...(exactName ? { nameVariant: variant, nameSource: "literal-input" } : {}), ...(job.nameStyleVersion === NAME_STYLE_VERSION ? { nameStyleLabel: graffitiStyles[variant - 1].label } : {}), designSeed, review, status: "completed" });
+    await store.setJSON(id, { ...job, layoutVersion: exactName ? EXACT_NAME_LAYOUT : fixedCaption ? CAPTION_LAYOUT : INTEGRATED_LAYOUT, ...(exactName ? { nameVariant: variant, nameSource: artwork ? "prebuilt-reviewed" : "literal-input" } : {}), ...(job.nameStyleVersion === NAME_STYLE_VERSION ? { nameStyleLabel: artwork ? "גרפיטי מוכן מראש" : graffitiStyles[variant - 1].label } : {}), designSeed, review, status: "completed" });
   } catch (error) {
     await store.setJSON(id, { ...job, status: "failed", error: /^(שירות|מפתח|החיבור|אין יתרה|לחשבון)/u.test(error.message) ? error.message : "יצירת התמונה נכשלה. בדקו את החיבור ונסו שוב." });
   } finally {

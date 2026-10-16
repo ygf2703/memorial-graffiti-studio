@@ -1,0 +1,4875 @@
+[
+  {
+    "name": "אריאל בן משה",
+    "sha256": "f0103fe3c59331cafb599b0cd58d32a49cf71b7df0d384ce63820318091263bf",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-0.png",
+    "ocr": {
+      "sha256": "f0103fe3c59331cafb599b0cd58d32a49cf71b7df0d384ce63820318091263bf",
+      "status": "matched",
+      "text": "אריאל בן משה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:27:51.199Z"
+    }
+  },
+  {
+    "name": "אליאב עמרם אביטבול",
+    "sha256": "19541b6fa4b3d2caa5ab983b62216e3dfd1edb5e485c1bb92c1d6b2c2947fead",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-0.png",
+    "ocr": {
+      "sha256": "19541b6fa4b3d2caa5ab983b62216e3dfd1edb5e485c1bb92c1d6b2c2947fead",
+      "status": "matched",
+      "text": "אליאב עמרם אביטבול",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:27:51.827Z"
+    }
+  },
+  {
+    "name": "רון בנימין",
+    "sha256": "3c97d32fd6e77c36cf4d6da8389a0894778df7e754ccf467a32689df3cfd7de7",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-0.png",
+    "ocr": {
+      "sha256": "3c97d32fd6e77c36cf4d6da8389a0894778df7e754ccf467a32689df3cfd7de7",
+      "status": "matched",
+      "text": "רון בנימין",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:27:39.945Z"
+    }
+  },
+  {
+    "name": "בן בנציון חסיד",
+    "sha256": "d302bbd50325b6b0cca4db69f05b1606f9592b73f387c2958dba7782669bfe19",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-0.png",
+    "ocr": {
+      "sha256": "d302bbd50325b6b0cca4db69f05b1606f9592b73f387c2958dba7782669bfe19",
+      "status": "needs_review",
+      "text": "בן בנצייון חסיד",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:29:05.087Z"
+    }
+  },
+  {
+    "name": "נאיל פוארסה",
+    "sha256": "d635fc3959785e3a4a295eb5415d4e7f60d791f6a6e4e514b473e5a18f2aceba",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-0.png",
+    "ocr": {
+      "sha256": "d635fc3959785e3a4a295eb5415d4e7f60d791f6a6e4e514b473e5a18f2aceba",
+      "status": "matched",
+      "text": "נאיל פוארסה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:28:15.286Z"
+    }
+  },
+  {
+    "name": "עילי בר שדה",
+    "sha256": "dda6f524b46a603b8445babcbc3695567641a71322b391f4256ecb32fbeb33ec",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-0.png",
+    "ocr": {
+      "sha256": "dda6f524b46a603b8445babcbc3695567641a71322b391f4256ecb32fbeb33ec",
+      "status": "matched",
+      "text": "עילי בר שדה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:28:17.741Z"
+    }
+  },
+  {
+    "name": "עומרי חיים יעקובוביץ, אלמקייס",
+    "sha256": "bd1c948ce8b0f62113135db8f1f70e6ec042833ff05319d221067ced95dfaf0d",
+    "spellingChecked": false,
+    "visualChecked": false,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-0.png",
+    "note": "יש לבדוק מחדש אותיות ופיסוק בשם הארוך",
+    "ocr": {
+      "sha256": "bd1c948ce8b0f62113135db8f1f70e6ec042833ff05319d221067ced95dfaf0d",
+      "status": "matched",
+      "text": "עומרי חיים יעקובוביץ, אלמקייס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:28:59.474Z"
+    }
+  },
+  {
+    "name": "גברי-אל ישי בראל",
+    "sha256": "55c9bc22a551e93906e7fa7c1acfae9e00577f5756b3d45305dae189c6e3ff53",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-0.png",
+    "ocr": {
+      "sha256": "55c9bc22a551e93906e7fa7c1acfae9e00577f5756b3d45305dae189c6e3ff53",
+      "status": "matched",
+      "text": "גברי-אל ישי בראל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:28:47.942Z"
+    }
+  },
+  {
+    "name": "יהודה גבאי",
+    "sha256": "24071ab2ec1e49368daff4083625929e433ed8a7d63351cf8b126847e1d52100",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-8.png",
+    "ocr": {
+      "sha256": "24071ab2ec1e49368daff4083625929e433ed8a7d63351cf8b126847e1d52100",
+      "status": "matched",
+      "text": "יהודה גבאי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:34:53.89Z"
+    }
+  },
+  {
+    "name": "איתי ברדיצ'בסקי",
+    "sha256": "f963c77eb9183cf629668891e5c5110e4ac6e92f12961277cbe7b4c43646d248",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-8.png",
+    "ocr": {
+      "sha256": "f963c77eb9183cf629668891e5c5110e4ac6e92f12961277cbe7b4c43646d248",
+      "status": "matched",
+      "text": "איתי ברדיצ'בסקי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:35:02.263Z"
+    }
+  },
+  {
+    "name": "רועי ברקת",
+    "sha256": "39d44b23e226e5a3e6ed888f45c4c1cab73823d7aa15fa9033e7ddb4884336b8",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-8.png",
+    "ocr": {
+      "sha256": "39d44b23e226e5a3e6ed888f45c4c1cab73823d7aa15fa9033e7ddb4884336b8",
+      "status": "needs_review",
+      "text": "רוועי ברקת",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:34:58.526Z"
+    }
+  },
+  {
+    "name": "גאיה אורן",
+    "sha256": "f6fe2bf243199633fcc32907772e70905104f63f99adbab68ba3e00df6558e55",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-8.png",
+    "ocr": {
+      "sha256": "f6fe2bf243199633fcc32907772e70905104f63f99adbab68ba3e00df6558e55",
+      "status": "matched",
+      "text": "גאיה אורן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:35:14.25Z"
+    }
+  },
+  {
+    "name": "רואי אליאס",
+    "sha256": "1c2d07160618f4b3c896cbf515668c99cdc21d5c1b103659c0ba1c22e02f934c",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-8.png",
+    "ocr": {
+      "sha256": "1c2d07160618f4b3c896cbf515668c99cdc21d5c1b103659c0ba1c22e02f934c",
+      "status": "needs_review",
+      "text": "רואי אלאם",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:35:46.49Z"
+    }
+  },
+  {
+    "name": "גיל עוז אנזה",
+    "sha256": "7d1825905330ae38f6660dd1a2e593f084d9312a52297401226861048cf886e3",
+    "spellingChecked": false,
+    "visualChecked": false,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-8.png",
+    "note": "יש לבדוק מחדש קריאות כתב היד",
+    "ocr": {
+      "sha256": "7d1825905330ae38f6660dd1a2e593f084d9312a52297401226861048cf886e3",
+      "status": "needs_review",
+      "text": "גיל עחה אבזה",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:36:01.315Z"
+    }
+  },
+  {
+    "name": "אלדד רגב",
+    "sha256": "d9cdcfd00daca4062b728fce0d0ec76539125c83b6372ab2fd3497f768e68fa6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-8.png",
+    "ocr": {
+      "sha256": "d9cdcfd00daca4062b728fce0d0ec76539125c83b6372ab2fd3497f768e68fa6",
+      "status": "matched",
+      "text": "אלדד רגב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:35:41.267Z"
+    }
+  },
+  {
+    "name": "אליה אליהו אילוז",
+    "sha256": "bee01f0ebbdac77916d2ae0ee5dddb1af5daf7143ad52bdbfed6d320e615ada7",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-8.png",
+    "ocr": {
+      "sha256": "bee01f0ebbdac77916d2ae0ee5dddb1af5daf7143ad52bdbfed6d320e615ada7",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:37:11.34Z"
+    }
+  },
+  {
+    "name": "יוסי שרעבי",
+    "sha256": "1680288358bbbfe7ab1cf8abf675ada454b86314f55e55efec69002fd1b413b1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-16.png",
+    "ocr": {
+      "sha256": "1680288358bbbfe7ab1cf8abf675ada454b86314f55e55efec69002fd1b413b1",
+      "status": "matched",
+      "text": "יוסי שרעבי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:35:57.636Z"
+    }
+  },
+  {
+    "name": "ניסים אלגרבלי",
+    "sha256": "16e0b07bcefe303b24ff089d7e9c7a6b54ecc3de600ba244fc066202db865d8b",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-16.png",
+    "ocr": {
+      "sha256": "16e0b07bcefe303b24ff089d7e9c7a6b54ecc3de600ba244fc066202db865d8b",
+      "status": "needs_review",
+      "text": "ניסים אלגובלי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:36:28.771Z"
+    }
+  },
+  {
+    "name": "שלמה (שלומי) יהונתן חזוט",
+    "sha256": "87c70f92da80cf246beb9f9f350793a2060f1a0dcbcfa88e4f8af7bb539b6923",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-16.png",
+    "ocr": {
+      "sha256": "87c70f92da80cf246beb9f9f350793a2060f1a0dcbcfa88e4f8af7bb539b6923",
+      "status": "matched",
+      "text": "שלמה (שלומי) יהונתן חזוט",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:36:39.198Z"
+    }
+  },
+  {
+    "name": "יהונתן אליהו",
+    "sha256": "38b59d68eaea82611f25ac572ebd0d6c95498ce26557cc39c0ef83eae5298795",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-16.png",
+    "ocr": {
+      "sha256": "38b59d68eaea82611f25ac572ebd0d6c95498ce26557cc39c0ef83eae5298795",
+      "status": "matched",
+      "text": "יהונתן אליהו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:36:45.087Z"
+    }
+  },
+  {
+    "name": "אור ברנדס",
+    "sha256": "c98cf6678a08f23c4b36c5acaccca55efc020b7fe870a9ff06ef4b0cfed17dba",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-16.png",
+    "ocr": {
+      "sha256": "c98cf6678a08f23c4b36c5acaccca55efc020b7fe870a9ff06ef4b0cfed17dba",
+      "status": "needs_review",
+      "text": "אור בונדס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:36:58.276Z"
+    }
+  },
+  {
+    "name": "שי חיון ביטון",
+    "sha256": "6350cc25dc098b8e893bff7fa7d6834933d6ca569a4ab6af26a7a3ef15c61489",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-16.png",
+    "ocr": {
+      "sha256": "6350cc25dc098b8e893bff7fa7d6834933d6ca569a4ab6af26a7a3ef15c61489",
+      "status": "matched",
+      "text": "שי חיון ביטון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:37:15.974Z"
+    }
+  },
+  {
+    "name": "ליאל ג'רפי",
+    "sha256": "c66d8784240835a2e0f5cc4524e58a0e87cee9b2d719fad787f22f0ff9008515",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-16.png",
+    "ocr": {
+      "sha256": "c66d8784240835a2e0f5cc4524e58a0e87cee9b2d719fad787f22f0ff9008515",
+      "status": "matched",
+      "text": "ליאל ג'רפי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:37:25.318Z"
+    }
+  },
+  {
+    "name": "לירון קסטון",
+    "sha256": "4b531082a373a474a2d6541c08dc16443683bc590d96c1d9d4ea486398d0fcd0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-16.png",
+    "ocr": {
+      "sha256": "4b531082a373a474a2d6541c08dc16443683bc590d96c1d9d4ea486398d0fcd0",
+      "status": "matched",
+      "text": "לירון קסטון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:37:36.222Z"
+    }
+  },
+  {
+    "name": "ניר זלאיט",
+    "sha256": "3cff1ed2b11aa2acd537863fc02050799d146fe2ec53fc4329e5e1d2c607ecf7",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-24.png",
+    "ocr": {
+      "sha256": "3cff1ed2b11aa2acd537863fc02050799d146fe2ec53fc4329e5e1d2c607ecf7",
+      "status": "matched",
+      "text": "ניר זלאיט",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:37:48.038Z"
+    }
+  },
+  {
+    "name": "יובל פנקר",
+    "sha256": "521edbbcfead2306b9ae553048183a1585fb98ad3b1221e38de0fc3812b61b08",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-24.png",
+    "ocr": {
+      "sha256": "521edbbcfead2306b9ae553048183a1585fb98ad3b1221e38de0fc3812b61b08",
+      "status": "matched",
+      "text": "יובל פנקר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:37:45.961Z"
+    }
+  },
+  {
+    "name": "יניב שיינברום",
+    "sha256": "623e12b67f28b9eddab46d18e55305bf06af586e0e6333f39995a1e941372f88",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-24.png",
+    "ocr": {
+      "sha256": "623e12b67f28b9eddab46d18e55305bf06af586e0e6333f39995a1e941372f88",
+      "status": "matched",
+      "text": "יניב שיינברום",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:38:23.691Z"
+    }
+  },
+  {
+    "name": "עידן בלוי",
+    "sha256": "2fd82ee74db92bc2b4812a09a7af7af6633d1f0534bb572e4ef915ac5aa3b2a4",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-24.png",
+    "ocr": {
+      "sha256": "2fd82ee74db92bc2b4812a09a7af7af6633d1f0534bb572e4ef915ac5aa3b2a4",
+      "status": "matched",
+      "text": "עידן בלוי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:38:07.131Z"
+    }
+  },
+  {
+    "name": "גבריאל שני",
+    "sha256": "2913bf2dee2fe6885c6041429f41424d024c9746a81961d2d062f4cd1dd7ab51",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-24.png",
+    "ocr": {
+      "sha256": "2913bf2dee2fe6885c6041429f41424d024c9746a81961d2d062f4cd1dd7ab51",
+      "status": "matched",
+      "text": "גבריאל שני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:38:00.862Z"
+    }
+  },
+  {
+    "name": "שמעון ארביב",
+    "sha256": "d3cd31a5e7595f52011389965a60d043a53ee3e44c395cdbfb040e113f73e438",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-24.png",
+    "ocr": {
+      "sha256": "d3cd31a5e7595f52011389965a60d043a53ee3e44c395cdbfb040e113f73e438",
+      "status": "matched",
+      "text": "שמעון ארביב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:38:26.44Z"
+    }
+  },
+  {
+    "name": "אייל מאיר ברקוביץ",
+    "sha256": "441212a31b0cffbd3ae9d4195ed45ef0c5204cf6bf95e5c7fd1a8553c2cf0a3c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-24.png",
+    "ocr": {
+      "sha256": "441212a31b0cffbd3ae9d4195ed45ef0c5204cf6bf95e5c7fd1a8553c2cf0a3c",
+      "status": "matched",
+      "text": "אייל מאיר ברקוביץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:38:28.617Z"
+    }
+  },
+  {
+    "name": "עומר יעקובזון",
+    "sha256": "5778cca84f556b4f8ecf0ac3aaafc6faa29dd816dca1d5867f2a5053fd1778c8",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-24.png",
+    "ocr": {
+      "sha256": "5778cca84f556b4f8ecf0ac3aaafc6faa29dd816dca1d5867f2a5053fd1778c8",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:39:53.765Z"
+    }
+  },
+  {
+    "name": "ספיר בילמס",
+    "sha256": "839bcfbdb90d3d6d66c8c7a7f465b3cac41a4bf59305ab5a08ff5ea829715218",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-32.png",
+    "ocr": {
+      "sha256": "839bcfbdb90d3d6d66c8c7a7f465b3cac41a4bf59305ab5a08ff5ea829715218",
+      "status": "needs_review",
+      "text": "ספיר בילמם",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:39:33.157Z"
+    }
+  },
+  {
+    "name": "מיכאל (מיקי) נחום",
+    "sha256": "1562efae009fab55a115c9c452d5e6354f6ad20773a26f676f626a806b06059d",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-32.png",
+    "ocr": {
+      "sha256": "1562efae009fab55a115c9c452d5e6354f6ad20773a26f676f626a806b06059d",
+      "status": "matched",
+      "text": "מיכאל (מיקי) נחום",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:39:14.77Z"
+    }
+  },
+  {
+    "name": "שחר בוזגלו",
+    "sha256": "1d5b95a705ccb842b2d6090632e9db76ff17c4f1e3e54165376af8e948a918b8",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-32.png",
+    "ocr": {
+      "sha256": "1d5b95a705ccb842b2d6090632e9db76ff17c4f1e3e54165376af8e948a918b8",
+      "status": "matched",
+      "text": "שחר בוזגלו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:39:39.63Z"
+    }
+  },
+  {
+    "name": "אייל טויטו-מבורך",
+    "sha256": "81aa7cdb99a1f6f304a36bb1b2d3101eeb7da07cb2c19d802f1a36b309e2831b",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-32.png",
+    "ocr": {
+      "sha256": "81aa7cdb99a1f6f304a36bb1b2d3101eeb7da07cb2c19d802f1a36b309e2831b",
+      "status": "needs_review",
+      "text": "איייל טויטו-מבורך",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:40:04.461Z"
+    }
+  },
+  {
+    "name": "מאור גרציאני",
+    "sha256": "9d0666ab2aa730ff90bf9e7b36e758edce3c028acaacc6abca5114d220736477",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-32.png",
+    "ocr": {
+      "sha256": "9d0666ab2aa730ff90bf9e7b36e758edce3c028acaacc6abca5114d220736477",
+      "status": "needs_review",
+      "text": "מאור גרציאניי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:40:22.668Z"
+    }
+  },
+  {
+    "name": "אורי משה בורנשטיין",
+    "sha256": "cdbaad611d899053858e8576f74856933af04b3b1d48ddbaf4967b7de2664eba",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-32.png",
+    "ocr": {
+      "sha256": "cdbaad611d899053858e8576f74856933af04b3b1d48ddbaf4967b7de2664eba",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:40:32.504Z"
+    }
+  },
+  {
+    "name": "טל פיליבה",
+    "sha256": "7ffed07b35e0485e27a47a52200a998c119af6bc4d2b2bb5f740babe77d08e85",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-32.png",
+    "ocr": {
+      "sha256": "7ffed07b35e0485e27a47a52200a998c119af6bc4d2b2bb5f740babe77d08e85",
+      "status": "matched",
+      "text": "טל פיליבה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:40:21.578Z"
+    }
+  },
+  {
+    "name": "לידור לוי",
+    "sha256": "ffed22b4b0e35c34561589dee5ce00e642ff8e30fb0a17fe7f38b6a38da64975",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-32.png",
+    "ocr": {
+      "sha256": "ffed22b4b0e35c34561589dee5ce00e642ff8e30fb0a17fe7f38b6a38da64975",
+      "status": "matched",
+      "text": "לידור לוי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:40:39.243Z"
+    }
+  },
+  {
+    "name": "ברק דוידי",
+    "sha256": "4fd585743f6fa82791a57d0b3424156aeefb58793289455150f9000832151bda",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-40.png",
+    "ocr": {
+      "sha256": "4fd585743f6fa82791a57d0b3424156aeefb58793289455150f9000832151bda",
+      "status": "matched",
+      "text": "ברק דוידי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:40:38.952Z"
+    }
+  },
+  {
+    "name": "איתי אילוז",
+    "sha256": "b306a733e6db8540ab17afd6a951ee059e8da593fb370fc03b9c00d634ec0aaa",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-40.png",
+    "ocr": {
+      "sha256": "b306a733e6db8540ab17afd6a951ee059e8da593fb370fc03b9c00d634ec0aaa",
+      "status": "needs_review",
+      "text": "איתי אילוז",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:41:27.473Z"
+    }
+  },
+  {
+    "name": "דורון לב",
+    "sha256": "1801d57b8bd1eaa59fae8a86534bfa1727fd4e3a4aeb4dee00e9df9b9a0ed263",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-40.png",
+    "ocr": {
+      "sha256": "1801d57b8bd1eaa59fae8a86534bfa1727fd4e3a4aeb4dee00e9df9b9a0ed263",
+      "status": "matched",
+      "text": "דורון לב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:40:52.2Z"
+    }
+  },
+  {
+    "name": "שאול גרינגליק",
+    "sha256": "12c9a2ca0a6b3658b937625ad55feeeb0459f7b45044e27566d715ca78751156",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-40.png",
+    "ocr": {
+      "sha256": "12c9a2ca0a6b3658b937625ad55feeeb0459f7b45044e27566d715ca78751156",
+      "status": "matched",
+      "text": "שאול גרינגליק",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:41:02.813Z"
+    }
+  },
+  {
+    "name": "אופק בכר",
+    "sha256": "da4586a35d811789e2dc36cce2b45f4d3a1894e5bd111247d445f8d5a2d688ea",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-40.png",
+    "ocr": {
+      "sha256": "da4586a35d811789e2dc36cce2b45f4d3a1894e5bd111247d445f8d5a2d688ea",
+      "status": "matched",
+      "text": "אופק בכר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:41:17.371Z"
+    }
+  },
+  {
+    "name": "רותם דושי",
+    "sha256": "43ae31618e83c4b028bb572302286eeaa63b0d8e8b17cfdd191290eaf026a784",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-40.png",
+    "ocr": {
+      "sha256": "43ae31618e83c4b028bb572302286eeaa63b0d8e8b17cfdd191290eaf026a784",
+      "status": "matched",
+      "text": "רותם דושי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:41:41.698Z"
+    }
+  },
+  {
+    "name": "יאיר (יאיא) יעקב",
+    "sha256": "5889adacb08158123eeb0d7d0473a52e2d8dc4832d94438494790166006106f8",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-40.png",
+    "ocr": {
+      "sha256": "5889adacb08158123eeb0d7d0473a52e2d8dc4832d94438494790166006106f8",
+      "status": "matched",
+      "text": "יאיר (יאיא) יעקב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:41:48.028Z"
+    }
+  },
+  {
+    "name": "דניאל (דני) יפרח",
+    "sha256": "bf7e709e846c80e17be72d4453c173e6269d37ed6a7cff3e52d2bd42a00c8d96",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-40.png",
+    "ocr": {
+      "sha256": "bf7e709e846c80e17be72d4453c173e6269d37ed6a7cff3e52d2bd42a00c8d96",
+      "status": "matched",
+      "text": "דניאל (דני) יפרח",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:42:07.304Z"
+    }
+  },
+  {
+    "name": "אדם גורן",
+    "sha256": "7301ad25591f8f23f9f7a7df3cb8fc4957d3da08714e4e382fc906882cd63f73",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-48.png",
+    "ocr": {
+      "sha256": "7301ad25591f8f23f9f7a7df3cb8fc4957d3da08714e4e382fc906882cd63f73",
+      "status": "matched",
+      "text": "אדם גורן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:42:06.338Z"
+    }
+  },
+  {
+    "name": "עוז צמח",
+    "sha256": "1425fdd6b6da457710bdc482ffa9b2cb4f52b7f130ff52842b55bb08ea019eb6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-48.png",
+    "ocr": {
+      "sha256": "1425fdd6b6da457710bdc482ffa9b2cb4f52b7f130ff52842b55bb08ea019eb6",
+      "status": "matched",
+      "text": "עוז צמח",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:42:16.264Z"
+    }
+  },
+  {
+    "name": "איתי שהם",
+    "sha256": "3a9fb7cb1f1e064fae0900b6d94a528e27d3ab6456e41db0a88c7d21d64a35f7",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-48.png",
+    "ocr": {
+      "sha256": "3a9fb7cb1f1e064fae0900b6d94a528e27d3ab6456e41db0a88c7d21d64a35f7",
+      "status": "matched",
+      "text": "איתי שהם",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:42:21.206Z"
+    }
+  },
+  {
+    "name": "זיו פנקר",
+    "sha256": "65252611c83cc748ab109332e9c0203ac73a0d2550094e54dce39d3686a835f7",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-48.png",
+    "ocr": {
+      "sha256": "65252611c83cc748ab109332e9c0203ac73a0d2550094e54dce39d3686a835f7",
+      "status": "needs_review",
+      "text": "זיו פניקר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:42:51.722Z"
+    }
+  },
+  {
+    "name": "אורן לוצאטו",
+    "sha256": "c35621711ab3ade73c6056fba03c09c8091563c1a27d8939b450ca08ea0f38a0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-48.png",
+    "ocr": {
+      "sha256": "c35621711ab3ade73c6056fba03c09c8091563c1a27d8939b450ca08ea0f38a0",
+      "status": "matched",
+      "text": "אורן לוצאטו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:42:50.825Z"
+    }
+  },
+  {
+    "name": "אורן חנוך",
+    "sha256": "999a9898f993cb24dd6277a1f5992746207974d54e796862a48fb4c350711c4d",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-48.png",
+    "ocr": {
+      "sha256": "999a9898f993cb24dd6277a1f5992746207974d54e796862a48fb4c350711c4d",
+      "status": "needs_review",
+      "text": "אורן חנוך",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:43:21.328Z"
+    }
+  },
+  {
+    "name": "ליאם בן חמו",
+    "sha256": "fb15217fb301b59b5116b4d76eef8a24ce8587e358d3af3200695ae2d2918878",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-48.png",
+    "ocr": {
+      "sha256": "fb15217fb301b59b5116b4d76eef8a24ce8587e358d3af3200695ae2d2918878",
+      "status": "matched",
+      "text": "ליאם בן חמו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:43:05.175Z"
+    }
+  },
+  {
+    "name": "בועז אברהם",
+    "sha256": "e3eb94e789d4b83c26e4b02f6a1512134f14f4adb0f00102b7ea70a6f3f68624",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-48.png",
+    "ocr": {
+      "sha256": "e3eb94e789d4b83c26e4b02f6a1512134f14f4adb0f00102b7ea70a6f3f68624",
+      "status": "matched",
+      "text": "בועז אברהם",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:43:15.777Z"
+    }
+  },
+  {
+    "name": "גל דנגורי",
+    "sha256": "a3686a342de2b1824fc104b7b22b8a01b3841c7f20c4392ada3dd62873eec892",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-56.png",
+    "ocr": {
+      "sha256": "a3686a342de2b1824fc104b7b22b8a01b3841c7f20c4392ada3dd62873eec892",
+      "status": "matched",
+      "text": "גל דנגורי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:43:28.755Z"
+    }
+  },
+  {
+    "name": "אורי ניסנוביץ'",
+    "sha256": "08ca456970bf8a3b87f48214fc9fcd6dd759713556b2ba84095940ebf269de9d",
+    "spellingChecked": false,
+    "visualChecked": false,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-56.png",
+    "note": "בדיקה חוזרת של רצף האותיות נדרשת",
+    "ocr": {
+      "sha256": "08ca456970bf8a3b87f48214fc9fcd6dd759713556b2ba84095940ebf269de9d",
+      "status": "needs_review",
+      "text": "אורי ביסננוביץ'",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:44:19.211Z"
+    }
+  },
+  {
+    "name": "ציון בן שושן",
+    "sha256": "039dbc4882453e0214c63202ba1199a598115c91655ceb1621abfa66eeb71500",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-56.png",
+    "ocr": {
+      "sha256": "039dbc4882453e0214c63202ba1199a598115c91655ceb1621abfa66eeb71500",
+      "status": "matched",
+      "text": "ציון בן שושן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:43:32.424Z"
+    }
+  },
+  {
+    "name": "יהב וינר",
+    "sha256": "6b59db68b14940c21bdd51a119b1a91a012c1e632bbd358cbabb5f152b7914ba",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-56.png",
+    "ocr": {
+      "sha256": "6b59db68b14940c21bdd51a119b1a91a012c1e632bbd358cbabb5f152b7914ba",
+      "status": "needs_review",
+      "text": "יהב ויינר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:43:51.452Z"
+    }
+  },
+  {
+    "name": "קרין ורניקוב",
+    "sha256": "76adb2cf7a3501853ebad0281a8b58024ed9310aea59147b0de398171b754ad6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-56.png",
+    "ocr": {
+      "sha256": "76adb2cf7a3501853ebad0281a8b58024ed9310aea59147b0de398171b754ad6",
+      "status": "matched",
+      "text": "קרין ורניקוב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:43:53.305Z"
+    }
+  },
+  {
+    "name": "מרדכי כליפה",
+    "sha256": "05898af8186d7715707626caa17d750551f550958e1c51c475f2ff2659ee1dd4",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-56.png",
+    "ocr": {
+      "sha256": "05898af8186d7715707626caa17d750551f550958e1c51c475f2ff2659ee1dd4",
+      "status": "matched",
+      "text": "מרדכי כליפה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:44:26.396Z"
+    }
+  },
+  {
+    "name": "דני דודוביץ",
+    "sha256": "e9729396566a306adfe877072a42e9e84f90136070999fda250e7fd8747afd19",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-56.png",
+    "ocr": {
+      "sha256": "e9729396566a306adfe877072a42e9e84f90136070999fda250e7fd8747afd19",
+      "status": "matched",
+      "text": "דני דודוביץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:44:29.771Z"
+    }
+  },
+  {
+    "name": "עומרי לוי",
+    "sha256": "1f1455019d380d299e963a0ce1ece9d44276f06ee6fc16c2b84d7296f7c9a173",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-56.png",
+    "ocr": {
+      "sha256": "1f1455019d380d299e963a0ce1ece9d44276f06ee6fc16c2b84d7296f7c9a173",
+      "status": "matched",
+      "text": "עומרי לוי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:44:34.186Z"
+    }
+  },
+  {
+    "name": "יניב זוהר",
+    "sha256": "1116ffa1b0b958f6bfea37dabc13ce876fa692fea7b2fda1319afea484cf879f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-64.png",
+    "ocr": {
+      "sha256": "1116ffa1b0b958f6bfea37dabc13ce876fa692fea7b2fda1319afea484cf879f",
+      "status": "matched",
+      "text": "יניב זוהר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:44:40.09Z"
+    }
+  },
+  {
+    "name": "גיא בן הרוש",
+    "sha256": "488dc30348afabf41501058cbddfe6bccf3507ada0b4c95095f638d034b7668d",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-64.png",
+    "ocr": {
+      "sha256": "488dc30348afabf41501058cbddfe6bccf3507ada0b4c95095f638d034b7668d",
+      "status": "matched",
+      "text": "גיא בן הרוש",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:44:56.896Z"
+    }
+  },
+  {
+    "name": "יונתן זיידמן",
+    "sha256": "3f17f969d96dd3dbee761116cd5a1b6c47a322441a47bf539a4a581559568814",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-64.png",
+    "ocr": {
+      "sha256": "3f17f969d96dd3dbee761116cd5a1b6c47a322441a47bf539a4a581559568814",
+      "status": "matched",
+      "text": "יונתן זיידמן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:45:02.454Z"
+    }
+  },
+  {
+    "name": "דוד (דודיק) ברגר",
+    "sha256": "77501b0d8fa20dd1fcfb2f143257b12c9e1656479c44a5b99f8adfaab32bd82b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-64.png",
+    "ocr": {
+      "sha256": "77501b0d8fa20dd1fcfb2f143257b12c9e1656479c44a5b99f8adfaab32bd82b",
+      "status": "matched",
+      "text": "דוד (דודיק) ברגר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:45:08.089Z"
+    }
+  },
+  {
+    "name": "דביר זכאי",
+    "sha256": "3573115dad94a162f0d732a62ad1d65a6dd3e4cea398c3a75e2ec71996a433d1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-64.png",
+    "ocr": {
+      "sha256": "3573115dad94a162f0d732a62ad1d65a6dd3e4cea398c3a75e2ec71996a433d1",
+      "status": "matched",
+      "text": "דביר זכאי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:45:11.519Z"
+    }
+  },
+  {
+    "name": "עידו ברוך",
+    "sha256": "bd84cfc21a3cb5bee7a482792011841693137e8d5354994aaf108b133e0c1072",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-64.png",
+    "ocr": {
+      "sha256": "bd84cfc21a3cb5bee7a482792011841693137e8d5354994aaf108b133e0c1072",
+      "status": "needs_review",
+      "text": "עידו ברוך",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:46:09.889Z"
+    }
+  },
+  {
+    "name": "תובל (תולי) גבירצמן",
+    "sha256": "361025989d8d4b70c0b53b54a0ac80b4502849ed43348a51e20056947a918039",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-64.png",
+    "ocr": {
+      "sha256": "361025989d8d4b70c0b53b54a0ac80b4502849ed43348a51e20056947a918039",
+      "status": "matched",
+      "text": "תובל (תולי) גבירצמן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:45:34.681Z"
+    }
+  },
+  {
+    "name": "אלון שמריז",
+    "sha256": "3ae7a3f95c281143c975b0639affd457b7822910caaa9235463517275c14ffe4",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-64.png",
+    "ocr": {
+      "sha256": "3ae7a3f95c281143c975b0639affd457b7822910caaa9235463517275c14ffe4",
+      "status": "matched",
+      "text": "אלון שמריז",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:45:45.138Z"
+    }
+  },
+  {
+    "name": "רותם לוי",
+    "sha256": "e3993fd0cb133da4d6809fe140895b7f0d88a18785f36a245afa6b412ae66285",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-72.png",
+    "ocr": {
+      "sha256": "e3993fd0cb133da4d6809fe140895b7f0d88a18785f36a245afa6b412ae66285",
+      "status": "matched",
+      "text": "רותם לוי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:46:02.458Z"
+    }
+  },
+  {
+    "name": "מתן זנטי",
+    "sha256": "5cbe67dd7f0be59ea019ebe2fc922a8909945ee44250d9e0852222873450974b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-72.png",
+    "ocr": {
+      "sha256": "5cbe67dd7f0be59ea019ebe2fc922a8909945ee44250d9e0852222873450974b",
+      "status": "matched",
+      "text": "מתן זנטי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:46:18.138Z"
+    }
+  },
+  {
+    "name": "סיון ווייל",
+    "sha256": "fe320c78cab59d0f672c28ffc1c7fd55648ac269c73209f2e0252e9d733a7385",
+    "spellingChecked": false,
+    "visualChecked": false,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-72.png",
+    "note": "בדיקה חוזרת של רצף האותיות נדרשת",
+    "ocr": {
+      "sha256": "fe320c78cab59d0f672c28ffc1c7fd55648ac269c73209f2e0252e9d733a7385",
+      "status": "matched",
+      "text": "סיון ווייל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:46:23.467Z"
+    }
+  },
+  {
+    "name": "איתי זפרני",
+    "sha256": "401bd9080b203d888df4a6b285be61b1f1eb02965447a05f79448966c7c873b0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-72.png",
+    "ocr": {
+      "sha256": "401bd9080b203d888df4a6b285be61b1f1eb02965447a05f79448966c7c873b0",
+      "status": "matched",
+      "text": "איתי זפרני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:46:38.953Z"
+    }
+  },
+  {
+    "name": "תמיר אדר",
+    "sha256": "fbdcd36ff074a9cb4918c8b5589f77178ff0c3ca6d192b686ebe7a6b05576d72",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-72.png",
+    "ocr": {
+      "sha256": "fbdcd36ff074a9cb4918c8b5589f77178ff0c3ca6d192b686ebe7a6b05576d72",
+      "status": "matched",
+      "text": "תמיר אדר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:46:51.802Z"
+    }
+  },
+  {
+    "name": "נצר שמחי",
+    "sha256": "1043a2fe288cf6e04a533e49a9972a9347506d94949efd2e841a53343b9c1fb4",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-72.png",
+    "ocr": {
+      "sha256": "1043a2fe288cf6e04a533e49a9972a9347506d94949efd2e841a53343b9c1fb4",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:47:53.531Z"
+    }
+  },
+  {
+    "name": "ארז איתן בצלאל",
+    "sha256": "bd65e8f29b287d5d1c58f6738a914303f5a1b4445512a6dddf908469ffed9a5a",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-72.png",
+    "ocr": {
+      "sha256": "bd65e8f29b287d5d1c58f6738a914303f5a1b4445512a6dddf908469ffed9a5a",
+      "status": "needs_review",
+      "text": "ארו איתן בצלאל",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:47:25.77Z"
+    }
+  },
+  {
+    "name": "אורן מנצור",
+    "sha256": "926eb3865676174ca99b51aef22f48e37f57c02754e15615785d51b8ef13a5d9",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-72.png",
+    "ocr": {
+      "sha256": "926eb3865676174ca99b51aef22f48e37f57c02754e15615785d51b8ef13a5d9",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:48:21.898Z"
+    }
+  },
+  {
+    "name": "איתי סבירסקי",
+    "sha256": "e4a0241cd3d69e1f5301542562c68c4f17af01db90925a8a92bd7f3c20af2b98",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-80.png",
+    "ocr": {
+      "sha256": "e4a0241cd3d69e1f5301542562c68c4f17af01db90925a8a92bd7f3c20af2b98",
+      "status": "matched",
+      "text": "איתי סבירסקי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:47:41.385Z"
+    }
+  },
+  {
+    "name": "אמיר מימוני",
+    "sha256": "434924cdfebc2f616c5fa48528c056177e910444988be23aa39e32ee2509f318",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-80.png",
+    "ocr": {
+      "sha256": "434924cdfebc2f616c5fa48528c056177e910444988be23aa39e32ee2509f318",
+      "status": "needs_review",
+      "text": "אמיר מלמוני",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:48:35.368Z"
+    }
+  },
+  {
+    "name": "יואב שדמי",
+    "sha256": "1f0147fea595319a0dbf7f337475bb2b06e1159ae8592b5463de0239cbd3c9f9",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-80.png",
+    "ocr": {
+      "sha256": "1f0147fea595319a0dbf7f337475bb2b06e1159ae8592b5463de0239cbd3c9f9",
+      "status": "matched",
+      "text": "יואב שדמי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:48:04.795Z"
+    }
+  },
+  {
+    "name": "חיים גולדשטיין",
+    "sha256": "0b9ab689137c3cdaf2478aa7f70e952afafbdb4054815eb8b6514e10c1aaf471",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-80.png",
+    "ocr": {
+      "sha256": "0b9ab689137c3cdaf2478aa7f70e952afafbdb4054815eb8b6514e10c1aaf471",
+      "status": "matched",
+      "text": "חיים גולדשטיין",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:48:49.531Z"
+    }
+  },
+  {
+    "name": "יעקב איליאן",
+    "sha256": "4a00b9dcd1b31cb6f5670bbf833e42c984296bf245099df25f351a1f8c8833f8",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-80.png",
+    "ocr": {
+      "sha256": "4a00b9dcd1b31cb6f5670bbf833e42c984296bf245099df25f351a1f8c8833f8",
+      "status": "matched",
+      "text": "יעקב איליאן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:48:36.161Z"
+    }
+  },
+  {
+    "name": "יהודה שמחוני-אסף",
+    "sha256": "2fed0eca095b0b22860356a6b61bf13ba68a142a06cc019e52d5ca46013eecb6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-80.png",
+    "ocr": {
+      "sha256": "2fed0eca095b0b22860356a6b61bf13ba68a142a06cc019e52d5ca46013eecb6",
+      "status": "matched",
+      "text": "יהודה שמחוני-אסף",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:49:43.203Z"
+    }
+  },
+  {
+    "name": "אריה (ארקה) גיסין",
+    "sha256": "a4a8bbfde0b4378cc62837b589333b463eb7c287666b7d345e0731323c5357c3",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-80.png",
+    "ocr": {
+      "sha256": "a4a8bbfde0b4378cc62837b589333b463eb7c287666b7d345e0731323c5357c3",
+      "status": "matched",
+      "text": "אריה (ארקה) גיסין",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:48:57.684Z"
+    }
+  },
+  {
+    "name": "איתי פריזט",
+    "sha256": "a0ed7e37d4e05f89ba455787b7174f8734ed82a936c6bd230338c124b30f1930",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-80.png",
+    "ocr": {
+      "sha256": "a0ed7e37d4e05f89ba455787b7174f8734ed82a936c6bd230338c124b30f1930",
+      "status": "matched",
+      "text": "איתי פריזט",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:49:46.122Z"
+    }
+  },
+  {
+    "name": "אברהם (אברמק) גלברד",
+    "sha256": "eb1559818221fba60e4094c15f216cfb51345e115b1b8ab4ee08af22acfcde63",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-88.png",
+    "ocr": {
+      "sha256": "eb1559818221fba60e4094c15f216cfb51345e115b1b8ab4ee08af22acfcde63",
+      "status": "matched",
+      "text": "אברהם (אברמק) גלברד",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:49:32.562Z"
+    }
+  },
+  {
+    "name": "בניה רובל",
+    "sha256": "08a022d56dd4ebe41ff553434ffd9c14e493a8d33ac487225088a86912ff6f60",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-88.png",
+    "ocr": {
+      "sha256": "08a022d56dd4ebe41ff553434ffd9c14e493a8d33ac487225088a86912ff6f60",
+      "status": "matched",
+      "text": "בניה רובל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:50:13.216Z"
+    }
+  },
+  {
+    "name": "איתי בוטון",
+    "sha256": "9ef08c63689b277d82b6d48d1bc3463fce626637509942282ce45c32116c19c6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-88.png",
+    "ocr": {
+      "sha256": "9ef08c63689b277d82b6d48d1bc3463fce626637509942282ce45c32116c19c6",
+      "status": "matched",
+      "text": "איתי בוטון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:49:59.675Z"
+    }
+  },
+  {
+    "name": "אריאל מרדכי וולפסטל",
+    "sha256": "66fdd64581a07e0c6c1130a86571441c387a31694744d3f44b65536027802cd7",
+    "spellingChecked": false,
+    "visualChecked": false,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-88.png",
+    "note": "בדיקה חוזרת של ו׳ כפולה בשם המשפחה",
+    "ocr": {
+      "sha256": "66fdd64581a07e0c6c1130a86571441c387a31694744d3f44b65536027802cd7",
+      "status": "matched",
+      "text": "אריאל מרדכי וולפסטל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:50:57.556Z"
+    }
+  },
+  {
+    "name": "גידי חיאל",
+    "sha256": "d3005ed3bb160b4a344be3b7620dcbae367543d1405a99db5b30b2c08d69e50d",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-88.png",
+    "ocr": {
+      "sha256": "d3005ed3bb160b4a344be3b7620dcbae367543d1405a99db5b30b2c08d69e50d",
+      "status": "needs_review",
+      "text": "גידי חיאל",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:50:49.723Z"
+    }
+  },
+  {
+    "name": "בנימין (בני) לחזיאל",
+    "sha256": "071b446cbf0d693d65cf9deabc2826d69f1f4a0185b850c2b10fd4be731eaee6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-88.png",
+    "ocr": {
+      "sha256": "071b446cbf0d693d65cf9deabc2826d69f1f4a0185b850c2b10fd4be731eaee6",
+      "status": "needs_review",
+      "text": "בנימין (בני) לחזיאל",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:51:36.069Z"
+    }
+  },
+  {
+    "name": "נגב דגן",
+    "sha256": "a1be20cfbf3757ebc18886a94cdb6b0593d89e39f2d4394ed6b3379ed134161c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-88.png",
+    "ocr": {
+      "sha256": "a1be20cfbf3757ebc18886a94cdb6b0593d89e39f2d4394ed6b3379ed134161c",
+      "status": "matched",
+      "text": "נגב דגן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:51:22.523Z"
+    }
+  },
+  {
+    "name": "מאור מאיר גנון",
+    "sha256": "c6bcb3735c22ac6300cbd2a92de9bbda6916809257d4f22e7503bb1858b2e27b",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-88.png",
+    "ocr": {
+      "sha256": "c6bcb3735c22ac6300cbd2a92de9bbda6916809257d4f22e7503bb1858b2e27b",
+      "status": "needs_review",
+      "text": "מאויר מאיר גנון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:52:21.371Z"
+    }
+  },
+  {
+    "name": "מאיה חיים",
+    "sha256": "91f7a1bbd18a28611f0dea8e79e9ad7471d58830298a05756d96838b59b23a3e",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-96.png",
+    "ocr": {
+      "sha256": "91f7a1bbd18a28611f0dea8e79e9ad7471d58830298a05756d96838b59b23a3e",
+      "status": "matched",
+      "text": "מאיה חיים",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:51:57.149Z"
+    }
+  },
+  {
+    "name": "סיון שדה",
+    "sha256": "d25ff1f7cce3b3c54a4988b8a2e3859431e63c46ac42cce03084764ed45e3a0c",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-96.png",
+    "ocr": {
+      "sha256": "d25ff1f7cce3b3c54a4988b8a2e3859431e63c46ac42cce03084764ed45e3a0c",
+      "status": "needs_review",
+      "text": "סיון שלה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:52:21.179Z"
+    }
+  },
+  {
+    "name": "אסף חממי",
+    "sha256": "de84f02e27897f63fa1442fa3ba51733f8453dbc932edf1e87bab94be57e9555",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-96.png",
+    "ocr": {
+      "sha256": "de84f02e27897f63fa1442fa3ba51733f8453dbc932edf1e87bab94be57e9555",
+      "status": "matched",
+      "text": "אסף חממי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:52:20.274Z"
+    }
+  },
+  {
+    "name": "נתן דלאל",
+    "sha256": "a4094faa30d0dc3552e6492bae699e29eabd369b60e2536d068c727d27c187c8",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-96.png",
+    "ocr": {
+      "sha256": "a4094faa30d0dc3552e6492bae699e29eabd369b60e2536d068c727d27c187c8",
+      "status": "matched",
+      "text": "נתן דלאל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:53:26.689Z"
+    }
+  },
+  {
+    "name": "חזי חנום",
+    "sha256": "0c33cb383f6ee02cd5240aad701ae305a17c45cb799a3f83cf3e419830bc84a1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-96.png",
+    "ocr": {
+      "sha256": "0c33cb383f6ee02cd5240aad701ae305a17c45cb799a3f83cf3e419830bc84a1",
+      "status": "matched",
+      "text": "חזי חנום",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:52:52.141Z"
+    }
+  },
+  {
+    "name": "יהונתן דויטש",
+    "sha256": "1f174ed68e7588641f6e6d73725b3e0c5f54fa4a84aab26ef54932f4de1f4802",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-96.png",
+    "ocr": {
+      "sha256": "1f174ed68e7588641f6e6d73725b3e0c5f54fa4a84aab26ef54932f4de1f4802",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:53:51.449Z"
+    }
+  },
+  {
+    "name": "נריה זיסק",
+    "sha256": "56221d4d761317a12715a2dcb3a28252708f91bed8dc374033b1ff3835858866",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-96.png",
+    "ocr": {
+      "sha256": "56221d4d761317a12715a2dcb3a28252708f91bed8dc374033b1ff3835858866",
+      "status": "needs_review",
+      "text": "כריה זיסק",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:53:44.821Z"
+    }
+  },
+  {
+    "name": "דרור אלטון",
+    "sha256": "24744a88977f5cc8d7a484069a1571d598fb3b30d60462f1ea6aea0422a3af58",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-96.png",
+    "ocr": {
+      "sha256": "24744a88977f5cc8d7a484069a1571d598fb3b30d60462f1ea6aea0422a3af58",
+      "status": "needs_review",
+      "text": "דרור אלסון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:54:01.293Z"
+    }
+  },
+  {
+    "name": "גלעד הראל",
+    "sha256": "36fa974b50b4c75cfe054085315aac185f346437ec3080ba98d6a25ae30d5bbc",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-104.png",
+    "ocr": {
+      "sha256": "36fa974b50b4c75cfe054085315aac185f346437ec3080ba98d6a25ae30d5bbc",
+      "status": "matched",
+      "text": "גלעד הראל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:54:09.254Z"
+    }
+  },
+  {
+    "name": "תימור נואף קבלאן",
+    "sha256": "2173332af39edcf9508221e3d4163a46b5292de13184d935afcb9dba04e2394b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-104.png",
+    "ocr": {
+      "sha256": "2173332af39edcf9508221e3d4163a46b5292de13184d935afcb9dba04e2394b",
+      "status": "matched",
+      "text": "תימור נואף קבלאן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:54:20.894Z"
+    }
+  },
+  {
+    "name": "מיכל סמרט פוזיילוב",
+    "sha256": "528520ae62c93de9b402ac10982688428bef4170e1c0546c528007253373fd0b",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-104.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "528520ae62c93de9b402ac10982688428bef4170e1c0546c528007253373fd0b",
+      "status": "needs_review",
+      "text": "מיכל סמרט פוזייילוב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:55:03.657Z"
+    }
+  },
+  {
+    "name": "אמיר טוילי",
+    "sha256": "d448b88a8e278a7d9a69152ddd3ed4876fa48c42bf5a1c754d81617215f254ea",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-104.png",
+    "ocr": {
+      "sha256": "d448b88a8e278a7d9a69152ddd3ed4876fa48c42bf5a1c754d81617215f254ea",
+      "status": "matched",
+      "text": "אמיר טוילי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:54:46.234Z"
+    }
+  },
+  {
+    "name": "תומר גרינברג",
+    "sha256": "81dc78fd02978fd4f2c8c4836da997bee9363e91cb0bc3b28baa2e6f9e36ea51",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-104.png",
+    "ocr": {
+      "sha256": "81dc78fd02978fd4f2c8c4836da997bee9363e91cb0bc3b28baa2e6f9e36ea51",
+      "status": "matched",
+      "text": "תומר גרינברג",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:54:54.86Z"
+    }
+  },
+  {
+    "name": "עמית פרידמן",
+    "sha256": "588f7f679ea66df368a05847bfbf4ca3a1249311c5a31fa6a755247d849e25f0",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-104.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "588f7f679ea66df368a05847bfbf4ca3a1249311c5a31fa6a755247d849e25f0",
+      "status": "needs_review",
+      "text": "עמית פריידמן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:55:20.238Z"
+    }
+  },
+  {
+    "name": "אמיתי אבן שושן",
+    "sha256": "e67069f653bb876bdb87cf68b827c01fad90c4ebe938779446debba1a303b90f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-104.png",
+    "ocr": {
+      "sha256": "e67069f653bb876bdb87cf68b827c01fad90c4ebe938779446debba1a303b90f",
+      "status": "matched",
+      "text": "אמיתי אבן שושן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:55:08.536Z"
+    }
+  },
+  {
+    "name": "נועה מרציאנו",
+    "sha256": "4a0a59251ebf7531de9fc4b793c6cf37440eb8fb66738f22f0b0bae0672c33a6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-104.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "4a0a59251ebf7531de9fc4b793c6cf37440eb8fb66738f22f0b0bae0672c33a6",
+      "status": "needs_review",
+      "text": "נועיה מרציאנו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:55:50.728Z"
+    }
+  },
+  {
+    "name": "אסף ביתן",
+    "sha256": "def241563d3f5b9a5dfacaf534914bdb33f3f93f11aa3c48cc86b3d01cb152f3",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-112.png",
+    "ocr": {
+      "sha256": "def241563d3f5b9a5dfacaf534914bdb33f3f93f11aa3c48cc86b3d01cb152f3",
+      "status": "matched",
+      "text": "אסף ביתן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:55:22.875Z"
+    }
+  },
+  {
+    "name": "קים יחזקאל-לבנגרונד",
+    "sha256": "7fb6345bbc8b6d18798f4b75dfd04ee4a82533212887f1a14a341b4348bcd5ad",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-112.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "7fb6345bbc8b6d18798f4b75dfd04ee4a82533212887f1a14a341b4348bcd5ad",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:56:50.307Z"
+    }
+  },
+  {
+    "name": "אברהם טיברג",
+    "sha256": "59c236ef24ca48bf5c476aaa8da6b973a54da9c9db4180e9fa29b480bb1829cc",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-112.png",
+    "ocr": {
+      "sha256": "59c236ef24ca48bf5c476aaa8da6b973a54da9c9db4180e9fa29b480bb1829cc",
+      "status": "matched",
+      "text": "אברהם טיברג",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:55:43.588Z"
+    }
+  },
+  {
+    "name": "שחר סטרוג",
+    "sha256": "5e4f001b42c3a0589d051061ba4ebca4d9b9538e9b23de5adb4e9ef7eb720396",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-112.png",
+    "ocr": {
+      "sha256": "5e4f001b42c3a0589d051061ba4ebca4d9b9538e9b23de5adb4e9ef7eb720396",
+      "status": "matched",
+      "text": "שחר סטרוג",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:56:25.892Z"
+    }
+  },
+  {
+    "name": "סהר טל",
+    "sha256": "c9343999d867cd9f7e90be668438e4954f27e908c0ed8a30df2255bc670f1906",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-112.png",
+    "ocr": {
+      "sha256": "c9343999d867cd9f7e90be668438e4954f27e908c0ed8a30df2255bc670f1906",
+      "status": "matched",
+      "text": "סהר טל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T06:56:18.278Z"
+    }
+  },
+  {
+    "name": "צפריר בר אור",
+    "sha256": "8d7cb16da3cec5f60967ff66ca212285655df85265c789e283b942d4c98cfecc",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-112.png",
+    "ocr": {
+      "sha256": "8d7cb16da3cec5f60967ff66ca212285655df85265c789e283b942d4c98cfecc",
+      "status": "needs_review",
+      "text": "צפיריור בר אור",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:05:19.562Z"
+    }
+  },
+  {
+    "name": "אורי טשרניחובסקי",
+    "sha256": "2fbce6e305be48aa8c5af6f3a33c276e916184a38d22278b6dfc129e9ffce9ab",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-112.png",
+    "ocr": {
+      "sha256": "2fbce6e305be48aa8c5af6f3a33c276e916184a38d22278b6dfc129e9ffce9ab",
+      "status": "needs_review",
+      "text": "א'ורי טשרניחובסקי",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:04:45.01Z"
+    }
+  },
+  {
+    "name": "אורי ג'רבי",
+    "sha256": "c378282a901d2a3ba6456c2ecaad6a9771a0df13c5713ebdbf731ae71d43120c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-112.png",
+    "ocr": {
+      "sha256": "c378282a901d2a3ba6456c2ecaad6a9771a0df13c5713ebdbf731ae71d43120c",
+      "status": "matched",
+      "text": "אורי ג'רבי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:04:26.919Z"
+    }
+  },
+  {
+    "name": "חנן דרורי",
+    "sha256": "82fdb1a9dba938c38194928d35659e411946da88a893081e4bb36dcd111610a1",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-120.png",
+    "ocr": {
+      "sha256": "82fdb1a9dba938c38194928d35659e411946da88a893081e4bb36dcd111610a1",
+      "status": "needs_review",
+      "text": "הנן דרורי",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:05:33.286Z"
+    }
+  },
+  {
+    "name": "דולב יהוד",
+    "sha256": "b2e5fb2a47fbddc3cba8dfdbfd58778a3f562a765a727f2c829b2019e75d52e2",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-120.png",
+    "ocr": {
+      "sha256": "b2e5fb2a47fbddc3cba8dfdbfd58778a3f562a765a727f2c829b2019e75d52e2",
+      "status": "needs_review",
+      "text": "דולב יהוד",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:05:49.214Z"
+    }
+  },
+  {
+    "name": "יוֹבֵל מוריוסף",
+    "sha256": "dbdbcba6c479cb90d5b47c8cbbb82350c0545ddf4d7950404b2f467346824b65",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-120.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "dbdbcba6c479cb90d5b47c8cbbb82350c0545ddf4d7950404b2f467346824b65",
+      "status": "needs_review",
+      "text": "יוֹבָל מורייוסף",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:06:27.311Z"
+    }
+  },
+  {
+    "name": "אלקנה ספז",
+    "sha256": "34e415a29441dabf90d6c6f243b549a9455b3d78cfa8c93cf687d402dc6b31e8",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-120.png",
+    "ocr": {
+      "sha256": "34e415a29441dabf90d6c6f243b549a9455b3d78cfa8c93cf687d402dc6b31e8",
+      "status": "needs_review",
+      "text": "אלקנה ספז",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:06:11.187Z"
+    }
+  },
+  {
+    "name": "עידו יהושע",
+    "sha256": "dd33b3277405fa9d57c6e98a4d3a785eb2a8d109a8e4833e6a0959c08caa3c93",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-120.png",
+    "ocr": {
+      "sha256": "dd33b3277405fa9d57c6e98a4d3a785eb2a8d109a8e4833e6a0959c08caa3c93",
+      "status": "needs_review",
+      "text": "עידו יהושע",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:06:49.661Z"
+    }
+  },
+  {
+    "name": "אלעד אלישיב",
+    "sha256": "965745f358b650222d38350e123828f5890564ce455f69039f948b8456d49a6f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-120.png",
+    "ocr": {
+      "sha256": "965745f358b650222d38350e123828f5890564ce455f69039f948b8456d49a6f",
+      "status": "matched",
+      "text": "אלעד אלישיב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:06:39.712Z"
+    }
+  },
+  {
+    "name": "ראמי חלבי",
+    "sha256": "1d1e3a8fac8d5fc0f4ccacf223630a171aea04b2d9d3656596f81280c04cc42b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-120.png",
+    "ocr": {
+      "sha256": "1d1e3a8fac8d5fc0f4ccacf223630a171aea04b2d9d3656596f81280c04cc42b",
+      "status": "matched",
+      "text": "ראמי חלבי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:06:48.576Z"
+    }
+  },
+  {
+    "name": "יפתח יעבץ",
+    "sha256": "9c54ee1176695b605c091ab7b63662404636014d4e8f5def306d10aaec7a4f53",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-120.png",
+    "ocr": {
+      "sha256": "9c54ee1176695b605c091ab7b63662404636014d4e8f5def306d10aaec7a4f53",
+      "status": "matched",
+      "text": "יפתח יעבץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:07:13.294Z"
+    }
+  },
+  {
+    "name": "אילן משה יעקב",
+    "sha256": "111edb8b2ac9b00201781c8376f34034e4efd7afca9afbf6f146de4ffad9329a",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-128.png",
+    "ocr": {
+      "sha256": "111edb8b2ac9b00201781c8376f34034e4efd7afca9afbf6f146de4ffad9329a",
+      "status": "needs_review",
+      "text": "אילן משב יעקב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:07:20.857Z"
+    }
+  },
+  {
+    "name": "חן בוכריס",
+    "sha256": "a13e08f0b03e4b42a43ee31c5ca9076d1d2c65f2ff3429da30209fc4bd8eb2cb",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-128.png",
+    "ocr": {
+      "sha256": "a13e08f0b03e4b42a43ee31c5ca9076d1d2c65f2ff3429da30209fc4bd8eb2cb",
+      "status": "matched",
+      "text": "חן בוכריס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:07:43.511Z"
+    }
+  },
+  {
+    "name": "חגי ז'ורנו",
+    "sha256": "6580af187187a187d5f7930c50f6055af32cd58a0a07c6d68102fd7f7949db28",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-128.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "6580af187187a187d5f7930c50f6055af32cd58a0a07c6d68102fd7f7949db28",
+      "status": "matched",
+      "text": "חגי ז'ורנו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:07:48.583Z"
+    }
+  },
+  {
+    "name": "אבי נגבקר",
+    "sha256": "76605f8ce70d613b608f03692ea514ddf7c8f5c8f7b56949e56a970dce93f41f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-128.png",
+    "ocr": {
+      "sha256": "76605f8ce70d613b608f03692ea514ddf7c8f5c8f7b56949e56a970dce93f41f",
+      "status": "matched",
+      "text": "אבי נגבקר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:07:52.515Z"
+    }
+  },
+  {
+    "name": "גיא כרמיאל",
+    "sha256": "616e32daed69aa855eab7e3f0fff1e6859afde945a4d97f0b8d945f829b1bd80",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-128.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "616e32daed69aa855eab7e3f0fff1e6859afde945a4d97f0b8d945f829b1bd80",
+      "status": "matched",
+      "text": "גיא כרמיאל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:08:39.604Z"
+    }
+  },
+  {
+    "name": "לידור חיים פדל",
+    "sha256": "a1f44a11556cd968a4137bc02aee38ecf5b3f4165f358615f028924d43a08cc2",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-128.png",
+    "ocr": {
+      "sha256": "a1f44a11556cd968a4137bc02aee38ecf5b3f4165f358615f028924d43a08cc2",
+      "status": "needs_review",
+      "text": "לידור היים פלל",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:09:07.495Z"
+    }
+  },
+  {
+    "name": "שוהם יעקב",
+    "sha256": "247702fcf77b45aa59f8eb38b01a0900d8eac118ab87910a55ea9620edd36b59",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-128.png",
+    "ocr": {
+      "sha256": "247702fcf77b45aa59f8eb38b01a0900d8eac118ab87910a55ea9620edd36b59",
+      "status": "matched",
+      "text": "שוהם יעקב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:08:23.709Z"
+    }
+  },
+  {
+    "name": "שנהב יעקב",
+    "sha256": "2d351c44a3f10a1f93f1070f502d4f7dd2adb52785df87b788e25d5fab490653",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-128.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "2d351c44a3f10a1f93f1070f502d4f7dd2adb52785df87b788e25d5fab490653",
+      "status": "matched",
+      "text": "שנהב יעקב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:08:44.149Z"
+    }
+  },
+  {
+    "name": "גבריאל יעקב בלום",
+    "sha256": "7dea168d72477ef703609fd7c7c61b1e2155cff2835bcc8a0fe782df937bbc18",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-136.png",
+    "ocr": {
+      "sha256": "7dea168d72477ef703609fd7c7c61b1e2155cff2835bcc8a0fe782df937bbc18",
+      "status": "needs_review",
+      "text": "גבריאל ייעקב בלום",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:09:37.232Z"
+    }
+  },
+  {
+    "name": "דולב קידר",
+    "sha256": "692129f69d2c891d4e31c9825b2bf8f2841097c92285169d6c7beb8d32b5f981",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-136.png",
+    "ocr": {
+      "sha256": "692129f69d2c891d4e31c9825b2bf8f2841097c92285169d6c7beb8d32b5f981",
+      "status": "matched",
+      "text": "דולב קידר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:09:05.186Z"
+    }
+  },
+  {
+    "name": "שנדה-שי חנוכייב",
+    "sha256": "3674cb2aa4c0dce1df386d388a0a6d08252b85f87b7138ffa99595df65b24c43",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-136.png",
+    "ocr": {
+      "sha256": "3674cb2aa4c0dce1df386d388a0a6d08252b85f87b7138ffa99595df65b24c43",
+      "status": "needs_review",
+      "text": "שנדה-שי תנוכייב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:09:33.122Z"
+    }
+  },
+  {
+    "name": "אוהד כהן",
+    "sha256": "b5bbf44232d8068ffac32511b44b1adad6289e019a93848b76cbb704ee6c360b",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-136.png",
+    "ocr": {
+      "sha256": "b5bbf44232d8068ffac32511b44b1adad6289e019a93848b76cbb704ee6c360b",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:10:37.572Z"
+    }
+  },
+  {
+    "name": "ניב-שמואל יעקבי",
+    "sha256": "d18f818d5572d9238ccae7919fc5e863d14c6f0a6a27f7f20344ff643c9c79e6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-136.png",
+    "ocr": {
+      "sha256": "d18f818d5572d9238ccae7919fc5e863d14c6f0a6a27f7f20344ff643c9c79e6",
+      "status": "matched",
+      "text": "ניב-שמואל יעקבי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:09:45.166Z"
+    }
+  },
+  {
+    "name": "אברהם רחמים",
+    "sha256": "7c87f44ec4b1ec25c6a46410c3befbb51a961c39ddd48ed0374972ea9e85a529",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-136.png",
+    "ocr": {
+      "sha256": "7c87f44ec4b1ec25c6a46410c3befbb51a961c39ddd48ed0374972ea9e85a529",
+      "status": "matched",
+      "text": "אברהם רחמים",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:10:09.328Z"
+    }
+  },
+  {
+    "name": "עומרי לביא",
+    "sha256": "7452c5f290f90dbaa461debc6e2d740eb673b5ffdbcc0f421e953a42f6b34866",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-136.png",
+    "ocr": {
+      "sha256": "7452c5f290f90dbaa461debc6e2d740eb673b5ffdbcc0f421e953a42f6b34866",
+      "status": "matched",
+      "text": "עומרי לביא",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:10:00.536Z"
+    }
+  },
+  {
+    "name": "נדב כהן",
+    "sha256": "ef43e623bfa2fae2ba165afd3bd3779b198907e9a32889e951d265dd360447c0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-136.png",
+    "ocr": {
+      "sha256": "ef43e623bfa2fae2ba165afd3bd3779b198907e9a32889e951d265dd360447c0",
+      "status": "matched",
+      "text": "נדב כהן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:10:39.478Z"
+    }
+  },
+  {
+    "name": "גל מיזלס",
+    "sha256": "6a21d311f4f700e7657a92e6f36ff9401ec00dd6d4d6425804fe1d9176b8d86e",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-144.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "6a21d311f4f700e7657a92e6f36ff9401ec00dd6d4d6425804fe1d9176b8d86e",
+      "status": "matched",
+      "text": "גל מיזלס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:10:48.255Z"
+    }
+  },
+  {
+    "name": "דוד (דידי) אילוז",
+    "sha256": "cf6dd2b4949d6001a7437c23b0dde6d44643f57a0375812f57a17e4a503883ea",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-144.png",
+    "ocr": {
+      "sha256": "cf6dd2b4949d6001a7437c23b0dde6d44643f57a0375812f57a17e4a503883ea",
+      "status": "matched",
+      "text": "דוד (דידי) אילוז",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:11:06.031Z"
+    }
+  },
+  {
+    "name": "מתן גוטליב",
+    "sha256": "76a9af06116f6757defe571f7586ec633e382d3c6793e0554883a11fa3bda0c6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-144.png",
+    "ocr": {
+      "sha256": "76a9af06116f6757defe571f7586ec633e382d3c6793e0554883a11fa3bda0c6",
+      "status": "needs_review",
+      "text": "מתן גוטלייב",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:11:28.19Z"
+    }
+  },
+  {
+    "name": "גיא לוי",
+    "sha256": "e1b8b4f84e10580f9cfa3f762974bd4ef4c5ad23139e1af6a8545112855b0977",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-144.png",
+    "ocr": {
+      "sha256": "e1b8b4f84e10580f9cfa3f762974bd4ef4c5ad23139e1af6a8545112855b0977",
+      "status": "matched",
+      "text": "גיא לוי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:11:07.482Z"
+    }
+  },
+  {
+    "name": "שמאי טיכר",
+    "sha256": "14cba887ae81d12979329437f1a2f056411eb634d691d12430b3d6a959a4b72a",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-144.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "14cba887ae81d12979329437f1a2f056411eb634d691d12430b3d6a959a4b72a",
+      "status": "matched",
+      "text": "שמאי טיכר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:11:43.945Z"
+    }
+  },
+  {
+    "name": "נפתלי בן ציון לנצקרון",
+    "sha256": "ea780dd04637b9a19f85b1446c30afb92f20a53318dfd3e3777d9a59e791afdc",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-144.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "ea780dd04637b9a19f85b1446c30afb92f20a53318dfd3e3777d9a59e791afdc",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:12:37.576Z"
+    }
+  },
+  {
+    "name": "רועי מונדר",
+    "sha256": "271b0bd4116fb33c8d5295b1f669767a41ed832f1d5f0fb842ac52a99b55a298",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-144.png",
+    "ocr": {
+      "sha256": "271b0bd4116fb33c8d5295b1f669767a41ed832f1d5f0fb842ac52a99b55a298",
+      "status": "needs_review",
+      "text": "רועי מוננדר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:12:09.352Z"
+    }
+  },
+  {
+    "name": "יותם יצחק פלד",
+    "sha256": "a0460311c4bd43e67d6e0c6c441f168b9af6f3ed52235f2c5b4101a453e6383a",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-144.png",
+    "ocr": {
+      "sha256": "a0460311c4bd43e67d6e0c6c441f168b9af6f3ed52235f2c5b4101a453e6383a",
+      "status": "matched",
+      "text": "יותם יצחק פלד",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:12:31.378Z"
+    }
+  },
+  {
+    "name": "דניאל טשוקטרן",
+    "sha256": "b087ab70e32b7f1b76f7936b9f0c8d1139f5eab0234e53aaa3fcdec8ab937d11",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-152.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "b087ab70e32b7f1b76f7936b9f0c8d1139f5eab0234e53aaa3fcdec8ab937d11",
+      "status": "matched",
+      "text": "דניאל טשוקטרן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:13:26.135Z"
+    }
+  },
+  {
+    "name": "עמית מוסט",
+    "sha256": "f5ac54ce9901fece594281edfc2a8fde5dfaa0a9541257aa280be7eddc33af66",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-152.png",
+    "ocr": {
+      "sha256": "f5ac54ce9901fece594281edfc2a8fde5dfaa0a9541257aa280be7eddc33af66",
+      "status": "matched",
+      "text": "עמית מוסט",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:13:01.813Z"
+    }
+  },
+  {
+    "name": "רן יעבץ",
+    "sha256": "1c4c9de02ef5f64a09b450391d5e5103c068ef6bfc8f992974213886b2ed70fb",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-152.png",
+    "ocr": {
+      "sha256": "1c4c9de02ef5f64a09b450391d5e5103c068ef6bfc8f992974213886b2ed70fb",
+      "status": "matched",
+      "text": "רן יעבץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:13:34.443Z"
+    }
+  },
+  {
+    "name": "שי מוצפי",
+    "sha256": "78b43d4f7cf2f3efc2056e9b7e9b49f226719cef4a6543189ec424a7f98f6dc4",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-152.png",
+    "ocr": {
+      "sha256": "78b43d4f7cf2f3efc2056e9b7e9b49f226719cef4a6543189ec424a7f98f6dc4",
+      "status": "matched",
+      "text": "שי מוצפי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:13:16.504Z"
+    }
+  },
+  {
+    "name": "יוני גולן",
+    "sha256": "01479b4e007275b7db7ac802440ba058b495097ff105cefd9bdc4006d458ea02",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-152.png",
+    "ocr": {
+      "sha256": "01479b4e007275b7db7ac802440ba058b495097ff105cefd9bdc4006d458ea02",
+      "status": "needs_review",
+      "text": "יובי גולן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:13:43.557Z"
+    }
+  },
+  {
+    "name": "תומר מזרחי",
+    "sha256": "8d9993b867872a1734ae612283027fb1ca7a69aa6b1caefc8eca55fddb675486",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-152.png",
+    "ocr": {
+      "sha256": "8d9993b867872a1734ae612283027fb1ca7a69aa6b1caefc8eca55fddb675486",
+      "status": "matched",
+      "text": "תומר מזרחי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:13:54.693Z"
+    }
+  },
+  {
+    "name": "רם (רמי) יוגב",
+    "sha256": "e4bb219d6fe2300994c8f2ffc5b38175a3e3c79ba288b939c8158ba02e1253e9",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-152.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "e4bb219d6fe2300994c8f2ffc5b38175a3e3c79ba288b939c8158ba02e1253e9",
+      "status": "matched",
+      "text": "רם (רמי) יוגב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:14:05.069Z"
+    }
+  },
+  {
+    "name": "נתנאל הרשקוביץ",
+    "sha256": "9466225e0463c2570cd700cec5e5bbf0ca5ef98bcce4bf2c9c6d3c966569335c",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-152.png",
+    "ocr": {
+      "sha256": "9466225e0463c2570cd700cec5e5bbf0ca5ef98bcce4bf2c9c6d3c966569335c",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:15:13.639Z"
+    }
+  },
+  {
+    "name": "שילה יוסף אמיר",
+    "sha256": "4df659315f75185f4650650fe710434af2925ceb2397faf43db6411abfeadf34",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-160.png",
+    "ocr": {
+      "sha256": "4df659315f75185f4650650fe710434af2925ceb2397faf43db6411abfeadf34",
+      "status": "matched",
+      "text": "שילה יוסף אמיר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:14:22.636Z"
+    }
+  },
+  {
+    "name": "סהר ציון מחלוף",
+    "sha256": "86d3d5a5c8595763d985d6857fa005f60b211c33d11c690b8abab038866c481e",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-160.png",
+    "notes": "Requires enlarged glyph/punctuation review before approval.",
+    "ocr": {
+      "sha256": "86d3d5a5c8595763d985d6857fa005f60b211c33d11c690b8abab038866c481e",
+      "status": "matched",
+      "text": "סהר ציון מחלוף",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:15:03.599Z"
+    }
+  },
+  {
+    "name": "עמית זיו",
+    "sha256": "56dd4f896c07a1dc2b312d48f8c8fb31ceb736bdd13685403f1ac3921b9f9362",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-160.png",
+    "ocr": {
+      "sha256": "56dd4f896c07a1dc2b312d48f8c8fb31ceb736bdd13685403f1ac3921b9f9362",
+      "status": "matched",
+      "text": "עמית זיו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:14:38.761Z"
+    }
+  },
+  {
+    "name": "איתי יעבץ",
+    "sha256": "fec37751394ba877d35e16967dbc9f5163ee323b0d450353f4874038f9c1f5e1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-160.png",
+    "ocr": {
+      "sha256": "fec37751394ba877d35e16967dbc9f5163ee323b0d450353f4874038f9c1f5e1",
+      "status": "matched",
+      "text": "איתי יעבץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:14:55.184Z"
+    }
+  },
+  {
+    "name": "שחר מנצור",
+    "sha256": "16e630bcb2059c95800b9c970fb4b7a1b16175ea700e3ffb02aef8325602a55a",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-160.png",
+    "ocr": {
+      "sha256": "16e630bcb2059c95800b9c970fb4b7a1b16175ea700e3ffb02aef8325602a55a",
+      "status": "matched",
+      "text": "שחר מנצור",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:15:30.453Z"
+    }
+  },
+  {
+    "name": "סער מרגוליס",
+    "sha256": "25c673f4a83c96a8246a8950dcb59ba2a27d30095c2ed562295d16f32208969c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-160.png",
+    "ocr": {
+      "sha256": "25c673f4a83c96a8246a8950dcb59ba2a27d30095c2ed562295d16f32208969c",
+      "status": "matched",
+      "text": "סער מרגוליס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:15:31.609Z"
+    }
+  },
+  {
+    "name": "גל נבון",
+    "sha256": "5f77ee84da916b81a3036fe154e43ad90fa056cbff92bdfa7220482909a866ff",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-160.png",
+    "ocr": {
+      "sha256": "5f77ee84da916b81a3036fe154e43ad90fa056cbff92bdfa7220482909a866ff",
+      "status": "needs_review",
+      "text": "גל נבון",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:16:03.838Z"
+    }
+  },
+  {
+    "name": "איתי גלאה",
+    "sha256": "9494fa5483c362fb84b102f0299543a00723fb9a76951355972f0d05b402f63b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-160.png",
+    "ocr": {
+      "sha256": "9494fa5483c362fb84b102f0299543a00723fb9a76951355972f0d05b402f63b",
+      "status": "matched",
+      "text": "איתי גלאה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:16:01.156Z"
+    }
+  },
+  {
+    "name": "יעקב (קובי) יעקבי",
+    "sha256": "4d3d0f0b960b7aeeec66e39b40ce5ce710cf3d6a4b570d75165d68f287437eb2",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-168.png",
+    "ocr": {
+      "sha256": "4d3d0f0b960b7aeeec66e39b40ce5ce710cf3d6a4b570d75165d68f287437eb2",
+      "status": "matched",
+      "text": "יעקב (קובי) יעקבי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:15:45.198Z"
+    }
+  },
+  {
+    "name": "משה דגן",
+    "sha256": "48a63d19ad08adf62a09818cf6a497e5fb6d45e1cde2d68e1c0a5aeed49ddf40",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-168.png",
+    "ocr": {
+      "sha256": "48a63d19ad08adf62a09818cf6a497e5fb6d45e1cde2d68e1c0a5aeed49ddf40",
+      "status": "matched",
+      "text": "משה דגן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:16:24.173Z"
+    }
+  },
+  {
+    "name": "בן כובאני",
+    "sha256": "9cb660aa7ac066f4ffa9551944e96b2ddca60bc1bcd23567fb744a9bcdb32d47",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-168.png",
+    "ocr": {
+      "sha256": "9cb660aa7ac066f4ffa9551944e96b2ddca60bc1bcd23567fb744a9bcdb32d47",
+      "status": "matched",
+      "text": "בן כובאני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:16:30.339Z"
+    }
+  },
+  {
+    "name": "רון-אליהו עובד",
+    "sha256": "f86064f4b60df0fbe4a4802b4cba6a8f151e73b4720f1c8203d84fbc36b033cf",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-168.png",
+    "ocr": {
+      "sha256": "f86064f4b60df0fbe4a4802b4cba6a8f151e73b4720f1c8203d84fbc36b033cf",
+      "status": "matched",
+      "text": "רון-אליהו עובד",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:16:50.469Z"
+    }
+  },
+  {
+    "name": "יצחק-מנחם (יצחקי) רוזנפלד",
+    "sha256": "9ae16270fb4c595298074a56a9825da46ee81e3f83b422243e3ccd1cb7581881",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-168.png",
+    "ocr": {
+      "sha256": "9ae16270fb4c595298074a56a9825da46ee81e3f83b422243e3ccd1cb7581881",
+      "status": "matched",
+      "text": "יצחק-מנחם (יצחקי) רוזנפלד",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:17:11.436Z"
+    }
+  },
+  {
+    "name": "יוחאי קלנגל",
+    "sha256": "88650f8e4e7cd31e4ba4abf9bb521b9be3f6b76ea5badbd245a64268cc00d00b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-168.png",
+    "ocr": {
+      "sha256": "88650f8e4e7cd31e4ba4abf9bb521b9be3f6b76ea5badbd245a64268cc00d00b",
+      "status": "matched",
+      "text": "יוחאי קלנגל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:16:45.526Z"
+    }
+  },
+  {
+    "name": "שחר אביאני",
+    "sha256": "4b53a5e7e6b146fad34861650fb288c812e74f390b9c98137f8bca076af8219e",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-168.png",
+    "ocr": {
+      "sha256": "4b53a5e7e6b146fad34861650fb288c812e74f390b9c98137f8bca076af8219e",
+      "status": "matched",
+      "text": "שחר אביאני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:17:10.352Z"
+    }
+  },
+  {
+    "name": "ירון ירושלמי",
+    "sha256": "0f6dc550811c13264467b6c45ce355c7a0061b39eaed64ff6992a33b4fa01839",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-168.png",
+    "ocr": {
+      "sha256": "0f6dc550811c13264467b6c45ce355c7a0061b39eaed64ff6992a33b4fa01839",
+      "status": "matched",
+      "text": "ירון ירושלמי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:17:10.53Z"
+    }
+  },
+  {
+    "name": "עמית הוד זיו",
+    "sha256": "012b3d7d788fab28839f5535c968d1d96739e8ce88a72b4699ff852e2febda80",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-176.png",
+    "ocr": {
+      "sha256": "012b3d7d788fab28839f5535c968d1d96739e8ce88a72b4699ff852e2febda80",
+      "status": "needs_review",
+      "text": "עמית הוד זיו",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:30:58.856Z"
+    }
+  },
+  {
+    "name": "מדרכי חיים אמויאל",
+    "sha256": "54ded0d253882f73e9e470876a65f4e20370edb9c7e9166c7d916feaef56c25d",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-176.png",
+    "notes": "Requires enlarged letter review before approval.",
+    "ocr": {
+      "sha256": "54ded0d253882f73e9e470876a65f4e20370edb9c7e9166c7d916feaef56c25d",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:31:37.004Z"
+    }
+  },
+  {
+    "name": "יוסף (יוסקה) ישראלי",
+    "sha256": "0101084454d01cd49973b1407fa98520a31d0a208afb01add1de655f380a4d22",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-176.png",
+    "ocr": {
+      "sha256": "0101084454d01cd49973b1407fa98520a31d0a208afb01add1de655f380a4d22",
+      "status": "matched",
+      "text": "יוסף (יוסקה) ישראלי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:17:28.142Z"
+    }
+  },
+  {
+    "name": "דניאל (דני) ישראלי",
+    "sha256": "6b2fe6dfb56e7722ce3e3a027296cda6748f6115d11607b59e86a8d870800ae3",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-176.png",
+    "ocr": {
+      "sha256": "6b2fe6dfb56e7722ce3e3a027296cda6748f6115d11607b59e86a8d870800ae3",
+      "status": "matched",
+      "text": "דניאל (דני) ישראלי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:17:50.598Z"
+    }
+  },
+  {
+    "name": "עידן אלפר",
+    "sha256": "1294976fada2d0801cfc928668be9663f5781fe877f9b5b87d02c9783c063023",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-176.png",
+    "ocr": {
+      "sha256": "1294976fada2d0801cfc928668be9663f5781fe877f9b5b87d02c9783c063023",
+      "status": "matched",
+      "text": "עידן אלפר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:31:01.17Z"
+    }
+  },
+  {
+    "name": "מרדכי נווה",
+    "sha256": "b569124dbc8726d7f3aadba2d106672c357e937ab029ec2590506cc9bdb65f6e",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-176.png",
+    "ocr": {
+      "sha256": "b569124dbc8726d7f3aadba2d106672c357e937ab029ec2590506cc9bdb65f6e",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:32:28.915Z"
+    }
+  },
+  {
+    "name": "אלעד סימן טוב",
+    "sha256": "b73c806b3e1138de54ca91ec618c8c84c8b0a7d37f9bb01dfb71dcff4e3646ef",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-176.png",
+    "ocr": {
+      "sha256": "b73c806b3e1138de54ca91ec618c8c84c8b0a7d37f9bb01dfb71dcff4e3646ef",
+      "status": "matched",
+      "text": "אלעד סימן טוב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:31:30.55Z"
+    }
+  },
+  {
+    "name": "יוסף (יוסי) פלדמן",
+    "sha256": "b97090b9883e5f6c79ff97dedd97bb7314054387b638ac595be343acafa79077",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-176.png",
+    "ocr": {
+      "sha256": "b97090b9883e5f6c79ff97dedd97bb7314054387b638ac595be343acafa79077",
+      "status": "matched",
+      "text": "יוסף (יוסי) פלדמן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:32:10.109Z"
+    }
+  },
+  {
+    "name": "אשרת פינטו",
+    "sha256": "52c481c237a9721790ec23a543b76d930517fb80a3486c4207c707b168942ffe",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-184.png",
+    "ocr": {
+      "sha256": "52c481c237a9721790ec23a543b76d930517fb80a3486c4207c707b168942ffe",
+      "status": "matched",
+      "text": "אשרת פינטו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:32:32.578Z"
+    }
+  },
+  {
+    "name": "אסף גביש",
+    "sha256": "ca2a32407e63f9392fef3d00b938c49f7b6fdc1087e9bc820d016bb80790f51a",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-184.png",
+    "ocr": {
+      "sha256": "ca2a32407e63f9392fef3d00b938c49f7b6fdc1087e9bc820d016bb80790f51a",
+      "status": "needs_review",
+      "text": "אסף גביש",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:32:49.061Z"
+    }
+  },
+  {
+    "name": "דולב מלכה",
+    "sha256": "85230a96b7053f8370458edb2acb62d2b780b6c48d1906fba919cdd608225663",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-184.png",
+    "ocr": {
+      "sha256": "85230a96b7053f8370458edb2acb62d2b780b6c48d1906fba919cdd608225663",
+      "status": "matched",
+      "text": "דולב מלכה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:32:43.342Z"
+    }
+  },
+  {
+    "name": "ארז-עזרא חדד",
+    "sha256": "586e382b27056716bc9dfe70778c79395cef2595f5e7430eeaf879250a269cfd",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-184.png",
+    "notes": "Requires enlarged letter review before approval.",
+    "ocr": {
+      "sha256": "586e382b27056716bc9dfe70778c79395cef2595f5e7430eeaf879250a269cfd",
+      "status": "matched",
+      "text": "ארז-עזרא חדד",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:33:08.197Z"
+    }
+  },
+  {
+    "name": "אלון פרנקס",
+    "sha256": "839c75237b8f8fd4e55614d21d12935566e9d0b311569ebb6919467cc7bec21a",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-184.png",
+    "ocr": {
+      "sha256": "839c75237b8f8fd4e55614d21d12935566e9d0b311569ebb6919467cc7bec21a",
+      "status": "matched",
+      "text": "אלון פרנקס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:33:05.955Z"
+    }
+  },
+  {
+    "name": "טיגטו-גיא אברה",
+    "sha256": "bcedd5db2ee9d3256a3dc7f91115df1bb69d2abc510fb126d29e8a8bbaa6f324",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-184.png",
+    "ocr": {
+      "sha256": "bcedd5db2ee9d3256a3dc7f91115df1bb69d2abc510fb126d29e8a8bbaa6f324",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:34:19.141Z"
+    }
+  },
+  {
+    "name": "חן נחמיאס",
+    "sha256": "13d7b88e7605c9ec56405d998bc89a5d018cb247fc7e3c46893d23d5c846e502",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-184.png",
+    "ocr": {
+      "sha256": "13d7b88e7605c9ec56405d998bc89a5d018cb247fc7e3c46893d23d5c846e502",
+      "status": "matched",
+      "text": "חן נחמיאס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:33:36.403Z"
+    }
+  },
+  {
+    "name": "שחר גולדמן",
+    "sha256": "f9d42370f95354d8bab1241c86d64cdda690b22d688d4888394ff4f38002c082",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-184.png",
+    "ocr": {
+      "sha256": "f9d42370f95354d8bab1241c86d64cdda690b22d688d4888394ff4f38002c082",
+      "status": "matched",
+      "text": "שחר גולדמן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:33:43.213Z"
+    }
+  },
+  {
+    "name": "דניאל בן דוד",
+    "sha256": "5ba3fab55e3bcb981c2a965ab2a28ed096633329bdc8c2b3cec6feeddea69a8e",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-192.png",
+    "ocr": {
+      "sha256": "5ba3fab55e3bcb981c2a965ab2a28ed096633329bdc8c2b3cec6feeddea69a8e",
+      "status": "matched",
+      "text": "דניאל בן דוד",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:33:54.796Z"
+    }
+  },
+  {
+    "name": "אביב לוי",
+    "sha256": "1870ff5db3b8a8841ee6fa29768a04b175ed25c992fd4751bff0647db2023ec5",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-192.png",
+    "ocr": {
+      "sha256": "1870ff5db3b8a8841ee6fa29768a04b175ed25c992fd4751bff0647db2023ec5",
+      "status": "matched",
+      "text": "אביב לוי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:33:57.561Z"
+    }
+  },
+  {
+    "name": "אור אשכר",
+    "sha256": "cc757c13b63bbc188e47b228c5fd26cb57402ba2f7b59f90faf798b9f387c6ca",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-192.png",
+    "notes": "Requires enlarged letter review before approval.",
+    "ocr": {
+      "sha256": "cc757c13b63bbc188e47b228c5fd26cb57402ba2f7b59f90faf798b9f387c6ca",
+      "status": "matched",
+      "text": "אור אשכר",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:34:19.779Z"
+    }
+  },
+  {
+    "name": "נאור סיבוני",
+    "sha256": "fcc69d348849f678848d494b79031127b8019cbeaafc921a1bcd0b483644ed09",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-192.png",
+    "ocr": {
+      "sha256": "fcc69d348849f678848d494b79031127b8019cbeaafc921a1bcd0b483644ed09",
+      "status": "matched",
+      "text": "נאור סיבוני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:34:36.351Z"
+    }
+  },
+  {
+    "name": "יאיר כץ",
+    "sha256": "44c3e8b8b2f9171894df9b1c07fe00893cfa430f104c1f4c373772550e7b90ae",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-192.png",
+    "ocr": {
+      "sha256": "44c3e8b8b2f9171894df9b1c07fe00893cfa430f104c1f4c373772550e7b90ae",
+      "status": "matched",
+      "text": "יאיר כץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:34:32.041Z"
+    }
+  },
+  {
+    "name": "דניאל מימון טואף",
+    "sha256": "87b4a8d998684fddb24a3587538f2184c60fe1e5873b35ce46ae966c62a8ecb9",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-192.png",
+    "ocr": {
+      "sha256": "87b4a8d998684fddb24a3587538f2184c60fe1e5873b35ce46ae966c62a8ecb9",
+      "status": "needs_review",
+      "text": "דנהאל מימון טואף",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:35:06.454Z"
+    }
+  },
+  {
+    "name": "גיל אבני",
+    "sha256": "643db65a26b3ee6e83a82d8710e6b65cb5ae2ddec31ee9b1254922c086c742fd",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-192.png",
+    "ocr": {
+      "sha256": "643db65a26b3ee6e83a82d8710e6b65cb5ae2ddec31ee9b1254922c086c742fd",
+      "status": "matched",
+      "text": "גיל אבני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:34:46.157Z"
+    }
+  },
+  {
+    "name": "גד עזרא",
+    "sha256": "ce5d0ad0526fee08358a156e1df13bb444e1ddcbfeddeee4342b4141c5b887c8",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-192.png",
+    "ocr": {
+      "sha256": "ce5d0ad0526fee08358a156e1df13bb444e1ddcbfeddeee4342b4141c5b887c8",
+      "status": "matched",
+      "text": "גד עזרא",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:35:10.641Z"
+    }
+  },
+  {
+    "name": "דוד (דודיק) ליאון",
+    "sha256": "22681557e393af6f18aa889ca8f5e5a95e8095ba8f06638bb7f13d5260f9a8b3",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-200.png",
+    "ocr": {
+      "sha256": "22681557e393af6f18aa889ca8f5e5a95e8095ba8f06638bb7f13d5260f9a8b3",
+      "status": "matched",
+      "text": "דוד (דודיק) ליאון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:35:03.764Z"
+    }
+  },
+  {
+    "name": "טובאל יוסף ליפשיץ",
+    "sha256": "848e501b4a12443eaef2c3ac4898bcea70976d71340764e2f5bc9e2d7ec2a6ba",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-200.png",
+    "notes": "Requires enlarged letter review before approval.",
+    "ocr": {
+      "sha256": "848e501b4a12443eaef2c3ac4898bcea70976d71340764e2f5bc9e2d7ec2a6ba",
+      "status": "matched",
+      "text": "טובאל יוסף ליפשיץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:35:42.34Z"
+    }
+  },
+  {
+    "name": "ירון פיקהולץ",
+    "sha256": "c02421279a3da7c6265cab46ed7d0a7a57b545436f4594156bd7a36ca622c51c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-200.png",
+    "ocr": {
+      "sha256": "c02421279a3da7c6265cab46ed7d0a7a57b545436f4594156bd7a36ca622c51c",
+      "status": "matched",
+      "text": "ירון פיקהולץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:35:38.006Z"
+    }
+  },
+  {
+    "name": "חיים סבח",
+    "sha256": "5d7c7acc00a84d8a11ea40e1628e9ab853296e9d928007a08cb94f7cb6bee746",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-200.png",
+    "ocr": {
+      "sha256": "5d7c7acc00a84d8a11ea40e1628e9ab853296e9d928007a08cb94f7cb6bee746",
+      "status": "needs_review",
+      "text": "חיים סבה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:35:42.901Z"
+    }
+  },
+  {
+    "name": "נועם מדמוני",
+    "sha256": "d9f182be8f0b352ac5f49964731cb8ba2b41848dece8b4b41ffbae1d0821a5e0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-200.png"
+  },
+  {
+    "name": "ניתאי מטודי",
+    "sha256": "a22738803bc0780b7270e0daf76453826a00bf3bb370377fcd6208f6e19110e5",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-200.png"
+  },
+  {
+    "name": "רועי עידן",
+    "sha256": "d42fdd5de0e69e726dc72e4fdfe623fa5ec80bc095efd75be90de414c1fb70f9",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-200.png"
+  },
+  {
+    "name": "עמי וייס",
+    "sha256": "42d67b2f5de49a9f797ecbbb413cb173247be55716dbeccf04226371ae2cf3f9",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-200.png"
+  },
+  {
+    "name": "ניתאי עמאר",
+    "sha256": "af96835e4b8a62ca4c7ac6355b84aaf68bd31e1571c673a477b6b58d6ca71a56",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-208.png"
+  },
+  {
+    "name": "יאיר אשכנזי",
+    "sha256": "7388c225022328a6c764b758fa2d90d174e1b775fb496000c13c9e4d3c67c8f9",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-208.png"
+  },
+  {
+    "name": "אבי עמר",
+    "sha256": "08885044fbde27bcfa3e14c113a0ed0ad182ce2c3d052ff4874e4707c4e0f4e1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-208.png"
+  },
+  {
+    "name": "עידו אבן",
+    "sha256": "c023b8bb6a00058adc960f9ec20bd401f5b8010ccfe121c3cad91836e6e4c154",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-208.png"
+  },
+  {
+    "name": "אביתר-משה תורגמן",
+    "sha256": "b0f27cfa324cc946491b2d001f93cc998ec190392f754a9acffa2f35d1a46c78",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-208.png"
+  },
+  {
+    "name": "רוני פטרובסקי",
+    "sha256": "f1f3f09aa8173d99c64969e71179c2569f9a5e29edd78b5e766dd38ecd90e7fc",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-208.png"
+  },
+  {
+    "name": "אילן פיורנטינו",
+    "sha256": "c2621f8d9b9fd59a0bce3e8396a1c7bdc2aebb7527e98f45d3ddd7395e45ae28",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-208.png"
+  },
+  {
+    "name": "ברק דניאל הלפרן",
+    "sha256": "60033d24eed0a4e7e255d2622f5fe0e0d8ba6d5cd4985a6a5624367a2fbd2d15",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-208.png"
+  },
+  {
+    "name": "אוהד נחום",
+    "sha256": "aaaf764008416070286692e3d59324a4c7236f57cc4bd458b5d44491efa529b2",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-216.png"
+  },
+  {
+    "name": "עמית בן יגאל",
+    "sha256": "fc923599d934d110d7c940ff59f02e79fbf85b781572ab5b3863ed4008f27c82",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-216.png"
+  },
+  {
+    "name": "דביר פימה",
+    "sha256": "122502c6ab8a770e387b2768772da2421e4d0760cd247ea2ada0702fb67f38fa",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-216.png"
+  },
+  {
+    "name": "שחר בן נון",
+    "sha256": "0c4304cf28915e77dce984e3c8631a8c857bf77e472408b71e6147511514ab3e",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-216.png"
+  },
+  {
+    "name": "מאיר מנדלסון",
+    "sha256": "f94ef1b9204ac19f600a6069e1d9ce18b3f19b46a44f33fc1cf2b7d0203e70a1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-216.png"
+  },
+  {
+    "name": "ערן אלכאוי",
+    "sha256": "69063e8a95e410f506d07c90a7e1b346bb0751b01164b9b227d1e480c6c6506a",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-216.png"
+  },
+  {
+    "name": "ישי פיטוסי",
+    "sha256": "008b58cbce3cca239ed14e9e9a48711bc6300070e241be2f52901760baad6a37",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-216.png"
+  },
+  {
+    "name": "עומרי ניב פיירשטיין",
+    "sha256": "bbda758c90f3d1c1ddd3f1515288187d8be6d57ce9ae17e590c0ca4a143b90f0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-216.png"
+  },
+  {
+    "name": "גל בכר",
+    "sha256": "f0518bd5f32d82c47e71da046a8344163e040fcedaf24783ca510ce465cfcc04",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-224.png"
+  },
+  {
+    "name": "עמית צדיקוב",
+    "sha256": "db49366c2d0e38430b7a8a6339b209b73e080ab98beed1cfebb5f7941cd67e2b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-224.png"
+  },
+  {
+    "name": "יוסף חיים (יוסי) הרשקוביץ'",
+    "sha256": "88a6327ef0055f8f04f48c29b392dffdd7138f13b99a60d40bc534e65420bf67",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-224.png"
+  },
+  {
+    "name": "דניאל פלד",
+    "sha256": "8a951d036732e39997cefbb539ee36978b2b432fd031260be3c7021f1b005efa",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-224.png"
+  },
+  {
+    "name": "אברהם (אבי) בן-מיור",
+    "sha256": "8f1fd450382a0611c46538cab77bccbba0384b105962c49e3d161232e449feef",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-224.png"
+  },
+  {
+    "name": "ולרי פרידמן",
+    "sha256": "4a1b9ecdbbd547eedb8cc9d509bccac1990b9a3c346873f69fc4b743eca01570",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-224.png"
+  },
+  {
+    "name": "ליאור ניב",
+    "sha256": "2a401422ffb77d997823d7b9d75b687a942b10db9504672d6cfe4ddbaf3aeb0a",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-224.png"
+  },
+  {
+    "name": "יעקב בר שלום",
+    "sha256": "ccb5edbc7462ab20ee5fe02576f6bbc2faa1ae1667cbf8d6ae495d62f0270531",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-224.png"
+  },
+  {
+    "name": "עידו פרץ",
+    "sha256": "1581f552e2a32fe563f77209856a8deb2c4c5557d8893d284b47a08861171d7f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-232.png"
+  },
+  {
+    "name": "עידו נעים",
+    "sha256": "4d0c4447a663af11eca554f86edb4e8d3a0979f7670a6bafe8f81b433b48aad4",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-232.png"
+  },
+  {
+    "name": "שחר רוזנברג",
+    "sha256": "71fce1f511195ade96ae5811855a94a6f8558ec73bb9397c74436e4e4ed3d112",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-232.png"
+  },
+  {
+    "name": "יניב בר-און",
+    "sha256": "eb2ebecfc1f07f02f3f4a0022389a174b8f12a3b976a781a0cc9c96c282f2e2e",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-232.png"
+  },
+  {
+    "name": "אמנון נסים",
+    "sha256": "4967d9cf94c24d4b5400c9dbad059fa204b98dc2a59727978545224d74abe223",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-232.png"
+  },
+  {
+    "name": "רועי פילוסוף",
+    "sha256": "befed4a76aa43741601e184809a61891961be84200cd757a70f44aaf71beb012",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-232.png"
+  },
+  {
+    "name": "חיים בכר",
+    "sha256": "df143e5e1b4427012f84555c8236b5236fb2d1c7786223cc390bf535064c0dc5",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-232.png"
+  },
+  {
+    "name": "מאור כהן איזנקוט",
+    "sha256": "f05dcf66a0eeb2f0987692c03a891dcd3c7b8b184c4e7bef9d314bdabaf0de1f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-232.png"
+  },
+  {
+    "name": "נועם ברזילי",
+    "sha256": "87493c4f709e3535fb3dfc161ea1469432033de918217dd8d24833513247bbd1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-240.png"
+  },
+  {
+    "name": "עמית יצחק",
+    "sha256": "8edebacc276a7019f051d1249a669fa0e42a3882d46e29628398cdfb599b05d9",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-240.png"
+  },
+  {
+    "name": "אפיק טרי",
+    "sha256": "6d5e379fd565086fd988f9715fa6b40cc90f88b40528b95223380aa1ab0991a7",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-240.png"
+  },
+  {
+    "name": "יובל סולומון",
+    "sha256": "f24d79ff84df86777f170145910b5ebc74a07454093dafea7186eac2d2c38c1f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-240.png"
+  },
+  {
+    "name": "עמית דוד חבורה",
+    "sha256": "b6e833bba7967c3526c1671e95bd8d6a503c3b22886a48d6f877b6c13c4b0099",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-240.png"
+  },
+  {
+    "name": "רון צרפתי",
+    "sha256": "1a024eaaf158f5fc96d87240922cbf177abc7edc0f6daec509d611f5c1047d27",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-240.png"
+  },
+  {
+    "name": "עדי שני",
+    "sha256": "e417263f427168bbd1bcd5d04d8bd1dff6f810b9fa5dd0596438f4699f646c42",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-240.png"
+  },
+  {
+    "name": "איתמר אלחרר",
+    "sha256": "e6a3c58c0b7cde5bf6468fdb6d1ef17faab0ab07a90675ba67fce3ab39d6fd17",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-240.png"
+  },
+  {
+    "name": "יניב פוז'אריק",
+    "sha256": "3a611200ee29c87896561064f967cd143440ae9616701fd484d84128e8255575",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-248.png"
+  },
+  {
+    "name": "דור ירחי",
+    "sha256": "5b53f7377cd5702ffce4d0d77f5dc312eefb2f54fd6c3e2592311c2099a75f18",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-248.png",
+    "notes": "Requires clearer glyph anatomy before approval."
+  },
+  {
+    "name": "איתי לבני",
+    "sha256": "d6a60f581fdc3d401d05eae2040d73d13cfadc79b9c5c1f938c8b10e6b24b9bd",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-248.png",
+    "notes": "Requires clearer glyph anatomy before approval."
+  },
+  {
+    "name": "אלון אבן",
+    "sha256": "28e62284729988a652ba474a9f45cf39514e9c855a5ff3262194c601f1a36070",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-248.png"
+  },
+  {
+    "name": "רותם שני",
+    "sha256": "67d82489b33b0e62b51224a42a4bb889f72c9284ccdadd353020316479b4482a",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-248.png"
+  },
+  {
+    "name": "דנה זמורסקי",
+    "sha256": "56f71b82e0187c711cc60c4846c2f3ea0294ffbe6b3481298aacdc73491c8aef",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-248.png"
+  },
+  {
+    "name": "אריק קראוניק",
+    "sha256": "78e406e173f70e5491f0850b59538e84e98d47a19260d934a4588a003f7f19da",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-248.png"
+  },
+  {
+    "name": "בן רובינשטיין",
+    "sha256": "a210f71d2dd75d108c64569103edee2d8d43f5b52905c850828d9bd1a5086edd",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-248.png"
+  },
+  {
+    "name": "עדן פרוביזור",
+    "sha256": "bc7cd705db55188be4f91f2308f6afff5c519dcac13b53e78aa625c00841320c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-256.png"
+  },
+  {
+    "name": "שרון רחמני",
+    "sha256": "1ed3d16d0513bfc158a6aeb1f2566ddc8e4c199ba62170fdd2300eb0751b618b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-256.png"
+  },
+  {
+    "name": "מייקל אגרנובסקי",
+    "sha256": "4ccac681f5fe5c074c28333d7853e10590f3c14186df0b83ab89d2f9c20f5b8d",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-256.png"
+  },
+  {
+    "name": "איציק אלגרט",
+    "sha256": "de57f0ac60ad4fbbc7deb379dac23cbb7b897350babacc3f5ba63d248eda67f1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-256.png"
+  },
+  {
+    "name": "נתנאל מושיאשוילי",
+    "sha256": "4c660e18f10e150d9b264ff5571585f02540c286d15059f7daa79e936e0d42d1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-256.png"
+  },
+  {
+    "name": "שי נרדי",
+    "sha256": "c6b35bed8ea3a5ebdcd8e89a0ce36c0744659752be249c00653cab39ce124146",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-256.png"
+  },
+  {
+    "name": "ברוך פויר בולק",
+    "sha256": "94b4e868a4ede64391df5d46d6f42c5b78d1a3262eb322dab6b860146910fd1e",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-256.png"
+  },
+  {
+    "name": "בן שלי",
+    "sha256": "c51875e3f3d95a48bd4bd4973875dad1c2cb0069ab8182d52bc4b1c42613c3f2",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-256.png"
+  },
+  {
+    "name": "דור רידר",
+    "sha256": "53ac5320aaba8297d8fdebe843e633719ecb6a55a8d343ae83f815779aa6381c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-264.png"
+  },
+  {
+    "name": "דניאל שיינקרמן",
+    "sha256": "fb4856395e48a764ce96dd88ab5f1335229f498fde600370592fa4063608c2eb",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-264.png"
+  },
+  {
+    "name": "תומר שפירר",
+    "sha256": "60c26ac854c33ef6750e090865356ccad5e29827c4bbbab8c3b676b733ddbc14",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-264.png"
+  },
+  {
+    "name": "ליאם שרם",
+    "sha256": "4e80e53ac2a64a0e64ee0a948df6277d4e215f18e700ccb4d273498af8815c3d",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-264.png"
+  },
+  {
+    "name": "אייל וייס",
+    "sha256": "441b02d145f855fbeda1f73965e90680c22ddcad938cc1e3d663ca082d8c3981",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-264.png"
+  },
+  {
+    "name": "אלעד ראובני",
+    "sha256": "c1ce5bb5c4266fa111b1ae2848dfa4dec6252c0f9c46417117f716d7cca7b746",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-264.png"
+  },
+  {
+    "name": "אלירן יגר",
+    "sha256": "bf4066b6a8faeb082cd0132b3e39d0f30333c699caa3d706dd48ed43dfb27a02",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-264.png"
+  },
+  {
+    "name": "שון מונדשיין",
+    "sha256": "d37d77eb520929f5725c0e5372cdeebfca616efeb229d00ae50c8b394886a17f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-264.png"
+  },
+  {
+    "name": "אורן צלניק",
+    "sha256": "86d9b2afe4844362ac91a2fd50ada518aee51a18880a16b8c933d58717d51fa6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-272.png"
+  },
+  {
+    "name": "יותם חיים",
+    "sha256": "150c761a14d2c9e8b49e6301ba8701d59f31809630ed0802026d92f1f6d16862",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-272.png"
+  },
+  {
+    "name": "בר תומר",
+    "sha256": "9fa0a96f01f19504b764fc80bbd18b7edea8144b0bd7757ed8225d1b461b1ddd",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-272.png"
+  },
+  {
+    "name": "איתי מרקוביץ",
+    "sha256": "0223882dc61c9659136f59fc78d03fa26adb99620c7844e105854127d693a361",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-272.png",
+    "notes": "Requires clearer glyph anatomy before approval."
+  },
+  {
+    "name": "ברק ניגרקר",
+    "sha256": "f8512f12ad3cc05df2cb320403e183bfb196cdaf58c5ecba18dec5c87968c80f",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-272.png",
+    "notes": "Requires clearer glyph anatomy before approval."
+  },
+  {
+    "name": "נתן פנץ",
+    "sha256": "f497b6b3022518f0d132141e13e0eae1aa9329da0a5610790c2c41c803efbeb2",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-272.png"
+  },
+  {
+    "name": "ליאור קולרן",
+    "sha256": "03c2c515b48d8bc11938ceb66a6c9a73739d8921a1f4bd73b6584302bed6e65b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-272.png"
+  },
+  {
+    "name": "רן-נתן דולב חיימוביץ",
+    "sha256": "d9eacb6db8fd37f4c5e239af2b1a01f5eac01d1bc2254beadc85666a60d35e92",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-272.png"
+  },
+  {
+    "name": "מרדכי מוטי שמיר",
+    "sha256": "c75f4b41f62658a494a1f329894fdc1269eeaf35cb3deeb1aafe6054015af411",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-280.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "רועי מלדסי",
+    "sha256": "168b4088b3baf97ce6eebdc719909583677c5a416f6bbd1601d67fc85fd17d63",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-280.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "רועי (חיים) וייזר",
+    "sha256": "567be1b4bfa636754319c962a94173508091032a10a36db1c0ed4ec1d1a025cb",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-280.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "יואב פפר",
+    "sha256": "1c419e4be6b2d68e1ab7876af54556783f5592de4a96ec06003fdb9c95f0e7a8",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-280.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "אלכס טוקר",
+    "sha256": "8eb86f10b8b02ec27c27e6ca27343972cb297a491f18865ffb57c2d9f23b5e01",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-280.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "יוסף (יוסי) בן-עזרא",
+    "sha256": "4bdb0d55a8c4f70b4ec400e00613b25573e75008617e558c33b561c40cee49ac",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-280.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "עומר מקסים נאוטרה",
+    "sha256": "e9bd9483f029ec8f5fba7be8baae7408e5afd9f07285397d1975c53fda58e057",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-280.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "אלון פרקס",
+    "sha256": "5e0d9feb932fe7b42a2b80ee067ef85e719629ef3c36ef57dc321d85080c92a4",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-280.png",
+    "notes": "חשד לתוספת י' בשם הפרטי; לבדוק מקור בהגדלה."
+  },
+  {
+    "name": "משה מלאכי רוזנפלד",
+    "sha256": "324a3a5e5a1ca59774c6a9b9838af1532dbd84d21a4b1eb2eb9cfc53bf0a53d6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-288.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "יאיר יעקב שושן",
+    "sha256": "59456d64aec4c5d7457ccb6992f55e81f8c36a7f2871a5dbc8ea3f12bdd88dbf",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-288.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "שלמה ציטרין",
+    "sha256": "373b3ca72894043610badd75ffda047cea5a84652686ab386b55c1193da2f6b8",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-288.png",
+    "notes": "חשד לתוספת ו' בסוף ציטרין; לבדוק בהגדלה."
+  },
+  {
+    "name": "רועי ניסים",
+    "sha256": "1a5c816b029f14a29993b18598737689d27dc6d0970e0fd000678a212e87379d",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-288.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "ערן-עזרא שוחט",
+    "sha256": "3a5647642b847497688dabcca1eb8656b8050389f32e8f5631125bda70b7613f",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-288.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "יותם בן בסט",
+    "sha256": "d4b7e1ac66d5e1a0a100fe018bae3ce2cbdaaf362d4c0e4b89dd3f6d17ee7ff7",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-288.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "עמית כהן",
+    "sha256": "1182b2d290586c7444d746499713ec1707a3e3553e2d4e2d1099171fc2d43a1a",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-288.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "עדי אוחנה",
+    "sha256": "a445a0a7b4fe0ce9a1b8106cfd6bb8ad5d858e980a62d41009e2e0a2493b8861",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-288.png",
+    "notes": "חשד לתוספת י' אחרי א' באוחנה."
+  },
+  {
+    "name": "שלמה סלמן קוזרי",
+    "sha256": "ba9f13018b966f431bf45f46c341f8753d907e286fd28c092129bb26c2236c17",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-296.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "ברק טל",
+    "sha256": "3a65ddbc4991f8814b356a7fcf35d8c974e26db573ff7dc99c659f6ee48f7d7f",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-296.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "עומרי תמרי",
+    "sha256": "1da8007ed5237c5ff369e14d6d4d554e87c322709fc15051fe78b481fcc95520",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-296.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "שמעון רוימי",
+    "sha256": "620c7f1e90a50b05362b5000f5c3dcec900ef383d2843b2001de820a58db208c",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-296.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "אביהוא קינן",
+    "sha256": "39d10d2d088fcad4c23ad6f5f692ae79e7d9139aef997d1a6b2e0cab2f2ea811",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-296.png",
+    "notes": "הנ' הסופית בקינן נראית כו'; נדרשת בדיקה מוגדלת."
+  },
+  {
+    "name": "אריאל הרוש",
+    "sha256": "301f43902160e1dcb75810181c8b83ac366817ae20897cebbe9a22c2d2910ff6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-296.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "אבישי בן חמו",
+    "sha256": "7a77c9ab1b4a509085052675ad296f1593dc4fce81228a156bb464089819e4e6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-296.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "איתן פיש",
+    "sha256": "6d9a611653c926f822ab6d48e05572123f0e5940e8f942cffb61613c3eb81421",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-296.png",
+    "notes": "חשד לתוספת ו' בפיש."
+  },
+  {
+    "name": "עמית בונצל",
+    "sha256": "40885eddc107320b723737d92a22fe13f8d1a99dbc6669b69c44185613b44d32",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-304.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "נדב עמיקם",
+    "sha256": "19a82f3a3e0f83fb69166141a33be606f189b3cd0f16a0bfed3cffb9d0d33e65",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-304.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "מעוז מורל",
+    "sha256": "855e97625cd92ce6c2a7ba1905add1d05a35f6c7dd95ed17dffd11a390f3b3a6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-304.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "עומר חג'אג'",
+    "sha256": "5ec8cb879cd6fc314ee5502b15b6e6042910c183a0a32cf174958e97c9ed413a",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-304.png",
+    "notes": "הגרש הסופי וסדר הסימנים מחייבים בדיקה מוגדלת."
+  },
+  {
+    "name": "מתן שי ישינובסקי",
+    "sha256": "bb0beb8715bf10e0f943a22b175fd242a1567d488b8ec4e7ea917da3cfa99bb7",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-304.png",
+    "notes": "שם ארוך; נדרשת ספירת י'/ו' מול המקור בהגדלה."
+  },
+  {
+    "name": "דניאל קסטיאל",
+    "sha256": "fc49721bb9ee349eee48a64ec655f23f58bb9ec4cb707aae4612e9f14c8e4ae7",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-304.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "יותם (יות'קה) ויסברג",
+    "sha256": "25f65e30b84d6cad6a41232c4e5acef06826304886983790f9bc7f1146613bad",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-304.png",
+    "notes": "נדרשת בדיקת גרש וסוגריים והבחנה בין ו' לי'."
+  },
+  {
+    "name": "שמשון רוזי",
+    "sha256": "ac0525a223bacc1deaed777cd6135c28618e62b61eca513cf1ba9bdbb295aa08",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-304.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "תומר פרץ",
+    "sha256": "4bcc7d4e5be31aaef8538c3840b75287a7c58cf616a4bf18511ff4c777ddead6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-312.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "שילה סימן טוב",
+    "sha256": "1dfdc14e6b9d5a47af15b25443ed5a9f9d823d68a799ebb0eae7e53b3e7894c3",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-312.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "יקיר יצחק",
+    "sha256": "0ba57828a2c012b798f76445f3e0945b65ef232103774099b194d9a2d0f51a52",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-312.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "אביחי לוי",
+    "sha256": "21cf5bbb2623e0de970695c11d85791e654eccfc253d88f56e54983db973579f",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-312.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "שאול צ'נסי",
+    "sha256": "d6925e71717be25db3989a0aa4780d503235b76091f04c585c33b7e576baffc6",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-312.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "עידו קסלסי",
+    "sha256": "80c231090100e679c07a61f148f52fc4f9bf9d15e84dca8b7c2bdbd5de3edbc8",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-312.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "עומר בלווה",
+    "sha256": "aa5873948353acc71f4292387ef6895d505818863b089af5ab73a77727b8a3a2",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-312.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "אלון סמוכה",
+    "sha256": "c1bc76debc519d93bda656551e7fae2e8151b6b38d4548c6a62ab363eb0523e5",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-312.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "עדי שאולי",
+    "sha256": "6af6721dcdc7a8a507568137dbeee2a66843e88c770c8e1056278356be5c4f58",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-320.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "ליאור הררי",
+    "sha256": "bc51a76656811d63e4bb1af426cfee73ec1d555b0ecbacffa2805ede7584b550",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-320.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "רום הכט",
+    "sha256": "025bfdeb80e38707dd66fe6f6f9c3e1411e70ce013089e28714d428a74864ac1",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-320.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "תומר חזן",
+    "sha256": "4764dd8d354788e56c6c25f4230b47dbcfd16a4e4c384c3a8d7b41f1769dcea9",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-320.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "משה כהן",
+    "sha256": "75ba33d16b8c2839f507a2cb9242b1ae6de3e66b608c1c18059e2d5fe716bd0f",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-320.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "חיים טורג'מן",
+    "sha256": "045c4103c1e9cc0bdf982b81ac5c7eff80e8f742616d8f8a16a64b7c57fc8d34",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-320.png",
+    "notes": "הגרש נראה חסר או נבלע; אין לאשר עד בירור."
+  },
+  {
+    "name": "ישראל יודקין",
+    "sha256": "c9be74efaa6144cb75595068c59496001653dd3fc121fda6c2dc9732864edac8",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-320.png",
+    "notes": "חשד לקריאה יודקיו במקום יודקין."
+  },
+  {
+    "name": "אדיר פורטוגל",
+    "sha256": "3a65622d0a4efadc657d2dead1b2d58c0692d57c809082afa865bdfce70c4237",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-320.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  },
+  {
+    "name": "אבירם-חי זילבר",
+    "sha256": "b82695aa4bff418e6d2b1f48bdfd17100fa440f4311aadeea0ddcf720a7eb3d7",
+    "spellingChecked": false,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "evidence": "sheet-328.png",
+    "notes": "סקירה ראשונית של הרינדור הושלמה; אישור איות ממתין להצלבה עיוורת ובדיקה מוגדלת לפי הצורך."
+  }
+]

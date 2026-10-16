@@ -6,6 +6,16 @@ import { validateFiles, validName } from "../public/batch.js";
 import correct from "../netlify/functions/correct.mjs";
 import { EXACT_NAME_LAYOUT } from "../public/design.js";
 
+test("prebuilt name artwork stays pinned through a one-time correction", async () => {
+  const { data, store, input } = fixture();
+  const artwork = { name: input.name, file: "a".repeat(20) + ".png", sha256: "b".repeat(64), status: "verified", spellingChecked: true, visualChecked: true, renderChecked: true };
+  data.set("original", { ...data.get("original"), layoutVersion: EXACT_NAME_LAYOUT, nameVariant: 3, nameArtwork: artwork });
+  const { id } = await queueCorrection(store, "original", input, "name");
+  assert.deepEqual(data.get(id).nameArtwork, artwork);
+  assert.equal(data.get(id).nameSource, "prebuilt-reviewed");
+  assert.equal(data.get(id).nameVariant, 3);
+});
+
 test("literal-name corrections preserve the new pipeline without asking AI to redraw letters", async () => {
   const { data, store, input } = fixture();
   data.set("original", { ...data.get("original"), layoutVersion: EXACT_NAME_LAYOUT, nameVariant: 10 });

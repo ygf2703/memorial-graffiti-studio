@@ -52,9 +52,11 @@ export async function fetchArtwork(entry, fetcher = fetch, site = process.env.ST
 }
 
 export async function artworkLayer(bytes) {
-  const asset = await sharp(bytes).resize({ width: 990, height: 220, fit: "inside", withoutEnlargement: true }).png().toBuffer({ resolveWithObject: true });
-  return sharp({ create: { width: 1080, height: 250, channels: 4, background: "#00000000" } })
-    .composite([{ input: asset.data, left: Math.round((1080 - asset.info.width) / 2), top: Math.round((250 - asset.info.height) / 2) }]).png().toBuffer();
+  // Remove empty padding only; preserve painted glyphs, overspray and paint runs.
+  const trimmed = await sharp(bytes).trim({ background: "#00000000", threshold: 0 }).png().toBuffer();
+  const asset = await sharp(trimmed).resize({ width: 990, height: 310, fit: "inside" }).png().toBuffer({ resolveWithObject: true });
+  return sharp({ create: { width: 1080, height: 340, channels: 4, background: "#00000000" } })
+    .composite([{ input: asset.data, left: Math.round((1080 - asset.info.width) / 2), top: Math.round((340 - asset.info.height) / 2) }]).png().toBuffer();
 }
 
 export async function compositeArtwork(bytes, artwork) {

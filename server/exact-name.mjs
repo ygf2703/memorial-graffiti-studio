@@ -76,8 +76,8 @@ export async function compositeExactName(bytes, name, seed, variant = nameVarian
 export async function compositeNameLayer(bytes, layer) {
   const base = await sharp(bytes).resize(1080, 1080).png().toBuffer();
   // Actual wall grain/cracks show through the paint, not a separate flat panel.
-  const wall = await sharp(base).extract({ left: 0, top: 0, width: 1080, height: 250 }).removeAlpha().greyscale().raw().toBuffer();
   const { data, info } = await sharp(layer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const wall = await sharp(base).extract({ left: 0, top: 0, width: info.width, height: info.height }).removeAlpha().greyscale().raw().toBuffer();
   for (let i = 0; i < wall.length; i++) data[i * 4 + 3] = Math.round(data[i * 4 + 3] * (.83 + .17 * wall[i] / 255));
   return sharp(base).composite([{ input: data, raw: { width: info.width, height: info.height, channels: 4 }, left: 0, top: 0 }]).png().toBuffer();
 }

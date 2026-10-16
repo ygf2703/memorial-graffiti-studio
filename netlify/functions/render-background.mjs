@@ -27,7 +27,7 @@ export default async (request) => {
     const previous = job.parentId ? await store.get(`${job.parentId}/${exactName ? "base" : "result"}`, { type: "arrayBuffer" }) : null;
     if (job.parentId && !previous) throw new Error("Missing original result");
     const correction = previous ? { bytes: Buffer.from(previous), reason: job.correctionReason } : null;
-    const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName);
+    const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName, Boolean(artwork));
     let result = Buffer.from(imageBase64, "base64");
     const variant = job.nameVariant || nameVariant(designSeed);
     if (exactName) {

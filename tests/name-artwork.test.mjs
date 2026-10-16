@@ -7,6 +7,7 @@ import { readFile } from "node:fs/promises";
 import { validName } from "../public/batch.js";
 import { reviewedCatalog, extendCatalog } from "../scripts/publish-name-artwork.mjs";
 import { artworkId } from "../scripts/name-artwork-inventory.mjs";
+import { muralPrompt } from "../server/prompt.mjs";
 
 const entry = (name, sha256 = "b".repeat(64)) => ({ name, file: "a".repeat(20) + ".png", sha256, status: "verified", spellingChecked: true, visualChecked: true, renderChecked: true, ocr: { status: "matched", text: name, uncertain: false, sha256 } });
 test("artwork lookup preserves exact spelling, punctuation and niqqud", () => {
@@ -102,7 +103,7 @@ test("wide and two-line transparent assets render safely on light and dark 1080p
     const asset = await sharp({ create: { width, height, channels: 4, background: "#207ba680" } }).png().toBuffer();
     const layer = await artworkLayer(asset);
     const meta = await sharp(layer).metadata();
-    assert.equal(meta.width, 1080); assert.equal(meta.height, 250); assert.equal(meta.hasAlpha, true);
+    assert.equal(meta.width, 1080); assert.equal(meta.height, 340); assert.equal(meta.hasAlpha, true);
     const rgba = await sharp(layer).raw().toBuffer();
     assert.equal(rgba[3], 0);
     for (const background of ["#efe4ce", "#15263a"]) {
@@ -112,4 +113,18 @@ test("wide and two-line transparent assets render safely on light and dark 1080p
       assert.notDeepEqual(result, wall);
     }
   }
+});
+test("name artwork ignores empty padding and fills the larger header without cropping", async () => {
+  const ink = await sharp({ create: { width: 600, height: 300, channels: 4, background: "#207ba6" } }).png().toBuffer();
+  const padded = await sharp({ create: { width: 1800, height: 1000, channels: 4, background: "#00000000" } })
+    .composite([{ input: ink, left: 600, top: 350 }]).png().toBuffer();
+  const layer = await artworkLayer(padded);
+  const visible = await sharp(layer).trim({ background: "#00000000", threshold: 0 }).toBuffer({ resolveWithObject: true });
+  assert.equal(visible.info.height, 310);
+  assert.equal(visible.info.width, 620);
+  assert.deepEqual(await artworkLayer(ink), layer);
+  const prompt = muralPrompt("seed", "גל בכר", false, true, true);
+  assert.match(prompt, /top 32%/);
+  assert.match(prompt, /between 33% and 65%/);
+  assert.match(muralPrompt("seed", "גל בכר", false, true), /top 24%/);
 });

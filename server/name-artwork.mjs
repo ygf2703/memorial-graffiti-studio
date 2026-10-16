@@ -32,7 +32,7 @@ export async function releaseCatalog() {
   try { catalog = JSON.parse(await readFile(resolve("data/name-artwork/release.json"), "utf8")); }
   catch (error) { if (error.code === "ENOENT") return null; throw error; }
   const names = (await readFile(resolve("data/name-artwork/names-2026-10-16.txt"), "utf8")).trim().split(/\r?\n/u);
-  validateCompleteCatalog(catalog, names);
+  validateReleaseCatalog(catalog, names);
   return catalog;
 }
 
@@ -66,5 +66,18 @@ export function validateCompleteCatalog(catalog, names) {
   if (!catalog || catalog.version !== 1 || !Array.isArray(catalog.entries)) throw new Error("Invalid catalog");
   if (catalog.entries.length !== unique.length || new Set(catalog.entries.map((item) => item.name)).size !== unique.length) throw new Error("Incomplete or duplicate catalog");
   for (const name of unique) selectArtwork(catalog, name);
+  return true;
+}
+
+export function validateReleaseCatalog(catalog, names) {
+  if (catalog?.mode !== "partial") return validateCompleteCatalog(catalog, names);
+  const allowed = new Set(names);
+  if (catalog.version !== 1 || !Array.isArray(catalog.entries) || !catalog.entries.length || catalog.sourceCount !== allowed.size) throw new Error("Invalid partial catalog");
+  const published = new Set();
+  for (const item of catalog.entries) {
+    if (!allowed.has(item.name) || published.has(item.name)) throw new Error("Unknown or duplicate catalog name");
+    published.add(item.name);
+    selectArtwork(catalog, item.name);
+  }
   return true;
 }

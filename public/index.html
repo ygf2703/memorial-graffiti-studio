@@ -35,6 +35,12 @@
           <h2 id="upload-title">בחרו תמונות מקור</h2>
           <p class="muted">שם הקובץ משמש כהצעה. אפשר להעלות גם תמונת WhatsApp או מצלמה ולהקליד שם מלא בשדה מתחת לתמונה. בדקו את האיות לפני היצירה.</p>
         </div>
+        <p id="name-availability" class="muted" role="status">טוען רשימת שמות זמינים…</p>
+        <details id="available-names-panel" hidden>
+          <summary>שמות גרפיטי זמינים לעבודה</summary>
+          <ul id="available-names-list"></ul>
+        </details>
+        <datalist id="available-names"></datalist>
         <label class="upload-dropzone" for="photos">
           <span>העלאת תמונות</span>
           <small>JPG, PNG או WEBP · עד 10 קבצים · עד 20MB לכל קובץ</small>

@@ -7,6 +7,7 @@ import { savedAccessCode, rememberAccessCode } from "./access.js";
 const $ = (selector) => document.querySelector(selector);
 const fileInput = $("#photos"), photoList = $("#photo-list"), validation = $("#validation"), count = $("#batch-count"), generateButton = $("#generate"), progress = $("#progress"), results = $("#results");
 let batch = [], busy = false, ready = false, invalid = false;
+let availableNames = null, availabilityLoaded = false;
 const outputUrls = [];
 const sourceFiles = new Map();
 let accessStorage;
@@ -20,13 +21,34 @@ function node(tag, text, className) {
   return element;
 }
 function buttons() {
-  generateButton.disabled = busy || !ready || invalid || !batch.length || batch.some((item) => !validName(item.name));
+  generateButton.disabled = busy || !ready || !availabilityLoaded || invalid || !batch.length || batch.some((item) => !validName(item.name) || (availableNames && !availableNames.has(item.name)));
   for (const input of photoList.querySelectorAll("input")) input.disabled = busy;
   fileInput.disabled = busy;
   $("#check-connection").disabled = busy;
   $("#forget-access").disabled = busy;
   $("#access-code").disabled = busy;
   $("#restore").disabled = busy || !ready;
+}
+async function loadAvailability() {
+  availabilityLoaded = false;
+  buttons();
+  try {
+    const response = await fetch("/name-artwork/catalog.json", { cache: "no-store", signal: AbortSignal.timeout(15000) });
+    if (response.status === 404) {
+      availableNames = null;
+      $("#name-availability").textContent = "אפשר להזין שם מלא בשדה שמתחת לתמונה.";
+    } else {
+      const catalog = await readJson(response);
+      if (!Array.isArray(catalog.names) || !catalog.names.length || catalog.names.some((name) => !validName(name))) throw new Error("רשימת השמות אינה זמינה. לחצו שוב על בדיקת חיבור.");
+      availableNames = new Set(catalog.names);
+      $("#name-availability").textContent = `${availableNames.size} מתוך ${catalog.sourceCount} שמות זמינים בגרפיטי מוכן מראש. שמות נוספים יתווספו לאחר בדיקה. יש לבחור או להקליד את השם בדיוק כפי שמופיע ברשימה.`;
+      $("#available-names-panel").hidden = false;
+      $("#available-names-list").replaceChildren(...catalog.names.map((name) => node("li", name)));
+      $("#available-names").replaceChildren(...catalog.names.map((name) => { const option = node("option"); option.value = name; return option; }));
+    }
+    availabilityLoaded = true;
+  } catch (error) { $("#name-availability").textContent = error.message; }
+  renderBatch();
 }
 async function checkConnection() {
   ready = false;
@@ -37,6 +59,7 @@ async function checkConnection() {
     ready = state.ready && state.authorized;
     $("#connection-status").textContent = ready ? "הסטודיו מחובר. אפשר ליצור פוסטרים." : state.message || "הזינו את קוד הכניסה לסטודיו ולחצו על בדיקת חיבור.";
     if (ready && !rememberAccessCode(accessStorage, $("#access-code").value)) $("#connection-status").textContent += " הדפדפן אינו מאפשר לשמור את הקוד; בכניסה הבאה יהיה צורך להזינו שוב.";
+    if (ready && !availabilityLoaded) await loadAvailability();
   } catch (error) { $("#connection-status").textContent = error.message; }
   buttons();
   return ready;
@@ -52,13 +75,21 @@ function renderBatch() {
     const nameLabel = node("label", "השם שיופיע בגרפיטי"), nameInput = node("input");
     nameInput.type = "text"; nameInput.value = item.name; nameInput.dir = "rtl";
     nameInput.required = true; nameInput.maxLength = 80;
+    nameInput.setAttribute("list", "available-names");
+    const nameStatus = node("small");
+    const updateNameStatus = () => {
+      const unavailable = availableNames && !availableNames.has(item.name);
+      nameStatus.textContent = unavailable ? "השם עדיין לא זמין במאגר. לא ניתן ליצור איתו תמונה כרגע." : availableNames ? "השם זמין במאגר הגרפיטי." : "";
+      nameInput.setCustomValidity(!validName(item.name) ? "יש להזין שם תקין." : unavailable ? "השם עדיין לא זמין במאגר." : "");
+    };
     nameInput.addEventListener("input", () => {
       item.name = nameInput.value;
-      nameInput.setCustomValidity(validName(item.name) ? "" : "יש להזין שם תקין.");
+      updateNameStatus();
       buttons();
     });
     nameLabel.append(nameInput);
-    details.append(node("small", item.file.name), nameLabel);
+    updateNameStatus();
+    details.append(node("small", item.file.name), nameLabel, nameStatus);
     card.append(img, details); photoList.append(card);
   }
   buttons();
@@ -137,7 +168,7 @@ function showResult(name, { poster, job }) {
     const message = review.status === "matched" ? "בדיקת האיות האוטומטית מצאה התאמה. זו אינה הבטחה — נדרש אישור חזותי לפני הורדה." : review.status === "needs_review" ? "אזהרה: הבדיקה האוטומטית מצאה חוסר התאמה או כיתוב לא ברור. אין לאשר אם חסרה או שגויה אפילו אות אחת." : "בדיקת האיות האוטומטית לא זמינה. יש לבדוק ידנית כל אות לפני אישור.";
     card.append(node("p", message, "review-note"));
     card.append(node("p", `הכיתוב הנדרש: ${job.name} | אחים ואחיות לסמל לא שוכחים`, "review-note"));
-    if (job.layoutVersion === EXACT_NAME_LAYOUT) card.append(node("p", `השם נוסף ישירות מהטקסט שהזנת, בסגנון גרפיטי ${job.nameVariant} מתוך ${job.nameStyleCount || 5}${job.nameStyleLabel ? ` — ${job.nameStyleLabel}` : ""}. בדקו קריאות, שילוב בקיר והתאמה לדמות.`, "review-note"));
+    if (job.layoutVersion === EXACT_NAME_LAYOUT) card.append(node("p", job.nameSource === "prebuilt-reviewed" ? "השם נוסף מנכס גרפיטי מוכן שנבדק מראש. בדקו קריאות, שילוב בקיר והתאמה לדמות." : `השם נוסף ישירות מהטקסט שהזנת, בסגנון גרפיטי ${job.nameVariant} מתוך ${job.nameStyleCount || 5}${job.nameStyleLabel ? ` — ${job.nameStyleLabel}` : ""}. בדקו קריאות, שילוב בקיר והתאמה לדמות.`, "review-note"));
     if (typeof review.name === "string") card.append(node("p", [CAPTION_LAYOUT, COMPOSITED_LAYOUT].includes(job.layoutVersion) ? `קריאה אוטומטית של השם (עלולה לטעות): ${review.name}. המשפט נוסף מקובץ קבוע, גרסה ${job.captionVariant} מתוך 5, ואינו נבדק בקריאה זו.` : `קריאה אוטומטית (עלולה לטעות): ${review.name} | ${review.caption}`, "review-note"));
     const label = node("label", "", "approval"), checkbox = node("input");
     checkbox.type = "checkbox";
@@ -232,3 +263,4 @@ $("#restore").addEventListener("click", () => run(savedJobs(), true));
 $("#restore").hidden = !savedJobs().length;
 $("#connection-status").textContent = $("#access-code").value ? "קוד הכניסה השמור נטען. לחצו על בדיקת חיבור." : "הזינו את קוד הכניסה ולחצו על בדיקת חיבור. לאחר אימות הוא יישמר בדפדפן הזה.";
 buttons();
+loadAvailability();

@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import sharp from "sharp";
-import { selectArtwork, validateCompleteCatalog, artworkLayer, compositeArtwork, fetchArtwork } from "../server/name-artwork.mjs";
+import { selectArtwork, validateCompleteCatalog, validateReleaseCatalog, artworkLayer, compositeArtwork, fetchArtwork } from "../server/name-artwork.mjs";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { validName } from "../public/batch.js";
@@ -59,6 +59,25 @@ test("publishing requires a visual review bound to the actual generated file", (
   assert.throws(() => reviewedCatalog(report, [{ ...review, ocr: undefined }], [name]));
   assert.throws(() => reviewedCatalog(report, [{ ...review, ocr: { ...review.ocr, text: "שם שגוי" } }], [name]));
   assert.throws(() => reviewedCatalog(report, [{ ...review, ocr: { ...review.ocr, sha256: "b".repeat(64) } }], [name]));
+});
+test("partial releases allow only reviewed source names and still block unavailable names", () => {
+  const names = ["שם אחד", "שם שני"], catalog = { version: 1, mode: "partial", sourceCount: 2, entries: [entry(names[0])] };
+  assert.equal(validateReleaseCatalog(catalog, names), true);
+  assert.throws(() => selectArtwork(catalog, names[1]));
+  for (const entries of [[], [entry("לא ברשימה")], [entry(names[0]), entry(names[0])], [{ ...entry(names[0]), spellingChecked: false }]]) assert.throws(() => validateReleaseCatalog({ ...catalog, entries }, names));
+  assert.throws(() => validateReleaseCatalog({ ...catalog, sourceCount: 3 }, names));
+  assert.throws(() => validateReleaseCatalog({ ...catalog, mode: undefined }, names));
+});
+test("partial publisher excludes stale, unchecked and OCR-disagreed artwork without weakening review", () => {
+  const names = ["שם אחד", "שם שני", "שם שלישי"], sha256 = "a".repeat(64);
+  const checks = names.map((name) => ({ name, id: artworkId(name), sha256, technicalPass: true, renderChecked: true }));
+  const reviews = names.map((name) => ({ ...entry(name, sha256), name }));
+  reviews[1].sha256 = "b".repeat(64);
+  reviews[2].ocr.text = "איות שגוי";
+  const catalog = reviewedCatalog({ checks }, reviews, names, { partial: true });
+  assert.deepEqual(catalog.entries.map((item) => item.name), [names[0]]);
+  assert.equal(catalog.sourceCount, 3);
+  assert.throws(() => reviewedCatalog({ checks }, reviews.slice(1), names, { partial: true }));
 });
 test("OCR disagreement requires an explicit visual override bound to the reviewed asset", () => {
   const candidate = entry("שם");

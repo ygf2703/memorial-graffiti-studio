@@ -1,5 +1,8 @@
 export const caption = "אחים ואחיות לסמל לא שוכחים";
 export const MAX_FILE_BYTES = 20 * 1024 * 1024;
+export function resolveArtworkName(name, aliases = {}) {
+  return Object.hasOwn(aliases, name) ? aliases[name] : name;
+}
 export function nameFromFile(file) {
   return file.name.replace(/\.[^.]+$/u, "");
 }

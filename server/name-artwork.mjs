@@ -3,9 +3,12 @@ import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 import sharp from "sharp";
 import { compositeNameLayer } from "./exact-name.mjs";
+import { validName, resolveArtworkName } from "../public/batch.js";
+import { loadNameRoster, validateNameRoster, validateRosterCoverage } from "./name-roster.mjs";
 
 // Generated pixels are immutable after review; never regenerate letters at runtime.
 export function selectArtwork(catalog, name) {
+  name = resolveArtworkName(name, catalog.aliases);
   const entry = catalog.entries.find((item) => item.name === name);
   if (!entry || entry.status !== "verified" || !entry.visualChecked || !entry.spellingChecked || !entry.renderChecked) {
     throw new Error("השם עדיין לא מוכן במאגר הגרפיטי. לא נשלחה בקשת יצירה.");
@@ -31,8 +34,10 @@ export async function releaseCatalog() {
   let catalog;
   try { catalog = JSON.parse(await readFile(resolve("data/name-artwork/release.json"), "utf8")); }
   catch (error) { if (error.code === "ENOENT") return null; throw error; }
-  const names = (await readFile(resolve("data/name-artwork/names-2026-10-16.txt"), "utf8")).trim().split(/\r?\n/u);
+  const roster = await loadNameRoster();
+  const names = roster ? validateNameRoster(roster).names : (await readFile(resolve("data/name-artwork/names-2026-10-16.txt"), "utf8")).trim().split(/\r?\n/u);
   validateReleaseCatalog(catalog, names);
+  if (roster) validateRosterCoverage(catalog, roster);
   return catalog;
 }
 
@@ -72,6 +77,12 @@ export function validateCompleteCatalog(catalog, names) {
 }
 
 export function validateReleaseCatalog(catalog, names) {
+  if (catalog?.aliases !== undefined) {
+    if (!catalog.aliases || typeof catalog.aliases !== "object" || Array.isArray(catalog.aliases)) throw new Error("Invalid artwork aliases");
+    for (const [alias, target] of Object.entries(catalog.aliases)) {
+      if (!validName(alias) || !validName(target) || Object.hasOwn(catalog.aliases, target) || catalog.entries.some((row) => row.name === alias) || !catalog.entries.some((row) => row.name === target)) throw new Error("Invalid artwork alias target");
+    }
+  }
   if (catalog?.mode !== "partial") return validateCompleteCatalog(catalog, names);
   const allowed = new Set(names);
   if (catalog.version !== 1 || !Array.isArray(catalog.entries) || !catalog.entries.length || catalog.sourceCount !== allowed.size) throw new Error("Invalid partial catalog");

@@ -7682,5 +7682,159 @@
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-16T16:59:13.881Z"
     }
+  },
+  {
+    "name": "אריאל בן-שאנן",
+    "sha256": "85d1fce8c640b280fd8859b23516992d4a9b05da036e3520fc636cd2d65a765d",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "reviewSession": "roster-347-2026-10-17",
+    "sourceFile": "56685d40af6e34380451.png",
+    "style": 2,
+    "evidence": ".netlify/name-library-review/56685d40af6e34380451-light.png; 56685d40af6e34380451-dark.png; source PNG enlarged",
+    "notes": "נבדקו אותיות המקור המוגדל מול שם הקובץ החדש, כולל מקף, אותיות סופיות וספירת י׳; נבדקו שקיפות, פלטת גרפיטי וקריאות שכבת היישום לאחר הקטנה על קיר בהיר וכהה ב־1080. תמלול עיוור תואם תומך בביקורת ואינו מחליף אותה.",
+    "ocr": {
+      "sha256": "85d1fce8c640b280fd8859b23516992d4a9b05da036e3520fc636cd2d65a765d",
+      "status": "matched",
+      "text": "אריאל בן-שאנן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-17T05:12:50.377Z"
+    }
+  },
+  {
+    "name": "לידור מועלם",
+    "sha256": "926634293c17a94d61a446f7999c93703ed11585b4664df106c6fc1455c6d9bd",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "reviewSession": "roster-347-2026-10-17",
+    "sourceFile": "68b400d359edeee7c819.png",
+    "style": 1,
+    "evidence": ".netlify/name-library-review/68b400d359edeee7c819-light.png; 68b400d359edeee7c819-dark.png; source PNG enlarged",
+    "notes": "נבדקו אותיות המקור המוגדל מול שם הקובץ החדש, כולל מקף, אותיות סופיות וספירת י׳; נבדקו שקיפות, פלטת גרפיטי וקריאות שכבת היישום לאחר הקטנה על קיר בהיר וכהה ב־1080. תמלול עיוור תואם תומך בביקורת ואינו מחליף אותה.",
+    "ocr": {
+      "sha256": "926634293c17a94d61a446f7999c93703ed11585b4664df106c6fc1455c6d9bd",
+      "status": "matched",
+      "text": "לידור מועלם",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-17T05:12:31.904Z"
+    }
+  },
+  {
+    "name": "נתנאל בוכריס",
+    "sha256": "9a9b4f748611069bffdd20dc4ec41a6deb5c28b567b092cb4ace3ed3d2204fbe",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "reviewSession": "roster-347-2026-10-17",
+    "sourceFile": "1e91b33b677df23d2feb.png",
+    "style": 7,
+    "evidence": ".netlify/name-library-review/1e91b33b677df23d2feb-light.png; 1e91b33b677df23d2feb-dark.png; source PNG enlarged",
+    "notes": "נבדקו אותיות המקור המוגדל מול שם הקובץ החדש, כולל מקף, אותיות סופיות וספירת י׳; נבדקו שקיפות, פלטת גרפיטי וקריאות שכבת היישום לאחר הקטנה על קיר בהיר וכהה ב־1080. תמלול עיוור תואם תומך בביקורת ואינו מחליף אותה.",
+    "ocr": {
+      "sha256": "9a9b4f748611069bffdd20dc4ec41a6deb5c28b567b092cb4ace3ed3d2204fbe",
+      "status": "matched",
+      "text": "נתנאל בוכריס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-17T05:12:53Z"
+    }
+  },
+  {
+    "name": "גיא לאו",
+    "sha256": "490ff1da54cfc05bf0a9ab55df91e2fab7bfed13649e1811a2b659cc55903d3f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "reviewSession": "roster-347-2026-10-17",
+    "sourceFile": "33266c839587034bc651.png",
+    "style": 4,
+    "evidence": ".netlify/name-library-review/33266c839587034bc651-light.png; 33266c839587034bc651-dark.png; source PNG enlarged",
+    "notes": "נבדקו אותיות המקור המוגדל מול שם הקובץ החדש, כולל מקף, אותיות סופיות וספירת י׳; נבדקו שקיפות, פלטת גרפיטי וקריאות שכבת היישום לאחר הקטנה על קיר בהיר וכהה ב־1080. תמלול עיוור תואם תומך בביקורת ואינו מחליף אותה.",
+    "ocr": {
+      "sha256": "490ff1da54cfc05bf0a9ab55df91e2fab7bfed13649e1811a2b659cc55903d3f",
+      "status": "matched",
+      "text": "גיא לאו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-17T05:12:56.212Z"
+    }
+  },
+  {
+    "name": "יוסף חיים אשרף",
+    "sha256": "0f1f77d3831c1d6eb4ee684db6a65031855d32a6b6cd44bc308cee0f318bb904",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "reviewSession": "roster-347-2026-10-17",
+    "sourceFile": "3fb0c0a762568b287edc.png",
+    "style": 8,
+    "evidence": ".netlify/name-library-review/3fb0c0a762568b287edc-light.png; 3fb0c0a762568b287edc-dark.png; source PNG enlarged",
+    "notes": "נבדקו אותיות המקור המוגדל מול שם הקובץ החדש, כולל מקף, אותיות סופיות וספירת י׳; נבדקו שקיפות, פלטת גרפיטי וקריאות שכבת היישום לאחר הקטנה על קיר בהיר וכהה ב־1080. תמלול עיוור תואם תומך בביקורת ואינו מחליף אותה.",
+    "ocr": {
+      "sha256": "0f1f77d3831c1d6eb4ee684db6a65031855d32a6b6cd44bc308cee0f318bb904",
+      "status": "matched",
+      "text": "יוסף חיים אשרף",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-17T05:14:09.884Z"
+    }
+  },
+  {
+    "name": "עמית אריה רגב",
+    "sha256": "9addfd42f424317954563fa489b6abf6d9332d79d4fb6d6fd028ea4b8ba3fe30",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "reviewSession": "roster-347-2026-10-17",
+    "sourceFile": "83ae150616b82e3cee75.png",
+    "style": 6,
+    "evidence": ".netlify/name-library-review/83ae150616b82e3cee75-light.png; 83ae150616b82e3cee75-dark.png; source PNG enlarged",
+    "notes": "נבדקו אותיות המקור המוגדל מול שם הקובץ החדש, כולל מקף, אותיות סופיות וספירת י׳; נבדקו שקיפות, פלטת גרפיטי וקריאות שכבת היישום לאחר הקטנה על קיר בהיר וכהה ב־1080. תמלול עיוור תואם תומך בביקורת ואינו מחליף אותה.",
+    "ocr": {
+      "sha256": "9addfd42f424317954563fa489b6abf6d9332d79d4fb6d6fd028ea4b8ba3fe30",
+      "status": "matched",
+      "text": "עמית אריה רגב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-17T05:13:18.658Z"
+    }
+  },
+  {
+    "name": "עינבר אברהם קב",
+    "sha256": "5bfba14ab533d3f58fac92fe5b7eec1ed8914a79bf963f69a15b608d97fa4b45",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-enlarged-source-and-app-render-review",
+    "reviewSession": "roster-347-2026-10-17",
+    "sourceFile": "75c33a46f58ad499f102.png",
+    "style": 9,
+    "evidence": ".netlify/name-library-review/75c33a46f58ad499f102-light.png; 75c33a46f58ad499f102-dark.png; source PNG enlarged",
+    "notes": "נבדקו אותיות המקור המוגדל מול שם הקובץ החדש, כולל מקף, אותיות סופיות וספירת י׳; נבדקו שקיפות, פלטת גרפיטי וקריאות שכבת היישום לאחר הקטנה על קיר בהיר וכהה ב־1080. תמלול עיוור תואם תומך בביקורת ואינו מחליף אותה.",
+    "ocr": {
+      "sha256": "5bfba14ab533d3f58fac92fe5b7eec1ed8914a79bf963f69a15b608d97fa4b45",
+      "status": "matched",
+      "text": "עינבר אברהם קב",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-17T05:13:45.325Z"
+    }
   }
 ]

@@ -12,7 +12,11 @@ export default async (request) => {
   try {
     input = await parsePortrait(request);
     const catalog = await releaseCatalog();
-    if (catalog) nameArtwork = selectArtwork(catalog, input.name);
+    if (catalog) {
+      nameArtwork = selectArtwork(catalog, input.name);
+      // The approved existing inscription is authoritative for aliases too.
+      input.name = nameArtwork.name;
+    }
     else await graffitiGlyph(input.name, nameVariant(input.id));
   } catch { return json({ error: "בדקו שהתמונה והשם תקינים ושהשם מוכן במאגר הגרפיטי. לא נשלחה בקשת יצירה." }, 400); }
   const base = process.env.NETLIFY_DEV === "true" ? new URL(request.url).origin : process.env.STUDIO_SITE_URL;

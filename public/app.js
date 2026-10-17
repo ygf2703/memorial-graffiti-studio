@@ -1,4 +1,4 @@
-import { nameFromFile, validateFiles, validName, readJson, batchSummary } from "./batch.js";
+import { nameFromFile, validateFiles, validName, readJson, batchSummary, resolveArtworkName } from "./batch.js";
 import { POSTER_LAYOUT, paintExactText } from "./poster.js";
 import { SPRAY_LAYOUT, CAPTION_LAYOUT, COMPOSITED_LAYOUT, EXACT_NAME_LAYOUT, requiresApproval } from "./design.js";
 import { paintFixedCaption } from "./captions.js";
@@ -8,6 +8,7 @@ const $ = (selector) => document.querySelector(selector);
 const fileInput = $("#photos"), photoList = $("#photo-list"), validation = $("#validation"), count = $("#batch-count"), generateButton = $("#generate"), progress = $("#progress"), results = $("#results");
 let batch = [], busy = false, ready = false, invalid = false;
 let availableNames = null, availabilityLoaded = false;
+let artworkAliases = {};
 const outputUrls = [];
 const sourceFiles = new Map();
 let accessStorage;
@@ -21,7 +22,7 @@ function node(tag, text, className) {
   return element;
 }
 function buttons() {
-  generateButton.disabled = busy || !ready || !availabilityLoaded || invalid || !batch.length || batch.some((item) => !validName(item.name) || (availableNames && !availableNames.has(item.name)));
+  generateButton.disabled = busy || !ready || !availabilityLoaded || invalid || !batch.length || batch.some((item) => !validName(item.name) || (availableNames && !availableNames.has(resolveArtworkName(item.name, artworkAliases))));
   for (const input of photoList.querySelectorAll("input")) input.disabled = busy;
   fileInput.disabled = busy;
   $("#check-connection").disabled = busy;
@@ -36,15 +37,18 @@ async function loadAvailability() {
     const response = await fetch("/name-artwork/catalog.json", { cache: "no-store", signal: AbortSignal.timeout(15000) });
     if (response.status === 404) {
       availableNames = null;
+      artworkAliases = {};
       $("#name-availability").textContent = "אפשר להזין שם מלא בשדה שמתחת לתמונה.";
     } else {
       const catalog = await readJson(response);
       if (!Array.isArray(catalog.names) || !catalog.names.length || catalog.names.some((name) => !validName(name))) throw new Error("רשימת השמות אינה זמינה. לחצו שוב על בדיקת חיבור.");
       availableNames = new Set(catalog.names);
+      artworkAliases = catalog.aliases || {};
+      if (typeof artworkAliases !== "object" || Array.isArray(artworkAliases) || Object.entries(artworkAliases).some(([alias, target]) => !validName(alias) || !availableNames.has(target) || Object.hasOwn(artworkAliases, target) || availableNames.has(alias))) throw new Error("מיפוי השמות אינו תקין. לחצו שוב על בדיקת חיבור.");
       $("#name-availability").textContent = `${availableNames.size} מתוך ${catalog.sourceCount} שמות זמינים בגרפיטי מוכן מראש. שמות נוספים יתווספו לאחר בדיקה. יש לבחור או להקליד את השם בדיוק כפי שמופיע ברשימה.`;
       $("#available-names-panel").hidden = false;
       $("#available-names-list").replaceChildren(...catalog.names.map((name) => node("li", name)));
-      $("#available-names").replaceChildren(...catalog.names.map((name) => { const option = node("option"); option.value = name; return option; }));
+      $("#available-names").replaceChildren(...[...catalog.names, ...Object.keys(artworkAliases)].map((name) => { const option = node("option"); option.value = name; return option; }));
     }
     availabilityLoaded = true;
   } catch (error) { $("#name-availability").textContent = error.message; }
@@ -78,8 +82,9 @@ function renderBatch() {
     nameInput.setAttribute("list", "available-names");
     const nameStatus = node("small");
     const updateNameStatus = () => {
-      const unavailable = availableNames && !availableNames.has(item.name);
-      nameStatus.textContent = unavailable ? "השם עדיין לא זמין במאגר. לא ניתן ליצור איתו תמונה כרגע." : availableNames ? "השם זמין במאגר הגרפיטי." : "";
+      const artworkName = resolveArtworkName(item.name, artworkAliases);
+      const unavailable = availableNames && !availableNames.has(artworkName);
+      nameStatus.textContent = unavailable ? "השם עדיין לא זמין במאגר. לא ניתן ליצור איתו תמונה כרגע." : artworkName !== item.name ? `הכיתוב בעיצוב הקיים: ${artworkName}. נוסח זה יישמר בפוסטר.` : availableNames ? "השם זמין במאגר הגרפיטי." : "";
       nameInput.setCustomValidity(!validName(item.name) ? "יש להזין שם תקין." : unavailable ? "השם עדיין לא זמין במאגר." : "");
     };
     nameInput.addEventListener("input", () => {
@@ -233,7 +238,8 @@ async function run(items, restore = false) {
   busy = true; buttons();
   let success = 0, failed = 0, attempted = 0;
   try {
-    for (const item of items) {
+    for (const rawItem of items) {
+      const item = restore ? rawItem : { ...rawItem, name: resolveArtworkName(rawItem.name, artworkAliases) };
       attempted++;
       progress.textContent = `${restore ? "בודק תוצאה של" : "יוצר פוסטר עבור"} ${item.name} (${attempted} מתוך ${items.length})… יצירה עשויה להימשך כמה דקות.`;
       try {

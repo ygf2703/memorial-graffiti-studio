@@ -1,9 +1,12 @@
 import { readFile, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { resolve } from "node:path";
+import { loadNameRoster, validateNameRoster } from "../server/name-roster.mjs";
 
 export const artworkId = (name) => createHash("sha256").update(name, "utf8").digest("hex").slice(0, 20);
 export async function sourceNames() {
+  const roster = await loadNameRoster();
+  if (roster) { const { names } = validateNameRoster(roster); return { rows: [...names], names }; }
   const rows = (await readFile(resolve("data/name-artwork/names-2026-10-16.txt"), "utf8")).trim().split(/\r?\n/u);
   return { rows, names: [...new Set(rows)] };
 }

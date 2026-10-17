@@ -3,9 +3,9 @@ import { CAPTION_LAYOUT, EXACT_NAME_LAYOUT, NAME_STYLE_COUNT, captionVariant } f
 import { nameVariant } from "./exact-name.mjs";
 
 export const correctionReasons = ["portrait", "name"];
-export function correctionInstruction(reason, name, exactName = false) {
+export function correctionInstruction(reason, name, exactName = false, largeName = false) {
   if (!correctionReasons.includes(reason)) throw new Error("סיבת הפסילה אינה תקינה.");
-  if (exactName) return `\nCORRECTION: The LAST image is the previous unlettered mural; the FIRST is the original portrait. Preserve the wall and palette. ${reason === "portrait" ? "Correct the person's facial geometry and likeness against the FIRST image using four flat stencil layers." : "Keep the face unchanged and clear all marks and lettering from the top 24% so the exact name can be applied clearly in postproduction."} Do not generate ANY text. Keep top 24% and bottom 32% clear of face and flag for postproduction lettering.`;
+  if (exactName) return `\nCORRECTION: The LAST image is the previous unlettered mural; the FIRST is the original portrait. Preserve the wall and palette. ${reason === "portrait" ? "Correct the person's facial geometry and likeness against the FIRST image using four flat stencil layers." : "Preserve the facial likeness, but reposition the entire head below the reserved name area if necessary."} Do not generate ANY text. Keep top ${largeName ? 32 : 24}% and bottom 32% clear of the entire head, hair, face and flag for postproduction lettering. Leave a visible gap below the name area; never move the head into it.`;
   return `\nCORRECTION: The LAST attached image is the rejected mural, not a style reference. Preserve its wall, palette, composition and all correct elements. The FIRST image is the original portrait. ${reason === "portrait" ? "Correct the person's likeness against the FIRST image: head shape, eyes, nose, mouth, hair and facial hair. Keep four flat stencil spray layers; do not make a photographic or painterly face. Preserve the correctly written name." : `Correct ONLY the name lettering to exactly ${JSON.stringify(name)}, in Hebrew RTL. Required characters in reading order: ${JSON.stringify([...name])}. Do not add or omit letters. Preserve the person's face and likeness.`} Keep the bottom 32% clear for the fixed caption. Do not generate the fixed caption.`;
 }
 

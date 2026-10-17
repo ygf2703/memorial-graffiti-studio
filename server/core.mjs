@@ -49,7 +49,7 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
     form.append("image[]", new Blob([bytes], { type: "image/png" }), filename);
   }
   if (correction) form.append("image[]", new Blob([correction.bytes], { type: "image/jpeg" }), "rejected-mural.jpg");
-  form.append("prompt", muralPrompt(designSeed, name, fixedCaption, exactName, largeName) + (correction ? correctionInstruction(correction.reason, name, exactName) : ""));
+  form.append("prompt", muralPrompt(designSeed, name, fixedCaption, exactName, largeName) + (correction ? correctionInstruction(correction.reason, name, exactName, largeName) : ""));
   let response;
   try {
     response = await fetcher("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(12 * 60 * 1000) });

@@ -25,7 +25,7 @@ test("fixed caption prompt reserves wall and does not generate the slogan", () =
   const prompt = muralPrompt("seed", "יהונתן אליהו", true);
   assert.match(prompt, /bottom 32%/); assert.match(prompt, /יהונתן אליהו/);
   assert.ok(!prompt.includes(caption));
-  assert.equal(compareReading({ name: "יהונתן אליהו", caption: "", uncertain: false, flagPresent: true }, "יהונתן אליהו", true).status, "matched");
+  assert.equal(compareReading({ name: "יהונתן אליהו", caption: "", uncertain: false, flagPresent: true, namePlacement: "clear_above" }, "יהונתן אליהו", true).status, "matched");
   assert.equal(compareReading({ name: "יהונתן אליהו", caption, uncertain: false, flagPresent: true }, "יהונתן אליהו", true).status, "needs_review");
 });
 test("fixed caption renderer places one asset inside its reserved area and fails closed", async () => {
@@ -164,14 +164,14 @@ test("new integrated murals require human approval even after matching OCR", () 
   for (const layoutVersion of [undefined, POSTER_LAYOUT, SPRAY_LAYOUT]) assert.equal(requiresApproval({ layoutVersion }), false);
 });
 test("reading comparison rejects wrong letters, missing words, uncertainty and missing flag", () => {
-  const reading = { name: "יהונתן אליהו", caption, uncertain: false, flagPresent: true };
+  const reading = { name: "יהונתן אליהו", caption, uncertain: false, flagPresent: true, namePlacement: "clear_above" };
   assert.equal(compareReading(reading, reading.name).status, "matched");
   assert.equal(compareReading({ ...reading, caption: "אחים ואחיות\nלסמל לא שוכחים" }, reading.name).status, "matched");
   for (const patch of [{ name: "יונתן אליהו" }, { caption: "אחים ואחיות לסמל שוכחים" }, { uncertain: true }, { flagPresent: false }]) assert.equal(compareReading({ ...reading, ...patch, status: "matched" }, reading.name).status, "needs_review");
   assert.equal(compareReading({ name: reading.name }, reading.name).status, "unavailable");
 });
 test("vision reader receives only the generated image, not expected text", async () => {
-  const reading = { name: "יהונתן אליהו", caption, uncertain: false, flagPresent: true };
+  const reading = { name: "יהונתן אליהו", caption, uncertain: false, flagPresent: true, namePlacement: "clear_above" };
   const result = await reviewImage("image-bytes", reading.name, async (url, options) => {
     assert.equal(url, "https://api.openai.com/v1/responses");
     const body = JSON.parse(options.body);
@@ -180,6 +180,8 @@ test("vision reader receives only the generated image, not expected text", async
     assert.equal(body.reasoning.effort, "none");
     assert.equal(body.input[0].content[0].image_url, "data:image/jpeg;base64,image-bytes");
     assert.equal(body.text.format.strict, true);
+    assert.ok(body.text.format.schema.required.includes("namePlacement"));
+    assert.match(body.instructions, /outlines, overspray and drips/);
     assert.ok(!options.body.includes(reading.name) && !options.body.includes(caption));
     return Response.json({ status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: JSON.stringify(reading) }] }] });
   });

@@ -30,7 +30,7 @@ export default async (request) => {
     if(job.referenceStyleVersion!==undefined&&job.referenceStyleVersion!==REFERENCE_STYLE_VERSION)throw new Error("Unsupported reference style");
     if(job.referenceStyleVersion&&!artwork)throw new Error("Missing approved name artwork");
     validatePaletteVersion(job.paletteVersion);
-    const referenceStyle=job.referenceStyleVersion?{version:REFERENCE_STYLE_VERSION,paletteVersion:job.paletteVersion,...await catalogueComposition(artwork)}:null;
+    const referenceStyle=job.referenceStyleVersion?{version:REFERENCE_STYLE_VERSION,paletteVersion:job.paletteVersion,nameSizeVersion:job.nameSizeVersion,...await catalogueComposition(artwork,job.nameSizeVersion)}:null;
     const designSeed = job.designSeed || id;
     const exactName = job.layoutVersion === EXACT_NAME_LAYOUT;
     const fixedCaption = job.layoutVersion === CAPTION_LAYOUT;

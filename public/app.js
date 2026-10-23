@@ -151,6 +151,10 @@ async function waitForJob(id) {
   const deadline = Date.now() + 16 * 60 * 1000;
   while (Date.now() < deadline) {
     const job = await readJson(await fetch(`/api/job?id=${encodeURIComponent(id)}`, { headers: headers(), cache: "no-store", signal: AbortSignal.timeout(20000) }));
+    if(job.status==="processing"&&job.portraitRefinementVersion===1){
+      const stage={generating:"יוצר קיר ודיוקן",refining_portrait:"מדייק את הפנים מול צילום המקור",compositing:"ממקם את הכיתוב ובודק את התוצר"}[job.stage]||"מעבד";
+      progress.textContent=`${job.name}: ${stage}…`;
+    }
     if (job.status === "completed") {
       const response = await fetch(`/api/job?id=${encodeURIComponent(id)}&image=1`, { headers: headers(), signal: AbortSignal.timeout(60000) });
       if (!response.ok || !response.headers.get("content-type")?.startsWith("image/")) throw new Error("הפוסטר נוצר אך ההורדה נכשלה. לחצו על שחזור תוצאות.");
@@ -198,7 +202,7 @@ function showResult(name, { poster, job }) {
     source.type = "file"; source.accept = "image/jpeg,image/png,image/webp";
     sourceLabel.append(source); sourceLabel.hidden = sourceFiles.has(job.id);
     repair.type = "button";
-    correctionPanel.append(reasonLabel, sourceLabel, node("p", "ניסיון אחד בלבד, כרוך בקריאת API נוספת. אין הבטחת דיוק ואין תיקון אוטומטי נוסף.", "review-note"), repair, status);
+    correctionPanel.append(reasonLabel, sourceLabel, node("p", job.portraitRefinementVersion===1 ? "ניסיון אחד בלבד, כולל שתי קריאות תמונה בתשלום: יצירה ודיוק פנים. אין הבטחת דיוק ואין תיקון אוטומטי נוסף." : "ניסיון אחד בלבד, כרוך בקריאת API נוספת. אין הבטחת דיוק ואין תיקון אוטומטי נוסף.", "review-note"), repair, status);
     correctionPanel.hidden = true;
     if (job.parentId) {
       correctionPanel.replaceChildren(node("p", "ניסיון התיקון היחיד נוצל. אפשר לפסול תוצאה זו, אך לא לתקן אותה שוב.", "review-note"));

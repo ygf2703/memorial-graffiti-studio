@@ -36,7 +36,7 @@ export async function parsePortrait(request) {
   if (!actualType || actualType !== portrait.type) throw new Error("הקובץ אינו תמונת JPG, PNG או WEBP תקינה.");
   return { id, name, bytes, type: actualType };
 }
-export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID(), fixedCaption = false, correction = null, exactName = false, largeName = false, adaptiveName = false, visualVersion = 0) {
+export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID(), fixedCaption = false, correction = null, exactName = false, largeName = false, adaptiveName = false, visualVersion = 0, timeoutMs = 12 * 60 * 1000) {
   const form = new FormData();
   form.append("model", "gpt-image-1.5");
   form.append("size", "1024x1024");
@@ -57,9 +57,13 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
   let prompt=muralPrompt(designSeed, name, fixedCaption, exactName, largeName, adaptiveName);
   if(visualVersion===1)prompt=prompt.replace("Image 5 is the approved COMPOSITION AND COLOR reference, overriding composition of images 2-4. Follow its large head on one outer side and large two-line lettering area on the opposite side.","Follow the written side layout; all secondary images are paint material swatches only.");
   form.append("prompt", prompt + (correction ? correctionInstruction(correction.reason, name, exactName, largeName, adaptiveName) : "") + (visualVersion===1?likenessInstruction:""));
+  return requestImageEdit(form, fetcher, timeoutMs);
+}
+
+export async function requestImageEdit(form, fetcher = fetch, timeoutMs = 12 * 60 * 1000) {
   let response;
   try {
-    response = await fetcher("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(12 * 60 * 1000) });
+    response = await fetcher("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(timeoutMs) });
   } catch { throw new Error("החיבור לשירות התמונות נקטע או חרג מזמן ההמתנה. אין ניסיון חוזר אוטומטי; בדקו לפני יצירה מחדש."); }
   const payload = await response.json().catch(() => null);
   if (!response.ok || !payload?.data?.[0]?.b64_json) {

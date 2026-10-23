@@ -33,6 +33,7 @@ export async function queueCorrection(store, parentId, input, reason) {
     ...(parent.captionStyleCount ? { captionStyleCount: parent.captionStyleCount } : {}),
     ...(parent.captionMix ? { captionMix: parent.captionMix } : {}),
     ...(parent.visualVersion ? { visualVersion: parent.visualVersion } : {}),
+    ...(parent.portraitRefinementVersion ? { portraitRefinementVersion: parent.portraitRefinementVersion, portraitRefinementModel: parent.portraitRefinementModel } : {}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),
   }, { onlyIfNew: true });
   return { id: claim.id, status: "queued" };

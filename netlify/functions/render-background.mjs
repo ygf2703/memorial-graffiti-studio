@@ -7,7 +7,7 @@ import { compositeCaption } from "../../server/composite.mjs";
 import { compositeGraffitiName, NAME_STYLE_VERSION, graffitiStyles } from "../../server/graffiti-name.mjs";
 import { fetchArtwork, compositeArtwork } from "../../server/name-artwork.mjs";
 import { detectPortraitLayout, composePlacedArtwork, vividPoster } from "../../server/name-placement.mjs";
-import { imageBaseForJob } from "../../server/recompose.mjs";
+import { preparePortraitBase } from "../../server/portrait-refinement.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -17,8 +17,10 @@ export default async (request) => {
   if (!job || job.status !== "queued") return;
   const claim = await store.set(`${id}/claimed`, "true", { onlyIfNew: true });
   if (!claim.modified) return;
+  const startedAt=Date.now();
   try {
-    await store.setJSON(id, { ...job, status: "processing", startedAt: Date.now() });
+    const onStage=stage=>store.setJSON(id,{...job,status:"processing",startedAt,stage});
+    await onStage("generating");
     const input = await store.get(`${id}/input`, { type: "json" });
     if (!input) throw new Error("תמונת המקור לא זמינה. יש להעלות אותה מחדש.");
     if (job.nameArtwork && job.nameArtwork.name !== input.name) throw new Error("Artwork name mismatch");
@@ -31,7 +33,12 @@ export default async (request) => {
     if (previousId && !previous) throw new Error("Missing original result");
     const correction = previous ? { bytes: Buffer.from(previous), reason: job.correctionReason } : null;
     const adaptiveName = artwork && [1,2].includes(job.namePlacementVersion) ? job.namePlacementVersion : false;
-    let result = await imageBaseForJob(job, previous, () => generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName, Boolean(artwork), adaptiveName, job.visualVersion||0));
+    const portrait={type:input.type,bytes:Buffer.from(input.bytes,"base64")};
+    let result = await preparePortraitBase(job,portrait,previous,{
+      generate:()=>generateImage(portrait,input.name,fetch,designSeed,fixedCaption,correction,exactName,Boolean(artwork),adaptiveName,job.visualVersion||0,job.portraitRefinementVersion?5*60*1000:12*60*1000),
+      saveDraft:draft=>store.set(`${id}/draft`,draft),onStage,
+    });
+    await onStage("compositing");
     const variant = job.nameVariant || nameVariant(designSeed);
     let namePlacement;
     if (exactName) {

@@ -25,11 +25,33 @@ export function validateFiles(files, checkNames = true) {
   return errors;
 }
 export async function readJson(response) {
-  if (!response.headers.get("content-type")?.includes("application/json")) throw new Error("שירות היצירה לא זמין בכתובת הזו. יש להפעיל את האתר עם השרת או לפתוח את כתובת Netlify.");
+  const failure = message => Object.assign(new Error(message), { status: response.status });
+  if (!response.headers.get("content-type")?.includes("application/json")) throw failure("שירות היצירה לא זמין בכתובת הזו. יש להפעיל את האתר עם השרת או לפתוח את כתובת Netlify.");
   let data;
-  try { data = await response.json(); } catch { throw new Error("התקבלה תשובה לא תקינה מהשרת. נסו לבדוק שוב את החיבור."); }
-  if (!response.ok) throw new Error(data.error || "הבקשה נכשלה. נסו שוב מאוחר יותר.");
+  try { data = await response.json(); } catch { throw failure("התקבלה תשובה לא תקינה מהשרת. נסו לבדוק שוב את החיבור."); }
+  if (!response.ok) throw failure(data.error || "הבקשה נכשלה. נסו שוב מאוחר יותר.");
   return data;
+}
+
+export function stopsBatch(error) {
+  return [401,403,429].includes(error?.status) || error?.status >= 500 ||
+    ["AbortError","TimeoutError"].includes(error?.name) ||
+    (error instanceof TypeError && /fetch|network|load failed/i.test(error.message)) ||
+    /^(אין יתרה|מפתח OpenAI|לחשבון OpenAI|שירות OpenAI הגיע למגבלת|החיבור לשירות התמונות)/u.test(error?.message || "");
+}
+
+// Each item is attempted once, serially. Local failures do not cancel remaining items.
+export async function processBatch(items, processItem, onError, stopOnGlobal = true) {
+  let success=0,failed=0,attempted=0;
+  for(const item of items){
+    attempted++;
+    try{await processItem(item,attempted);success++;}
+    catch(error){
+      failed++;await onError(item,error);
+      if(stopOnGlobal&&stopsBatch(error))break;
+    }
+  }
+  return {success,failed,pending:items.length-attempted};
 }
 export function batchSummary(success, failed, pending = 0) {
   if (!success) return `לא נוצרו פוסטרים. ${failed} נכשלו${pending ? `, ${pending} לא נשלחו` : ""}.`;

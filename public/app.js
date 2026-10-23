@@ -1,4 +1,4 @@
-import { nameFromFile, validateFiles, validName, readJson, batchSummary, resolveArtworkName } from "./batch.js";
+import { nameFromFile, validateFiles, validName, readJson, batchSummary, resolveArtworkName, processBatch } from "./batch.js";
 import { POSTER_LAYOUT, paintExactText } from "./poster.js";
 import { SPRAY_LAYOUT, CAPTION_LAYOUT, COMPOSITED_LAYOUT, EXACT_NAME_LAYOUT, requiresApproval } from "./design.js";
 import { paintFixedCaption } from "./captions.js";
@@ -266,31 +266,27 @@ function showError(name, message, repairableId) {
 async function run(items, restore = false) {
   if (!await checkConnection()) return;
   busy = true; buttons();
-  let success = 0, failed = 0, attempted = 0;
+  let summary;
   try {
-    for (const rawItem of items) {
+    summary=await processBatch(items,async(rawItem,attempted)=>{
       const item = restore ? rawItem : { ...rawItem, name: resolveArtworkName(rawItem.name, artworkAliases) };
-      attempted++;
       progress.textContent = `${restore ? "בודק תוצאה של" : "יוצר פוסטר עבור"} ${item.name} (${attempted} מתוך ${items.length})… יצירה עשויה להימשך כמה דקות.`;
-      try {
-        let id = item.id;
-        if (!restore) {
-          id = crypto.randomUUID();
-          sourceFiles.set(id, item.file);
-          const form = new FormData();
-          form.append("image", await prepareUpload(item.file), "portrait.jpg"); form.append("name", item.name); form.append("id", id);
-          // Save before sending so an uncertain network outcome can be checked without another paid call.
-          saveJob({ id, name: item.name });
-          await readJson(await fetch("/api/generate", { method: "POST", headers: headers(), body: form, signal: AbortSignal.timeout(30000) }));
-        }
-        showResult(item.name, await waitForJob(id)); success++;
-      } catch (error) {
-        showError(item.name, error.message, error.canRecompose ? error.jobId : null); failed++;
-        if (!restore) break;
+      let id = item.id;
+      if (!restore) {
+        id = crypto.randomUUID();
+        sourceFiles.set(id, item.file);
+        const form = new FormData();
+        form.append("image", await prepareUpload(item.file), "portrait.jpg"); form.append("name", item.name); form.append("id", id);
+        // Save before sending so an uncertain network outcome can be checked without another paid call.
+        saveJob({ id, name: item.name });
+        await readJson(await fetch("/api/generate", { method: "POST", headers: headers(), body: form, signal: AbortSignal.timeout(30000) }));
       }
-    }
+      showResult(item.name, await waitForJob(id));
+    },(item,error)=>{
+      showError(restore?item.name:resolveArtworkName(item.name,artworkAliases),error.message,error.canRecompose?error.jobId:null);
+    },!restore);
   } finally {
-    progress.textContent = batchSummary(success, failed, items.length - attempted);
+    progress.textContent = summary ? batchSummary(summary.success,summary.failed,summary.pending) : "האצווה הופסקה עקב שגיאה בלתי צפויה. שחזרו תוצאות לפני יצירה נוספת.";
     busy = false; buttons();
   }
 }

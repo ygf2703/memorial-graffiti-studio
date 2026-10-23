@@ -35,7 +35,7 @@ export async function parsePortrait(request) {
   if (!actualType || actualType !== portrait.type) throw new Error("הקובץ אינו תמונת JPG, PNG או WEBP תקינה.");
   return { id, name, bytes, type: actualType };
 }
-export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID(), fixedCaption = false, correction = null, exactName = false, largeName = false) {
+export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID(), fixedCaption = false, correction = null, exactName = false, largeName = false, adaptiveName = false) {
   const form = new FormData();
   form.append("model", "gpt-image-1.5");
   form.append("size", "1024x1024");
@@ -49,7 +49,7 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
     form.append("image[]", new Blob([bytes], { type: "image/png" }), filename);
   }
   if (correction) form.append("image[]", new Blob([correction.bytes], { type: "image/jpeg" }), "rejected-mural.jpg");
-  form.append("prompt", muralPrompt(designSeed, name, fixedCaption, exactName, largeName) + (correction ? correctionInstruction(correction.reason, name, exactName, largeName) : ""));
+  form.append("prompt", muralPrompt(designSeed, name, fixedCaption, exactName, largeName, adaptiveName) + (correction ? correctionInstruction(correction.reason, name, exactName, largeName, adaptiveName) : ""));
   let response;
   try {
     response = await fetcher("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(12 * 60 * 1000) });

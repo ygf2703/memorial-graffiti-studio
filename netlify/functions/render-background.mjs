@@ -6,6 +6,7 @@ import { compositeExactName, nameVariant } from "../../server/exact-name.mjs";
 import { compositeCaption } from "../../server/composite.mjs";
 import { compositeGraffitiName, NAME_STYLE_VERSION, graffitiStyles } from "../../server/graffiti-name.mjs";
 import { fetchArtwork, compositeArtwork } from "../../server/name-artwork.mjs";
+import { detectPortraitLayout, compositeAdaptiveArtwork } from "../../server/name-placement.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -27,19 +28,24 @@ export default async (request) => {
     const previous = job.parentId ? await store.get(`${job.parentId}/${exactName ? "base" : "result"}`, { type: "arrayBuffer" }) : null;
     if (job.parentId && !previous) throw new Error("Missing original result");
     const correction = previous ? { bytes: Buffer.from(previous), reason: job.correctionReason } : null;
-    const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName, Boolean(artwork));
+    const adaptiveName = Boolean(artwork && job.namePlacementVersion === 1);
+    const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName, Boolean(artwork), adaptiveName);
     let result = Buffer.from(imageBase64, "base64");
     const variant = job.nameVariant || nameVariant(designSeed);
+    let namePlacement;
     if (exactName) {
       await store.set(`${id}/base`, result);
-      result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant) : await compositeExactName(result, input.name, designSeed, variant);
+      if (adaptiveName) {
+        const composed = await compositeAdaptiveArtwork(result, artwork, await detectPortraitLayout(result));
+        result = composed.bytes; namePlacement = composed.placement;
+      } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant) : await compositeExactName(result, input.name, designSeed, variant);
       result = await compositeCaption(result, job.captionVariant);
     }
     await store.set(`${id}/result`, result);
     const review = await reviewImage(result.toString("base64"), input.name, fetch, fixedCaption, exactName ? "image/png" : "image/jpeg");
-    await store.setJSON(id, { ...job, layoutVersion: exactName ? EXACT_NAME_LAYOUT : fixedCaption ? CAPTION_LAYOUT : INTEGRATED_LAYOUT, ...(exactName ? { nameVariant: variant, nameSource: artwork ? "prebuilt-reviewed" : "literal-input" } : {}), ...(job.nameStyleVersion === NAME_STYLE_VERSION ? { nameStyleLabel: artwork ? "גרפיטי מוכן מראש" : graffitiStyles[variant - 1].label } : {}), designSeed, review, status: "completed" });
+    await store.setJSON(id, { ...job, layoutVersion: exactName ? EXACT_NAME_LAYOUT : fixedCaption ? CAPTION_LAYOUT : INTEGRATED_LAYOUT, ...(exactName ? { nameVariant: variant, nameSource: artwork ? "prebuilt-reviewed" : "literal-input" } : {}), ...(job.nameStyleVersion === NAME_STYLE_VERSION ? { nameStyleLabel: artwork ? "גרפיטי מוכן מראש" : graffitiStyles[variant - 1].label } : {}), designSeed, ...(namePlacement ? { namePlacement } : {}), review, status: "completed" });
   } catch (error) {
-    await store.setJSON(id, { ...job, status: "failed", error: /^(שירות|מפתח|החיבור|אין יתרה|לחשבון)/u.test(error.message) ? error.message : "יצירת התמונה נכשלה. בדקו את החיבור ונסו שוב." });
+    await store.setJSON(id, { ...job, status: "failed", error: /^(לא נמצא מיקום בטוח|שירות|מפתח|החיבור|אין יתרה|לחשבון)/u.test(error.message) ? error.message : "יצירת התמונה נכשלה. בדקו את החיבור ונסו שוב." });
   } finally {
     await store.delete(`${id}/input`);
   }

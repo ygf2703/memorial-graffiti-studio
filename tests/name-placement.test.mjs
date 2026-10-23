@@ -14,6 +14,7 @@ test("correct spelling never masks an overlapping, misplaced or unverified name"
     assert.equal(result.namePlacement, ["overlap", "not_above"].includes(namePlacement) ? namePlacement : "uncertain");
   }
   assert.equal(compareReading({ ...reading, namePlacement: "clear_above" }, reading.name).status, "matched");
+  assert.equal(compareReading({ ...reading, namePlacement: "clear_beside" }, reading.name).status, "matched");
 });
 
 test("large-name corrections preserve the full header and head safety gap", () => {

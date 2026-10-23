@@ -173,14 +173,14 @@ function showResult(name, { poster, job }) {
     const message = review.status === "matched" ? "בדיקת האיות האוטומטית מצאה התאמה. זו אינה הבטחה — נדרש אישור חזותי לפני הורדה." : review.status === "needs_review" ? "אזהרה: הבדיקה האוטומטית מצאה חוסר התאמה או כיתוב לא ברור. אין לאשר אם חסרה או שגויה אפילו אות אחת." : "בדיקת האיות האוטומטית לא זמינה. יש לבדוק ידנית כל אות לפני אישור.";
     card.append(node("p", message, "review-note"));
     const placement = job.review?.namePlacement;
-    card.append(node("p", placement === "clear_above" ? "בדיקת המיקום מצאה שהשם מעל הראש, ללא חפיפה. יש לאמת זאת גם חזותית." : ["overlap", "not_above"].includes(placement) ? "אזהרת מיקום: השם עלול להסתיר את הראש או שאינו מעליו. אין לאשר את התוצאה לפני בדיקה; אם יש חפיפה, פסלו ובחרו בתיקון השם." : "מיקום השם לא אומת אוטומטית. ודאו שהשם וכל הנזילות מעל הראש, עם רווח גלוי, ואינם מסתירים פנים או שיער.", "review-note"));
+    card.append(node("p", ["clear_above", "clear_beside"].includes(placement) ? "בדיקת המיקום מצאה שהשם מעל הראש או לצדו, ללא חפיפה. יש לאמת זאת גם חזותית." : ["overlap", "not_above"].includes(placement) ? "אזהרת מיקום: השם עלול להסתיר את הראש או שמיקומו אינו בטוח. אין לאשר את התוצאה לפני בדיקה; אם יש חפיפה, פסלו ובחרו בתיקון השם." : "מיקום השם לא אומת אוטומטית. ודאו שהשם וכל הנזילות מעל הראש או לצדו, עם רווח גלוי, ואינם מסתירים פנים או שיער.", "review-note"));
     card.append(node("p", `הכיתוב הנדרש: ${job.name} | אחים ואחיות לסמל לא שוכחים`, "review-note"));
     if (job.layoutVersion === EXACT_NAME_LAYOUT) card.append(node("p", job.nameSource === "prebuilt-reviewed" ? "השם נוסף מנכס גרפיטי מוכן שנבדק מראש. בדקו קריאות, שילוב בקיר והתאמה לדמות." : `השם נוסף ישירות מהטקסט שהזנת, בסגנון גרפיטי ${job.nameVariant} מתוך ${job.nameStyleCount || 5}${job.nameStyleLabel ? ` — ${job.nameStyleLabel}` : ""}. בדקו קריאות, שילוב בקיר והתאמה לדמות.`, "review-note"));
     if (typeof review.name === "string") card.append(node("p", [CAPTION_LAYOUT, COMPOSITED_LAYOUT].includes(job.layoutVersion) ? `קריאה אוטומטית של השם (עלולה לטעות): ${review.name}. המשפט נוסף מקובץ קבוע, גרסה ${job.captionVariant} מתוך 5, ואינו נבדק בקריאה זו.` : `קריאה אוטומטית (עלולה לטעות): ${review.name} | ${review.caption}`, "review-note"));
     const label = node("label", "", "approval"), checkbox = node("input");
     checkbox.type = "checkbox";
     checkbox.disabled = ["overlap", "not_above"].includes(placement);
-    label.append(checkbox, node("span", "בדקתי אות־אות: השם והמשפט מלאים ומדויקים, השם וכל הנזילות מעל הראש ואינם מסתירים פנים או שיער, הדגל גלוי והדמות מתאימה."));
+    label.append(checkbox, node("span", "בדקתי אות־אות: השם והמשפט מלאים ומדויקים, השם וכל הנזילות מעל הראש או לצדו ואינם מסתירים פנים או שיער, הדגל גלוי והדמות מתאימה."));
     checkbox.addEventListener("change", () => { link.hidden = !checkbox.checked; });
     const reject = node("button", "פסילת התוצאה", "reject-result");
     reject.type = "button";

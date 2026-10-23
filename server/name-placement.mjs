@@ -1,5 +1,6 @@
 import sharp from "sharp";
 import { compositeNameLayer } from "./exact-name.mjs";
+import { twoLineGraffitiAsset } from "./name-wrap.mjs";
 
 const fail = () => new Error("לא נמצא מיקום בטוח לשם ללא הסתרת הראש. התוצאה נעצרה; אין ניסיון יצירה נוסף אוטומטי.");
 export function pixelBox(box, padding = 24) {
@@ -55,18 +56,29 @@ export async function compositeAdaptiveArtwork(bytes, artwork, detection) {
 }
 
 
-export async function composePlacedArtwork(bytes, artwork, detection, version=1, wrappedArtwork=null) {
+export async function composePlacedArtwork(bytes, artwork, detection, version=1, wrappedArtwork=null, context=null) {
   if(![1,2].includes(version))throw fail();
   let trimmed=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer();
   let meta=await sharp(trimmed).metadata(),placement;
   try { placement=planNamePlacement(meta.width,meta.height,detection,version===2?500:180); }
   catch(error) {
-    if(version!==2||!wrappedArtwork)throw error;
-    trimmed=await sharp(wrappedArtwork).trim({background:"#00000000",threshold:0}).png().toBuffer();
-    meta=await sharp(trimmed).metadata();
-    placement=planNamePlacement(meta.width,meta.height,detection,280);
-    if(placement.height<180)throw fail();
-    placement.lines=2;
+    if(version!==2||detection?.uncertain!==false)throw error;
+    let fallback=null;
+    if(wrappedArtwork){
+      try {
+        const candidate=await sharp(wrappedArtwork).trim({background:"#00000000",threshold:0}).png().toBuffer();
+        const info=await sharp(candidate).metadata(),plan=planNamePlacement(info.width,info.height,detection,280);
+        if(plan.height>=180)fallback={trimmed:candidate,placement:{...plan,lines:2,source:"prebuilt-wrapped"}};
+      }catch{/* Try literal two-line graffiti when a reviewed companion cannot fit. */}
+    }
+    if(!fallback&&context?.name){
+      const generated=await twoLineGraffitiAsset(context.name,context.seed||context.name,context.variant||2);
+      const info=await sharp(generated.bytes).metadata(),plan=planNamePlacement(info.width,info.height,detection,240);
+      if(plan.height<130)throw fail();
+      fallback={trimmed:generated.bytes,placement:{...plan,lines:2,source:"literal-two-line",textLines:generated.lines}};
+    }
+    if(!fallback)throw error;
+    trimmed=fallback.trimmed;placement=fallback.placement;
   }
   const paint=await sharp(trimmed).resize(placement.width,placement.height,{fit:"fill"}).png().toBuffer();
   const layer=await sharp({create:{width:1080,height:1080,channels:4,background:"#00000000"}}).composite([{input:paint,left:placement.left,top:placement.top}]).png().toBuffer();

@@ -156,7 +156,11 @@ async function waitForJob(id) {
       if (!response.ok || !response.headers.get("content-type")?.startsWith("image/")) throw new Error("הפוסטר נוצר אך ההורדה נכשלה. לחצו על שחזור תוצאות.");
       return { poster: await exportPoster(await response.blob(), job), job };
     }
-    if (job.status === "failed") throw new Error(job.error || "היצירה נכשלה.");
+    if (job.status === "failed") {
+      const error = new Error(job.error || "היצירה נכשלה.");
+      error.jobId = id; error.canRecompose = !job.recomposeOnly && error.message.startsWith("לא נמצא מיקום בטוח");
+      throw error;
+    }
     await new Promise((resolve) => setTimeout(resolve, 4000));
   }
   throw new Error("ההמתנה הסתיימה. אפשר לבדוק שוב באמצעות שחזור תוצאות, ללא יצירה נוספת.");
@@ -170,6 +174,7 @@ function showResult(name, { poster, job }) {
     // Review is an editorial safeguard, not an access-control boundary.
     link.hidden = true;
     const review = job.review || { status: "unavailable" };
+    if(job.nameSource==="literal-two-line") card.append(node("p","השם סודר אוטומטית בשתי שורות ברינדור גרפיטי מקומי מהטקסט המדויק. זהו מסלול חלופי, לא הנכס המצויר המקורי. בדקו את האיות והמראה לפני אישור.","review-note"));
     const message = review.status === "matched" ? "בדיקת האיות האוטומטית מצאה התאמה. זו אינה הבטחה — נדרש אישור חזותי לפני הורדה." : review.status === "needs_review" ? "אזהרה: הבדיקה האוטומטית מצאה חוסר התאמה או כיתוב לא ברור. אין לאשר אם חסרה או שגויה אפילו אות אחת." : "בדיקת האיות האוטומטית לא זמינה. יש לבדוק ידנית כל אות לפני אישור.";
     card.append(node("p", message, "review-note"));
     const placement = job.review?.namePlacement;
@@ -232,9 +237,27 @@ function showResult(name, { poster, job }) {
   } else card.append(node("p", "לפני פרסום: בדקו את השם ואת המשפט אחים ואחיות לסמל לא שוכחים.", "review-note"));
   results.append(card);
 }
-function showError(name, message) {
+function showError(name, message, repairableId) {
   const card = node("article", "", "error-card");
-  card.append(node("strong", name), node("p", message)); results.append(card);
+  card.append(node("strong",name),node("p",message));
+  if (repairableId) {
+    const button = node("button","סידור השם מחדש — ללא יצירת דיוקן נוספת"),status = node("p","","review-note");
+    button.type="button";
+    button.addEventListener("click",async()=>{
+      if(busy)return;
+      busy=true;buttons();button.disabled=true;status.textContent="מסדר את השם על התמונה שכבר נוצרה…";
+      try{
+        const queued=await readJson(await fetch("/api/recompose",{method:"POST",headers:{...headers(),"content-type":"application/json"},body:JSON.stringify({id:repairableId}),signal:AbortSignal.timeout(30000)}));
+        saveJob({id:queued.id,name});
+        if(sourceFiles.has(repairableId))sourceFiles.set(queued.id,sourceFiles.get(repairableId));
+        showResult(name,await waitForJob(queued.id));
+        status.textContent="התוצאה מוצגת בכרטיס חדש ומחייבת אישור חזותי.";
+      }catch(error){status.textContent=error.message;button.disabled=false;}
+      finally{busy=false;buttons();}
+    });
+    card.append(button,status);
+  }
+  results.append(card);
 }
 async function run(items, restore = false) {
   if (!await checkConnection()) return;
@@ -258,7 +281,7 @@ async function run(items, restore = false) {
         }
         showResult(item.name, await waitForJob(id)); success++;
       } catch (error) {
-        showError(item.name, error.message); failed++;
+        showError(item.name, error.message, error.canRecompose ? error.jobId : null); failed++;
         if (!restore) break;
       }
     }

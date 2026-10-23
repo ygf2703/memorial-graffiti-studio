@@ -55,11 +55,19 @@ export async function compositeAdaptiveArtwork(bytes, artwork, detection) {
 }
 
 
-export async function composePlacedArtwork(bytes, artwork, detection, version=1) {
+export async function composePlacedArtwork(bytes, artwork, detection, version=1, wrappedArtwork=null) {
   if(![1,2].includes(version))throw fail();
-  const trimmed=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer();
-  const meta=await sharp(trimmed).metadata();
-  const placement=planNamePlacement(meta.width,meta.height,detection,version===2?500:180);
+  let trimmed=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer();
+  let meta=await sharp(trimmed).metadata(),placement;
+  try { placement=planNamePlacement(meta.width,meta.height,detection,version===2?500:180); }
+  catch(error) {
+    if(version!==2||!wrappedArtwork)throw error;
+    trimmed=await sharp(wrappedArtwork).trim({background:"#00000000",threshold:0}).png().toBuffer();
+    meta=await sharp(trimmed).metadata();
+    placement=planNamePlacement(meta.width,meta.height,detection,280);
+    if(placement.height<180)throw fail();
+    placement.lines=2;
+  }
   const paint=await sharp(trimmed).resize(placement.width,placement.height,{fit:"fill"}).png().toBuffer();
   const layer=await sharp({create:{width:1080,height:1080,channels:4,background:"#00000000"}}).composite([{input:paint,left:placement.left,top:placement.top}]).png().toBuffer();
   return {bytes:await compositeNameLayer(bytes,layer,version===2),placement};

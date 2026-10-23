@@ -36,7 +36,8 @@ export default async (request) => {
     if (exactName) {
       await store.set(`${id}/base`, result);
       if (adaptiveName) {
-        const composed = await composePlacedArtwork(result, artwork, await detectPortraitLayout(result), job.namePlacementVersion, input.name);
+        const wrapped = job.nameArtwork.wrapped ? await fetchArtwork(job.nameArtwork.wrapped) : null;
+        const composed = await composePlacedArtwork(result, artwork, await detectPortraitLayout(result), job.namePlacementVersion, wrapped);
         result = composed.bytes; namePlacement = composed.placement;
       } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant) : await compositeExactName(result, input.name, designSeed, variant);
       result = await compositeCaption(result, job.captionVariant);

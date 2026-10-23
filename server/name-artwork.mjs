@@ -18,6 +18,10 @@ export function selectArtwork(catalog, name) {
   const matched = reading?.status === "matched" && reading.uncertain === false && typeof reading.text === "string" && reading.text.normalize("NFC") === name.normalize("NFC");
   const override = ["needs_review", "unavailable"].includes(reading?.status) && typeof reading.overrideReason === "string" && reading.overrideReason.trim().length >= 20;
   if (reading?.sha256 !== entry.sha256 || (!matched && !override)) throw new Error("Artwork reading review is incomplete");
+  if (entry.wrapped) {
+    if (entry.wrapped.name !== entry.name || entry.wrapped.wrapped || entry.wrapped.sha256 === entry.sha256) throw new Error("Invalid wrapped artwork");
+    selectArtwork({entries:[entry.wrapped]},entry.name);
+  }
   return entry;
 }
 
@@ -27,6 +31,7 @@ export async function loadArtwork(catalog, name, root = resolve("public/name-art
   if (createHash("sha256").update(bytes).digest("hex") !== entry.sha256) throw new Error("Artwork checksum mismatch");
   const metadata = await sharp(bytes).metadata();
   if (metadata.format !== "png" || !metadata.hasAlpha) throw new Error("Artwork must be transparent PNG");
+  if (entry.wrapped) await loadArtwork({entries:[entry.wrapped]},entry.name,root);
   return { entry, bytes };
 }
 

@@ -9,6 +9,7 @@ import { fetchArtwork, compositeArtwork } from "../../server/name-artwork.mjs";
 import { detectPortraitLayout, composePlacedArtwork, vividPoster } from "../../server/name-placement.mjs";
 import { preparePortraitBase } from "../../server/portrait-refinement.mjs";
 import {catalogueComposition,REFERENCE_STYLE_VERSION} from "../../server/reference-style.mjs";
+import {enforcePalette,validatePaletteVersion} from "../../server/palette.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -28,7 +29,8 @@ export default async (request) => {
     const artwork = job.nameArtwork ? await fetchArtwork(job.nameArtwork) : null;
     if(job.referenceStyleVersion!==undefined&&job.referenceStyleVersion!==REFERENCE_STYLE_VERSION)throw new Error("Unsupported reference style");
     if(job.referenceStyleVersion&&!artwork)throw new Error("Missing approved name artwork");
-    const referenceStyle=job.referenceStyleVersion?{version:REFERENCE_STYLE_VERSION,...await catalogueComposition(artwork)}:null;
+    validatePaletteVersion(job.paletteVersion);
+    const referenceStyle=job.referenceStyleVersion?{version:REFERENCE_STYLE_VERSION,paletteVersion:job.paletteVersion,...await catalogueComposition(artwork)}:null;
     const designSeed = job.designSeed || id;
     const exactName = job.layoutVersion === EXACT_NAME_LAYOUT;
     const fixedCaption = job.layoutVersion === CAPTION_LAYOUT;
@@ -57,6 +59,7 @@ export default async (request) => {
       result = await compositeCaption(result, job.captionVariant);
       if (job.namePlacementVersion === 2) result = await vividPoster(result);
     }
+    result = await enforcePalette(result,job.paletteVersion);
     await store.set(`${id}/result`, result);
     const review = await reviewImage(result.toString("base64"), input.name, fetch, fixedCaption, exactName ? "image/png" : "image/jpeg");
     await store.setJSON(id, { ...job, layoutVersion: exactName ? EXACT_NAME_LAYOUT : fixedCaption ? CAPTION_LAYOUT : INTEGRATED_LAYOUT, ...(exactName ? { nameVariant: variant, nameSource: namePlacement?.source === "literal-two-line" ? "literal-two-line" : artwork ? "prebuilt-reviewed" : "literal-input" } : {}), ...(job.nameStyleVersion === NAME_STYLE_VERSION ? { nameStyleLabel: namePlacement?.source === "literal-two-line" ? "גרפיטי מקומי בשתי שורות" : artwork ? "גרפיטי מוכן מראש" : graffitiStyles[variant - 1].label } : {}), designSeed, ...(namePlacement ? { namePlacement } : {}), review, status: "completed" });

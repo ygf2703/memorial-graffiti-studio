@@ -33,6 +33,7 @@ export async function queueCorrection(store, parentId, input, reason) {
     ...(parent.captionStyleCount ? { captionStyleCount: parent.captionStyleCount } : {}),
     ...(parent.captionMix ? { captionMix: parent.captionMix } : {}),
     ...(parent.visualVersion ? { visualVersion: parent.visualVersion } : {}),
+    ...(parent.paletteVersion !== undefined ? { paletteVersion: parent.paletteVersion } : {}),
     ...(parent.referenceStyleVersion ? { referenceStyleVersion: parent.referenceStyleVersion } : {}),
     ...(parent.portraitRefinementVersion ? { portraitRefinementVersion: parent.portraitRefinementVersion, portraitRefinementModel: parent.portraitRefinementModel } : {}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),

@@ -72,7 +72,13 @@ export async function composePlacedArtwork(bytes, artwork, detection, version=1,
         if(plan.height>=180)fallback={trimmed:candidate,placement:{...plan,lines:2,source:"prebuilt-wrapped"}};
       }catch{/* Try literal two-line graffiti when a reviewed companion cannot fit. */}
     }
-    if(!fallback&&context?.name){
+    if(!fallback&&context?.catalogueOnly){
+      try{
+        const plan=planNamePlacement(meta.width,meta.height,detection,360);
+        if(plan.height>=90)fallback={trimmed,placement:{...plan,source:"prebuilt-fit"}};
+      }catch{/* Fail closed; never substitute a local font in catalogue-only mode. */}
+    }
+    if(!fallback&&context?.name&&!context?.catalogueOnly){
       const generated=await twoLineGraffitiAsset(context.name,context.seed||context.name,context.variant||2,context.visualVersion||0);
       const info=await sharp(generated.bytes).metadata(),plan=planNamePlacement(info.width,info.height,detection,240);
       if(plan.height<130)throw fail();
@@ -82,7 +88,7 @@ export async function composePlacedArtwork(bytes, artwork, detection, version=1,
     trimmed=fallback.trimmed;placement=fallback.placement;
   }
   let paint=await sharp(trimmed).resize(placement.width,placement.height,{fit:"fill"}).png().toBuffer();
-  if(context?.visualVersion===1)paint=await weatherPaint(paint,context.seed||context.name,.8);
+  if(context?.visualVersion===1&&!context?.catalogueOnly)paint=await weatherPaint(paint,context.seed||context.name,.8);
   const layer=await sharp({create:{width:1080,height:1080,channels:4,background:"#00000000"}}).composite([{input:paint,left:placement.left,top:placement.top}]).png().toBuffer();
   return {bytes:await compositeNameLayer(bytes,layer,version===2),placement};
 }

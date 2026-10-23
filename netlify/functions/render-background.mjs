@@ -8,6 +8,7 @@ import { compositeGraffitiName, NAME_STYLE_VERSION, graffitiStyles } from "../..
 import { fetchArtwork, compositeArtwork } from "../../server/name-artwork.mjs";
 import { detectPortraitLayout, composePlacedArtwork, vividPoster } from "../../server/name-placement.mjs";
 import { preparePortraitBase } from "../../server/portrait-refinement.mjs";
+import {catalogueComposition,REFERENCE_STYLE_VERSION} from "../../server/reference-style.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -25,6 +26,9 @@ export default async (request) => {
     if (!input) throw new Error("תמונת המקור לא זמינה. יש להעלות אותה מחדש.");
     if (job.nameArtwork && job.nameArtwork.name !== input.name) throw new Error("Artwork name mismatch");
     const artwork = job.nameArtwork ? await fetchArtwork(job.nameArtwork) : null;
+    if(job.referenceStyleVersion!==undefined&&job.referenceStyleVersion!==REFERENCE_STYLE_VERSION)throw new Error("Unsupported reference style");
+    if(job.referenceStyleVersion&&!artwork)throw new Error("Missing approved name artwork");
+    const referenceStyle=job.referenceStyleVersion?{version:REFERENCE_STYLE_VERSION,...await catalogueComposition(artwork)}:null;
     const designSeed = job.designSeed || id;
     const exactName = job.layoutVersion === EXACT_NAME_LAYOUT;
     const fixedCaption = job.layoutVersion === CAPTION_LAYOUT;
@@ -35,8 +39,8 @@ export default async (request) => {
     const adaptiveName = artwork && [1,2].includes(job.namePlacementVersion) ? job.namePlacementVersion : false;
     const portrait={type:input.type,bytes:Buffer.from(input.bytes,"base64")};
     let result = await preparePortraitBase(job,portrait,previous,{
-      generate:()=>generateImage(portrait,input.name,fetch,designSeed,fixedCaption,correction,exactName,Boolean(artwork),adaptiveName,job.visualVersion||0,job.portraitRefinementVersion?5*60*1000:12*60*1000),
-      saveDraft:draft=>store.set(`${id}/draft`,draft),onStage,
+      generate:()=>generateImage(portrait,input.name,fetch,designSeed,fixedCaption,correction,exactName,Boolean(artwork),adaptiveName,job.visualVersion||0,job.portraitRefinementVersion?5*60*1000:12*60*1000,referenceStyle),
+      saveDraft:draft=>store.set(`${id}/draft`,draft),onStage,referenceStyle,
     });
     await onStage("compositing");
     const variant = job.nameVariant || nameVariant(designSeed);
@@ -47,7 +51,7 @@ export default async (request) => {
         const wrapped = job.nameArtwork.wrapped ? await fetchArtwork(job.nameArtwork.wrapped) : null;
         const detection = await detectPortraitLayout(result);
         await store.setJSON(`${id}/layout`,detection);
-        const composed = await composePlacedArtwork(result, artwork, detection, job.namePlacementVersion, wrapped, {name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0});
+        const composed = await composePlacedArtwork(result, artwork, detection, job.namePlacementVersion, wrapped, {name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle)});
         result = composed.bytes; namePlacement = composed.placement;
       } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant, job.visualVersion||0) : await compositeExactName(result, input.name, designSeed, variant);
       result = await compositeCaption(result, job.captionVariant);

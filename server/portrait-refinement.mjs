@@ -1,5 +1,6 @@
 import { requestImageEdit } from "./core.mjs";
 import { imageBaseForJob } from "./recompose.mjs";
+import {referenceBoard,referenceRefinementPrompt} from "./reference-style.mjs";
 
 export const PORTRAIT_REFINEMENT_VERSION = 1;
 export const PORTRAIT_REFINEMENT_MODEL = "gpt-image-2.5-sunburst";
@@ -12,7 +13,7 @@ Render the corrected face as SPRAYED GRAFFITI, NOT a photograph pasted on the wa
 No names, letters, slogans, new symbols, watermarks or extra people. Preserve the existing clear space above/beside the head and the bottom 32% for later lettering. Keep the full Israeli flag visible.
 Before finishing, compare the face directly against Image 1, not against the incorrect draft. Keep all non-head elements unchanged.`;
 
-export async function refinePortrait(portrait, mural, fetcher = fetch) {
+export async function refinePortrait(portrait, mural, fetcher = fetch, referenceStyle = null) {
   const form=new FormData();
   form.append("model",PORTRAIT_REFINEMENT_MODEL);
   form.append("size","1024x1024");
@@ -21,12 +22,17 @@ export async function refinePortrait(portrait, mural, fetcher = fetch) {
   form.append("output_compression","90");
   form.append("image[]",new Blob([portrait.bytes],{type:portrait.type}),"original-portrait");
   form.append("image[]",new Blob([mural],{type:"image/jpeg"}),"unlettered-draft.jpg");
-  form.append("prompt",portraitRefinementPrompt);
+  let prompt=portraitRefinementPrompt;
+  if(referenceStyle){
+    prompt=referenceRefinementPrompt(referenceStyle);
+    form.append("image[]",new Blob([await referenceBoard()],{type:"image/png"}),"approved-graphic-board.png");
+  }
+  form.append("prompt",prompt);
   return Buffer.from(await requestImageEdit(form,fetcher,5*60*1000),"base64");
 }
 
 // The worker's durable claim surrounds BOTH paid calls. Never retry either call here.
-export async function preparePortraitBase(job, portrait, previous, {generate, refine=refinePortrait, saveDraft=async()=>{}, onStage=async()=>{}}) {
+export async function preparePortraitBase(job, portrait, previous, {generate, refine=refinePortrait, saveDraft=async()=>{}, onStage=async()=>{},referenceStyle=null}) {
   if(job.portraitRefinementVersion!==undefined&&job.portraitRefinementVersion!==PORTRAIT_REFINEMENT_VERSION)throw new Error("Unsupported refinement version");
   if(job.portraitRefinementModel!==undefined&&job.portraitRefinementModel!==PORTRAIT_REFINEMENT_MODEL)throw new Error("Unsupported refinement model");
   if(job.recomposeOnly)return imageBaseForJob(job,previous,generate);
@@ -36,7 +42,7 @@ export async function preparePortraitBase(job, portrait, previous, {generate, re
   if(job.portraitRefinementVersion!==PORTRAIT_REFINEMENT_VERSION)return draft;
   await saveDraft(draft);
   await onStage("refining_portrait");
-  const refined=await refine(portrait,draft);
+  const refined=await refine(portrait,draft,fetch,referenceStyle);
   if(!Buffer.isBuffer(refined)||!refined.length)throw new Error("Missing refined image");
   return refined;
 }

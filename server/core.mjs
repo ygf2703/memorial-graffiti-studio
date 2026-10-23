@@ -5,6 +5,7 @@ import { validName } from "../public/batch.js";
 import { muralPrompt, likenessInstruction } from "./prompt.mjs";
 import { materialSwatch } from "./paint-surface.mjs";
 import { correctionInstruction } from "./correction.mjs";
+import {referenceBoard,referenceGenerationPrompt} from "./reference-style.mjs";
 
 export const MAX_UPLOAD = 3 * 1024 * 1024;
 export const validId = (id) => /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(id || "");
@@ -36,7 +37,7 @@ export async function parsePortrait(request) {
   if (!actualType || actualType !== portrait.type) throw new Error("הקובץ אינו תמונת JPG, PNG או WEBP תקינה.");
   return { id, name, bytes, type: actualType };
 }
-export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID(), fixedCaption = false, correction = null, exactName = false, largeName = false, adaptiveName = false, visualVersion = 0, timeoutMs = 12 * 60 * 1000) {
+export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID(), fixedCaption = false, correction = null, exactName = false, largeName = false, adaptiveName = false, visualVersion = 0, timeoutMs = 12 * 60 * 1000, referenceStyle = null) {
   const form = new FormData();
   form.append("model", "gpt-image-1.5");
   form.append("size", "1024x1024");
@@ -45,6 +46,13 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
   form.append("output_format", "jpeg");
   form.append("output_compression", "90");
   form.append("image[]", new Blob([portrait.bytes], { type: portrait.type }), "portrait");
+  if(referenceStyle){
+    const prompt=referenceGenerationPrompt(designSeed,referenceStyle);
+    form.append("image[]",new Blob([await referenceBoard()],{type:"image/png"}),"approved-graphic-board.png");
+    if(correction)form.append("image[]",new Blob([correction.bytes],{type:"image/jpeg"}),"rejected-mural.jpg");
+    form.append("prompt",prompt+(correction?" The LAST image is the rejected mural: keep its correct elements, correcting likeness from Image 1 and maintaining the safe layout. It is not an identity reference.":""));
+    return requestImageEdit(form,fetcher,timeoutMs);
+  }
   for (const filename of ["style-01.png", "style-02.png", "style-03.png"]) {
     const bytes = await readFile(resolve("netlify/functions/references", filename));
     form.append("image[]", new Blob([visualVersion===1?await materialSwatch(bytes):bytes], { type: "image/png" }), filename);

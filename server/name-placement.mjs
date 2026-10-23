@@ -1,6 +1,7 @@
 import sharp from "sharp";
 import { compositeNameLayer } from "./exact-name.mjs";
 import { twoLineGraffitiAsset } from "./name-wrap.mjs";
+import { weatherPaint } from "./paint-surface.mjs";
 
 const fail = () => new Error("לא נמצא מיקום בטוח לשם ללא הסתרת הראש. התוצאה נעצרה; אין ניסיון יצירה נוסף אוטומטי.");
 export function pixelBox(box, padding = 24) {
@@ -72,7 +73,7 @@ export async function composePlacedArtwork(bytes, artwork, detection, version=1,
       }catch{/* Try literal two-line graffiti when a reviewed companion cannot fit. */}
     }
     if(!fallback&&context?.name){
-      const generated=await twoLineGraffitiAsset(context.name,context.seed||context.name,context.variant||2);
+      const generated=await twoLineGraffitiAsset(context.name,context.seed||context.name,context.variant||2,context.visualVersion||0);
       const info=await sharp(generated.bytes).metadata(),plan=planNamePlacement(info.width,info.height,detection,240);
       if(plan.height<130)throw fail();
       fallback={trimmed:generated.bytes,placement:{...plan,lines:2,source:"literal-two-line",textLines:generated.lines}};
@@ -80,7 +81,8 @@ export async function composePlacedArtwork(bytes, artwork, detection, version=1,
     if(!fallback)throw error;
     trimmed=fallback.trimmed;placement=fallback.placement;
   }
-  const paint=await sharp(trimmed).resize(placement.width,placement.height,{fit:"fill"}).png().toBuffer();
+  let paint=await sharp(trimmed).resize(placement.width,placement.height,{fit:"fill"}).png().toBuffer();
+  if(context?.visualVersion===1)paint=await weatherPaint(paint,context.seed||context.name,.8);
   const layer=await sharp({create:{width:1080,height:1080,channels:4,background:"#00000000"}}).composite([{input:paint,left:placement.left,top:placement.top}]).png().toBuffer();
   return {bytes:await compositeNameLayer(bytes,layer,version===2),placement};
 }

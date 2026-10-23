@@ -2,7 +2,8 @@ import { createHmac, timingSafeEqual, randomUUID } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { validName } from "../public/batch.js";
-import { muralPrompt } from "./prompt.mjs";
+import { muralPrompt, likenessInstruction } from "./prompt.mjs";
+import { materialSwatch } from "./paint-surface.mjs";
 import { correctionInstruction } from "./correction.mjs";
 
 export const MAX_UPLOAD = 3 * 1024 * 1024;
@@ -35,7 +36,7 @@ export async function parsePortrait(request) {
   if (!actualType || actualType !== portrait.type) throw new Error("הקובץ אינו תמונת JPG, PNG או WEBP תקינה.");
   return { id, name, bytes, type: actualType };
 }
-export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID(), fixedCaption = false, correction = null, exactName = false, largeName = false, adaptiveName = false) {
+export async function generateImage(portrait, name, fetcher = fetch, designSeed = randomUUID(), fixedCaption = false, correction = null, exactName = false, largeName = false, adaptiveName = false, visualVersion = 0) {
   const form = new FormData();
   form.append("model", "gpt-image-1.5");
   form.append("size", "1024x1024");
@@ -46,14 +47,16 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
   form.append("image[]", new Blob([portrait.bytes], { type: portrait.type }), "portrait");
   for (const filename of ["style-01.png", "style-02.png", "style-03.png"]) {
     const bytes = await readFile(resolve("netlify/functions/references", filename));
-    form.append("image[]", new Blob([bytes], { type: "image/png" }), filename);
+    form.append("image[]", new Blob([visualVersion===1?await materialSwatch(bytes):bytes], { type: "image/png" }), filename);
   }
   if (adaptiveName === 2) {
     const layout = await readFile(resolve("netlify/functions/references/layout-vivid.png"));
-    form.append("image[]", new Blob([layout], { type: "image/png" }), "approved-composition.png");
+    form.append("image[]", new Blob([visualVersion===1?await materialSwatch(layout):layout], { type: "image/png" }), "approved-composition.png");
   }
   if (correction) form.append("image[]", new Blob([correction.bytes], { type: "image/jpeg" }), "rejected-mural.jpg");
-  form.append("prompt", muralPrompt(designSeed, name, fixedCaption, exactName, largeName, adaptiveName) + (correction ? correctionInstruction(correction.reason, name, exactName, largeName, adaptiveName) : ""));
+  let prompt=muralPrompt(designSeed, name, fixedCaption, exactName, largeName, adaptiveName);
+  if(visualVersion===1)prompt=prompt.replace("Image 5 is the approved COMPOSITION AND COLOR reference, overriding composition of images 2-4. Follow its large head on one outer side and large two-line lettering area on the opposite side.","Follow the written side layout; all secondary images are paint material swatches only.");
+  form.append("prompt", prompt + (correction ? correctionInstruction(correction.reason, name, exactName, largeName, adaptiveName) : "") + (visualVersion===1?likenessInstruction:""));
   let response;
   try {
     response = await fetcher("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(12 * 60 * 1000) });

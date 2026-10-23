@@ -16,10 +16,10 @@ export function nameWrapLines(name) {
 }
 
 // Deterministic literal glyph fallback; never cut the approved bitmap across letters.
-export async function twoLineGraffitiAsset(name, seed, variant=2) {
+export async function twoLineGraffitiAsset(name, seed, variant=2, visualVersion=0) {
   const lines=nameWrapLines(name),parts=[];
   for(const [i,line] of lines.entries()){
-    const layer=await graffitiNameLayer(line,seed+":line:"+i,variant);
+    const layer=await graffitiNameLayer(line,seed+":line:"+i,variant,visualVersion);
     parts.push(await sharp(layer).trim({background:"#00000000",threshold:0})
       .resize({width:1000,height:220,fit:"inside"}).png().toBuffer({resolveWithObject:true}));
   }

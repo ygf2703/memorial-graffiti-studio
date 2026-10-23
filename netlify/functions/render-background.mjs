@@ -31,7 +31,7 @@ export default async (request) => {
     if (previousId && !previous) throw new Error("Missing original result");
     const correction = previous ? { bytes: Buffer.from(previous), reason: job.correctionReason } : null;
     const adaptiveName = artwork && [1,2].includes(job.namePlacementVersion) ? job.namePlacementVersion : false;
-    let result = await imageBaseForJob(job, previous, () => generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName, Boolean(artwork), adaptiveName));
+    let result = await imageBaseForJob(job, previous, () => generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName, Boolean(artwork), adaptiveName, job.visualVersion||0));
     const variant = job.nameVariant || nameVariant(designSeed);
     let namePlacement;
     if (exactName) {
@@ -40,9 +40,9 @@ export default async (request) => {
         const wrapped = job.nameArtwork.wrapped ? await fetchArtwork(job.nameArtwork.wrapped) : null;
         const detection = await detectPortraitLayout(result);
         await store.setJSON(`${id}/layout`,detection);
-        const composed = await composePlacedArtwork(result, artwork, detection, job.namePlacementVersion, wrapped, {name:input.name,seed:designSeed,variant});
+        const composed = await composePlacedArtwork(result, artwork, detection, job.namePlacementVersion, wrapped, {name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0});
         result = composed.bytes; namePlacement = composed.placement;
-      } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant) : await compositeExactName(result, input.name, designSeed, variant);
+      } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant, job.visualVersion||0) : await compositeExactName(result, input.name, designSeed, variant);
       result = await compositeCaption(result, job.captionVariant);
       if (job.namePlacementVersion === 2) result = await vividPoster(result);
     }

@@ -32,6 +32,7 @@ export async function queueCorrection(store, parentId, input, reason) {
     ...(parent.namePlacementVersion ? { namePlacementVersion: parent.namePlacementVersion } : {}),
     ...(parent.captionStyleCount ? { captionStyleCount: parent.captionStyleCount } : {}),
     ...(parent.captionMix ? { captionMix: parent.captionMix } : {}),
+    ...(parent.visualVersion ? { visualVersion: parent.visualVersion } : {}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),
   }, { onlyIfNew: true });
   return { id: claim.id, status: "queued" };

@@ -23,7 +23,7 @@ export default async (request) => {
   if (!base) return json({ error: "כתובת שירות הרקע לא הוגדרה בשרת." }, 503);
   const store = getStore({ name: "graffiti-jobs", consistency: "strong" });
   try {
-    const created = await store.setJSON(input.id, { status: "queued", name: input.name, layoutVersion: EXACT_NAME_LAYOUT, nameStyleVersion: NAME_STYLE_VERSION, nameVariant: nameVariant(input.id), nameStyleCount: NAME_STYLE_COUNT, ...(nameArtwork ? { nameArtwork, namePlacementVersion: 2, nameSource: "prebuilt-reviewed" } : {}), captionVariant: captionVariant(input.id, CAPTION_STYLE_COUNT, "new90"), captionStyleCount: CAPTION_STYLE_COUNT, captionMix: "new90", designSeed: input.id, createdAt: Date.now() }, { onlyIfNew: true });
+    const created = await store.setJSON(input.id, { status: "queued", name: input.name, visualVersion: 1, layoutVersion: EXACT_NAME_LAYOUT, nameStyleVersion: NAME_STYLE_VERSION, nameVariant: nameVariant(input.id), nameStyleCount: NAME_STYLE_COUNT, ...(nameArtwork ? { nameArtwork, namePlacementVersion: 2, nameSource: "prebuilt-reviewed" } : {}), captionVariant: captionVariant(input.id, CAPTION_STYLE_COUNT, "new90"), captionStyleCount: CAPTION_STYLE_COUNT, captionMix: "new90", designSeed: input.id, createdAt: Date.now() }, { onlyIfNew: true });
     if (!created.modified) {
       const existing = await store.get(input.id, { type: "json" });
       if (existing.status !== "queued") return json({ id: input.id }, 202);

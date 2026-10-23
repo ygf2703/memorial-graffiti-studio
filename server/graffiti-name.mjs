@@ -1,6 +1,7 @@
 import sharp from "sharp";
 import { literalGlyph, compositeNameLayer } from "./exact-name.mjs";
 import { seededRandom, NAME_STYLE_COUNT } from "../public/design.js";
+import { weatherPaint } from "./paint-surface.mjs";
 
 export const NAME_STYLE_VERSION = 2;
 const navy = "#082e49", blue = "#207ba6", yellow = "#e6c62e", white = "#f5f1da";
@@ -24,7 +25,7 @@ export async function graffitiGlyph(name, variant) {
   return literalGlyph(name, { ...style, height: 132 });
 }
 
-export async function graffitiNameLayer(name, seed, variant) {
+export async function graffitiNameLayer(name, seed, variant, visualVersion = 0) {
   const style = graffitiStyles[variant - 1], glyph = await graffitiGlyph(name, variant);
   const random = seededRandom(`aerosol-v2:${seed}:${variant}`), pick = (list) => list[Math.floor(random() * list.length)];
   const x = (1080 - glyph.info.width) / 2, y = 37 + (132 - glyph.info.height) / 2;
@@ -46,15 +47,23 @@ export async function graffitiNameLayer(name, seed, variant) {
     wear.push(`<circle cx="${x + random() * glyph.info.width}" cy="${y + random() * glyph.info.height}" r="${.3 + random() * 1.5}" fill="black" opacity="${.2 + random() * .65}"/>`);
   }
   const alpha = await sharp(glyph.data).extractChannel(3).raw().toBuffer();
-  for (let i = 0; i < style.runs; i++) {
+  const dripColumns=[];
+  const runCount=visualVersion===1?Math.min(8,Math.max(3,Math.floor(glyph.info.width/95))):style.runs;
+  for (let i = 0; i < runCount; i++) {
     const column = Math.floor(random() * glyph.info.width);
     let row = glyph.info.height - 1;
     while (row >= 0 && alpha[row * glyph.info.width + column] < 200) row--;
     if (row < glyph.info.height * .25) continue;
+    if(visualVersion===1){
+      if(dripColumns.some(c=>Math.abs(c-column)<24))continue;
+      if(column<2||column>=glyph.info.width-2||alpha[row*glyph.info.width+column-2]<180||alpha[row*glyph.info.width+column+2]<180)continue;
+      dripColumns.push(column);
+    }
     const py = y + row - 2, px = x + column + skew * (py - 125);
-    const bottom = Math.min(235, py + 12 + random() * 62), width = 1 + random() * (i % 6 ? 2.3 : 4.5);
+    const bottom = Math.min(235, py + (visualVersion===1?4+random()*glyph.info.height*.14:12+random()*62)), width = visualVersion===1?.65+random()*1.1:1+random()*(i%6?2.3:4.5);
     const ink = i % 4 ? (style.lower || style.fill) : style.rim;
-    runs.push(`<path d="M${px} ${py}C${px + .7} ${py + 12} ${px - .6} ${bottom - 4} ${px} ${bottom}" stroke="${ink}" stroke-width="${width}" fill="none" stroke-linecap="round" opacity="${.55 + random() * .4}"/><ellipse cx="${px}" cy="${bottom}" rx="${width * .62}" ry="${width * 1.1}" fill="${ink}" opacity=".85"/>`);
+    const firstControl=visualVersion===1?py+(bottom-py)*.34:py+12,secondControl=visualVersion===1?py+(bottom-py)*.72:bottom-4;
+    runs.push(`<path d="M${px} ${py}C${px + .7} ${firstControl} ${px - .6} ${secondControl} ${px} ${bottom}" stroke="${ink}" stroke-width="${width}" fill="none" stroke-linecap="round" opacity="${.55 + random() * .4}"/><ellipse cx="${px}" cy="${bottom}" rx="${width * .62}" ry="${width * 1.1}" fill="${ink}" opacity=".85"/>`);
   }
   if (style.arrows) {
     flashes.push(`<path d="M${x - 22} 90l-20 -15 8 25M${x + glyph.info.width + 20} 130l25 -18 -9 28" stroke="${yellow}" stroke-width="5" fill="none" opacity=".85"/>`);
@@ -74,10 +83,11 @@ export async function graffitiNameLayer(name, seed, variant) {
     <g clip-path="url(#safe)"><g filter="url(#haze)">${halo.join("")}</g>${dust.join("")}${flashes.join("")}
     <g mask="url(#wear)" opacity=".95">${shadow}<use href="#shape" filter="url(#rim)"/><use href="#shape" filter="url(#outline)"/>
     <g mask="url(#letters)"><rect width="1080" height="250" fill="${style.fill}"/>${style.lower ? `<path d="M0 ${y + glyph.info.height * .45 - 7}L1080 ${y + glyph.info.height * .45 + 7}V250H0Z" fill="${style.lower}"/>` : ""}${style.stencil ? `<path d="M0 91L1080 97M0 145L1080 139" stroke="${navy}" opacity=".2" stroke-width="2"/>` : ""}</g>
-    ${style.shine ? '<use href="#shape" filter="url(#shine)" opacity=".85"/>' : ""}</g>${runs.join("")}${under}</g></svg>`;
-  return sharp(Buffer.from(svg)).png().toBuffer();
+    ${style.shine ? `<use href="#shape" filter="url(#shine)" opacity="${visualVersion===1?.35:.85}"/>` : ""}</g>${runs.join("")}${under}</g></svg>`;
+  const layer=await sharp(Buffer.from(svg)).png().toBuffer();
+  return visualVersion===1?weatherPaint(layer,seed,2.8):layer;
 }
 
-export async function compositeGraffitiName(bytes, name, seed, variant) {
-  return compositeNameLayer(bytes, await graffitiNameLayer(name, seed, variant));
+export async function compositeGraffitiName(bytes, name, seed, variant, visualVersion = 0) {
+  return compositeNameLayer(bytes, await graffitiNameLayer(name, seed, variant, visualVersion));
 }

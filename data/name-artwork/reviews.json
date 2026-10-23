@@ -7836,5 +7836,27 @@
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-17T05:13:45.325Z"
     }
+  },
+  {
+    "name": "אייל מבורך טויטו",
+    "sha256": "b6673250681f2813acfcd8fbf8d275a5a5567077ed67c9f1d21f6b111687653e",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-source-and-light-dark-render-review",
+    "reviewSession": "explicit-eyal-no-hyphen-2026-10-23",
+    "evidence": ".netlify/eyal-layer.png; .netlify/eyal-light.png; .netlify/eyal-dark.png",
+    "notes": "נבדקו אייל עם שתי י׳, מבורך עם ך סופית יורדת, וטויטו בסדר המבוקש. שלוש מילים ללא מקף; המקור השקוף ושכבת ההרכבה קריאים בשני הרקעים.",
+    "sourceFile": "706ce2b3ac39b59dc1e1.png",
+    "style": 2,
+    "ocr": {
+      "sha256": "b6673250681f2813acfcd8fbf8d275a5a5567077ed67c9f1d21f6b111687653e",
+      "status": "matched",
+      "text": "אייל מבורך טויטו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-23T05:32:13.661Z"
+    }
   }
 ]

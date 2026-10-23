@@ -30,6 +30,8 @@ export async function queueCorrection(store, parentId, input, reason) {
     ...(parent.nameStyleVersion ? { nameStyleVersion: parent.nameStyleVersion } : {}),
     ...(parent.nameArtwork ? { nameArtwork: parent.nameArtwork, nameSource: "prebuilt-reviewed", nameVariant: parent.nameVariant } : {}),
     ...(parent.namePlacementVersion ? { namePlacementVersion: parent.namePlacementVersion } : {}),
+    ...(parent.captionStyleCount ? { captionStyleCount: parent.captionStyleCount } : {}),
+    ...(parent.captionMix ? { captionMix: parent.captionMix } : {}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),
   }, { onlyIfNew: true });
   return { id: claim.id, status: "queued" };

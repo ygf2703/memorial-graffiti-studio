@@ -48,6 +48,10 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
     const bytes = await readFile(resolve("netlify/functions/references", filename));
     form.append("image[]", new Blob([bytes], { type: "image/png" }), filename);
   }
+  if (adaptiveName === 2) {
+    const layout = await readFile(resolve("netlify/functions/references/layout-vivid.png"));
+    form.append("image[]", new Blob([layout], { type: "image/png" }), "approved-composition.png");
+  }
   if (correction) form.append("image[]", new Blob([correction.bytes], { type: "image/jpeg" }), "rejected-mural.jpg");
   form.append("prompt", muralPrompt(designSeed, name, fixedCaption, exactName, largeName, adaptiveName) + (correction ? correctionInstruction(correction.reason, name, exactName, largeName, adaptiveName) : ""));
   let response;

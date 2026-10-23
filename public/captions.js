@@ -1,5 +1,6 @@
+import { CAPTION_STYLE_COUNT } from "./design.js";
 export async function paintFixedCaption(canvas, variant) {
-  if (!Number.isInteger(variant) || variant < 1 || variant > 5) throw new Error("גרסת הכיתוב אינה תקינה.");
+  if (!Number.isInteger(variant) || variant < 1 || variant > CAPTION_STYLE_COUNT) throw new Error("גרסת הכיתוב אינה תקינה.");
   const image = new Image();
   image.src = `/captions/caption-${variant}.png`;
   try { await image.decode(); } catch { throw new Error("הכיתוב הקבוע לא נטען. שחזרו את התוצאה ללא יצירה נוספת."); }

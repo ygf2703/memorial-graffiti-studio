@@ -1,10 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import sharp from "sharp";
-import {pixelBox,planNamePlacement,intersects,detectPortraitLayout,compositeAdaptiveArtwork} from "../server/name-placement.mjs";
+import {pixelBox,planNamePlacement,intersects,detectPortraitLayout,compositeAdaptiveArtwork,composePlacedArtwork,vividPoster} from "../server/name-placement.mjs";
 import {muralPrompt} from "../server/prompt.mjs";
 import {correctionInstruction,queueCorrection} from "../server/correction.mjs";
 import {EXACT_NAME_LAYOUT} from "../public/design.js";
+import {generateImage} from "../server/core.mjs";
 
 const detection={uncertain:false,head:{x:500,y:90,width:360,height:530},star:{x:110,y:470,width:220,height:180}};
 test("left/right/central heads get large separate name boxes above or beside, never across hair",()=>{
@@ -48,4 +49,29 @@ test("correction retains adaptive version without upgrading historical jobs",asy
   const child=await queueCorrection(store,"parent",{name:parent.name,type:"image/jpeg",bytes:Buffer.from("test")},"name");
   assert.equal(data.get(child.id).namePlacementVersion,adaptive?1:undefined);
  }
+});
+
+test("vivid edition enforces a prominent title and never falls back to the old small size",async()=>{
+ const value={uncertain:false,head:{x:600,y:90,width:360,height:530},star:{x:110,y:500,width:220,height:150}};
+ const old=planNamePlacement(600,300,detection),next=planNamePlacement(600,300,value,500);
+ assert.ok(next.width>=500);assert.ok(next.width>old.width*1.2);
+ assert.throws(()=>planNamePlacement(600,300,detection,500));
+ const base=await sharp({create:{width:1080,height:1080,channels:3,background:"#c8be9e"}}).png().toBuffer();
+ const art=await sharp({create:{width:600,height:300,channels:4,background:"#207ba6"}}).png().toBuffer();
+ const result=await composePlacedArtwork(base,art,value,2);
+ assert.ok(result.placement.width>=500);
+ const vivid=await vividPoster(result.bytes);assert.notDeepEqual(vivid,result.bytes);
+ const prompt=muralPrompt("seed","גל בכר",false,true,true,2);
+ assert.match(prompt,/#168dcc/);assert.match(prompt,/#ffd629/);assert.match(prompt,/at least 500px/);
+ assert.doesNotMatch(prompt,/#207ba6|#e6c62e/);
+});
+
+test("vivid generation sends the approved composition reference and literal source only once",async()=>{
+ const result=await generateImage({bytes:Buffer.from([255,216,255]),type:"image/jpeg"},"גל בכר",async(url,options)=>{
+  assert.equal(options.body.getAll("image[]").length,5);
+  assert.match(options.body.get("prompt"),/Image 5 is the approved/);
+  assert.match(options.body.get("prompt"),/#168dcc/);
+  return Response.json({data:[{b64_json:"test-image"}]});
+ },"seed",false,null,true,true,2);
+ assert.equal(result,"test-image");
 });

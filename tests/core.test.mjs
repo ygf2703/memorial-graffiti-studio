@@ -36,7 +36,7 @@ test("fixed caption renderer places one asset inside its reserved area and fails
     await paintFixedCaption(canvas, 3);
     assert.equal(calls.length, 1); assert.equal(calls[0][0].src, "/captions/caption-3.png");
     const [, x, y, width, height] = calls[0]; assert.ok(x >= 0 && y >= 1080 * .68 && x + width <= 1080 && y + height <= 1080);
-    await assert.rejects(paintFixedCaption(canvas, 6));
+    await assert.rejects(paintFixedCaption(canvas, 11));
     globalThis.Image = class { async decode() { throw new Error("missing"); } };
     await assert.rejects(paintFixedCaption(canvas, 1), /לא נטען/);
   } finally { if (previous) globalThis.Image = previous; else delete globalThis.Image; }

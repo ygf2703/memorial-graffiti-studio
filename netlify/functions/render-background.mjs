@@ -6,7 +6,7 @@ import { compositeExactName, nameVariant } from "../../server/exact-name.mjs";
 import { compositeCaption } from "../../server/composite.mjs";
 import { compositeGraffitiName, NAME_STYLE_VERSION, graffitiStyles } from "../../server/graffiti-name.mjs";
 import { fetchArtwork, compositeArtwork } from "../../server/name-artwork.mjs";
-import { detectPortraitLayout, compositeAdaptiveArtwork } from "../../server/name-placement.mjs";
+import { detectPortraitLayout, composePlacedArtwork, vividPoster } from "../../server/name-placement.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -28,7 +28,7 @@ export default async (request) => {
     const previous = job.parentId ? await store.get(`${job.parentId}/${exactName ? "base" : "result"}`, { type: "arrayBuffer" }) : null;
     if (job.parentId && !previous) throw new Error("Missing original result");
     const correction = previous ? { bytes: Buffer.from(previous), reason: job.correctionReason } : null;
-    const adaptiveName = Boolean(artwork && job.namePlacementVersion === 1);
+    const adaptiveName = artwork && [1,2].includes(job.namePlacementVersion) ? job.namePlacementVersion : false;
     const imageBase64 = await generateImage({ type: input.type, bytes: Buffer.from(input.bytes, "base64") }, input.name, fetch, designSeed, fixedCaption, correction, exactName, Boolean(artwork), adaptiveName);
     let result = Buffer.from(imageBase64, "base64");
     const variant = job.nameVariant || nameVariant(designSeed);
@@ -36,10 +36,11 @@ export default async (request) => {
     if (exactName) {
       await store.set(`${id}/base`, result);
       if (adaptiveName) {
-        const composed = await compositeAdaptiveArtwork(result, artwork, await detectPortraitLayout(result));
+        const composed = await composePlacedArtwork(result, artwork, await detectPortraitLayout(result), job.namePlacementVersion, input.name);
         result = composed.bytes; namePlacement = composed.placement;
       } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant) : await compositeExactName(result, input.name, designSeed, variant);
       result = await compositeCaption(result, job.captionVariant);
+      if (job.namePlacementVersion === 2) result = await vividPoster(result);
     }
     await store.set(`${id}/result`, result);
     const review = await reviewImage(result.toString("base64"), input.name, fetch, fixedCaption, exactName ? "image/png" : "image/jpeg");

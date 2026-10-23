@@ -4,9 +4,18 @@ export const CAPTION_LAYOUT = "fixed-caption-v4";
 export const COMPOSITED_LAYOUT = "server-caption-v5";
 export const EXACT_NAME_LAYOUT = "server-exact-name-v6";
 export const NAME_STYLE_COUNT = 10;
+export const CAPTION_STYLE_COUNT = 10;
 export const requiresApproval = (job) => [INTEGRATED_LAYOUT, CAPTION_LAYOUT, COMPOSITED_LAYOUT, EXACT_NAME_LAYOUT].includes(job.layoutVersion);
 export const deliveredJob = (job) => job.layoutVersion === CAPTION_LAYOUT ? { ...job, layoutVersion: COMPOSITED_LAYOUT } : job;
-export function captionVariant(seed) { return 1 + Math.floor(seededRandom(`caption:${seed}`)() * 5); }
+export function captionVariant(seed, count = 5, mix = "balanced") {
+  if (![5,CAPTION_STYLE_COUNT].includes(count)) throw new Error("Invalid caption style count");
+  if (!["balanced","new90"].includes(mix) || (mix === "new90" && count !== 10)) throw new Error("Invalid caption mix");
+  if (mix === "new90") {
+    const first = seededRandom(`caption-group:${seed}`)() < .9 ? 6 : 1;
+    return first + Math.floor(seededRandom(`caption-style:${seed}`)() * 5);
+  }
+  return 1 + Math.floor(seededRandom(`caption:${seed}`)() * count);
+}
 export function seededRandom(seed) {
   let state = 2166136261;
   for (const character of String(seed)) state = Math.imul(state ^ character.charCodeAt(0), 16777619);

@@ -8,7 +8,7 @@ export function pixelBox(box, padding = 24) {
   return {left,top,right:Math.min(1080,Math.ceil((box.x+box.width)*1.08)+padding),bottom:Math.min(1080,Math.ceil((box.y+box.height)*1.08)+padding)};
 }
 export const intersects = (a,b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
-export function planNamePlacement(width, height, detection) {
+export function planNamePlacement(width, height, detection, minimumWidth = 180) {
   if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0 || detection?.uncertain !== false) throw fail();
   const head=pixelBox(detection.head), star=pixelBox(detection.star,16), protectedBoxes=[head,star];
   const xs=[...new Set([36,1044,...protectedBoxes.flatMap(b=>[b.left,b.right])])].filter(x=>x>=36&&x<=1044).sort((a,b)=>a-b);
@@ -20,7 +20,7 @@ export function planNamePlacement(width, height, detection) {
     if(protectedBoxes.some(b=>intersects(region,b)))continue;
     const scale=Math.min((right-left)/width,(bottom-top)/height,440/height);
     const w=Math.floor(width*scale),h=Math.floor(height*scale);
-    if(w<180||h<75)continue;
+    if(w<minimumWidth||h<75)continue;
     const paint={left:Math.round((left+right-w)/2),top:Math.round((top+bottom-h)/2),width:w,height:h};
     if(paint.top>=head.bottom)continue; // Above or beside, never below the portrait.
     if(!best||scale>best.scale+1e-6||(Math.abs(scale-best.scale)<1e-6&&paint.top<best.top))best={...paint,scale,head,star};
@@ -51,9 +51,18 @@ export async function detectPortraitLayout(bytes, fetcher=fetch) {
 }
 
 export async function compositeAdaptiveArtwork(bytes, artwork, detection) {
+  return composePlacedArtwork(bytes,artwork,detection,1);
+}
+
+
+export async function composePlacedArtwork(bytes, artwork, detection, version=1) {
+  if(![1,2].includes(version))throw fail();
   const trimmed=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer();
-  const meta=await sharp(trimmed).metadata(),placement=planNamePlacement(meta.width,meta.height,detection);
+  const meta=await sharp(trimmed).metadata();
+  const placement=planNamePlacement(meta.width,meta.height,detection,version===2?500:180);
   const paint=await sharp(trimmed).resize(placement.width,placement.height,{fit:"fill"}).png().toBuffer();
   const layer=await sharp({create:{width:1080,height:1080,channels:4,background:"#00000000"}}).composite([{input:paint,left:placement.left,top:placement.top}]).png().toBuffer();
-  return {bytes:await compositeNameLayer(bytes,layer),placement};
+  return {bytes:await compositeNameLayer(bytes,layer,version===2),placement};
 }
+
+export const vividPoster = bytes => sharp(bytes).modulate({saturation:1.35,brightness:1.03}).png().toBuffer();

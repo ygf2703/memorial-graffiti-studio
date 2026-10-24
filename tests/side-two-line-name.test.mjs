@@ -9,7 +9,7 @@ import {queueCorrection} from "../server/correction.mjs";
 import {queueRecompose} from "../server/recompose.mjs";
 import {EXACT_NAME_LAYOUT} from "../public/design.js";
 
-const names=["יוסף (יוסי) בן-עזרא","יאיר אשכנזי"];
+const names=["יוסף (יוסי) בן-עזרא","יאיר אשכנזי","שילה יוסף אמיר"];
 const composition="side-two-line-v1";
 const detection={uncertain:false,head:{x:620,y:90,width:330,height:520},star:{x:760,y:640,width:120,height:110}};
 
@@ -26,7 +26,7 @@ test("corrections and recovery keep pinned side artwork; historical jobs do not 
  }
 });
 
-test("only the two requested names opt into reviewed two-line side composition",async()=>{
+test("only the requested names opt into reviewed two-line side composition",async()=>{
  const c=await releaseCatalog();
  assert.deepEqual(c.entries.filter(e=>e.composition===composition).map(e=>e.name).sort(),names.slice().sort());
  for(const name of names){

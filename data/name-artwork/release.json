@@ -2813,6 +2813,13 @@
       "name": "שילה יוסף אמיר",
       "file": "4df659315f75185f4650.png",
       "sha256": "4df659315f75185f4650650fe710434af2925ceb2397faf43db6411abfeadf34",
+      "composition": "side-two-line-v1",
+      "layoutReview": {
+        "sha256": "4df659315f75185f4650650fe710434af2925ceb2397faf43db6411abfeadf34",
+        "lines": ["שילה יוסף", "אמיר"],
+        "checkedAt": "2026-10-24",
+        "notes": "Original approved transparent artwork visually checked: שילה יוסף above אמיר; immutable source unchanged."
+      },
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,

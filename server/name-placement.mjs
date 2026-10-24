@@ -10,7 +10,7 @@ export function pixelBox(box, padding = 24) {
   return {left,top,right:Math.min(1080,Math.ceil((box.x+box.width)*1.08)+padding),bottom:Math.min(1080,Math.ceil((box.y+box.height)*1.08)+padding)};
 }
 export const intersects = (a,b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
-export function planNamePlacement(width, height, detection, minimumWidth = 180) {
+export function planNamePlacement(width, height, detection, minimumWidth = 180, sideOnly = false) {
   if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0 || detection?.uncertain !== false) throw fail();
   const head=pixelBox(detection.head), star=pixelBox(detection.star,16), protectedBoxes=[head,star];
   const xs=[...new Set([36,1044,...protectedBoxes.flatMap(b=>[b.left,b.right])])].filter(x=>x>=36&&x<=1044).sort((a,b)=>a-b);
@@ -24,6 +24,7 @@ export function planNamePlacement(width, height, detection, minimumWidth = 180) 
     const w=Math.floor(width*scale),h=Math.floor(height*scale);
     if(w<minimumWidth||h<75)continue;
     const paint={left:Math.round((left+right-w)/2),top:Math.round((top+bottom-h)/2),width:w,height:h};
+    if(sideOnly && (!(paint.left+w<=head.left||paint.left>=head.right)||paint.top+h<=head.top||paint.top>=head.bottom))continue;
     if(paint.top>=head.bottom)continue; // Above or beside, never below the portrait.
     if(!best||scale>best.scale+1e-6||(Math.abs(scale-best.scale)<1e-6&&paint.top<best.top))best={...paint,scale,head,star};
   }
@@ -61,8 +62,14 @@ export async function composePlacedArtwork(bytes, artwork, detection, version=1,
   if(![1,2].includes(version))throw fail();
   let trimmed=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer();
   let meta=await sharp(trimmed).metadata(),placement;
-  try { placement=planNamePlacement(meta.width,meta.height,detection,version===2?500:180); }
+  const sideOnly=context?.nameComposition==="side-two-line-v1";
+  if(context?.nameComposition!==undefined&&!sideOnly)throw fail();
+  try {
+    placement=planNamePlacement(meta.width,meta.height,detection,sideOnly?460:version===2?500:180,sideOnly);
+    if(sideOnly){if(placement.height<200)throw fail();placement={...placement,lines:2,source:"prebuilt-side-two-line"};}
+  }
   catch(error) {
+    if(sideOnly)throw error; // No shrinking into a tiny label, font replacement or above-face fallback.
     if(version!==2||detection?.uncertain!==false)throw error;
     let fallback=null;
     if(wrappedArtwork){

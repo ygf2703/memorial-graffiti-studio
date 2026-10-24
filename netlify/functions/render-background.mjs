@@ -31,6 +31,7 @@ export default async (request) => {
     if(job.referenceStyleVersion&&!artwork)throw new Error("Missing approved name artwork");
     validatePaletteVersion(job.paletteVersion);
     const referenceStyle=job.referenceStyleVersion?{version:REFERENCE_STYLE_VERSION,paletteVersion:job.paletteVersion,nameSizeVersion:job.nameSizeVersion,...await catalogueComposition(artwork,job.nameSizeVersion)}:null;
+    if(referenceStyle&&job.nameArtwork.composition)referenceStyle.nameComposition=job.nameArtwork.composition;
     const designSeed = job.designSeed || id;
     const exactName = job.layoutVersion === EXACT_NAME_LAYOUT;
     const fixedCaption = job.layoutVersion === CAPTION_LAYOUT;
@@ -53,7 +54,7 @@ export default async (request) => {
         const wrapped = job.nameArtwork.wrapped ? await fetchArtwork(job.nameArtwork.wrapped) : null;
         const detection = await detectPortraitLayout(result);
         await store.setJSON(`${id}/layout`,detection);
-        const composed = await composePlacedArtwork(result, artwork, detection, job.namePlacementVersion, wrapped, {name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle)});
+        const composed = await composePlacedArtwork(result, artwork, detection, job.namePlacementVersion, wrapped, {name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle),nameComposition:job.nameArtwork.composition});
         result = composed.bytes; namePlacement = composed.placement;
       } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant, job.visualVersion||0) : await compositeExactName(result, input.name, designSeed, variant);
       result = await compositeCaption(result, job.captionVariant);

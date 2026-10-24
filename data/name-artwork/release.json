@@ -1557,6 +1557,13 @@
       "name": "יוסף (יוסי) בן-עזרא",
       "file": "4bdb0d55a8c4f70b4ec4.png",
       "sha256": "4bdb0d55a8c4f70b4ec400e00613b25573e75008617e558c33b561c40cee49ac",
+      "composition": "side-two-line-v1",
+      "layoutReview": {
+        "sha256": "4bdb0d55a8c4f70b4ec400e00613b25573e75008617e558c33b561c40cee49ac",
+        "lines": ["יוסף (יוסי)","בן-עזרא"],
+        "checkedAt": "2026-10-24",
+        "notes": "Original approved transparent artwork visually checked: given name above family name; immutable source unchanged."
+      },
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
@@ -2264,6 +2271,13 @@
       "name": "יאיר אשכנזי",
       "file": "7388c225022328a6c764.png",
       "sha256": "7388c225022328a6c764b758fa2d90d174e1b775fb496000c13c9e4d3c67c8f9",
+      "composition": "side-two-line-v1",
+      "layoutReview": {
+        "sha256": "7388c225022328a6c764b758fa2d90d174e1b775fb496000c13c9e4d3c67c8f9",
+        "lines": ["יאיר","אשכנזי"],
+        "checkedAt": "2026-10-24",
+        "notes": "Original approved transparent artwork visually checked: given name above family name; immutable source unchanged."
+      },
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,

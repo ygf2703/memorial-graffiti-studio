@@ -14,6 +14,7 @@ export function selectArtwork(catalog, name) {
     throw new Error("השם עדיין לא מוכן במאגר הגרפיטי. לא נשלחה בקשת יצירה.");
   }
   if (!/^[a-f0-9]{20}\.png$/u.test(entry.file) || !/^[a-f0-9]{64}$/u.test(entry.sha256)) throw new Error("Invalid artwork manifest");
+  if (entry.composition !== undefined && (entry.composition !== "side-two-line-v1" || entry.layoutReview?.sha256 !== entry.sha256 || !Array.isArray(entry.layoutReview?.lines) || entry.layoutReview.lines.length !== 2 || entry.layoutReview.lines.some(line=>typeof line!=="string"||!line.trim()) || entry.layoutReview.lines.join(" ") !== name)) throw new Error("Invalid artwork composition review");
   const reading = entry.ocr;
   const matched = reading?.status === "matched" && reading.uncertain === false && typeof reading.text === "string" && reading.text.normalize("NFC") === name.normalize("NFC");
   const override = ["needs_review", "unavailable"].includes(reading?.status) && typeof reading.overrideReason === "string" && reading.overrideReason.trim().length >= 20;

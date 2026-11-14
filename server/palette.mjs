@@ -1,6 +1,6 @@
 import sharp from "sharp";
 
-export const PALETTE_VERSION=1;
+export const PALETTE_VERSION=2;
 export const paletteInstruction="STRICT PALETTE, overriding all reference colours: ONLY yellow, blue and white, including their shades. White or pale blue plaster, NEVER beige, cream, brown, grey, green, red, orange or natural skin colours. Portrait, clothing, name and slogan must use yellow/blue/white; use deep BLUE/navy rather than black for shadows and outlines. Black is permitted ONLY for background doodles and decorations, never on the person or lettering. Preserve likeness, geometry and expression, not the photograph's colours.";
 
 // All output pixels belong to these blue / yellow / white ramps. No dithering,
@@ -15,6 +15,20 @@ export const approvedPalette=Object.freeze([
  ...ramp([255,220,0],[255,255,255],20),
 ].map(rgb=>Object.freeze(rgb)));
 
+// Version 1 is immutable for saved jobs. Version 2 only adds colour shades.
+export const expandedPalette=Object.freeze([
+ ...approvedPalette,
+ ...ramp([40,163,232],[54,169,225],8),
+ ...ramp([54,169,225],[255,255,255],20),
+ ...ramp([255,220,0],[255,240,106],12),
+ ...ramp([255,240,106],[255,255,255],16),
+].map(rgb=>Object.freeze(rgb)));
+
+export function paletteInstructionForVersion(version){
+ validatePaletteVersion(version);
+ return paletteInstruction+(version===2?" TONAL ADDITION ONLY: retain the existing saturated blue/yellow palette and add subtle light lemon-yellow (#FFF06A) and light sky-blue (#36A9E1) accents. Keep white white; no overall yellow wash. Change colour shades only, never lettering design, lettering placement, portrait geometry, wall composition or flag structure.": "");
+}
+
 function lab([r,g,b]){
  const linear=v=>(v/=255)<=.04045?v/12.92:((v+.055)/1.055)**2.4;
  r=linear(r);g=linear(g);b=linear(b);
@@ -24,14 +38,17 @@ function lab([r,g,b]){
  return [.2104542553*l+.793617785*m-.0040720468*s,1.9779984951*l-2.428592205*m+.4505937099*s,.0259040371*l+.7827717662*m-.808675766*s];
 }
 const paletteLab=approvedPalette.map(lab);
+const expandedPaletteLab=expandedPalette.map(lab);
 
 export function validatePaletteVersion(version){
- if(version!==undefined&&version!==PALETTE_VERSION)throw new Error("Unsupported palette version");
+ if(version!==undefined&&version!==1&&version!==PALETTE_VERSION)throw new Error("Unsupported palette version");
 }
 
 export async function enforcePalette(bytes,version){
  validatePaletteVersion(version);
  if(version===undefined)return bytes; // Historical output remains byte-for-byte unchanged.
+ const colours=version===2?expandedPalette:approvedPalette;
+ const labs=version===2?expandedPaletteLab:paletteLab;
  const {data,info}=await sharp(bytes).flatten({background:"#ffffff"}).toColourspace("srgb").removeAlpha().raw().toBuffer({resolveWithObject:true});
  const cache=new Map();
  for(let p=0;p<data.length;p+=3){
@@ -40,12 +57,12 @@ export async function enforcePalette(bytes,version){
   if(!rgb){
    const colour=lab([data[p],data[p+1],data[p+2]]);
    let best=Infinity,index=0;
-   for(let i=0;i<paletteLab.length;i++){
-    const candidate=paletteLab[i];
+   for(let i=0;i<labs.length;i++){
+    const candidate=labs[i];
     const distance=(colour[0]-candidate[0])**2+(colour[1]-candidate[1])**2+(colour[2]-candidate[2])**2;
     if(distance<best){best=distance;index=i;}
    }
-   rgb=approvedPalette[index];cache.set(key,rgb);
+   rgb=colours[index];cache.set(key,rgb);
   }
   data[p]=rgb[0];data[p+1]=rgb[1];data[p+2]=rgb[2];
  }

@@ -35,8 +35,8 @@ test("transparent pixels flatten to white and pixel positions and dimensions rem
 test("historical images are returned untouched; unsupported versions fail closed",async()=>{
  const original=Buffer.from("not even an image");
  assert.equal(await enforcePalette(original),original);
- assert.throws(()=>validatePaletteVersion(2));
- await assert.rejects(enforcePalette(original,2),/Unsupported palette/);
+ assert.throws(()=>validatePaletteVersion(3));
+ await assert.rejects(enforcePalette(original,3),/Unsupported palette/);
 });
 
 test("both image prompts override warm reference walls, without modifying historical prompts",()=>{
@@ -47,7 +47,7 @@ test("both image prompts override warm reference walls, without modifying histor
   assert.doesNotMatch(prompt,/neutral beige only for bare wall/);
  }
  assert.match(referenceGenerationPrompt("seed",{version:1,headerBottom:300}),/neutral beige only for bare wall/);
- assert.throws(()=>referenceRefinementPrompt({...style,paletteVersion:2}));
+ assert.throws(()=>referenceRefinementPrompt({...style,paletteVersion:3}));
 });
 
 test("correction and layout repair inherit palette version; old jobs are not upgraded",async()=>{

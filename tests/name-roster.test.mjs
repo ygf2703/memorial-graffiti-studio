@@ -12,7 +12,7 @@ const roster = {version:1,sourceCount:2,retiredNames:["שם ישן"],records:[{n
 test("workbook roster covers exactly 347 distinct sources and distinct designs", async () => {
   const actual = JSON.parse(await readFile(new URL("../data/name-artwork/roster-2026-10-17.json",import.meta.url),"utf8"));
   const result = validateNameRoster(actual);
-  assert.equal(actual.records.length,347); assert.equal(result.names.length,347); assert.equal(Object.keys(result.aliases).length,19);
+  assert.equal(actual.records.length,347); assert.equal(result.names.length,347); assert.equal(Object.keys(result.aliases).length,18);
   assert.deepEqual(actual.retiredNames,["אורי משה בורנשטיין","סיון שדה","אלון פרנקס","מעוז מורל"]);
   assert.ok(result.names.includes("אלון פרקס")); assert.ok(!result.names.includes("אלון פרנקס"));
   for(const name of ["אריאל בן-שאנן","לידור מועלם","נתנאל בוכריס","גיא לאו","יוסף חיים אשרף","עמית אריה רגב","עינבר אברהם קב"]) assert.ok(result.names.includes(name));

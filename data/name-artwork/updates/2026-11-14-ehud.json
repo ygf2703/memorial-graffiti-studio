@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-14",
+  "tool": "built-in-imagegen",
+  "prompt": "Use case: text-localization. Make a NEW transparent Hebrew graffiti name asset matching the attached angular hand-painted graffiti STYLE, but CHANGE TEXT to EXACTLY \"אהוד נחום\". CRITICAL first word is אהוד, characters in reading order א ה ו ד, NOT אוהד. Second word נחום characters נ ח ו ם final mem. One horizontal RTL line \"אהוד נחום\". Authentic large irregular spray-painted graffiti letters, connected dark NAVY outlines, chipped pigment, subtle spray-edge softness, small broken white highlights, natural short proportional downward drips attached to thick strokes, sparse supporting splatter. Add an additional blue and yellow shade for richer depth: cobalt blue #1954B8, bright sky blue #36A9E1, navy #092C57; saturated yellow #FFD52A plus lemon yellow #FFF06A. White highlights. ONLY blue/yellow/white shades; NO red green orange brown beige black. Yellow and blue varied fills, NOT just a yellow flat fill. Exact easily readable Hebrew, no essential stroke erased. Entire artwork safely inset with transparent margin on all sides. TRUE transparent alpha background. No wall, no rectangular background, no drop-shadow haze/glow, no checkerboard drawn, no person/flag/slogan/watermark. Preserve a real aerosol lettering feel rather than ordinary typeset font. Exact text again: אהוד נחום.",
+  "original": {
+    "name": "אוהד נחום",
+    "file": "aaaf7640084160702866.png",
+    "sha256": "aaaf764008416070286692e3d59324a4c7236f57cc4bd458b5d44491efa529b2",
+    "status": "verified",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "style": 7,
+    "ocr": {
+      "sha256": "aaaf764008416070286692e3d59324a4c7236f57cc4bd458b5d44491efa529b2",
+      "status": "unavailable",
+      "text": "",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:39:41.728Z",
+      "overrideReason": "אוהד נקרא עם ה' ורגל מופרדת, ונחום מסתיים בם סופית סגורה. אין אות נוספת בין שתי המילים."
+    }
+  },
+  "updated": {
+    "name": "אהוד נחום",
+    "file": "70938edc6fd8cacf4151.png",
+    "sha256": "70938edc6fd8cacf41517d8b9ec0147c61783372a7bb1f36fb834576d3a29a38",
+    "status": "verified",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "style": 7,
+    "ocr": {
+      "sha256": "70938edc6fd8cacf41517d8b9ec0147c61783372a7bb1f36fb834576d3a29a38",
+      "status": "needs_review",
+      "text": "",
+      "uncertain": true,
+      "checkedAt": "2026-11-14",
+      "overrideReason": "בדיקה חזותית ישירה של המקור ורינדור 1080: אהוד באותיות א-ה-ו-ד ולא אוהד, נחום באותיות נ-ח-ו-ם סופית. המשתמש אישר את הנכס; אין טענה לתמלול OCR תואם."
+    }
+  },
+  "review": {
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "notes": "User-approved new spelling and artwork. Exact source letters and native 1080 light/dark renders visually checked. Original PNG and durable job metadata preserved; no OCR match claimed.",
+    "evidence": ".netlify/ehud-review-light.png; .netlify/ehud-review-dark.png"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-14",
+  "tool": "built-in-imagegen",
+  "notes": "Explicit user-requested replacement. All original PNGs retained for pinned historical jobs. No portrait generation or layout-policy change. OCR not claimed; manual visual reviews bound to hashes.",
+  "entries": [
+    {
+      "original": {
+        "name": "אמנון נסים",
+        "file": "4967d9cf94c24d4b5400.png",
+        "sha256": "4967d9cf94c24d4b5400c9dbad059fa204b98dc2a59727978545224d74abe223",
+        "status": "verified",
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "style": 7,
+        "ocr": {
+          "sha256": "4967d9cf94c24d4b5400c9dbad059fa204b98dc2a59727978545224d74abe223",
+          "status": "matched",
+          "text": "אמנון נסים",
+          "uncertain": false,
+          "model": "gpt-6.1-sol",
+          "version": "blind-artwork-v4-sol-light-wall",
+          "checkedAt": "2026-10-16T07:43:28.211Z"
+        }
+      },
+      "updated": {
+        "name": "אמנון ניסים",
+        "file": "98f42b9bcc6032ad5679.png",
+        "sha256": "98f42b9bcc6032ad567910c0ede546dea830b1a46a1554b816992623d38184c3",
+        "status": "verified",
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "style": 7,
+        "ocr": {
+          "sha256": "98f42b9bcc6032ad567910c0ede546dea830b1a46a1554b816992623d38184c3",
+          "status": "needs_review",
+          "text": "",
+          "uncertain": true,
+          "checkedAt": "2026-11-14",
+          "overrideReason": "נבדק חזותית במקור וברינדור 1080: אמנון באותיות א-מ-נ-ו-ן; ניסים נ-י-ס-י-ם, כולל שתי יו״דים. המשתמש אישר. אין טענה לתמלול OCR תואם."
+        }
+      },
+      "prompt": "Use case: text-localization. Edit attached Hebrew graffiti name asset: replace text with EXACT \"אמנון ניסים\". Keep the same authentic hand-painted angular graffiti lettering style, one horizontal RTL line, bold yellow fills, deep blue/navy outlines and blue drop depth, rough spray edges, worn paint texture, restrained splatters and short proportional paint drips. Exact first word אמנון = א מ נ ו ן. Exact surname ניסים = נ י ס י ם, including BOTH yods; NOT נסים. Every letter clearly legible, no essential strokes erased. Current blue/yellow/white palette with subtle light lemon yellow #FFF06A and sky blue #36A9E1 accents, navy shadow. No black, beige, red, green or orange. True transparent alpha background with generous transparent margins, no opaque rectangle, no glow/haze, no wall, no face, no slogan, no extra words, no watermark. Preserve graffiti design language instead of ordinary typed font. Render ONLY exact text \"אמנון ניסים\".",
+      "technical": {
+        "width": 1774,
+        "height": 887,
+        "hasAlpha": true,
+        "transparentPixels": 839140,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "paintedRatio": 1.974914481185861,
+      "review": {
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "evidence": ".netlify/three-names-0-light.png; .netlify/three-names-0-dark.png"
+      }
+    },
+    {
+      "original": {
+        "name": "אשרת פינטו",
+        "file": "52c481c237a9721790ec.png",
+        "sha256": "52c481c237a9721790ec23a543b76d930517fb80a3486c4207c707b168942ffe",
+        "status": "verified",
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "style": 5,
+        "ocr": {
+          "sha256": "52c481c237a9721790ec23a543b76d930517fb80a3486c4207c707b168942ffe",
+          "status": "matched",
+          "text": "אשרת פינטו",
+          "uncertain": false,
+          "model": "gpt-6.1-sol",
+          "version": "blind-artwork-v4-sol-light-wall",
+          "checkedAt": "2026-10-16T07:32:32.578Z"
+        }
+      },
+      "updated": {
+        "name": "אשרת פינטו",
+        "file": "cbb60f9a01934627af74.png",
+        "sha256": "cbb60f9a01934627af748c7ce01aeca81333d15033dd31bb22fcc6df2e237c12",
+        "status": "verified",
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "style": 5,
+        "ocr": {
+          "sha256": "cbb60f9a01934627af748c7ce01aeca81333d15033dd31bb22fcc6df2e237c12",
+          "status": "needs_review",
+          "text": "",
+          "uncertain": true,
+          "checkedAt": "2026-11-14",
+          "overrideReason": "נבדק חזותית במקור וברינדור בהיר וכהה: אשרת ללא ו׳ בשם הפרטי בשורה העליונה, פינטו בשורה התחתונה. כל האותיות נשמרו; אין טענה לתמלול OCR תואם."
+        }
+      },
+      "prompt": "Use case: text-localization. Create new COMPACT TWO-LINE transparent Hebrew graffiti asset matching attached reference hand-painted angular graffiti style. EXACT top line \"אשרת\", EXACT bottom line \"פינטו\". Entire name \"אשרת פינטו\". Characters א ש ר ת / פ י נ ט ו. First word אשרת WITHOUT an extra ו. Broad substantial very readable individual Hebrew letters with strong navy contours, yellow/blue/white pigment, modest sky-blue and light lemon accents. Authentic irregular aerosol edges and subtle worn paint, white highlights, short attached drips no longer than 8% of letter height, sparse small splatters. Very tight compact name silhouette, balanced two rows with only narrow separation, target painted aspect ratio about 1.5 to 1.7 width/height. Keep both rows large and readable. No long drips, huge spray clouds, haze or glow expanding bounds; no giant empty margins. True transparent alpha background with a SMALL 4% transparent safe border on every side. No wall, portrait, flag, slogan, watermark, extra text. NO ordinary typeset font. ONLY blue shades including navy, yellow shades, white. No red green brown beige black. Precise Hebrew spelling and two lines mandatory.",
+      "technical": {
+        "width": 1536,
+        "height": 1024,
+        "hasAlpha": true,
+        "transparentPixels": 630652,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "paintedRatio": 1.604602510460251,
+      "review": {
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "evidence": ".netlify/three-names-1-light.png; .netlify/three-names-1-dark.png"
+      }
+    },
+    {
+      "original": {
+        "name": "אדיר פורטוגל",
+        "file": "3a65622d0a4efadc657d.png",
+        "sha256": "3a65622d0a4efadc657d2dead1b2d58c0692d57c809082afa865bdfce70c4237",
+        "status": "verified",
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "style": 3,
+        "ocr": {
+          "sha256": "3a65622d0a4efadc657d2dead1b2d58c0692d57c809082afa865bdfce70c4237",
+          "status": "matched",
+          "text": "אדיר פורטוגל",
+          "uncertain": false,
+          "model": "gpt-6.1-sol",
+          "version": "blind-artwork-v4-sol-light-wall",
+          "checkedAt": "2026-10-16T13:43:22.695Z"
+        }
+      },
+      "updated": {
+        "name": "אדיר פורטוגל",
+        "file": "33ccad503800bca7b624.png",
+        "sha256": "33ccad503800bca7b624ff9c87a85652a0447361f2bf32abe7a6441228cd21de",
+        "status": "verified",
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "style": 3,
+        "ocr": {
+          "sha256": "33ccad503800bca7b624ff9c87a85652a0447361f2bf32abe7a6441228cd21de",
+          "status": "needs_review",
+          "text": "",
+          "uncertain": true,
+          "checkedAt": "2026-11-14",
+          "overrideReason": "נבדק חזותית במקור וברינדור בהיר וכהה: אדיר בשורה העליונה ופורטוגל בפ-ו-ר-ט-ו-ג-ל בשורה התחתונה, לפי אישור המשתמש. אין טענה לתמלול OCR תואם."
+        }
+      },
+      "prompt": "Use case: text-localization. Create new COMPACT TWO-LINE transparent Hebrew graffiti asset matching attached reference hand-painted angular graffiti style. EXACT top line \"אדיר\", EXACT bottom line \"פורטוגל\". Entire name \"אדיר פורטוגל\". Characters א ד י ר / פ ו ר ט ו ג ל. Broad substantial very readable individual Hebrew letters with strong navy contours, yellow/blue/white pigment, modest sky-blue and light lemon accents. Authentic irregular aerosol edges and subtle worn paint, white highlights, short attached drips no longer than 8% of letter height, sparse small splatters. Very tight compact name silhouette, balanced two rows with only narrow separation, target painted aspect ratio about 1.5 to 1.7 width/height. Keep both rows large and readable. No long drips, huge spray clouds, haze or glow expanding bounds; no giant empty margins. True transparent alpha background with a SMALL 4% transparent safe border on every side. No wall, portrait, flag, slogan, watermark, extra text. NO ordinary typeset font. ONLY blue shades including navy, yellow shades, white. No red green brown beige black. Precise Hebrew spelling and two lines mandatory.",
+      "technical": {
+        "width": 1536,
+        "height": 1024,
+        "hasAlpha": true,
+        "transparentPixels": 761590,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "paintedRatio": 1.5813704496788008,
+      "review": {
+        "spellingChecked": true,
+        "visualChecked": true,
+        "renderChecked": true,
+        "evidence": ".netlify/three-names-2-light.png; .netlify/three-names-2-dark.png"
+      }
+    }
+  ]
+}

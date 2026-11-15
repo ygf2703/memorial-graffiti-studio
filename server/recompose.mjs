@@ -4,7 +4,7 @@ import {LAYOUT_RECOVERY_VERSION} from "./layout-recovery.mjs";
 
 export async function queueRecompose(store,parentId){
   const parent=await store.get(parentId,{type:"json"});
-  const legacyWhite=parent?.status==="completed"&&parent.layoutRecoveryVersion===1&&parent.namePlacement?.source==="prebuilt-reflow";
+  const legacyWhite=parent?.status==="completed"&&[1,2].includes(parent.layoutRecoveryVersion)&&["prebuilt-reflow","prebuilt-wall-reflow"].includes(parent.namePlacement?.source);
   const failed=parent?.status==="failed"&&!parent.recomposeOnly&&parent.error?.startsWith("לא נמצא מיקום בטוח");
   if(!parent?.nameArtwork||(!legacyWhite&&!failed))throw new Error("Not a repairable layout");
   const base=await store.get(parentId+"/base",{type:"arrayBuffer"});

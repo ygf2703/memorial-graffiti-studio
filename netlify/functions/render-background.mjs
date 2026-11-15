@@ -11,6 +11,7 @@ import { preparePortraitBase } from "../../server/portrait-refinement.mjs";
 import {catalogueComposition,REFERENCE_STYLE_VERSION} from "../../server/reference-style.mjs";
 import {enforcePalette,validatePaletteVersion} from "../../server/palette.mjs";
 import {placeCatalogueWithRecovery,reviewWithLayoutProof,LAYOUT_RECOVERY_VERSION} from "../../server/layout-recovery.mjs";
+import {dominantPortraitSide} from "../../server/dominant-wall.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -31,7 +32,7 @@ export default async (request) => {
     if(job.referenceStyleVersion!==undefined&&job.referenceStyleVersion!==REFERENCE_STYLE_VERSION)throw new Error("Unsupported reference style");
     if(job.referenceStyleVersion&&!artwork)throw new Error("Missing approved name artwork");
     validatePaletteVersion(job.paletteVersion);
-    const referenceStyle=job.referenceStyleVersion?{version:REFERENCE_STYLE_VERSION,paletteVersion:job.paletteVersion,nameSizeVersion:job.nameSizeVersion,...await catalogueComposition(artwork,job.nameSizeVersion,job.layoutRecoveryVersion)}:null;
+    const referenceStyle=job.referenceStyleVersion?{version:REFERENCE_STYLE_VERSION,paletteVersion:job.paletteVersion,nameSizeVersion:job.nameSizeVersion,portraitSide:dominantPortraitSide(job.designSeed||id),...await catalogueComposition(artwork,job.nameSizeVersion,job.layoutRecoveryVersion)}:null;
     if(referenceStyle&&job.nameArtwork.composition)referenceStyle.nameComposition=job.nameArtwork.composition;
     const designSeed = job.designSeed || id;
     const exactName = job.layoutVersion === EXACT_NAME_LAYOUT;
@@ -53,17 +54,17 @@ export default async (request) => {
       await store.set(`${id}/base`, result);
       if (adaptiveName) {
         const wrapped = job.nameArtwork.wrapped ? await fetchArtwork(job.nameArtwork.wrapped) : null;
-        const composed = await placeCatalogueWithRecovery({bytes:result,artwork,wrapped,placementVersion:job.namePlacementVersion,captionVariant:job.captionVariant,recoveryVersion:job.layoutRecoveryVersion,context:{name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle)||[1,LAYOUT_RECOVERY_VERSION].includes(job.layoutRecoveryVersion),nameComposition:job.layoutRecoveryVersion===2?undefined:job.nameArtwork.composition}});
+        const composed = await placeCatalogueWithRecovery({bytes:result,artwork,wrapped,placementVersion:job.namePlacementVersion,captionVariant:job.captionVariant,recoveryVersion:job.layoutRecoveryVersion,context:{name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle)||[1,2,LAYOUT_RECOVERY_VERSION].includes(job.layoutRecoveryVersion),nameComposition:job.layoutRecoveryVersion>=2?undefined:job.nameArtwork.composition}});
         composition = composed;
         await store.setJSON(`${id}/layout`,composed.detection||{source:"prebuilt-reflow",wholeMuralProtected:true});
         result = composed.bytes; namePlacement = composed.placement;
       } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant, job.visualVersion||0) : await compositeExactName(result, input.name, designSeed, variant);
-      result = await compositeCaption(result, job.captionVariant);
-      if (job.namePlacementVersion === 2) result = await vividPoster(result);
+      result = await compositeCaption(result, job.captionVariant,job.layoutRecoveryVersion===3?220:290);
+      if (job.namePlacementVersion === 2 && job.layoutRecoveryVersion !== 3) result = await vividPoster(result);
     }
     result = await enforcePalette(result,job.paletteVersion);
     await store.set(`${id}/result`, result);
-    const review = reviewWithLayoutProof(await reviewImage(result.toString("base64"), input.name, fetch, fixedCaption, exactName ? "image/png" : "image/jpeg"),composition);
+    const review = reviewWithLayoutProof(await reviewImage(result.toString("base64"), input.name, fetch, fixedCaption, exactName ? "image/png" : "image/jpeg",job.layoutRecoveryVersion===3),composition);
     await store.setJSON(id, { ...job, layoutVersion: exactName ? EXACT_NAME_LAYOUT : fixedCaption ? CAPTION_LAYOUT : INTEGRATED_LAYOUT, ...(exactName ? { nameVariant: variant, nameSource: namePlacement?.source === "literal-two-line" ? "literal-two-line" : artwork ? "prebuilt-reviewed" : "literal-input" } : {}), ...(job.nameStyleVersion === NAME_STYLE_VERSION ? { nameStyleLabel: namePlacement?.source === "literal-two-line" ? "גרפיטי מקומי בשתי שורות" : artwork ? "גרפיטי מוכן מראש" : graffitiStyles[variant - 1].label } : {}), designSeed, ...(namePlacement ? { namePlacement } : {}), review, status: "completed" });
   } catch (error) {
     await store.setJSON(id, { ...job, status: "failed", error: /^(לא נמצא מיקום בטוח|שירות|מפתח|החיבור|אין יתרה|לחשבון)/u.test(error.message) ? error.message : "יצירת התמונה נכשלה. בדקו את החיבור ונסו שוב." });

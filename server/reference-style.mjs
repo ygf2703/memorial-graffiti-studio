@@ -13,15 +13,19 @@ export async function catalogueComposition(artwork,nameSizeVersion,layoutRecover
  if(nameSizeVersion!==undefined&&nameSizeVersion!==NAME_SIZE_VERSION)throw new Error("Invalid name size version");
  // Use rendered dimensions: metadata() alone reports the untrimmed input.
  const trimmed=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer({resolveWithObject:true});
- const headerBottom=layoutRecoveryVersion===2
+ const headerBottom=[2,3].includes(layoutRecoveryVersion)
   ?Math.min(288,Math.max(180,Math.ceil(Math.min(1008*trimmed.info.height/trimmed.info.width,240))+48))
   :nameSizeVersion===NAME_SIZE_VERSION
   ?Math.min(440,Math.max(300,Math.ceil(1008*trimmed.info.height/trimmed.info.width)+48))
   :Math.min(380,Math.max(200,Math.ceil(900*trimmed.info.height/trimmed.info.width)+36));
- return {headerBottom,...(layoutRecoveryVersion===2?{wallCompositionVersion:2}:{})};
+ return {headerBottom,...([2,3].includes(layoutRecoveryVersion)?{wallCompositionVersion:layoutRecoveryVersion}:{})};
 }
 
 export function referenceCompositionInstruction(style){
+ if(style?.wallCompositionVersion===3){
+  if(style.version!==REFERENCE_STYLE_VERSION||!["LEFT","RIGHT"].includes(style.portraitSide))throw new Error("Invalid dominant portrait side");
+  return `DOMINANT ASYMMETRIC GRAFFITI COMPOSITION: the illustrated person, clothing and connected blue/yellow painted strokes must occupy MORE THAN 85% of this square wall, reaching the left, right and lower edges. This refers to painted illustration, not bare plaster texture or a small image placed on a larger wall. NO centered portrait medallion, postage stamp, inset picture, surrounding empty wall frame, title/footer panels or collage. The recognizable face is distinctly on the ${style.portraitSide}, NOT centered; show head AND shoulders, not an extreme face close-up. Make the person slightly smaller relative to the wall; keep the illustration dominant by filling surrounding wall with connected graffiti brush/spray strokes rather than empty margins. Use richer background accents in golden yellow, saturated sunshine yellow, light lemon and pale yellow, together with blue; no orange or brown. Never colour the flag yellow. Use bold six-layer aerosol/stencil GRAFFITI with hand-cut colour shapes, navy contours, brush/spray edges and restrained paint drips. NO photographic pores, smooth photo shading, fine skin texture or oil-painted portrait. Preserve likeness through the exact source anatomy, pose and expression. Keep forehead, eyes, nose, mouth and chin clear of the name and lower slogan. Reserve upper wall y=24..240 for existing catalogue graffiti letters above or beside the face; hair and shoulders may extend behind lettering, facial features may not. Keep the face's chin above y=790. Paint the full recognizable Israeli flag beside the person on the opposite side, its star clear of lettering and face. The slogan will overlay the painted lower shoulders/wall near y=810..1030, not a separate panel. Rich connected spray, brush strokes, clothing and flag extend across almost the entire image. Do not paint any text. Preserve this off-center composition during refinement.`;
+ }
  if(style?.wallCompositionVersion===2){
   if(style.version!==REFERENCE_STYLE_VERSION||!Number.isInteger(style.headerBottom)||style.headerBottom<180||style.headerBottom>288)throw new Error("Invalid wall composition");
   return `ONE CONTINUOUS FULL-BLEED GRAFFITI WALL: plaster, portrait, flag and lettering areas are parts of ONE painted wall, reaching all four image edges. Never make a white page, separate title/footer panels, collage, inset portrait, border, card, or rectangular photo frame. Keep lightly textured wall at x=36..1044, y=24..${style.headerBottom} for the existing large catalogue name. Keep the whole head and hair just below y=${style.headerBottom+20}, with its chin above y=720. Make the recognizable portrait LARGE, filling most of the remaining wall; shoulders extend behind the bottom slogan. Keep the complete flag and star beside the head, below the title and above y=720. The existing slogan will be painted across the lower wall, not in a separate box. Continuous plaster texture, layered blue/yellow spray strokes and tags connect the entire composition. Do not paint any text. Preserve this full-wall composition during face refinement.`;

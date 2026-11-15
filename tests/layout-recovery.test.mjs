@@ -63,7 +63,7 @@ test("successful placements stay unchanged; historical and unrelated failures ar
  await assert.rejects(placeCatalogueWithRecovery({...input,recoveryVersion:undefined},{detect:failure}),/לא נמצא/);
  await assert.rejects(placeCatalogueWithRecovery({...input,context:{catalogueOnly:false}},{detect:failure}),/לא נמצא/);
  await assert.rejects(placeCatalogueWithRecovery(input,{detect:async()=>{throw new Error("Asset unavailable");}}),/Asset unavailable/);
- await assert.rejects(placeCatalogueWithRecovery({...input,recoveryVersion:3}),/Unsupported/);
+ await assert.rejects(placeCatalogueWithRecovery({...input,recoveryVersion:4}),/Unsupported/);
  await assert.rejects(placeCatalogueWithRecovery({...input,artwork:Buffer.from("broken")},{detect:failure}));
  for(const dims of [[0,2,3],[2,0,3],[2,3,291],[NaN,3,20]])assert.throws(()=>reflowPlan(...dims));
 });
@@ -73,7 +73,7 @@ test("explicit repair upgrades historical layout failures; correction inherits r
  const values=new Map([["parent",parent],["parent/base",base.buffer],["parent/recompose-v1",{id:"old-failed"}],["old-failed",{status:"failed",recomposeOnly:true}]]);
  const store={get:async k=>values.get(k),setJSON:async(k,v)=>{if(!values.has(k))values.set(k,v);}};
  const repaired=await queueRecompose(store,"parent");
- assert.equal(values.get(repaired.id).layoutRecoveryVersion,2);
+ assert.equal(values.get(repaired.id).layoutRecoveryVersion,3);
  assert.notEqual(repaired.id,"old-failed");
  assert.equal(values.get("old-failed").status,"failed");
  assert.equal((await queueRecompose(store,"parent")).id,repaired.id);
@@ -82,7 +82,7 @@ test("explicit repair upgrades historical layout failures; correction inherits r
   values.set("completed",{...parent,status:"completed",layoutRecoveryVersion:version});
   values.delete("completed/correction");
   const child=await queueCorrection(store,"completed",{name:"test",type:"image/jpeg",bytes:Buffer.from("photo")},"portrait");
-  assert.equal(values.get(child.id).layoutRecoveryVersion,version===1?2:version);
+  assert.equal(values.get(child.id).layoutRecoveryVersion,version===1?3:version);
  }
 });
 

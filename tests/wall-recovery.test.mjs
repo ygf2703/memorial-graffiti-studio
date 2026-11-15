@@ -34,7 +34,8 @@ test("all edges contain textured wall and protected portrait pixels stay opaque 
  const protectedPixels=await sharp(result.bytes).extract({left:p.left+2,top:p.top+2,width:p.right-p.left-4,height:p.bottom-p.top-4}).removeAlpha().raw().toBuffer();
  for(let i=0;i<protectedPixels.length;i+=3)assert.deepEqual([...protectedPixels.subarray(i,i+3)],[22,141,204]);
  for(const corner of [{left:0,top:0},{left:1016,top:0},{left:0,top:1016},{left:1016,top:1016}]){
-  const stats=await sharp(result.bytes).extract({...corner,width:64,height:64}).stats();
+  const crop=await sharp(result.bytes).extract({...corner,width:64,height:64}).png().toBuffer();
+  const stats=await sharp(crop).stats();
   assert.ok(stats.channels.some(channel=>channel.stdev>2));
   assert.ok(stats.channels.some(channel=>channel.mean<245));
  }
@@ -42,7 +43,7 @@ test("all edges contain textured wall and protected portrait pixels stay opaque 
 });
 
 test("current policy uses full-wall recovery; unknown bounds preserve every original pixel region",async()=>{
- assert.equal(LAYOUT_RECOVERY_VERSION,2);
+ assert.equal(LAYOUT_RECOVERY_VERSION,3);
  for(const detect of [async()=>detection,blocked]){
   const result=await placeCatalogueWithRecovery({bytes:source,artwork,placementVersion:2,captionVariant:9,recoveryVersion:2,context:{catalogueOnly:true}},{detect,compose:blocked});
   assert.equal(result.placement.source,"prebuilt-wall-reflow");
@@ -55,10 +56,10 @@ test("completed legacy white results can be repaired once without deleting or bu
  const map=new Map([["white",parent],["white/base",source.buffer]]);
  const store={get:async key=>map.get(key),setJSON:async(key,value)=>{if(!map.has(key))map.set(key,value);}};
  const a=await queueRecompose(store,"white"),b=await queueRecompose(store,"white");
- assert.equal(a.id,b.id);assert.equal(map.get(a.id).layoutRecoveryVersion,2);
+ assert.equal(a.id,b.id);assert.equal(map.get(a.id).layoutRecoveryVersion,3);
  assert.equal(map.get(a.id).recomposeOnly,true);assert.equal(map.get(a.id).parentId,"white");
  assert.equal(map.get("white"),parent);
- for(const patch of [{layoutRecoveryVersion:2},{namePlacement:{source:"normal"}},{nameArtwork:null}]){
+ for(const patch of [{layoutRecoveryVersion:3},{namePlacement:{source:"normal"}},{nameArtwork:null}]){
   map.set("invalid",{...parent,...patch});await assert.rejects(queueRecompose(store,"invalid"));
  }
 });
@@ -85,7 +86,7 @@ test("restored white cards offer a repair button that queues only native recompo
  });
  show("test",{poster:"old.png",job:{id:"white",layoutRecoveryVersion:1,namePlacement:{source:"prebuilt-reflow"}}});
  const button=cards[0].children.find(child=>child.tag==="button");
- assert.match(button.text,/החזרת קיר גרפיטי רציף/);
+ assert.match(button.text,/הגדלת ציור הקיר/);
  await button.listener();
  assert.equal(requests.length,1);assert.equal(requests[0].url,"/api/recompose");assert.equal(requests[0].body.id,"white");
  assert.equal(saved[0].id,"repaired");assert.equal(cards.length,2);

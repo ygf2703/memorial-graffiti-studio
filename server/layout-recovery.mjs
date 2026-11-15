@@ -2,8 +2,9 @@ import sharp from "sharp";
 import {captionAsset} from "./composite.mjs";
 import {detectPortraitLayout,composePlacedArtwork} from "./name-placement.mjs";
 import {composeWallRecovery} from "./wall-recovery.mjs";
+import {composeDominantWall} from "./dominant-wall.mjs";
 
-export const LAYOUT_RECOVERY_VERSION=2;
+export const LAYOUT_RECOVERY_VERSION=3;
 
 export function reviewWithLayoutProof(review,composed){
  if(composed?.placement?.source==="prebuilt-wall-reflow"&&composed.placement.wholeMuralProtected)return {...review,visionNamePlacement:review.namePlacement||"uncertain",namePlacement:"clear_above",placementVerification:"whole-mural-wall-v2"};
@@ -38,7 +39,12 @@ export async function reflowCatalogue(bytes,artwork,captionVariant){
 
 export async function placeCatalogueWithRecovery(input,deps={}){
  const {bytes,artwork,wrapped,context,placementVersion,captionVariant,recoveryVersion}=input;
- if(recoveryVersion!==undefined&&![1,2].includes(recoveryVersion))throw new Error("Unsupported layout recovery version");
+ if(recoveryVersion!==undefined&&![1,2,3].includes(recoveryVersion))throw new Error("Unsupported layout recovery version");
+ if(recoveryVersion===3){
+  let measured;
+  try{measured=await (deps.detect||((b)=>detectPortraitLayout(b,fetch,true)))(bytes);}catch{/* Final review must check unverified layout. */}
+  return composeDominantWall(bytes,artwork,measured,context);
+ }
  let detection;
  try{
   detection=await (deps.detect||detectPortraitLayout)(bytes);

@@ -1,10 +1,12 @@
 import sharp from "sharp";
 import {captionAsset} from "./composite.mjs";
 import {detectPortraitLayout,composePlacedArtwork} from "./name-placement.mjs";
+import {composeWallRecovery} from "./wall-recovery.mjs";
 
-export const LAYOUT_RECOVERY_VERSION=1;
+export const LAYOUT_RECOVERY_VERSION=2;
 
 export function reviewWithLayoutProof(review,composed){
+ if(composed?.placement?.source==="prebuilt-wall-reflow"&&composed.placement.wholeMuralProtected)return {...review,visionNamePlacement:review.namePlacement||"uncertain",namePlacement:"clear_above",placementVerification:"whole-mural-wall-v2"};
  if(!composed?.recovered||composed.placement?.source!=="prebuilt-reflow")return review;
  // Only position is proved by the disjoint native regions, never spelling/likeness.
  return {...review,visionNamePlacement:review.namePlacement||"uncertain",namePlacement:"clear_above",placementVerification:"separate-regions-v1"};
@@ -36,13 +38,15 @@ export async function reflowCatalogue(bytes,artwork,captionVariant){
 
 export async function placeCatalogueWithRecovery(input,deps={}){
  const {bytes,artwork,wrapped,context,placementVersion,captionVariant,recoveryVersion}=input;
- if(recoveryVersion!==undefined&&recoveryVersion!==LAYOUT_RECOVERY_VERSION)throw new Error("Unsupported layout recovery version");
+ if(recoveryVersion!==undefined&&![1,2].includes(recoveryVersion))throw new Error("Unsupported layout recovery version");
+ let detection;
  try{
-  const detection=await (deps.detect||detectPortraitLayout)(bytes);
+  detection=await (deps.detect||detectPortraitLayout)(bytes);
   const result=await (deps.compose||composePlacedArtwork)(bytes,artwork,detection,placementVersion,wrapped,context);
   return {...result,detection,recovered:false};
  }catch(error){
-  if(recoveryVersion!==LAYOUT_RECOVERY_VERSION||!context?.catalogueOnly||!error.message?.startsWith("לא נמצא מיקום בטוח"))throw error;
+  if(![1,2].includes(recoveryVersion)||!context?.catalogueOnly||!error.message?.startsWith("לא נמצא מיקום בטוח"))throw error;
+  if(recoveryVersion===2)return composeWallRecovery(bytes,artwork,captionVariant,detection);
   return reflowCatalogue(bytes,artwork,captionVariant);
  }
 }

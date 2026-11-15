@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { CAPTION_LAYOUT, EXACT_NAME_LAYOUT, NAME_STYLE_COUNT, captionVariant } from "../public/design.js";
 import { nameVariant } from "./exact-name.mjs";
+import {LAYOUT_RECOVERY_VERSION} from "./layout-recovery.mjs";
 
 export const correctionReasons = ["portrait", "name"];
 export function correctionInstruction(reason, name, exactName = false, largeName = false, adaptiveName = false) {
@@ -35,7 +36,7 @@ export async function queueCorrection(store, parentId, input, reason) {
     ...(parent.visualVersion ? { visualVersion: parent.visualVersion } : {}),
     ...(parent.paletteVersion !== undefined ? { paletteVersion: parent.paletteVersion } : {}),
     ...(parent.nameSizeVersion !== undefined ? { nameSizeVersion: parent.nameSizeVersion } : {}),
-    ...(parent.layoutRecoveryVersion !== undefined ? { layoutRecoveryVersion: parent.layoutRecoveryVersion } : {}),
+    ...(parent.layoutRecoveryVersion !== undefined ? { layoutRecoveryVersion: parent.layoutRecoveryVersion===1?LAYOUT_RECOVERY_VERSION:parent.layoutRecoveryVersion } : {}),
     ...(parent.referenceStyleVersion ? { referenceStyleVersion: parent.referenceStyleVersion } : {}),
     ...(parent.portraitRefinementVersion ? { portraitRefinementVersion: parent.portraitRefinementVersion, portraitRefinementModel: parent.portraitRefinementModel } : {}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),

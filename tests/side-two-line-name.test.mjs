@@ -36,7 +36,7 @@ test("only the requested names opt into reviewed two-line side composition",asyn
  }
  const worker=await readFile(new URL("../netlify/functions/render-background.mjs",import.meta.url),"utf8");
  assert.match(worker,/referenceStyle.nameComposition=job.nameArtwork.composition/);
- assert.match(worker,/nameComposition:job.nameArtwork.composition/);
+ assert.match(worker,/nameComposition:job.layoutRecoveryVersion===2\?undefined:job.nameArtwork.composition/);
 });
 
 test("side instruction overrides header and is used by both portrait stages",()=>{

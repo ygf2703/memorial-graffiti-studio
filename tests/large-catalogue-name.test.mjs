@@ -50,6 +50,6 @@ test("fresh jobs pin larger size and pass it to layout planning before image gen
  const generate=await readFile(new URL("../netlify/functions/generate.mjs",import.meta.url),"utf8");
  const worker=await readFile(new URL("../netlify/functions/render-background.mjs",import.meta.url),"utf8");
  assert.match(generate,/nameSizeVersion: NAME_SIZE_VERSION/);
- assert.match(worker,/catalogueComposition\(artwork,job.nameSizeVersion\)/);
+ assert.match(worker,/catalogueComposition\(artwork,job.nameSizeVersion,job.layoutRecoveryVersion\)/);
  assert.ok(worker.indexOf("catalogueComposition(artwork,")<worker.indexOf("await preparePortraitBase"));
 });

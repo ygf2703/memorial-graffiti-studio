@@ -4,7 +4,9 @@ import {LAYOUT_RECOVERY_VERSION} from "./layout-recovery.mjs";
 
 export async function queueRecompose(store,parentId){
   const parent=await store.get(parentId,{type:"json"});
-  if(!parent||parent.status!=="failed"||parent.recomposeOnly||!parent.nameArtwork||!parent.error?.startsWith("לא נמצא מיקום בטוח"))throw new Error("Not a layout failure");
+  const legacyWhite=parent?.status==="completed"&&parent.layoutRecoveryVersion===1&&parent.namePlacement?.source==="prebuilt-reflow";
+  const failed=parent?.status==="failed"&&!parent.recomposeOnly&&parent.error?.startsWith("לא נמצא מיקום בטוח");
+  if(!parent?.nameArtwork||(!legacyWhite&&!failed))throw new Error("Not a repairable layout");
   const base=await store.get(parentId+"/base",{type:"arrayBuffer"});
   if(!base?.byteLength)throw new Error("Missing saved base");
   // A failed repair from the older placement policy must not pin the new button
@@ -16,7 +18,7 @@ export async function queueRecompose(store,parentId){
   if(existing)return{id:claim.id,status:existing.status};
   const inherited=Object.fromEntries(["name","nameArtwork","nameVariant","nameStyleVersion","nameStyleCount","visualVersion","paletteVersion","nameSizeVersion","referenceStyleVersion","portraitRefinementVersion","portraitRefinementModel","captionVariant","captionStyleCount","captionMix","designSeed","parentId","correctionReason"].filter(k=>parent[k]!==undefined).map(k=>[k,parent[k]]));
   await store.setJSON(claim.id+"/input",{name:parent.name,type:"image/jpeg",bytes:""},{onlyIfNew:true});
-  await store.setJSON(claim.id,{...inherited,status:"queued",layoutRecoveryVersion:LAYOUT_RECOVERY_VERSION,layoutVersion:EXACT_NAME_LAYOUT,namePlacementVersion:2,recomposeOnly:true,recomposeOf:parentId,createdAt:Date.now()},{onlyIfNew:true});
+  await store.setJSON(claim.id,{...inherited,...(legacyWhite?{parentId:parent.parentId||parentId}:{}),status:"queued",layoutRecoveryVersion:LAYOUT_RECOVERY_VERSION,layoutVersion:EXACT_NAME_LAYOUT,namePlacementVersion:2,recomposeOnly:true,recomposeOf:parentId,createdAt:Date.now()},{onlyIfNew:true});
   return{id:claim.id,status:"queued"};
 }
 

@@ -176,6 +176,8 @@ function showResult(name, { poster, job }) {
   link.download = `${name}-1080.png`; link.href = poster;
   info.append(node("strong", name), link); card.append(image, info);
   if(job.namePlacement?.source==="prebuilt-reflow") card.append(node("p","השם סודר באזור עליון נפרד. התמונה השלמה הוקטנה מתחתיו ללא חיתוך או יצירת דיוקן נוספת.","review-note"));
+  if(job.layoutRecoveryVersion===1&&job.namePlacement?.source==="prebuilt-reflow") appendRecompose(card,name,job.id,"החזרת קיר גרפיטי רציף — ללא יצירת דיוקן נוספת");
+  if(job.namePlacement?.source==="prebuilt-wall-reflow") card.append(node("p","השם שולב בקיר רציף. בדקו את הדמות, חיבור מרקמי הקיר וקריאות הכיתוב לפני אישור.","review-note"));
   if (requiresApproval(job)) {
     // Review is an editorial safeguard, not an access-control boundary.
     link.hidden = true;
@@ -247,8 +249,11 @@ function showResult(name, { poster, job }) {
 function showError(name, message, repairableId) {
   const card = node("article", "", "error-card");
   card.append(node("strong",name),node("p",message));
-  if (repairableId) {
-    const button = node("button","סידור השם מחדש — ללא יצירת דיוקן נוספת"),status = node("p","","review-note");
+  if (repairableId) appendRecompose(card,name,repairableId);
+  results.append(card);
+}
+function appendRecompose(card,name,repairableId,label="סידור השם מחדש — ללא יצירת דיוקן נוספת") {
+    const button = node("button",label),status = node("p","","review-note");
     button.type="button";
     button.addEventListener("click",async()=>{
       if(busy)return;
@@ -263,8 +268,6 @@ function showError(name, message, repairableId) {
       finally{busy=false;buttons();}
     });
     card.append(button,status);
-  }
-  results.append(card);
 }
 async function run(items, restore = false) {
   if (!await checkConnection()) return;

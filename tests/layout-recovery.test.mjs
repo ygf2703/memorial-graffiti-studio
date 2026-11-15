@@ -7,6 +7,7 @@ import {captionAsset,compositeCaption} from "../server/composite.mjs";
 import {queueRecompose} from "../server/recompose.mjs";
 import {queueCorrection} from "../server/correction.mjs";
 import {EXACT_NAME_LAYOUT} from "../public/design.js";
+import {wallRecoveryPlan} from "../server/wall-recovery.mjs";
 
 const failure=()=>{throw new Error("לא נמצא מיקום בטוח לשם ללא הסתרת הראש");};
 const base=await sharp({create:{width:1080,height:1080,channels:3,background:"#168dcc"}}).png().toBuffer();
@@ -26,6 +27,11 @@ test("all 347 catalogue names fit above the entire mural for every caption",asyn
    assert.ok(p.name.left>=24&&p.name.left+p.name.width<=1056,entry.name);
    assert.ok(p.name.height>0&&p.portrait.height>=400,entry.name);
    assert.ok(Math.abs(p.name.width/info.width-p.name.height/info.height)<.01,entry.name);
+   for(const detection of [null,{uncertain:false,head:{x:300,y:200,width:350,height:420},star:{x:740,y:300,width:180,height:180}}]){
+    const wall=wallRecoveryPlan(info.width,info.height,h,detection);
+    assert.ok(wall.name.top+wall.name.height<wall.protectedRegion.top,entry.name);
+    assert.ok(wall.protectedRegion.bottom<wall.captionTop,entry.name);
+   }
   }
  }
 });
@@ -57,7 +63,7 @@ test("successful placements stay unchanged; historical and unrelated failures ar
  await assert.rejects(placeCatalogueWithRecovery({...input,recoveryVersion:undefined},{detect:failure}),/לא נמצא/);
  await assert.rejects(placeCatalogueWithRecovery({...input,context:{catalogueOnly:false}},{detect:failure}),/לא נמצא/);
  await assert.rejects(placeCatalogueWithRecovery(input,{detect:async()=>{throw new Error("Asset unavailable");}}),/Asset unavailable/);
- await assert.rejects(placeCatalogueWithRecovery({...input,recoveryVersion:2}),/Unsupported/);
+ await assert.rejects(placeCatalogueWithRecovery({...input,recoveryVersion:3}),/Unsupported/);
  await assert.rejects(placeCatalogueWithRecovery({...input,artwork:Buffer.from("broken")},{detect:failure}));
  for(const dims of [[0,2,3],[2,0,3],[2,3,291],[NaN,3,20]])assert.throws(()=>reflowPlan(...dims));
 });
@@ -67,7 +73,7 @@ test("explicit repair upgrades historical layout failures; correction inherits r
  const values=new Map([["parent",parent],["parent/base",base.buffer],["parent/recompose-v1",{id:"old-failed"}],["old-failed",{status:"failed",recomposeOnly:true}]]);
  const store={get:async k=>values.get(k),setJSON:async(k,v)=>{if(!values.has(k))values.set(k,v);}};
  const repaired=await queueRecompose(store,"parent");
- assert.equal(values.get(repaired.id).layoutRecoveryVersion,1);
+ assert.equal(values.get(repaired.id).layoutRecoveryVersion,2);
  assert.notEqual(repaired.id,"old-failed");
  assert.equal(values.get("old-failed").status,"failed");
  assert.equal((await queueRecompose(store,"parent")).id,repaired.id);
@@ -76,7 +82,7 @@ test("explicit repair upgrades historical layout failures; correction inherits r
   values.set("completed",{...parent,status:"completed",layoutRecoveryVersion:version});
   values.delete("completed/correction");
   const child=await queueCorrection(store,"completed",{name:"test",type:"image/jpeg",bytes:Buffer.from("photo")},"portrait");
-  assert.equal(values.get(child.id).layoutRecoveryVersion,version);
+  assert.equal(values.get(child.id).layoutRecoveryVersion,version===1?2:version);
  }
 });
 

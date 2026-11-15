@@ -9,17 +9,23 @@ export const NAME_SIZE_VERSION=1;
 export const referenceBoard=()=>readFile(resolve("netlify/functions/references/approved-graphic-board.png"));
 export const graphicStyleInstruction=`APPROVED GRAPHIC MURAL STYLE — overrides photographic and dense-grain rendering instructions: Match the supplied illustrated poster board's visual medium only, NEVER its people, words or exact wall arrangement. Bold hand-painted aerosol/stencil illustration with broad connected blue, yellow and chalk colour planes, confident dark navy contours and deliberately simplified tonal regions. Keep the person's exact photographed geometry and expression. The face is an ILLUSTRATION, not a photograph converted to coloured dots. NO halftone, stippling, pointillism, dense speckled skin, photocopy grain, photo-real facial shading, oil paint or tiny tonal islands. Weathering and spray belong mainly on wall and outer paint edges, not as noise across eyes, nose and mouth. Large worn plaster areas, cracks, peeling paint, a varied painted Israeli flag, asymmetrical arrows and abstract non-letter tags, controlled blue/yellow spray clouds; rich but not a full-canvas confetti texture. Palette unchanged: blue, navy, yellow and chalk; neutral beige only for bare wall. Do not copy any person, inscription or fixed background from the board. Paint NO words; catalogue name and slogan are added later. Preserve accurate facial features, clothing and all clear lettering space.`;
 
-export async function catalogueComposition(artwork,nameSizeVersion){
+export async function catalogueComposition(artwork,nameSizeVersion,layoutRecoveryVersion){
  if(nameSizeVersion!==undefined&&nameSizeVersion!==NAME_SIZE_VERSION)throw new Error("Invalid name size version");
  // Use rendered dimensions: metadata() alone reports the untrimmed input.
  const trimmed=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer({resolveWithObject:true});
- const headerBottom=nameSizeVersion===NAME_SIZE_VERSION
+ const headerBottom=layoutRecoveryVersion===2
+  ?Math.min(288,Math.max(180,Math.ceil(Math.min(1008*trimmed.info.height/trimmed.info.width,240))+48))
+  :nameSizeVersion===NAME_SIZE_VERSION
   ?Math.min(440,Math.max(300,Math.ceil(1008*trimmed.info.height/trimmed.info.width)+48))
   :Math.min(380,Math.max(200,Math.ceil(900*trimmed.info.height/trimmed.info.width)+36));
- return {headerBottom};
+ return {headerBottom,...(layoutRecoveryVersion===2?{wallCompositionVersion:2}:{})};
 }
 
 export function referenceCompositionInstruction(style){
+ if(style?.wallCompositionVersion===2){
+  if(style.version!==REFERENCE_STYLE_VERSION||!Number.isInteger(style.headerBottom)||style.headerBottom<180||style.headerBottom>288)throw new Error("Invalid wall composition");
+  return `ONE CONTINUOUS FULL-BLEED GRAFFITI WALL: plaster, portrait, flag and lettering areas are parts of ONE painted wall, reaching all four image edges. Never make a white page, separate title/footer panels, collage, inset portrait, border, card, or rectangular photo frame. Keep lightly textured wall at x=36..1044, y=24..${style.headerBottom} for the existing large catalogue name. Keep the whole head and hair just below y=${style.headerBottom+20}, with its chin above y=720. Make the recognizable portrait LARGE, filling most of the remaining wall; shoulders extend behind the bottom slogan. Keep the complete flag and star beside the head, below the title and above y=720. The existing slogan will be painted across the lower wall, not in a separate box. Continuous plaster texture, layered blue/yellow spray strokes and tags connect the entire composition. Do not paint any text. Preserve this full-wall composition during face refinement.`;
+ }
  if(style?.nameComposition!==undefined){
   if(style.version!==REFERENCE_STYLE_VERSION||style.nameSizeVersion!==NAME_SIZE_VERSION||style.nameComposition!=="side-two-line-v1")throw new Error("Invalid side name composition");
   return `LARGE TWO-LINE SIDE NAME COMPOSITION overrides all upper-title and centered-head instructions: on a 1080px square reserve x=36..600, y=100..660 as continuous lightly textured wall for a large existing two-line graffiti name. NO head, hair, ears, flag, star, tags or large paint marks in this rectangle. Place the ENTIRE recognizable head including hair and ears on the RIGHT, inside x=660..1044, y=80..720. Do not shrink facial features selectively. Keep the flag and complete star below or to the right of the reserved name rectangle, outside it and outside the head. Shoulders may extend behind the bottom caption. Bottom 32% contains no face or star. The name will be added BESIDE the face in two large lines, not above it and never covering it. Do not paint any text. Preserve this safe side area during face refinement; vary the wall and flag without copying a fixed background.`;

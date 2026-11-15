@@ -42,6 +42,7 @@ export async function queueCorrection(store, parentId, input, reason) {
     ...(parent.portraitRefinementVersion ? { portraitRefinementVersion: parent.portraitRefinementVersion, portraitRefinementModel: parent.portraitRefinementModel } : {}),
     ...(reason==="portrait"&&parent.referenceStyleVersion?{portraitIdentityVersion:PORTRAIT_IDENTITY_VERSION}:parent.portraitIdentityVersion!==undefined?{portraitIdentityVersion:parent.portraitIdentityVersion}:{}),
     ...(parent.flagIntegrityVersion!==undefined?{flagIntegrityVersion:parent.flagIntegrityVersion}:parent.layoutRecoveryVersion===3?{flagIntegrityVersion:1}:{}),
+    ...(parent.wallPaintVersion!==undefined?{wallPaintVersion:parent.wallPaintVersion}:parent.referenceStyleVersion&&parent.layoutRecoveryVersion===3?{wallPaintVersion:1}:{}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),
   }, { onlyIfNew: true });
   return { id: claim.id, status: "queued" };

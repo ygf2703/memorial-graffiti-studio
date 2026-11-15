@@ -5,6 +5,7 @@ import {muralDesign} from "../public/design.js";
 import {paletteInstructionForVersion,validatePaletteVersion} from "./palette.mjs";
 import {identityInstruction,graffitiIdentityInstruction,validatePortraitIdentityVersion} from "./portrait-identity.mjs";
 import {intactFlagInstruction,validateFlagIntegrityVersion} from "./flag-integrity.mjs";
+import {richWallPaintInstruction,validateWallPaintVersion} from './wall-paint.mjs';
 
 export const REFERENCE_STYLE_VERSION=1;
 export const NAME_SIZE_VERSION=1;
@@ -13,6 +14,7 @@ export const paintSwatchBoard=()=>readFile(resolve("netlify/functions/references
 export const paintedMediumInstruction=`APPROVED TEXTURED MEMORIAL GRAFFITI: use the supplied PAINT-MATERIAL SWATCHES for medium only. They are cropped painted hair, clothing, colour planes and wall spray from the user's examples, NOT people or identity references. Repaint the source person with blue/navy drawn contours, yellow and white light planes, sky-blue secondary shadows, layered aerosol grain and visible directional brush/spray strokes. Preserve expressive illustrated eyes, lips, smile and the person's exact original geometry. Hair uses drawn grouped strands and painted directional strokes matching the original silhouette, not a solid plastic helmet. Retain fine PAINT texture inside broken colour regions, with more weathered spray on clothing, silhouette and wall. The face, clothing and wall must share the SAME painted medium; no smooth photographic skin, pasted photograph, photographic pores or realistic skin-colour lighting. Equally, NO flat six-colour posterization, vector face, uniform featureless paint blobs, cartoon or rigid threshold bands. The visual target is the textured aerosol/screen-printed mural samples, with recognizable anatomy and layered painted detail, not photographic detail. Exact source geometry and expression remain the identity anchor. Only permitted blue, yellow and white shades; keep the whole flag intact, white and blue and separate from lettering. No text or copied sample shapes.`;
 
 function paintMaterialPrompt(seed,style,refining=false){
+ validateWallPaintVersion(style.wallPaintVersion);
  validatePaletteVersion(style.paletteVersion);
  const design=muralDesign(seed);
  const composition=referenceCompositionInstruction(style).replace('Use bold six-layer aerosol/stencil GRAFFITI with hand-cut colour shapes','Use layered aerosol/brush GRAFFITI with hand-painted colour shapes');
@@ -20,6 +22,7 @@ function paintMaterialPrompt(seed,style,refining=false){
   ?'Image 1 is the ORIGINAL photograph and sole identity source. Image 2 is the unlettered mural draft; correct its facial geometry and expression directly from Image 1 while retaining its framing, head size/position, wall, flag, clothing and lettering areas. Image 3 contains PAINT MATERIAL SWATCHES only, no complete people or faces. Apply their textured painted medium consistently to the corrected portrait; never restore photographic skin during likeness correction. '
   :'Create an unlettered graffiti memorial wall for the person in Image 1, the ORIGINAL photograph and ONLY identity source. Image 2 contains PAINT MATERIAL SWATCHES only, no complete people or faces. Repaint this same person in that painted medium; do not copy any sample contours. ')
   +identityInstruction+' '+paletteInstructionForVersion(style.paletteVersion)+' '+composition+' '+paintedMediumInstruction
+  +(style.wallPaintVersion===1?(refining?' Preserve the rich aerosol clouds, splatter clusters and dry-brush/bristle strokes already painted around the person. Do not wash them out or smooth them into an empty wall. Keep all such paint outside the face and complete flag.':richWallPaintInstruction):'')
   +(refining?' Keep the existing non-head wall and flag arrangement unchanged.':` BACKGROUND VARIATION: ${design.wall.replace(/cream|beige|off-white/gi,'white')}; ${design.wear}; ${design.marks}. ${design.flag}. Variation ${seed}.`)
   +' No names, words, slogans, dates, logos, watermarks or extra people. Catalogue name and slogan are added later.';
 }

@@ -68,7 +68,7 @@ export async function composeDominantWall(bytes,artwork,detection,context={}){
   plan={frame:{left:0,top:0,width:1080,height:1080},placement:{left:sideFor(context.seed)<540?36:1044-width,top:24,width,height},sourceFrameCoverage:1};
   manualRequired=true;
  }
- const painted=await backgroundGraffiti(await sharp(base).extract(plan.frame).resize(1080,1080).png().toBuffer(),plan.detection,context.seed);
+ const painted=await backgroundGraffiti(await sharp(base).extract(plan.frame).resize(1080,1080).png().toBuffer(),plan.detection,context.seed,context.wallPaintVersion);
  const mural=context.graphicFinish?await graphicPortrait(painted,plan.detection):context.preserveFacialDetail?painted:await stencilPortrait(painted,plan.detection);
  const paint=await sharp(name.data).resize(plan.placement.width,plan.placement.height).png().toBuffer();
  const layer=await sharp({create:{width:1080,height:1080,channels:4,background:"#00000000"}}).composite([{input:paint,left:plan.placement.left,top:plan.placement.top}]).png().toBuffer();

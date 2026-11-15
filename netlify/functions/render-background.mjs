@@ -32,7 +32,7 @@ export default async (request) => {
     if(job.referenceStyleVersion!==undefined&&job.referenceStyleVersion!==REFERENCE_STYLE_VERSION)throw new Error("Unsupported reference style");
     if(job.referenceStyleVersion&&!artwork)throw new Error("Missing approved name artwork");
     validatePaletteVersion(job.paletteVersion);
-    const referenceStyle=job.referenceStyleVersion?{flagIntegrityVersion:job.flagIntegrityVersion,portraitIdentityVersion:job.portraitIdentityVersion,version:REFERENCE_STYLE_VERSION,paletteVersion:job.paletteVersion,nameSizeVersion:job.nameSizeVersion,portraitSide:dominantPortraitSide(job.designSeed||id),...await catalogueComposition(artwork,job.nameSizeVersion,job.layoutRecoveryVersion)}:null;
+    const referenceStyle=job.referenceStyleVersion?{wallPaintVersion:job.wallPaintVersion,flagIntegrityVersion:job.flagIntegrityVersion,portraitIdentityVersion:job.portraitIdentityVersion,version:REFERENCE_STYLE_VERSION,paletteVersion:job.paletteVersion,nameSizeVersion:job.nameSizeVersion,portraitSide:dominantPortraitSide(job.designSeed||id),...await catalogueComposition(artwork,job.nameSizeVersion,job.layoutRecoveryVersion)}:null;
     if(referenceStyle&&job.nameArtwork.composition)referenceStyle.nameComposition=job.nameArtwork.composition;
     const designSeed = job.designSeed || id;
     const exactName = job.layoutVersion === EXACT_NAME_LAYOUT;
@@ -54,7 +54,7 @@ export default async (request) => {
       await store.set(`${id}/base`, result);
       if (adaptiveName) {
         const wrapped = job.nameArtwork.wrapped ? await fetchArtwork(job.nameArtwork.wrapped) : null;
-        const composed = await placeCatalogueWithRecovery({bytes:result,artwork,wrapped,placementVersion:job.namePlacementVersion,captionVariant:job.captionVariant,recoveryVersion:job.layoutRecoveryVersion,context:{graphicFinish:job.portraitIdentityVersion===3,protectFlag:job.flagIntegrityVersion===1,preserveFacialDetail:[1,2,3,4].includes(job.portraitIdentityVersion),name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle)||[1,2,LAYOUT_RECOVERY_VERSION].includes(job.layoutRecoveryVersion),nameComposition:job.layoutRecoveryVersion>=2?undefined:job.nameArtwork.composition}});
+        const composed = await placeCatalogueWithRecovery({bytes:result,artwork,wrapped,placementVersion:job.namePlacementVersion,captionVariant:job.captionVariant,recoveryVersion:job.layoutRecoveryVersion,context:{wallPaintVersion:job.wallPaintVersion,graphicFinish:job.portraitIdentityVersion===3,protectFlag:job.flagIntegrityVersion===1,preserveFacialDetail:[1,2,3,4].includes(job.portraitIdentityVersion),name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle)||[1,2,LAYOUT_RECOVERY_VERSION].includes(job.layoutRecoveryVersion),nameComposition:job.layoutRecoveryVersion>=2?undefined:job.nameArtwork.composition}});
         composition = composed;
         await store.setJSON(`${id}/layout`,composed.detection||{source:"prebuilt-reflow",wholeMuralProtected:true});
         result = composed.bytes; namePlacement = composed.placement;

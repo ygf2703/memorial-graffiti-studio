@@ -10,6 +10,7 @@ import {PALETTE_VERSION} from "../../server/palette.mjs";
 import {LAYOUT_RECOVERY_VERSION} from "../../server/layout-recovery.mjs";
 import {PORTRAIT_IDENTITY_VERSION} from "../../server/portrait-identity.mjs";
 import {FLAG_INTEGRITY_VERSION} from "../../server/flag-integrity.mjs";
+import {WALL_PAINT_VERSION} from '../../server/wall-paint.mjs';
 export default async (request) => {
   if (request.method !== "POST") return json({ error: "הפעולה אינה נתמכת." }, 405);
   const denied = authorize(request);
@@ -29,7 +30,7 @@ export default async (request) => {
   if (!base) return json({ error: "כתובת שירות הרקע לא הוגדרה בשרת." }, 503);
   const store = getStore({ name: "graffiti-jobs", consistency: "strong" });
   try {
-    const created = await store.setJSON(input.id, { status: "queued", flagIntegrityVersion: FLAG_INTEGRITY_VERSION, portraitIdentityVersion: PORTRAIT_IDENTITY_VERSION, layoutRecoveryVersion: LAYOUT_RECOVERY_VERSION, name: input.name, paletteVersion: PALETTE_VERSION, nameSizeVersion: NAME_SIZE_VERSION, referenceStyleVersion: REFERENCE_STYLE_VERSION, visualVersion: 1, portraitRefinementVersion: PORTRAIT_REFINEMENT_VERSION, portraitRefinementModel: PORTRAIT_REFINEMENT_MODEL, layoutVersion: EXACT_NAME_LAYOUT, nameStyleVersion: NAME_STYLE_VERSION, nameVariant: nameVariant(input.id), nameStyleCount: NAME_STYLE_COUNT, ...(nameArtwork ? { nameArtwork, namePlacementVersion: 2, nameSource: "prebuilt-reviewed" } : {}), captionVariant: captionVariant(input.id, CAPTION_STYLE_COUNT, "new90"), captionStyleCount: CAPTION_STYLE_COUNT, captionMix: "new90", designSeed: input.id, createdAt: Date.now() }, { onlyIfNew: true });
+    const created = await store.setJSON(input.id, { status: "queued", wallPaintVersion: WALL_PAINT_VERSION, flagIntegrityVersion: FLAG_INTEGRITY_VERSION, portraitIdentityVersion: PORTRAIT_IDENTITY_VERSION, layoutRecoveryVersion: LAYOUT_RECOVERY_VERSION, name: input.name, paletteVersion: PALETTE_VERSION, nameSizeVersion: NAME_SIZE_VERSION, referenceStyleVersion: REFERENCE_STYLE_VERSION, visualVersion: 1, portraitRefinementVersion: PORTRAIT_REFINEMENT_VERSION, portraitRefinementModel: PORTRAIT_REFINEMENT_MODEL, layoutVersion: EXACT_NAME_LAYOUT, nameStyleVersion: NAME_STYLE_VERSION, nameVariant: nameVariant(input.id), nameStyleCount: NAME_STYLE_COUNT, ...(nameArtwork ? { nameArtwork, namePlacementVersion: 2, nameSource: "prebuilt-reviewed" } : {}), captionVariant: captionVariant(input.id, CAPTION_STYLE_COUNT, "new90"), captionStyleCount: CAPTION_STYLE_COUNT, captionMix: "new90", designSeed: input.id, createdAt: Date.now() }, { onlyIfNew: true });
     if (!created.modified) {
       const existing = await store.get(input.id, { type: "json" });
       if (existing.status !== "queued") return json({ id: input.id }, 202);

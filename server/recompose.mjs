@@ -1,5 +1,6 @@
 import {randomUUID} from "node:crypto";
 import {EXACT_NAME_LAYOUT} from "../public/design.js";
+import {LAYOUT_RECOVERY_VERSION} from "./layout-recovery.mjs";
 
 export async function queueRecompose(store,parentId){
   const parent=await store.get(parentId,{type:"json"});
@@ -13,7 +14,7 @@ export async function queueRecompose(store,parentId){
   if(existing)return{id:claim.id,status:existing.status};
   const inherited=Object.fromEntries(["name","nameArtwork","nameVariant","nameStyleVersion","nameStyleCount","visualVersion","paletteVersion","nameSizeVersion","referenceStyleVersion","portraitRefinementVersion","portraitRefinementModel","captionVariant","captionStyleCount","captionMix","designSeed","parentId","correctionReason"].filter(k=>parent[k]!==undefined).map(k=>[k,parent[k]]));
   await store.setJSON(claim.id+"/input",{name:parent.name,type:"image/jpeg",bytes:""},{onlyIfNew:true});
-  await store.setJSON(claim.id,{...inherited,status:"queued",layoutVersion:EXACT_NAME_LAYOUT,namePlacementVersion:2,recomposeOnly:true,recomposeOf:parentId,createdAt:Date.now()},{onlyIfNew:true});
+  await store.setJSON(claim.id,{...inherited,status:"queued",layoutRecoveryVersion:LAYOUT_RECOVERY_VERSION,layoutVersion:EXACT_NAME_LAYOUT,namePlacementVersion:2,recomposeOnly:true,recomposeOf:parentId,createdAt:Date.now()},{onlyIfNew:true});
   return{id:claim.id,status:"queued"};
 }
 

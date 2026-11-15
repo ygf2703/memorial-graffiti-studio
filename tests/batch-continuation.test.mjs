@@ -48,7 +48,7 @@ test('actual app run submits and displays later images after a failed job, prese
  assert.ok(start>0&&end>start);
  const saved=[],displayed=[],errors=[],submitted=[],progress={textContent:''};
  const run=runInNewContext(source.slice(start,end)+';run',{
-  processBatch,batchSummary,resolveArtworkName,readJson,progress,artworkAliases:{},busy:false,
+  processBatch,batchSummary,resolveArtworkName,resolveAvailableName:name=>resolveArtworkName(name),readJson,progress,artworkAliases:{},busy:false,
   checkConnection:async()=>true,buttons:()=>{},crypto:{randomUUID},sourceFiles:new Map(),
   FormData,AbortSignal,headers:()=>({}),prepareUpload:async file=>file,
   saveJob:job=>saved.push(job),

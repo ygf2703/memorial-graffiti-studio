@@ -84,5 +84,5 @@ test("fresh jobs pin the two-stage edition server-side; the worker retains claim
  assert.match(generate,/portraitRefinementVersion: PORTRAIT_REFINEMENT_VERSION/);
  assert.ok(worker.indexOf("if (!claim.modified) return")<worker.indexOf("await preparePortraitBase"));
  assert.match(worker,/finally[\s\S]*store.delete\(`\$\{id\}\/input`\)/);
- assert.ok(worker.indexOf("await preparePortraitBase")<worker.indexOf("await detectPortraitLayout"));
+ assert.ok(worker.indexOf("await placeCatalogueWithRecovery")>worker.indexOf("await preparePortraitBase"));
 });

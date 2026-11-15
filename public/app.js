@@ -11,6 +11,7 @@ let availableNames = null, availabilityLoaded = false;
 let artworkAliases = {};
 const outputUrls = [];
 const sourceFiles = new Map();
+const resolveAvailableName = name => resolveArtworkName(name, artworkAliases, availableNames || []);
 let accessStorage;
 try { accessStorage = window.localStorage; } catch { /* Storage may be blocked. */ }
 $("#access-code").value = savedAccessCode(accessStorage);
@@ -22,7 +23,7 @@ function node(tag, text, className) {
   return element;
 }
 function buttons() {
-  generateButton.disabled = busy || !ready || !availabilityLoaded || invalid || !batch.length || batch.some((item) => !validName(item.name) || (availableNames && !availableNames.has(resolveArtworkName(item.name, artworkAliases))));
+  generateButton.disabled = busy || !ready || !availabilityLoaded || invalid || !batch.length || batch.some((item) => !validName(item.name) || (availableNames && !availableNames.has(resolveAvailableName(item.name))));
   for (const input of photoList.querySelectorAll("input")) input.disabled = busy;
   fileInput.disabled = busy;
   $("#check-connection").disabled = busy;
@@ -45,7 +46,7 @@ async function loadAvailability() {
       availableNames = new Set(catalog.names);
       artworkAliases = catalog.aliases || {};
       if (typeof artworkAliases !== "object" || Array.isArray(artworkAliases) || Object.entries(artworkAliases).some(([alias, target]) => !validName(alias) || !availableNames.has(target) || Object.hasOwn(artworkAliases, target) || availableNames.has(alias))) throw new Error("מיפוי השמות אינו תקין. לחצו שוב על בדיקת חיבור.");
-      $("#name-availability").textContent = `${availableNames.size} מתוך ${catalog.sourceCount} שמות זמינים בגרפיטי מוכן מראש. שמות נוספים יתווספו לאחר בדיקה. יש לבחור או להקליד את השם בדיוק כפי שמופיע ברשימה.`;
+      $("#name-availability").textContent = `${availableNames.size} מתוך ${catalog.sourceCount} שמות זמינים בגרפיטי מוכן מראש. אפשר להקליד גם ללא ניקוד; האותיות וסדר השם צריכים להתאים לרשימה.`;
       $("#available-names-panel").hidden = false;
       $("#available-names-list").replaceChildren(...catalog.names.map((name) => node("li", name)));
       $("#available-names").replaceChildren(...[...catalog.names, ...Object.keys(artworkAliases)].map((name) => { const option = node("option"); option.value = name; return option; }));
@@ -82,7 +83,7 @@ function renderBatch() {
     nameInput.setAttribute("list", "available-names");
     const nameStatus = node("small");
     const updateNameStatus = () => {
-      const artworkName = resolveArtworkName(item.name, artworkAliases);
+      const artworkName = resolveAvailableName(item.name);
       const unavailable = availableNames && !availableNames.has(artworkName);
       nameStatus.textContent = unavailable ? "השם עדיין לא זמין במאגר. לא ניתן ליצור איתו תמונה כרגע." : artworkName !== item.name ? `הכיתוב בעיצוב הקיים: ${artworkName}. נוסח זה יישמר בפוסטר.` : availableNames ? "השם זמין במאגר הגרפיטי." : "";
       nameInput.setCustomValidity(!validName(item.name) ? "יש להזין שם תקין." : unavailable ? "השם עדיין לא זמין במאגר." : "");
@@ -174,6 +175,7 @@ function showResult(name, { poster, job }) {
   image.src = poster; image.alt = `פוסטר גרפיטי של ${name}`;
   link.download = `${name}-1080.png`; link.href = poster;
   info.append(node("strong", name), link); card.append(image, info);
+  if(job.namePlacement?.source==="prebuilt-reflow") card.append(node("p","השם סודר באזור עליון נפרד. התמונה השלמה הוקטנה מתחתיו ללא חיתוך או יצירת דיוקן נוספת.","review-note"));
   if (requiresApproval(job)) {
     // Review is an editorial safeguard, not an access-control boundary.
     link.hidden = true;
@@ -182,6 +184,7 @@ function showResult(name, { poster, job }) {
     const message = review.status === "matched" ? "בדיקת האיות האוטומטית מצאה התאמה. זו אינה הבטחה — נדרש אישור חזותי לפני הורדה." : review.status === "needs_review" ? "אזהרה: הבדיקה האוטומטית מצאה חוסר התאמה או כיתוב לא ברור. אין לאשר אם חסרה או שגויה אפילו אות אחת." : "בדיקת האיות האוטומטית לא זמינה. יש לבדוק ידנית כל אות לפני אישור.";
     card.append(node("p", message, "review-note"));
     const placement = job.review?.namePlacement;
+    if(review.placementVerification==="separate-regions-v1") card.append(node("p","המיקום אומת בהרכבה: כל השם באזור נפרד מעל התמונה השלמה. אימות זה אינו בדיקת איות או דמיון.","review-note"));
     card.append(node("p", ["clear_above", "clear_beside"].includes(placement) ? "בדיקת המיקום מצאה שהשם מעל הראש או לצדו, ללא חפיפה. יש לאמת זאת גם חזותית." : ["overlap", "not_above"].includes(placement) ? "אזהרת מיקום: השם עלול להסתיר את הראש או שמיקומו אינו בטוח. אין לאשר את התוצאה לפני בדיקה; אם יש חפיפה, פסלו ובחרו בתיקון השם." : "מיקום השם לא אומת אוטומטית. ודאו שהשם וכל הנזילות מעל הראש או לצדו, עם רווח גלוי, ואינם מסתירים פנים או שיער.", "review-note"));
     card.append(node("p", `הכיתוב הנדרש: ${job.name} | אחים ואחיות לסמל לא שוכחים`, "review-note"));
     if (job.layoutVersion === EXACT_NAME_LAYOUT) card.append(node("p", job.nameSource === "prebuilt-reviewed" ? "השם נוסף מנכס גרפיטי מוכן שנבדק מראש. בדקו קריאות, שילוב בקיר והתאמה לדמות." : `השם נוסף ישירות מהטקסט שהזנת, בסגנון גרפיטי ${job.nameVariant} מתוך ${job.nameStyleCount || 5}${job.nameStyleLabel ? ` — ${job.nameStyleLabel}` : ""}. בדקו קריאות, שילוב בקיר והתאמה לדמות.`, "review-note"));
@@ -269,7 +272,7 @@ async function run(items, restore = false) {
   let summary;
   try {
     summary=await processBatch(items,async(rawItem,attempted)=>{
-      const item = restore ? rawItem : { ...rawItem, name: resolveArtworkName(rawItem.name, artworkAliases) };
+      const item = restore ? rawItem : { ...rawItem, name: resolveAvailableName(rawItem.name) };
       progress.textContent = `${restore ? "בודק תוצאה של" : "יוצר פוסטר עבור"} ${item.name} (${attempted} מתוך ${items.length})… יצירה עשויה להימשך כמה דקות.`;
       let id = item.id;
       if (!restore) {
@@ -283,7 +286,7 @@ async function run(items, restore = false) {
       }
       showResult(item.name, await waitForJob(id));
     },(item,error)=>{
-      showError(restore?item.name:resolveArtworkName(item.name,artworkAliases),error.message,error.canRecompose?error.jobId:null);
+      showError(restore?item.name:resolveAvailableName(item.name),error.message,error.canRecompose?error.jobId:null);
     },!restore);
   } finally {
     progress.textContent = summary ? batchSummary(summary.success,summary.failed,summary.pending) : "האצווה הופסקה עקב שגיאה בלתי צפויה. שחזרו תוצאות לפני יצירה נוספת.";

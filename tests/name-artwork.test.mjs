@@ -10,10 +10,11 @@ import { artworkId } from "../scripts/name-artwork-inventory.mjs";
 import { muralPrompt } from "../server/prompt.mjs";
 
 const entry = (name, sha256 = "b".repeat(64)) => ({ name, file: "a".repeat(20) + ".png", sha256, status: "verified", spellingChecked: true, visualChecked: true, renderChecked: true, ocr: { status: "matched", text: name, uncertain: false, sha256 } });
-test("artwork lookup preserves exact spelling, punctuation and niqqud", () => {
+test("artwork lookup preserves approved spelling and niqqud while accepting unpointed input", () => {
   const name = "יוֹבֵל (יובל) מוריוסף", catalog = { entries: [entry(name)] };
   assert.equal(selectArtwork(catalog, name).name, name);
-  assert.throws(() => selectArtwork(catalog, "יובל (יובל) מוריוסף"));
+  assert.equal(selectArtwork(catalog, "יובל (יובל) מוריוסף").name, name);
+  assert.throws(() => selectArtwork(catalog, "יובל יובל מוריוסף"));
   assert.throws(() => selectArtwork(catalog, name + " "));
 });
 test("unreviewed, missing or unsafe artwork is never selected", () => {

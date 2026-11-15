@@ -6,10 +6,11 @@ import { compositeExactName, nameVariant } from "../../server/exact-name.mjs";
 import { compositeCaption } from "../../server/composite.mjs";
 import { compositeGraffitiName, NAME_STYLE_VERSION, graffitiStyles } from "../../server/graffiti-name.mjs";
 import { fetchArtwork, compositeArtwork } from "../../server/name-artwork.mjs";
-import { detectPortraitLayout, composePlacedArtwork, vividPoster } from "../../server/name-placement.mjs";
+import { vividPoster } from "../../server/name-placement.mjs";
 import { preparePortraitBase } from "../../server/portrait-refinement.mjs";
 import {catalogueComposition,REFERENCE_STYLE_VERSION} from "../../server/reference-style.mjs";
 import {enforcePalette,validatePaletteVersion} from "../../server/palette.mjs";
+import {placeCatalogueWithRecovery,reviewWithLayoutProof,LAYOUT_RECOVERY_VERSION} from "../../server/layout-recovery.mjs";
 export default async (request) => {
   if (request.method !== "POST") return;
   const { id } = await request.json().catch(() => ({}));
@@ -47,14 +48,14 @@ export default async (request) => {
     });
     await onStage("compositing");
     const variant = job.nameVariant || nameVariant(designSeed);
-    let namePlacement;
+    let namePlacement, composition;
     if (exactName) {
       await store.set(`${id}/base`, result);
       if (adaptiveName) {
         const wrapped = job.nameArtwork.wrapped ? await fetchArtwork(job.nameArtwork.wrapped) : null;
-        const detection = await detectPortraitLayout(result);
-        await store.setJSON(`${id}/layout`,detection);
-        const composed = await composePlacedArtwork(result, artwork, detection, job.namePlacementVersion, wrapped, {name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle),nameComposition:job.nameArtwork.composition});
+        const composed = await placeCatalogueWithRecovery({bytes:result,artwork,wrapped,placementVersion:job.namePlacementVersion,captionVariant:job.captionVariant,recoveryVersion:job.layoutRecoveryVersion,context:{name:input.name,seed:designSeed,variant,visualVersion:job.visualVersion||0,catalogueOnly:Boolean(referenceStyle)||job.layoutRecoveryVersion===LAYOUT_RECOVERY_VERSION,nameComposition:job.nameArtwork.composition}});
+        composition = composed;
+        await store.setJSON(`${id}/layout`,composed.detection||{source:"prebuilt-reflow",wholeMuralProtected:true});
         result = composed.bytes; namePlacement = composed.placement;
       } else result = artwork ? await compositeArtwork(result, artwork) : job.nameStyleVersion === NAME_STYLE_VERSION ? await compositeGraffitiName(result, input.name, designSeed, variant, job.visualVersion||0) : await compositeExactName(result, input.name, designSeed, variant);
       result = await compositeCaption(result, job.captionVariant);
@@ -62,7 +63,7 @@ export default async (request) => {
     }
     result = await enforcePalette(result,job.paletteVersion);
     await store.set(`${id}/result`, result);
-    const review = await reviewImage(result.toString("base64"), input.name, fetch, fixedCaption, exactName ? "image/png" : "image/jpeg");
+    const review = reviewWithLayoutProof(await reviewImage(result.toString("base64"), input.name, fetch, fixedCaption, exactName ? "image/png" : "image/jpeg"),composition);
     await store.setJSON(id, { ...job, layoutVersion: exactName ? EXACT_NAME_LAYOUT : fixedCaption ? CAPTION_LAYOUT : INTEGRATED_LAYOUT, ...(exactName ? { nameVariant: variant, nameSource: namePlacement?.source === "literal-two-line" ? "literal-two-line" : artwork ? "prebuilt-reviewed" : "literal-input" } : {}), ...(job.nameStyleVersion === NAME_STYLE_VERSION ? { nameStyleLabel: namePlacement?.source === "literal-two-line" ? "גרפיטי מקומי בשתי שורות" : artwork ? "גרפיטי מוכן מראש" : graffitiStyles[variant - 1].label } : {}), designSeed, ...(namePlacement ? { namePlacement } : {}), review, status: "completed" });
   } catch (error) {
     await store.setJSON(id, { ...job, status: "failed", error: /^(לא נמצא מיקום בטוח|שירות|מפתח|החיבור|אין יתרה|לחשבון)/u.test(error.message) ? error.message : "יצירת התמונה נכשלה. בדקו את החיבור ונסו שוב." });

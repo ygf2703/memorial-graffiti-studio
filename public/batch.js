@@ -1,7 +1,14 @@
 export const caption = "אחים ואחיות לסמל לא שוכחים";
 export const MAX_FILE_BYTES = 20 * 1024 * 1024;
-export function resolveArtworkName(name, aliases = {}) {
-  return Object.hasOwn(aliases, name) ? aliases[name] : name;
+export function resolveArtworkName(name, aliases = {}, available = []) {
+  if (Object.hasOwn(aliases, name)) return aliases[name];
+  if (typeof name !== "string") return name;
+  // Ignore Hebrew vowel/cantillation marks only; never change letters or punctuation.
+  const unpointed = value => value.normalize("NFD").replace(/[\u0591-\u05bd\u05bf\u05c1\u05c2\u05c4\u05c5\u05c7]/gu, "");
+  const names = [...available];
+  if (names.includes(name)) return name;
+  const matches = names.filter(candidate => unpointed(candidate) === unpointed(name));
+  return matches.length === 1 ? matches[0] : name;
 }
 export function nameFromFile(file) {
   return file.name.replace(/\.[^.]+$/u, "");

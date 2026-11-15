@@ -8,7 +8,7 @@ import { loadNameRoster, validateNameRoster, validateRosterCoverage } from "./na
 
 // Generated pixels are immutable after review; never regenerate letters at runtime.
 export function selectArtwork(catalog, name) {
-  name = resolveArtworkName(name, catalog.aliases);
+  name = resolveArtworkName(name, catalog.aliases, catalog.entries.map(item => item.name));
   const entry = catalog.entries.find((item) => item.name === name);
   if (!entry || entry.status !== "verified" || !entry.visualChecked || !entry.spellingChecked || !entry.renderChecked) {
     throw new Error("השם עדיין לא מוכן במאגר הגרפיטי. לא נשלחה בקשת יצירה.");

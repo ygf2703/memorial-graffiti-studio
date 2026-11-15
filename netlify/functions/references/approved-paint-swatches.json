@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "date": "2026-11-15",
+  "purpose": "User-approved graffiti paint medium samples; no complete faces, people, name inscriptions or flag compositions. Original upload remains sole identity reference.",
+  "boardSha256": "f4e8f072d8f2f5a376034a4c3e0036e7beb0a5ae913d6aabc7dee9755a5f9b2b",
+  "sources": [
+    {
+      "file": "רון צרפתי.png",
+      "sha256": "9cea7cd1d680e19d25cc766cea2c4689746706835e6858940378bb5bb2fe8cce",
+      "crop": {
+        "left": 300,
+        "top": 300,
+        "width": 130,
+        "height": 230
+      },
+      "medium": "painted hair strokes"
+    },
+    {
+      "file": "אברהם טיברג.png",
+      "sha256": "438010beda6f540bd43e1527c5e0d6665a54bc9a04c8bfd85782f6c5d8d3f658",
+      "crop": {
+        "left": 310,
+        "top": 650,
+        "width": 160,
+        "height": 130
+      },
+      "medium": "blue-white garment strokes"
+    },
+    {
+      "file": "אדם גורן.png",
+      "sha256": "d66389e1002f5fd63c37b79258e8d0b881ecd253cb80e6614f998e359919cedc",
+      "crop": {
+        "left": 20,
+        "top": 300,
+        "width": 170,
+        "height": 360
+      },
+      "medium": "wall spray and arrows"
+    },
+    {
+      "file": "אורן חנוך.png",
+      "sha256": "417e649fa03d51ffe8e2ad4c4a2dd5a844161741f187430da989d40a37658672",
+      "crop": {
+        "left": 555,
+        "top": 540,
+        "width": 65,
+        "height": 60
+      },
+      "medium": "paint grain and colour planes"
+    },
+    {
+      "file": "אייל מאיר ברקוביץ'.png",
+      "sha256": "f1e7b25376f2aa5594edce18115fc72c5763691bb88424567290a4d045cc5b73",
+      "crop": {
+        "left": 540,
+        "top": 670,
+        "width": 100,
+        "height": 100
+      },
+      "medium": "painted dark hair and edges"
+    },
+    {
+      "file": "איציק אלגרט.png",
+      "sha256": "aade912762da9ab9bf8a98575807c5af05090c090c051372a0586182887e0288",
+      "crop": {
+        "left": 330,
+        "top": 700,
+        "width": 170,
+        "height": 90
+      },
+      "medium": "white and blue painted garment"
+    }
+  ]
+}

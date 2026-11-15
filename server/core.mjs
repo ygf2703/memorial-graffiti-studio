@@ -5,7 +5,7 @@ import { validName } from "../public/batch.js";
 import { muralPrompt, likenessInstruction } from "./prompt.mjs";
 import { materialSwatch } from "./paint-surface.mjs";
 import { correctionInstruction } from "./correction.mjs";
-import {referenceBoard,referenceGenerationPrompt} from "./reference-style.mjs";
+import {referenceBoard,paintSwatchBoard,referenceGenerationPrompt} from "./reference-style.mjs";
 
 export const MAX_UPLOAD = 3 * 1024 * 1024;
 export const validId = (id) => /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(id || "");
@@ -48,6 +48,7 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
   form.append("image[]", new Blob([portrait.bytes], { type: portrait.type }), "portrait");
   if(referenceStyle){
     const prompt=referenceGenerationPrompt(designSeed,referenceStyle);
+    if(referenceStyle.portraitIdentityVersion===4)form.append("image[]",new Blob([await paintSwatchBoard()],{type:"image/png"}),"paint-material-swatches.png");
     if(!referenceStyle.portraitIdentityVersion){
       form.append("image[]",new Blob([await referenceBoard()],{type:"image/png"}),"approved-graphic-board.png");
       if(correction)form.append("image[]",new Blob([correction.bytes],{type:"image/jpeg"}),"rejected-mural.jpg");

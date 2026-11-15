@@ -1,6 +1,6 @@
 import { requestImageEdit } from "./core.mjs";
 import { imageBaseForJob } from "./recompose.mjs";
-import {referenceBoard,referenceRefinementPrompt} from "./reference-style.mjs";
+import {referenceBoard,paintSwatchBoard,referenceRefinementPrompt} from "./reference-style.mjs";
 import {validatePortraitIdentityVersion} from "./portrait-identity.mjs";
 import {validateFlagIntegrityVersion} from "./flag-integrity.mjs";
 
@@ -27,6 +27,7 @@ export async function refinePortrait(portrait, mural, fetcher = fetch, reference
   let prompt=portraitRefinementPrompt;
   if(referenceStyle){
     prompt=referenceRefinementPrompt(referenceStyle);
+    if(referenceStyle.portraitIdentityVersion===4)form.append("image[]",new Blob([await paintSwatchBoard()],{type:"image/png"}),"paint-material-swatches.png");
     if(!referenceStyle.portraitIdentityVersion)form.append("image[]",new Blob([await referenceBoard()],{type:"image/png"}),"approved-graphic-board.png");
   }
   form.append("prompt",prompt);

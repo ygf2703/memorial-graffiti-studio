@@ -9,6 +9,20 @@ import {intactFlagInstruction,validateFlagIntegrityVersion} from "./flag-integri
 export const REFERENCE_STYLE_VERSION=1;
 export const NAME_SIZE_VERSION=1;
 export const referenceBoard=()=>readFile(resolve("netlify/functions/references/approved-graphic-board.png"));
+export const paintSwatchBoard=()=>readFile(resolve("netlify/functions/references/approved-paint-swatches.png"));
+export const paintedMediumInstruction=`APPROVED TEXTURED MEMORIAL GRAFFITI: use the supplied PAINT-MATERIAL SWATCHES for medium only. They are cropped painted hair, clothing, colour planes and wall spray from the user's examples, NOT people or identity references. Repaint the source person with blue/navy drawn contours, yellow and white light planes, sky-blue secondary shadows, layered aerosol grain and visible directional brush/spray strokes. Preserve expressive illustrated eyes, lips, smile and the person's exact original geometry. Hair uses drawn grouped strands and painted directional strokes matching the original silhouette, not a solid plastic helmet. Retain fine PAINT texture inside broken colour regions, with more weathered spray on clothing, silhouette and wall. The face, clothing and wall must share the SAME painted medium; no smooth photographic skin, pasted photograph, photographic pores or realistic skin-colour lighting. Equally, NO flat six-colour posterization, vector face, uniform featureless paint blobs, cartoon or rigid threshold bands. The visual target is the textured aerosol/screen-printed mural samples, with recognizable anatomy and layered painted detail, not photographic detail. Exact source geometry and expression remain the identity anchor. Only permitted blue, yellow and white shades; keep the whole flag intact, white and blue and separate from lettering. No text or copied sample shapes.`;
+
+function paintMaterialPrompt(seed,style,refining=false){
+ validatePaletteVersion(style.paletteVersion);
+ const design=muralDesign(seed);
+ const composition=referenceCompositionInstruction(style).replace('Use bold six-layer aerosol/stencil GRAFFITI with hand-cut colour shapes','Use layered aerosol/brush GRAFFITI with hand-painted colour shapes');
+ return (refining
+  ?'Image 1 is the ORIGINAL photograph and sole identity source. Image 2 is the unlettered mural draft; correct its facial geometry and expression directly from Image 1 while retaining its framing, head size/position, wall, flag, clothing and lettering areas. Image 3 contains PAINT MATERIAL SWATCHES only, no complete people or faces. Apply their textured painted medium consistently to the corrected portrait; never restore photographic skin during likeness correction. '
+  :'Create an unlettered graffiti memorial wall for the person in Image 1, the ORIGINAL photograph and ONLY identity source. Image 2 contains PAINT MATERIAL SWATCHES only, no complete people or faces. Repaint this same person in that painted medium; do not copy any sample contours. ')
+  +identityInstruction+' '+paletteInstructionForVersion(style.paletteVersion)+' '+composition+' '+paintedMediumInstruction
+  +(refining?' Keep the existing non-head wall and flag arrangement unchanged.':` BACKGROUND VARIATION: ${design.wall.replace(/cream|beige|off-white/gi,'white')}; ${design.wear}; ${design.marks}. ${design.flag}. Variation ${seed}.`)
+  +' No names, words, slogans, dates, logos, watermarks or extra people. Catalogue name and slogan are added later.';
+}
 export const graphicStyleInstruction=`APPROVED GRAPHIC MURAL STYLE — overrides photographic and dense-grain rendering instructions: Match the supplied illustrated poster board's visual medium only, NEVER its people, words or exact wall arrangement. Bold hand-painted aerosol/stencil illustration with broad connected blue, yellow and chalk colour planes, confident dark navy contours and deliberately simplified tonal regions. Keep the person's exact photographed geometry and expression. The face is an ILLUSTRATION, not a photograph converted to coloured dots. NO halftone, stippling, pointillism, dense speckled skin, photocopy grain, photo-real facial shading, oil paint or tiny tonal islands. Weathering and spray belong mainly on wall and outer paint edges, not as noise across eyes, nose and mouth. Large worn plaster areas, cracks, peeling paint, a varied painted Israeli flag, asymmetrical arrows and abstract non-letter tags, controlled blue/yellow spray clouds; rich but not a full-canvas confetti texture. Palette unchanged: blue, navy, yellow and chalk; neutral beige only for bare wall. Do not copy any person, inscription or fixed background from the board. Paint NO words; catalogue name and slogan are added later. Preserve accurate facial features, clothing and all clear lettering space.`;
 
 export async function catalogueComposition(artwork,nameSizeVersion,layoutRecoveryVersion){
@@ -45,6 +59,7 @@ export function referenceGenerationPrompt(seed,style){
  validateFlagIntegrityVersion(style.flagIntegrityVersion);
  if(style.flagIntegrityVersion)return referenceGenerationPrompt(seed,{...style,flagIntegrityVersion:undefined})+" "+intactFlagInstruction;
  validatePortraitIdentityVersion(style.portraitIdentityVersion);
+ if(style.portraitIdentityVersion===4)return paintMaterialPrompt(seed,style);
  if(style.portraitIdentityVersion){
   const legacy=referenceGenerationPrompt(seed,{...style,portraitIdentityVersion:undefined});
   return legacy.replace("Image 2 is an illustration STYLE board, not a source of people or text.","There are NO other identity or style reference images.").replaceAll("supplied illustrated poster board's","described graffiti medium's").replaceAll("like the STYLE board","with hand-painted graffiti edges")+" "+identityInstruction+(style.portraitIdentityVersion>=2?" "+graffitiIdentityInstruction:"");
@@ -59,6 +74,7 @@ export function referenceRefinementPrompt(style){
  validateFlagIntegrityVersion(style.flagIntegrityVersion);
  if(style.flagIntegrityVersion)return referenceRefinementPrompt({...style,flagIntegrityVersion:undefined})+" "+intactFlagInstruction;
  validatePortraitIdentityVersion(style.portraitIdentityVersion);
+ if(style.portraitIdentityVersion===4)return paintMaterialPrompt('refine',style,true);
  if(style.portraitIdentityVersion){
   return referenceRefinementPrompt({...style,portraitIdentityVersion:undefined}).replace("Image 3 is the approved GRAPHIC ILLUSTRATION STYLE board, not another identity.","Only two images are supplied. Image 2 is an imperfect draft, NEVER an identity reference.").replaceAll("supplied illustrated poster board's","described graffiti medium's")+" "+identityInstruction+(style.portraitIdentityVersion>=2?" "+graffitiIdentityInstruction:"");
  }

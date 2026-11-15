@@ -38,5 +38,5 @@ test('current worker applies graphic finish before catalogue lettering and prese
  assert.deepEqual(modern.placement.frame,prior.placement.frame);
  const worker=await readFile('netlify/functions/render-background.mjs','utf8');
  assert.ok(worker.includes('graphicFinish:job.portraitIdentityVersion===3'));
- assert.ok(worker.includes('[1,2,3].includes(job.portraitIdentityVersion)&&!job.recomposeOnly?portrait:null'));
+ assert.ok(worker.includes('[1,2,3,4].includes(job.portraitIdentityVersion)&&!job.recomposeOnly?portrait:null'));
 });

@@ -183,7 +183,7 @@ function showResult(name, { poster, job }) {
     // Review is an editorial safeguard, not an access-control boundary.
     link.hidden = true;
     const review = job.review || { status: "unavailable" };
-    if([1,2].includes(job.portraitIdentityVersion)){
+    if([1,2,3].includes(job.portraitIdentityVersion)){
       const text=review.likeness==="consistent"?"השוואה אוטומטית למקור לא מצאה סטייה ברורה. נדרשת גם בדיקה חזותית של הדמות.":review.likeness==="different"?"אזהרה: נמצאה סטייה אפשרית בתווי הפנים לעומת המקור. השוו את הדמות לפני אישור.":"הדמיון למקור לא אומת אוטומטית. השוו לתצלום לפני אישור.";
       card.append(node("p",text,"review-note"));
       if(review.likenessIssues?.length)card.append(node("p",review.likenessIssues.join("; "),"review-note"));

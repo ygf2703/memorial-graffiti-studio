@@ -28,7 +28,7 @@ test('identity generation uses only original photo, refinement original plus dra
  await generateImage(portrait,'PRIVATE_EXPECTED_NAME',mock(1),'seed',false,{bytes:Buffer.from('rejected')},true,true,2,1,1000,style);
  await refinePortrait(portrait,Buffer.from('draft'),mock(2),style);
  assert.equal(count,2);
- let paid=0;await assert.rejects(preparePortraitBase({portraitIdentityVersion:3},portrait,null,{generate:()=>{paid++;}}));assert.equal(paid,0);
+ let paid=0;await assert.rejects(preparePortraitBase({portraitIdentityVersion:4},portrait,null,{generate:()=>{paid++;}}));assert.equal(paid,0);
 });
 
 test('same blind reading call compares original without receiving expected name; drift cannot be marked matched',async()=>{
@@ -69,7 +69,7 @@ test('identity edition survives correction and recompose without storing another
  map.set('failed',{...parent,status:'failed',error:'לא נמצא מיקום בטוח'});map.set('failed/base',new Uint8Array([1]).buffer);
  const recomposed=await queueRecompose(store,'failed');assert.equal(map.get(recomposed.id).portraitIdentityVersion,1);
  const worker=await readFile('netlify/functions/render-background.mjs','utf8');
- assert.ok(worker.includes('preserveFacialDetail:[1,2].includes(job.portraitIdentityVersion)'));
- assert.ok(worker.includes('[1,2].includes(job.portraitIdentityVersion)&&!job.recomposeOnly?portrait:null'));
+ assert.ok(worker.includes('preserveFacialDetail:[1,2,3].includes(job.portraitIdentityVersion)'));
+ assert.ok(worker.includes('[1,2,3].includes(job.portraitIdentityVersion)&&!job.recomposeOnly?portrait:null'));
  assert.match(worker,/finally[\s\S]*store.delete\(`\$\{id\}\/input`\)/);
 });

@@ -1,7 +1,7 @@
 import sharp from "sharp";
 import {pixelBox,planNamePlacement} from "./name-placement.mjs";
 import {compositeNameLayer} from "./exact-name.mjs";
-import {stencilPortrait} from "./stencil-portrait.mjs";
+import {stencilPortrait,graphicPortrait} from "./stencil-portrait.mjs";
 import {backgroundGraffiti} from "./background-graffiti.mjs";
 
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
@@ -69,7 +69,7 @@ export async function composeDominantWall(bytes,artwork,detection,context={}){
   manualRequired=true;
  }
  const painted=await backgroundGraffiti(await sharp(base).extract(plan.frame).resize(1080,1080).png().toBuffer(),plan.detection,context.seed);
- const mural=context.preserveFacialDetail?painted:await stencilPortrait(painted,plan.detection);
+ const mural=context.graphicFinish?await graphicPortrait(painted,plan.detection):context.preserveFacialDetail?painted:await stencilPortrait(painted,plan.detection);
  const paint=await sharp(name.data).resize(plan.placement.width,plan.placement.height).png().toBuffer();
  const layer=await sharp({create:{width:1080,height:1080,channels:4,background:"#00000000"}}).composite([{input:paint,left:plan.placement.left,top:plan.placement.top}]).png().toBuffer();
  const {head:protectedFace,...position}=plan.placement;

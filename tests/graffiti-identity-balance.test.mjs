@@ -7,7 +7,7 @@ import {PORTRAIT_IDENTITY_VERSION,graffitiIdentityInstruction} from '../server/p
 const photo={bytes:Buffer.from('original'),type:'image/jpeg'};
 const style={version:1,paletteVersion:2,nameSizeVersion:1,wallCompositionVersion:3,portraitSide:'LEFT',portraitIdentityVersion:PORTRAIT_IDENTITY_VERSION,flagIntegrityVersion:1};
 test('balanced graffiti edition removes photographic surface detail while retaining anatomy and full flag in BOTH stages',async()=>{
- assert.equal(PORTRAIT_IDENTITY_VERSION,2);
+ assert.equal(PORTRAIT_IDENTITY_VERSION,3);
  const mock=count=>async(url,{body})=>{
   const images=body.getAll('image[]');assert.equal(images.length,count);
   assert.deepEqual(Buffer.from(await images[0].arrayBuffer()),photo.bytes);

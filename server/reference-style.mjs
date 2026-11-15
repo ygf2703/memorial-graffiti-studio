@@ -4,6 +4,7 @@ import {resolve} from "node:path";
 import {muralDesign} from "../public/design.js";
 import {paletteInstructionForVersion,validatePaletteVersion} from "./palette.mjs";
 import {identityInstruction,validatePortraitIdentityVersion} from "./portrait-identity.mjs";
+import {intactFlagInstruction,validateFlagIntegrityVersion} from "./flag-integrity.mjs";
 
 export const REFERENCE_STYLE_VERSION=1;
 export const NAME_SIZE_VERSION=1;
@@ -41,6 +42,8 @@ export function referenceCompositionInstruction(style){
 }
 
 export function referenceGenerationPrompt(seed,style){
+ validateFlagIntegrityVersion(style.flagIntegrityVersion);
+ if(style.flagIntegrityVersion)return referenceGenerationPrompt(seed,{...style,flagIntegrityVersion:undefined})+" "+intactFlagInstruction;
  validatePortraitIdentityVersion(style.portraitIdentityVersion);
  if(style.portraitIdentityVersion){
   const legacy=referenceGenerationPrompt(seed,{...style,portraitIdentityVersion:undefined});
@@ -53,6 +56,8 @@ export function referenceGenerationPrompt(seed,style){
 }
 
 export function referenceRefinementPrompt(style){
+ validateFlagIntegrityVersion(style.flagIntegrityVersion);
+ if(style.flagIntegrityVersion)return referenceRefinementPrompt({...style,flagIntegrityVersion:undefined})+" "+intactFlagInstruction;
  validatePortraitIdentityVersion(style.portraitIdentityVersion);
  if(style.portraitIdentityVersion){
   return referenceRefinementPrompt({...style,portraitIdentityVersion:undefined}).replace("Image 3 is the approved GRAPHIC ILLUSTRATION STYLE board, not another identity.","Only two images are supplied. Image 2 is an imperfect draft, NEVER an identity reference.").replaceAll("supplied illustrated poster board's","described graffiti medium's")+" "+identityInstruction;

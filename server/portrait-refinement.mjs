@@ -2,6 +2,7 @@ import { requestImageEdit } from "./core.mjs";
 import { imageBaseForJob } from "./recompose.mjs";
 import {referenceBoard,referenceRefinementPrompt} from "./reference-style.mjs";
 import {validatePortraitIdentityVersion} from "./portrait-identity.mjs";
+import {validateFlagIntegrityVersion} from "./flag-integrity.mjs";
 
 export const PORTRAIT_REFINEMENT_VERSION = 1;
 export const PORTRAIT_REFINEMENT_MODEL = "gpt-image-2.5-sunburst";
@@ -35,6 +36,7 @@ export async function refinePortrait(portrait, mural, fetcher = fetch, reference
 // The worker's durable claim surrounds BOTH paid calls. Never retry either call here.
 export async function preparePortraitBase(job, portrait, previous, {generate, refine=refinePortrait, saveDraft=async()=>{}, onStage=async()=>{},referenceStyle=null}) {
   validatePortraitIdentityVersion(job.portraitIdentityVersion);
+  validateFlagIntegrityVersion(job.flagIntegrityVersion);
   if(job.portraitRefinementVersion!==undefined&&job.portraitRefinementVersion!==PORTRAIT_REFINEMENT_VERSION)throw new Error("Unsupported refinement version");
   if(job.portraitRefinementModel!==undefined&&job.portraitRefinementModel!==PORTRAIT_REFINEMENT_MODEL)throw new Error("Unsupported refinement model");
   if(job.recomposeOnly)return imageBaseForJob(job,previous,generate);

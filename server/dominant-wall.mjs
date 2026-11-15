@@ -13,15 +13,22 @@ function remapBox(box,frame){
  return {x:clamp(x,0,1000),y:clamp(y,0,1000),width:clamp(right,0,1000)-clamp(x,0,1000),height:clamp(bottom,0,1000)-clamp(y,0,1000)};
 }
 
-export function dominantWallPlan(width,height,detection,captionHeight=220,seed=""){
+export function dominantWallPlan(width,height,detection,captionHeight=220,seed="",protectFlag=false){
  if(detection?.uncertain!==false)throw new Error("Uncertain face layout");
  const rawHead=pixelBox(detection.head,0),rawFace=pixelBox(detection.face,0);
  if(rawFace.left<rawHead.left||rawFace.top<rawHead.top||rawFace.right>rawHead.right||rawFace.bottom>rawHead.bottom)throw new Error("Face outside head bounds");
  const head=pixelBox(detection.head),face=pixelBox(detection.face),star=pixelBox(detection.star,16);
  const bounds={left:Math.min(head.left,star.left),top:Math.min(head.top,star.top),right:Math.max(head.right,star.right),bottom:Math.max(head.bottom,star.bottom)};
+ if(protectFlag){
+  const flag=pixelBox(detection.flag,16),rawFlag=pixelBox(detection.flag,0),rawStar=pixelBox(detection.star,0);
+  if(rawStar.left<rawFlag.left||rawStar.top<rawFlag.top||rawStar.right>rawFlag.right||rawStar.bottom>rawFlag.bottom)throw new Error('Star outside flag');
+  bounds.left=Math.min(bounds.left,flag.left);bounds.top=Math.min(bounds.top,flag.top);
+  bounds.right=Math.max(bounds.right,flag.right);bounds.bottom=Math.max(bounds.bottom,flag.bottom);
+ }
  let best;
  // Every candidate FILLS the canvas. Reframe by cropping outer wall/body only;
- // never shrink a mural into a larger wall template. Preserve head and star.
+ // never shrink a mural into a larger wall template. The flag edition also
+ // preserves the entire white field and stripes, not just the star.
  for(const size of [980,1040,1080]){
   const minX=Math.max(0,bounds.right-size),maxX=Math.min(bounds.left,1080-size);
   const minY=Math.max(0,bounds.bottom-size),maxY=Math.min(bounds.top,1080-size);
@@ -34,9 +41,9 @@ export function dominantWallPlan(width,height,detection,captionHeight=220,seed="
    const frame={left,top,width:size,height:size};
    const mapped={uncertain:false,...Object.fromEntries(["head","face","star",...(detection.flag?["flag"]:[])].map(k=>[k,remapBox(detection[k],frame)]))};
    const transformedFace=pixelBox(mapped.face),transformedStar=pixelBox(mapped.star,16);
-   if(Math.max(transformedFace.bottom,transformedStar.bottom)>1030-captionHeight-12)continue;
+   if(Math.max(transformedFace.bottom,transformedStar.bottom,...(protectFlag?[pixelBox(mapped.flag,16).bottom]:[]))>1030-captionHeight-12)continue;
    for(const minimumWidth of [360,180])try{
-    const placement=planNamePlacement(width,height,mapped,minimumWidth,false,{faceOnly:true,maximumHeight:240});
+    const placement=planNamePlacement(width,height,mapped,minimumWidth,false,{faceOnly:true,maximumHeight:240,protectFlag});
     const offCenter=Math.abs((transformedFace.left+transformedFace.right)/2-540);
     const score=(1080/size)*1000+Math.min(offCenter,160)+placement.width*.03;
     if(!best||score>best.score)best={frame,detection:mapped,placement,score,sourceFrameCoverage:1,offCenter};
@@ -52,7 +59,7 @@ export async function composeDominantWall(bytes,artwork,detection,context={}){
  const name=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer({resolveWithObject:true});
  const base=await sharp(bytes).resize(1080,1080).png().toBuffer();
  let plan,manualRequired=false;
- try{plan=dominantWallPlan(name.info.width,name.info.height,detection,220,context.seed);}
+ try{plan=dominantWallPlan(name.info.width,name.info.height,detection,220,context.seed,context.protectFlag===true);}
  catch{
   // Do not silently shrink the illustration when vision is unavailable. Keep
   // the complete full-wall image; the blind final review and human approval

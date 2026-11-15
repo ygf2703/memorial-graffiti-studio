@@ -13,6 +13,7 @@ export const intersects = (a,b) => a.left < b.right && a.right > b.left && a.top
 export function planNamePlacement(width, height, detection, minimumWidth = 180, sideOnly = false, options = {}) {
   if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0 || detection?.uncertain !== false) throw fail();
   const head=pixelBox(options.faceOnly?detection.face:detection.head), star=pixelBox(detection.star,16), protectedBoxes=[head,star];
+  if(options.protectFlag)protectedBoxes.push(pixelBox(detection.flag,16));
   const xs=[...new Set([36,1044,...protectedBoxes.flatMap(b=>[b.left,b.right])])].filter(x=>x>=36&&x<=1044).sort((a,b)=>a-b);
   const ys=[...new Set([24,720,...protectedBoxes.flatMap(b=>[b.top,b.bottom])])].filter(y=>y>=24&&y<=720).sort((a,b)=>a-b);
   let best=null;

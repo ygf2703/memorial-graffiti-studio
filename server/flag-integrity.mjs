@@ -1,0 +1,5 @@
+export const FLAG_INTEGRITY_VERSION=1;
+export const intactFlagInstruction=`MANDATORY INTACT ISRAELI FLAG: paint one COMPLETE rectangular Israeli flag, entirely inside the canvas and fully visible beside the person. Show its whole white field, TWO continuous blue stripes from end to end, and ONE complete correctly formed six-pointed blue Star of David. No torn edges, missing pieces, holes, cropped boundaries, peeling or chipped flag paint. Wall cracks and weathering belong OUTSIDE the flag; subtle spray texture must not break the flag or its symbols. Do not place the person, hair, tags, drips or decorative paint over any part of the flag. Keep the ENTIRE flag below the upper name area and above y=798 on the 1080px canvas, with clear wall around its full perimeter. Name and slogan are added later and must not cover ANY part of it. Graffiti paint on a wall, never a photographic fabric flag. This intact, uncovered flag requirement overrides background variation and weathering instructions.`;
+export function validateFlagIntegrityVersion(version){
+ if(version!==undefined&&version!==FLAG_INTEGRITY_VERSION)throw new Error('Unsupported flag integrity version');
+}

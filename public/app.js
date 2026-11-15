@@ -197,6 +197,10 @@ function showResult(name, { poster, job }) {
     if(job.nameSource==="literal-two-line") card.append(node("p","השם סודר אוטומטית בשתי שורות ברינדור גרפיטי מקומי מהטקסט המדויק. זהו מסלול חלופי, לא הנכס המצויר המקורי. בדקו את האיות והמראה לפני אישור.","review-note"));
     const message = review.status === "matched" ? "בדיקת האיות האוטומטית מצאה התאמה. זו אינה הבטחה — נדרש אישור חזותי לפני הורדה." : review.status === "needs_review" ? "אזהרה: הבדיקה האוטומטית מצאה חוסר התאמה או כיתוב לא ברור. אין לאשר אם חסרה או שגויה אפילו אות אחת." : "בדיקת האיות האוטומטית לא זמינה. יש לבדוק ידנית כל אות לפני אישור.";
     card.append(node("p", message, "review-note"));
+    if(job.flagIntegrityVersion===1){
+      const intact=review.flagPresent&&review.flagCondition==="intact"&&review.flagVisibility==="clear";
+      card.append(node("p",intact?"הבדיקה מצאה דגל ישראל שלם וגלוי. ודאו שגם הפסים והשדה הלבן אינם חתוכים, קרועים או מכוסים בכיתוב.":"בדיקת הדגל לא אישרה דגל שלם וגלוי. אין לאשר דגל חסר, קרוע, חתוך או מכוסה בשם, בסלוגן או בדמות.","review-note"));
+    }
     const placement = job.review?.namePlacement;
     if(review.placementVerification==="separate-regions-v1") card.append(node("p","המיקום אומת בהרכבה: כל השם באזור נפרד מעל התמונה השלמה. אימות זה אינו בדיקת איות או דמיון.","review-note"));
     card.append(node("p",job.layoutRecoveryVersion===3?(["clear_above","clear_beside"].includes(placement)?"בדיקת המיקום מצאה שהכיתוב אינו מכסה פנים. יש לאמת זאת גם חזותית; חפיפה לשיער או לבגד מותרת.":"בדקו שהשם והסלוגן אינם מכסים מצח, עיניים, אף, פה או סנטר. אין לאשר פנים מוסתרות."):(["clear_above", "clear_beside"].includes(placement) ? "בדיקת המיקום מצאה שהשם מעל הראש או לצדו, ללא חפיפה. יש לאמת זאת גם חזותית." : ["overlap", "not_above"].includes(placement) ? "אזהרת מיקום: השם עלול להסתיר את הראש או שמיקומו אינו בטוח. אין לאשר את התוצאה לפני בדיקה; אם יש חפיפה, פסלו ובחרו בתיקון השם." : "מיקום השם לא אומת אוטומטית. ודאו שהשם וכל הנזילות מעל הראש או לצדו, עם רווח גלוי, ואינם מסתירים פנים או שיער."), "review-note"));
@@ -205,8 +209,8 @@ function showResult(name, { poster, job }) {
     if (typeof review.name === "string") card.append(node("p", [CAPTION_LAYOUT, COMPOSITED_LAYOUT].includes(job.layoutVersion) ? `קריאה אוטומטית של השם (עלולה לטעות): ${review.name}. המשפט נוסף מקובץ קבוע, גרסה ${job.captionVariant} מתוך ${job.captionStyleCount || 5}, ואינו נבדק בקריאה זו.` : `קריאה אוטומטית (עלולה לטעות): ${review.name} | ${review.caption}`, "review-note"));
     const label = node("label", "", "approval"), checkbox = node("input");
     checkbox.type = "checkbox";
-    checkbox.disabled = ["overlap", "not_above"].includes(placement);
-    label.append(checkbox, node("span",job.layoutRecoveryVersion===3?"בדקתי אות־אות: השם והמשפט מדויקים, שום כיתוב אינו מסתיר פנים, הדגל גלוי והדמות מתאימה. חפיפה לשיער ולבגד מותרת.":"בדקתי אות־אות: השם והמשפט מלאים ומדויקים, השם וכל הנזילות מעל הראש או לצדו ואינם מסתירים פנים או שיער, הדגל גלוי והדמות מתאימה."));
+    checkbox.disabled = ["overlap", "not_above"].includes(placement)||(job.flagIntegrityVersion===1&&(review.flagCondition==="damaged"||review.flagVisibility==="covered"||review.flagPresent===false));
+    label.append(checkbox, node("span",job.flagIntegrityVersion===1?"בדקתי אות־אות: השם והסלוגן מדויקים, הפנים גלויות, דגל ישראל כולו שלם — ללא קרעים, חיתוך או כיסוי בכיתוב או בדמות — והדמות דומה למקור.":job.layoutRecoveryVersion===3?"בדקתי אות־אות: השם והמשפט מדויקים, שום כיתוב אינו מסתיר פנים, הדגל גלוי והדמות מתאימה. חפיפה לשיער ולבגד מותרת.":"בדקתי אות־אות: השם והמשפט מלאים ומדויקים, השם וכל הנזילות מעל הראש או לצדו ואינם מסתירים פנים או שיער, הדגל גלוי והדמות מתאימה."));
     checkbox.addEventListener("change", () => { link.hidden = !checkbox.checked; });
     const reject = node("button", "פסילת התוצאה", "reject-result");
     reject.type = "button";

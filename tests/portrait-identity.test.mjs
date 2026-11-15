@@ -9,6 +9,7 @@ import {composeDominantWall} from '../server/dominant-wall.mjs';
 import {queueCorrection} from '../server/correction.mjs';
 import {queueRecompose} from '../server/recompose.mjs';
 import {EXACT_NAME_LAYOUT} from '../public/design.js';
+import {PORTRAIT_IDENTITY_VERSION} from '../server/portrait-identity.mjs';
 const portrait={bytes:Buffer.from('original-photo'),type:'image/jpeg'};
 const style={version:1,paletteVersion:2,nameSizeVersion:1,wallCompositionVersion:3,portraitSide:'LEFT',portraitIdentityVersion:1};
 
@@ -27,7 +28,7 @@ test('identity generation uses only original photo, refinement original plus dra
  await generateImage(portrait,'PRIVATE_EXPECTED_NAME',mock(1),'seed',false,{bytes:Buffer.from('rejected')},true,true,2,1,1000,style);
  await refinePortrait(portrait,Buffer.from('draft'),mock(2),style);
  assert.equal(count,2);
- let paid=0;await assert.rejects(preparePortraitBase({portraitIdentityVersion:2},portrait,null,{generate:()=>{paid++;}}));assert.equal(paid,0);
+ let paid=0;await assert.rejects(preparePortraitBase({portraitIdentityVersion:3},portrait,null,{generate:()=>{paid++;}}));assert.equal(paid,0);
 });
 
 test('same blind reading call compares original without receiving expected name; drift cannot be marked matched',async()=>{
@@ -64,11 +65,11 @@ test('detail-preserving composition leaves face pixels unchanged after the same 
 test('identity edition survives correction and recompose without storing another copy of original',async()=>{
  const parent={status:'completed',name:'גל בכר',layoutVersion:EXACT_NAME_LAYOUT,portraitIdentityVersion:1,referenceStyleVersion:1,nameArtwork:{name:'גל בכר'},layoutRecoveryVersion:3};
  const map=new Map([['parent',parent]]),store={get:async k=>map.get(k),setJSON:async(k,v)=>{if(!map.has(k))map.set(k,v);}};
- const corrected=await queueCorrection(store,'parent',{...portrait,name:parent.name},'portrait');assert.equal(map.get(corrected.id).portraitIdentityVersion,1);
+ const corrected=await queueCorrection(store,'parent',{...portrait,name:parent.name},'portrait');assert.equal(map.get(corrected.id).portraitIdentityVersion,PORTRAIT_IDENTITY_VERSION);
  map.set('failed',{...parent,status:'failed',error:'לא נמצא מיקום בטוח'});map.set('failed/base',new Uint8Array([1]).buffer);
  const recomposed=await queueRecompose(store,'failed');assert.equal(map.get(recomposed.id).portraitIdentityVersion,1);
  const worker=await readFile('netlify/functions/render-background.mjs','utf8');
- assert.match(worker,/preserveFacialDetail:job.portraitIdentityVersion===1/);
- assert.match(worker,/job.portraitIdentityVersion===1&&!job.recomposeOnly\?portrait:null/);
+ assert.ok(worker.includes('preserveFacialDetail:[1,2].includes(job.portraitIdentityVersion)'));
+ assert.ok(worker.includes('[1,2].includes(job.portraitIdentityVersion)&&!job.recomposeOnly?portrait:null'));
  assert.match(worker,/finally[\s\S]*store.delete\(`\$\{id\}\/input`\)/);
 });

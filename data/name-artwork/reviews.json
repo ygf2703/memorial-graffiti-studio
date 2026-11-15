@@ -7858,5 +7858,78 @@
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-10-23T05:32:13.661Z"
     }
+  },
+  {
+    "name": "מרדכי חיים אמויאל",
+    "sha256": "9b8113c98b783b3eb45cfbd7d4c666dc711b59794372bbeed54901b4af79e752",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "reviewSession": "name-fixes-2026-11-15",
+    "evidence": ".netlify/name-fix-0-light.png; .netlify/name-fix-0-dark.png",
+    "notes": "בדיקת מקור ורינדור בהיר/כהה: מרדכי נכתב מ-ר-ד-כ-י ולא מדרכי. חיים עם שתי יו״דים ום סופית; אמויאל באותיות א-מ-ו-י-א-ל. כל הנזילות והשוליים נראים וללא חיתוך אותיות.",
+    "ocr": {
+      "sha256": "9b8113c98b783b3eb45cfbd7d4c666dc711b59794372bbeed54901b4af79e752",
+      "status": "matched",
+      "text": "מרדכי חיים אמויאל",
+      "characters": [
+        "מ",
+        "ר",
+        "ד",
+        "כ",
+        "י",
+        " ",
+        "ח",
+        "י",
+        "י",
+        "ם",
+        " ",
+        "א",
+        "מ",
+        "ו",
+        "י",
+        "א",
+        "ל"
+      ],
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-15T10:05:29.537Z"
+    }
+  },
+  {
+    "name": "יהונתן דויטש",
+    "sha256": "3d95127873b87912f1959557ecb7aece4d62816ff981324b924924e415df209f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "reviewSession": "name-fixes-2026-11-15",
+    "evidence": ".netlify/name-fix-1-light.png; .netlify/name-fix-1-dark.png",
+    "notes": "בדיקת מקור ורינדור בהיר/כהה: יהונתן באותיות י-ה-ו-נ-ת-ן עם ן סופית; דויטש ד-ו-י-ט-ש, ו ארוכה וי קצרה מובחנות. שתי המילים מופרדות וכל האותיות שלמות וקריאות.",
+    "ocr": {
+      "sha256": "3d95127873b87912f1959557ecb7aece4d62816ff981324b924924e415df209f",
+      "status": "matched",
+      "text": "יהונתן דויטש",
+      "characters": [
+        "י",
+        "ה",
+        "ו",
+        "נ",
+        "ת",
+        "ן",
+        " ",
+        "ד",
+        "ו",
+        "י",
+        "ט",
+        "ש"
+      ],
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-15T10:05:39.421Z"
+    }
   }
 ]

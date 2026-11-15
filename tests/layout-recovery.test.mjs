@@ -64,10 +64,13 @@ test("successful placements stay unchanged; historical and unrelated failures ar
 
 test("explicit repair upgrades historical layout failures; correction inherits recovery policy",async()=>{
  const parent={status:"failed",name:"test",nameArtwork:{name:"test"},layoutVersion:EXACT_NAME_LAYOUT,error:"לא נמצא מיקום בטוח"};
- const values=new Map([["parent",parent],["parent/base",base.buffer]]);
+ const values=new Map([["parent",parent],["parent/base",base.buffer],["parent/recompose-v1",{id:"old-failed"}],["old-failed",{status:"failed",recomposeOnly:true}]]);
  const store={get:async k=>values.get(k),setJSON:async(k,v)=>{if(!values.has(k))values.set(k,v);}};
  const repaired=await queueRecompose(store,"parent");
  assert.equal(values.get(repaired.id).layoutRecoveryVersion,1);
+ assert.notEqual(repaired.id,"old-failed");
+ assert.equal(values.get("old-failed").status,"failed");
+ assert.equal((await queueRecompose(store,"parent")).id,repaired.id);
  assert.equal(values.get(repaired.id).recomposeOnly,true);
  for(const version of [undefined,1]){
   values.set("completed",{...parent,status:"completed",layoutRecoveryVersion:version});

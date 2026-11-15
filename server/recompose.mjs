@@ -7,7 +7,9 @@ export async function queueRecompose(store,parentId){
   if(!parent||parent.status!=="failed"||parent.recomposeOnly||!parent.nameArtwork||!parent.error?.startsWith("לא נמצא מיקום בטוח"))throw new Error("Not a layout failure");
   const base=await store.get(parentId+"/base",{type:"arrayBuffer"});
   if(!base?.byteLength)throw new Error("Missing saved base");
-  const key=parentId+"/recompose-v1";
+  // A failed repair from the older placement policy must not pin the new button
+  // to that same failed child. Keep both claims/results; one child per policy.
+  const key=parentId+"/recompose-layout-"+LAYOUT_RECOVERY_VERSION;
   await store.setJSON(key,{id:randomUUID()},{onlyIfNew:true});
   const claim=await store.get(key,{type:"json"});
   const existing=await store.get(claim.id,{type:"json"});

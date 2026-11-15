@@ -48,9 +48,11 @@ export async function generateImage(portrait, name, fetcher = fetch, designSeed 
   form.append("image[]", new Blob([portrait.bytes], { type: portrait.type }), "portrait");
   if(referenceStyle){
     const prompt=referenceGenerationPrompt(designSeed,referenceStyle);
-    form.append("image[]",new Blob([await referenceBoard()],{type:"image/png"}),"approved-graphic-board.png");
-    if(correction)form.append("image[]",new Blob([correction.bytes],{type:"image/jpeg"}),"rejected-mural.jpg");
-    form.append("prompt",prompt+(correction?" The LAST image is the rejected mural: keep its correct elements, correcting likeness from Image 1 and maintaining the safe layout. It is not an identity reference.":""));
+    if(!referenceStyle.portraitIdentityVersion){
+      form.append("image[]",new Blob([await referenceBoard()],{type:"image/png"}),"approved-graphic-board.png");
+      if(correction)form.append("image[]",new Blob([correction.bytes],{type:"image/jpeg"}),"rejected-mural.jpg");
+    }
+    form.append("prompt",prompt+(correction&&!referenceStyle.portraitIdentityVersion?" The LAST image is the rejected mural: keep its correct elements, correcting likeness from Image 1 and maintaining the safe layout. It is not an identity reference.":""));
     return requestImageEdit(form,fetcher,timeoutMs);
   }
   for (const filename of ["style-01.png", "style-02.png", "style-03.png"]) {

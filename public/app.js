@@ -183,6 +183,17 @@ function showResult(name, { poster, job }) {
     // Review is an editorial safeguard, not an access-control boundary.
     link.hidden = true;
     const review = job.review || { status: "unavailable" };
+    if(job.portraitIdentityVersion===1){
+      const text=review.likeness==="consistent"?"השוואה אוטומטית למקור לא מצאה סטייה ברורה. נדרשת גם בדיקה חזותית של הדמות.":review.likeness==="different"?"אזהרה: נמצאה סטייה אפשרית בתווי הפנים לעומת המקור. השוו את הדמות לפני אישור.":"הדמיון למקור לא אומת אוטומטית. השוו לתצלום לפני אישור.";
+      card.append(node("p",text,"review-note"));
+      if(review.likenessIssues?.length)card.append(node("p",review.likenessIssues.join("; "),"review-note"));
+      const original=sourceFiles.get(job.id);
+      if(original){
+        const preview=node("img"),url=URL.createObjectURL(original);outputUrls.push(url);
+        preview.src=url;preview.alt="תמונת המקור להשוואת תווי הפנים";preview.className="source-comparison";
+        card.append(node("p","תמונת המקור להשוואה","review-note"),preview);
+      }
+    }
     if(job.nameSource==="literal-two-line") card.append(node("p","השם סודר אוטומטית בשתי שורות ברינדור גרפיטי מקומי מהטקסט המדויק. זהו מסלול חלופי, לא הנכס המצויר המקורי. בדקו את האיות והמראה לפני אישור.","review-note"));
     const message = review.status === "matched" ? "בדיקת האיות האוטומטית מצאה התאמה. זו אינה הבטחה — נדרש אישור חזותי לפני הורדה." : review.status === "needs_review" ? "אזהרה: הבדיקה האוטומטית מצאה חוסר התאמה או כיתוב לא ברור. אין לאשר אם חסרה או שגויה אפילו אות אחת." : "בדיקת האיות האוטומטית לא זמינה. יש לבדוק ידנית כל אות לפני אישור.";
     card.append(node("p", message, "review-note"));
@@ -232,6 +243,7 @@ function showResult(name, { poster, job }) {
         } else {
           await readJson(await fetch(`/api/correct?resume=${encodeURIComponent(job.id)}`, { method: "POST", headers: headers(), signal: AbortSignal.timeout(30000) }));
         }
+        if(file)sourceFiles.set(id,file);
         saveJob({ id, name: job.name });
         showResult(job.name, await waitForJob(id));
         status.textContent = "התיקון מוצג בכרטיס חדש ומחייב בדיקה ואישור.";

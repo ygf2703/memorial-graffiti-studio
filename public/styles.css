@@ -1,3 +1,4 @@
+.result-card img.source-comparison { width: auto; max-width: 100%; height: 200px; object-fit: contain; display: block; margin: 12px auto; }
 :root { color-scheme: dark; font-family: 'Assistant', sans-serif; background: #081426; color: #f7f4ea; }
 button, input, select, textarea { font: inherit; }
 [hidden] { display: none !important; }

@@ -7965,5 +7965,36 @@
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-11-15T12:04:59.275Z"
     }
+  },
+  {
+    "name": "רון צרפתי",
+    "sha256": "0a5c1bee775a05b9647b4f70f4f28c4afc20e9fa9fcf450943ea727893fd09f1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "reviewSession": "ron-refresh-2026-11-15",
+    "evidence": ".netlify/ron-refresh-2026-11-15/light.png; .netlify/ron-refresh-2026-11-15/dark.png",
+    "notes": "המקור השקוף ורינדורי בהיר/כהה נבדקו חזותית: רון ר-ו-ן; צרפתי צ-ר-פ-ת-י. אותיות שלמות וקריאות, נזילות קצרות ללא חיתוך, עיצוב בועה כחול חדש.",
+    "ocr": {
+      "sha256": "0a5c1bee775a05b9647b4f70f4f28c4afc20e9fa9fcf450943ea727893fd09f1",
+      "status": "matched",
+      "text": "רון צרפתי",
+      "characters": [
+        "ר",
+        "ו",
+        "ן",
+        " ",
+        "צ",
+        "ר",
+        "פ",
+        "ת",
+        "י"
+      ],
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-15T12:27:41.080Z"
+    }
   }
 ]

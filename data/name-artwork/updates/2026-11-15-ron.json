@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-15",
+  "tool": "built-in-imagegen",
+  "prompt": "Use case: style-transfer. Create a NEW highly readable Hebrew graffiti name design, distinctly rounded and more open than the attached sharp angular version. The reference supplies EXACT TEXT ONLY. Text in logical Hebrew RTL: \"רון צרפתי\". First word רון has EXACTLY THREE letters: ר ו ן, RESH then VAV then FINAL NUN. The ר must be a clear rounded roof-and-right-stem resh, not ד or ה; the ו is a separate tall narrow vav; the final ן has a clearly longer descender. Last word צרפתי has EXACTLY FIVE letters: צ ר פ ת י, not צפרתי. Give every letter a complete readable silhouette and leave visible space between the two words. One horizontal right-to-left line. NEW DESIGN: authentic rounded bubble/throw-up aerosol graffiti with cobalt and sky-blue fills, white curved broken highlights, dark navy contours, generous golden-yellow and lemon accents, subtle paint grain, a few short natural drips and restrained supporting splatter. Organic hand-painted letter edges rather than typed font. Only blue, yellow and white shades. No damaged/missing essential strokes, no extra letters, words or symbols. True transparent alpha background with generous safety margins on ALL sides and below drips. No wall, opaque rectangle, checkerboard, person, flag, slogan or watermark. Exact inscription again: רון צרפתי.",
+  "generatedFile": "exec-b441f5a5-60fb-4aca-afaf-2ed24da8552f.png",
+  "sourceNormalization": {
+    "transparentPadding": 32,
+    "paintPixelsPreserved": true
+  },
+  "original": {
+    "name": "רון צרפתי",
+    "file": "1a024eaaf158f5fc96d8.png",
+    "sha256": "1a024eaaf158f5fc96d87240922cbf177abc7edc0f6daec509d611f5c1047d27",
+    "status": "verified",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "style": 6,
+    "ocr": {
+      "sha256": "1a024eaaf158f5fc96d87240922cbf177abc7edc0f6daec509d611f5c1047d27",
+      "status": "matched",
+      "text": "רון צרפתי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:45:02.085Z"
+    }
+  },
+  "updated": {
+    "name": "רון צרפתי",
+    "file": "0a5c1bee775a05b9647b.png",
+    "sha256": "0a5c1bee775a05b9647b4f70f4f28c4afc20e9fa9fcf450943ea727893fd09f1",
+    "status": "verified",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "style": 1,
+    "ocr": {
+      "sha256": "0a5c1bee775a05b9647b4f70f4f28c4afc20e9fa9fcf450943ea727893fd09f1",
+      "status": "matched",
+      "text": "רון צרפתי",
+      "characters": [
+        "ר",
+        "ו",
+        "ן",
+        " ",
+        "צ",
+        "ר",
+        "פ",
+        "ת",
+        "י"
+      ],
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-15T12:27:41.080Z"
+    }
+  },
+  "review": {
+    "name": "רון צרפתי",
+    "sha256": "0a5c1bee775a05b9647b4f70f4f28c4afc20e9fa9fcf450943ea727893fd09f1",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "reviewSession": "ron-refresh-2026-11-15",
+    "evidence": ".netlify/ron-refresh-2026-11-15/light.png; .netlify/ron-refresh-2026-11-15/dark.png",
+    "notes": "המקור השקוף ורינדורי בהיר/כהה נבדקו חזותית: רון ר-ו-ן; צרפתי צ-ר-פ-ת-י. אותיות שלמות וקריאות, נזילות קצרות ללא חיתוך, עיצוב בועה כחול חדש.",
+    "ocr": {
+      "sha256": "0a5c1bee775a05b9647b4f70f4f28c4afc20e9fa9fcf450943ea727893fd09f1",
+      "status": "matched",
+      "text": "רון צרפתי",
+      "characters": [
+        "ר",
+        "ו",
+        "ן",
+        " ",
+        "צ",
+        "ר",
+        "פ",
+        "ת",
+        "י"
+      ],
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-15T12:27:41.080Z"
+    }
+  },
+  "unchangedCount": 346,
+  "unchangedFingerprint": "c3f92f82ff0fddfcc12788e5b31ebd81ce898a8fbc8f1d23bbebd4d3a51d513c",
+  "previousReleaseUpdate": "2026-11-15-amit.json"
+}

@@ -3,6 +3,7 @@ import {readFile} from "node:fs/promises";
 import {resolve} from "node:path";
 import {muralDesign} from "../public/design.js";
 import {paletteInstructionForVersion,validatePaletteVersion} from "./palette.mjs";
+import {identityInstruction,validatePortraitIdentityVersion} from "./portrait-identity.mjs";
 
 export const REFERENCE_STYLE_VERSION=1;
 export const NAME_SIZE_VERSION=1;
@@ -40,6 +41,11 @@ export function referenceCompositionInstruction(style){
 }
 
 export function referenceGenerationPrompt(seed,style){
+ validatePortraitIdentityVersion(style.portraitIdentityVersion);
+ if(style.portraitIdentityVersion){
+  const legacy=referenceGenerationPrompt(seed,{...style,portraitIdentityVersion:undefined});
+  return legacy.replace("Image 2 is an illustration STYLE board, not a source of people or text.","There are NO other identity or style reference images.").replaceAll("supplied illustrated poster board's","described graffiti medium's").replaceAll("like the STYLE board","with hand-painted graffiti edges")+" "+identityInstruction;
+ }
  validatePaletteVersion(style.paletteVersion);
  const design=muralDesign(seed);
  if(style.paletteVersion)design.wall=design.wall.replace(/cream|beige|off-white/gi,"white");
@@ -47,6 +53,10 @@ export function referenceGenerationPrompt(seed,style){
 }
 
 export function referenceRefinementPrompt(style){
+ validatePortraitIdentityVersion(style.portraitIdentityVersion);
+ if(style.portraitIdentityVersion){
+  return referenceRefinementPrompt({...style,portraitIdentityVersion:undefined}).replace("Image 3 is the approved GRAPHIC ILLUSTRATION STYLE board, not another identity.","Only two images are supplied. Image 2 is an imperfect draft, NEVER an identity reference.").replaceAll("supplied illustrated poster board's","described graffiti medium's")+" "+identityInstruction;
+ }
  validatePaletteVersion(style.paletteVersion);
  return `Refine the person in the unlettered mural Image 2 using original photograph Image 1 as the ONLY identity source. Image 3 is the approved GRAPHIC ILLUSTRATION STYLE board, not another identity. Correct the actual head/jaw proportions, eye/eyelid shapes, nose, smile/lips/teeth, hair, facial hair and accessories against the photo. Do not invent beard from shadows, alter expression, beautify or mirror. Preserve the draft's framing, head size/position, clothing, wall, flag and clear lettering areas. ${style.paletteVersion?graphicStyleInstruction.replace("Palette unchanged: blue, navy, yellow and chalk; neutral beige only for bare wall.",paletteInstructionForVersion(style.paletteVersion)):graphicStyleInstruction} This is a graphic hand-painted portrait: clean broad blue/yellow/chalk planes, navy selected contours. Remove fine facial stippling instead of adding it. Do NOT increase photographic skin detail or preserve photographic texture. Keep likeness through contour geometry, not through pores or shaded dots. ${referenceCompositionInstruction(style)} No lettering of any kind. Keep non-head elements unchanged.`;
 }

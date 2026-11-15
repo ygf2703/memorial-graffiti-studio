@@ -4139,21 +4139,32 @@
     },
     {
       "name": "רון צרפתי",
-      "file": "1a024eaaf158f5fc96d8.png",
-      "sha256": "1a024eaaf158f5fc96d87240922cbf177abc7edc0f6daec509d611f5c1047d27",
+      "file": "0a5c1bee775a05b9647b.png",
+      "sha256": "0a5c1bee775a05b9647b4f70f4f28c4afc20e9fa9fcf450943ea727893fd09f1",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
-      "style": 6,
+      "style": 1,
       "ocr": {
-        "sha256": "1a024eaaf158f5fc96d87240922cbf177abc7edc0f6daec509d611f5c1047d27",
+        "sha256": "0a5c1bee775a05b9647b4f70f4f28c4afc20e9fa9fcf450943ea727893fd09f1",
         "status": "matched",
         "text": "רון צרפתי",
+        "characters": [
+          "ר",
+          "ו",
+          "ן",
+          " ",
+          "צ",
+          "ר",
+          "פ",
+          "ת",
+          "י"
+        ],
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:45:02.085Z"
+        "checkedAt": "2026-11-15T12:27:41.080Z"
       }
     },
     {

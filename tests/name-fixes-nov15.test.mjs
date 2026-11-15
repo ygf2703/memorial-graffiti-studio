@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {readFile} from "node:fs/promises";
 import {createHash} from "node:crypto";
 import sharp from "sharp";
+import {beforeUpdates} from "./catalog-history.mjs";
 import {releaseCatalog,selectArtwork,loadArtwork,compositeArtwork} from "../server/name-artwork.mjs";
 import {resolveArtworkName} from "../public/batch.js";
 const read=async file=>JSON.parse(await readFile(file,"utf8"));
@@ -20,7 +21,7 @@ test("Mordechai is available with corrected letters and Yehonatan has the approv
  const changed=new Set(update.replacements.map(item=>item.updated.name));
  // Reconstruct this historical snapshot across the later explicit Amit update.
  const amit=await read("data/name-artwork/updates/2026-11-15-amit.json");
- const snapshot=catalog.entries.map(entry=>{
+ const snapshot=(await beforeUpdates(catalog.entries,["2026-11-15-ron.json"])).map(entry=>{
   if(entry.name!==amit.updated.name)return entry;
   assert.equal(entry.sha256,amit.updated.sha256);
   return amit.original;

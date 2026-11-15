@@ -39,6 +39,7 @@ export async function queueCorrection(store, parentId, input, reason) {
     ...(parent.layoutRecoveryVersion !== undefined ? { layoutRecoveryVersion: [1,2].includes(parent.layoutRecoveryVersion)?LAYOUT_RECOVERY_VERSION:parent.layoutRecoveryVersion } : {}),
     ...(parent.referenceStyleVersion ? { referenceStyleVersion: parent.referenceStyleVersion } : {}),
     ...(parent.portraitRefinementVersion ? { portraitRefinementVersion: parent.portraitRefinementVersion, portraitRefinementModel: parent.portraitRefinementModel } : {}),
+    ...(parent.portraitIdentityVersion!==undefined?{portraitIdentityVersion:parent.portraitIdentityVersion}:reason==="portrait"&&parent.referenceStyleVersion?{portraitIdentityVersion:1}:{}),
     designSeed: parent.designSeed || parentId, createdAt: Date.now(),
   }, { onlyIfNew: true });
   return { id: claim.id, status: "queued" };

@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {readFile} from "node:fs/promises";
 import {createHash} from "node:crypto";
 import sharp from "sharp";
+import {beforeUpdates} from "./catalog-history.mjs";
 import {releaseCatalog,selectArtwork,loadArtwork,compositeArtwork} from "../server/name-artwork.mjs";
 const hash=value=>createHash("sha256").update(value).digest("hex");
 
@@ -16,7 +17,7 @@ test("Amit uses distinct reviewed bubble graffiti while the old file and all 346
  assert.equal(catalog.entries.length,347);assert.equal(Object.keys(catalog.aliases).length,19);
  assert.equal(update.original.sha256,"fc923599d934d110d7c940ff59f02e79fbf85b781572ab5b3863ed4008f27c82");
  const old=await loadArtwork({entries:[update.original]},current.name);assert.equal(hash(old.bytes),update.original.sha256);
- const unchanged=catalog.entries.filter(entry=>entry.name!==current.name);
+ const unchanged=(await beforeUpdates(catalog.entries,["2026-11-15-ron.json"])).filter(entry=>entry.name!==current.name);
  assert.equal(unchanged.length,346);
  assert.equal(hash(JSON.stringify(unchanged.map(({name,file,sha256})=>({name,file,sha256})))),update.unchangedFingerprint);
  const {bytes}=await loadArtwork(catalog,current.name),meta=await sharp(bytes).metadata();

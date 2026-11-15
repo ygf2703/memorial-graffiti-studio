@@ -7931,5 +7931,39 @@
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-11-15T10:05:39.421Z"
     }
+  },
+  {
+    "name": "עמית בן יגאל",
+    "sha256": "55443e6cb0c94028b7b8d93d3c9195a681c577d7568f977244d9f5547bb16177",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "reviewSession": "amit-refresh-2026-11-15",
+    "evidence": ".netlify/amit-refresh-2026-11-15/light.png; .netlify/amit-refresh-2026-11-15/dark.png",
+    "notes": "המקור השקוף ורינדורי 1080 בהיר/כהה נבדקו: עמית ע-מ-י-ת; בן ב-ן סופית עם יורדת מובחנת; יגאל י-ג-א-ל. כל האותיות שלמות ומופרדות, הנזילות אינן חתוכות. עיצוב בועה מעוגל וכחול שונה מהמקור הזוויתי.",
+    "ocr": {
+      "sha256": "55443e6cb0c94028b7b8d93d3c9195a681c577d7568f977244d9f5547bb16177",
+      "status": "matched",
+      "text": "עמית בן יגאל",
+      "characters": [
+        "ע",
+        "מ",
+        "י",
+        "ת",
+        " ",
+        "ב",
+        "ן",
+        " ",
+        "י",
+        "ג",
+        "א",
+        "ל"
+      ],
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-15T12:04:59.275Z"
+    }
   }
 ]

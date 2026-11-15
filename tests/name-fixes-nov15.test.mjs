@@ -18,7 +18,14 @@ test("Mordechai is available with corrected letters and Yehonatan has the approv
  assert.equal(selectArtwork(catalog,"יהונתן יעקב דויטש").name,"יהונתן דויטש");
  for(const typo of ["מרדגי חיים אמויאל","יהונתן דוויטש"])assert.throws(()=>selectArtwork(catalog,typo));
  const changed=new Set(update.replacements.map(item=>item.updated.name));
- const unchanged=catalog.entries.filter(entry=>!changed.has(entry.name));
+ // Reconstruct this historical snapshot across the later explicit Amit update.
+ const amit=await read("data/name-artwork/updates/2026-11-15-amit.json");
+ const snapshot=catalog.entries.map(entry=>{
+  if(entry.name!==amit.updated.name)return entry;
+  assert.equal(entry.sha256,amit.updated.sha256);
+  return amit.original;
+ });
+ const unchanged=snapshot.filter(entry=>!changed.has(entry.name));
  assert.equal(unchanged.length,345);assert.equal(hash(JSON.stringify(unchanged.map(({name,file,sha256})=>({name,file,sha256})))),update.unchangedFingerprint);
  assert.equal(hash(JSON.stringify(roster.records.map(({row,name})=>({row,name})))),update.rosterSourceFingerprint);
  assert.equal(roster.records.find(row=>row.name==="מדרכי חיים אמויאל").artworkName,"מרדכי חיים אמויאל");

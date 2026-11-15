@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-15",
+  "tool": "built-in-imagegen",
+  "prompt": "Use case: style-transfer. Create a distinctly DIFFERENT Hebrew graffiti name design from the attached angular artwork. Use the reference only for the exact TEXT, NOT its angular lettering shapes. Exact inscription in logical Hebrew RTL: \"עמית בן יגאל\". First word עמית: ע מ י ת. Middle word בן: ב ן (final nun). Last word יגאל: י ג א ל. One horizontal right-to-left row with clear spaces between the three words. NEW STYLE: fat rounded hand-painted bubble graffiti, lively irregular organic letter contours, rich cobalt/sky-blue fills, deep navy outline and dimensional shade, sunshine-yellow and lemon outer accents, broken white curved highlights. Authentic aerosol paint texture, modest blue/yellow splatter and short natural proportional drips, not a polished typeset font or vector sticker. Make all Hebrew characters complete, distinct and easily readable; do not add or omit letters. ONLY shades of BLUE, YELLOW and WHITE, navy instead of black. Genuinely transparent alpha background, no wall, opaque rectangle, checkerboard, person, flag, slogan, watermark or extra text. Keep generous transparent margins on every side, including below all drips. Exact text again: עמית בן יגאל.",
+  "generatedFile": "exec-b677f8cc-8304-4ff6-8d21-94432c10b459.png",
+  "original": {
+    "name": "עמית בן יגאל",
+    "file": "fc923599d934d110d7c9.png",
+    "sha256": "fc923599d934d110d7c940ff59f02e79fbf85b781572ab5b3863ed4008f27c82",
+    "status": "verified",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "style": 8,
+    "ocr": {
+      "sha256": "fc923599d934d110d7c940ff59f02e79fbf85b781572ab5b3863ed4008f27c82",
+      "status": "matched",
+      "text": "עמית בן יגאל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-10-16T07:39:22.691Z"
+    }
+  },
+  "updated": {
+    "name": "עמית בן יגאל",
+    "file": "55443e6cb0c94028b7b8.png",
+    "sha256": "55443e6cb0c94028b7b8d93d3c9195a681c577d7568f977244d9f5547bb16177",
+    "status": "verified",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "style": 1,
+    "ocr": {
+      "sha256": "55443e6cb0c94028b7b8d93d3c9195a681c577d7568f977244d9f5547bb16177",
+      "status": "matched",
+      "text": "עמית בן יגאל",
+      "characters": [
+        "ע",
+        "מ",
+        "י",
+        "ת",
+        " ",
+        "ב",
+        "ן",
+        " ",
+        "י",
+        "ג",
+        "א",
+        "ל"
+      ],
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-15T12:04:59.275Z"
+    }
+  },
+  "review": {
+    "name": "עמית בן יגאל",
+    "sha256": "55443e6cb0c94028b7b8d93d3c9195a681c577d7568f977244d9f5547bb16177",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review",
+    "reviewSession": "amit-refresh-2026-11-15",
+    "evidence": ".netlify/amit-refresh-2026-11-15/light.png; .netlify/amit-refresh-2026-11-15/dark.png",
+    "notes": "המקור השקוף ורינדורי 1080 בהיר/כהה נבדקו: עמית ע-מ-י-ת; בן ב-ן סופית עם יורדת מובחנת; יגאל י-ג-א-ל. כל האותיות שלמות ומופרדות, הנזילות אינן חתוכות. עיצוב בועה מעוגל וכחול שונה מהמקור הזוויתי.",
+    "ocr": {
+      "sha256": "55443e6cb0c94028b7b8d93d3c9195a681c577d7568f977244d9f5547bb16177",
+      "status": "matched",
+      "text": "עמית בן יגאל",
+      "characters": [
+        "ע",
+        "מ",
+        "י",
+        "ת",
+        " ",
+        "ב",
+        "ן",
+        " ",
+        "י",
+        "ג",
+        "א",
+        "ל"
+      ],
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-15T12:04:59.275Z"
+    }
+  },
+  "unchangedCount": 346,
+  "unchangedFingerprint": "3ed3a9224babd119bbd33817e69feca299a8cd771bfe3bad6901436748829d2c",
+  "previousReleaseUpdate": "2026-11-15-two-names.json"
+}

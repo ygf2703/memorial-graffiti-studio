@@ -43,10 +43,16 @@ export async function placeCatalogueWithRecovery(input,deps={}){
  if(recoveryVersion===3){
   let measured;
   try{measured=await (deps.detect||((b)=>detectPortraitLayout(b,fetch,true)))(bytes);}catch{/* Final review must check unverified layout. */}
-  if(!measured&&!deps.detect){
-   try{measured=await detectPortraitLayout(bytes,fetch,true,true);}catch{/* Separate the entire source when geometry remains unknown. */}
+  const composed=measured?await composeDominantWall(bytes,artwork,measured,{...context,captionVariant}):null;
+  if(composed?.placement.source==='prebuilt-dominant-wall')return composed;
+  const accurate=deps.redetect||(!deps.detect?()=>detectPortraitLayout(bytes,fetch,true,true):null);
+  if(accurate){
+   try{
+    const verified=await accurate(bytes);
+    return await composeDominantWall(bytes,artwork,verified,{...context,captionVariant});
+   }catch{/* Safely separate all source pixels if both analyses fail. */}
   }
-  return composeDominantWall(bytes,artwork,measured,{...context,captionVariant});
+  return composed||composeDominantWall(bytes,artwork,undefined,{...context,captionVariant});
  }
  let detection;
  try{

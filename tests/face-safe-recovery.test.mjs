@@ -6,8 +6,18 @@ import {composeDominantWall,dominantWallPlan} from '../server/dominant-wall.mjs'
 import {wallRecoveryPlan} from '../server/wall-recovery.mjs';
 import {pixelBox,intersects,detectPortraitLayout} from '../server/name-placement.mjs';
 import {queueRecompose,imageBaseForJob} from '../server/recompose.mjs';
+import {placeCatalogueWithRecovery} from '../server/layout-recovery.mjs';
 const base=await sharp({create:{width:1080,height:1080,channels:3,background:'#168dcc'}}).png().toBuffer();
 const art=await sharp({create:{width:980,height:320,channels:4,background:'#ffd629'}}).png().toBuffer();
+
+test('an oversized initial flag box gets one accurate check before shrinking a mural unnecessarily',async()=>{
+ const accurate={uncertain:false,head:{x:500,y:67,width:189,height:264},face:{x:520,y:126,width:151,height:202},star:{x:86,y:204,width:205,height:184},flag:{x:0,y:65,width:430,height:597}};
+ let checks=0;
+ const result=await placeCatalogueWithRecovery({bytes:base,artwork:art,placementVersion:2,captionVariant:9,recoveryVersion:3,context:{protectFlag:true,nameScaleVersion:1,preserveFacialDetail:true}},
+ {detect:async()=>({...accurate,flag:{x:0,y:0,width:1000,height:1000}}),redetect:async()=>{checks++;return accurate;}});
+ assert.equal(checks,1);assert.equal(result.placement.source,'prebuilt-dominant-wall');assert.equal(result.placement.sourceFrameCoverage,1);
+ const p=result.placement;assert.equal(intersects({left:p.left,top:p.top,right:p.left+p.width,bottom:p.top+p.height},pixelBox(result.detection.face)),false);
+});
 
 test('missing or invalid layout never puts an unverified large name over the unchanged mural',async()=>{
  for(const detection of [undefined,{uncertain:true},{uncertain:false}]){

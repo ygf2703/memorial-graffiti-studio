@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import{readFile}from'node:fs/promises';
+import{createHash}from'node:crypto';
+import sharp from'sharp';
+import{releaseCatalog,selectArtwork,loadArtwork}from'../server/name-artwork.mjs';
+const hash=x=>createHash('sha256').update(x).digest('hex');
+test('approved Gabriel lettering replaces only one asset and preserves Ariel and all other names',async()=>{
+ const audit=JSON.parse(await readFile('data/name-artwork/updates/2026-11-16-gabriel-refresh.json','utf8'));
+ const catalog=await releaseCatalog();assert.equal(catalog.entries.length,347);
+ assert.deepEqual(selectArtwork(catalog,'גברי-אל ישי בראל'),audit.updated);assert.notEqual(audit.original.sha256,audit.updated.sha256);
+ const unchanged=catalog.entries.filter(e=>e.name!==audit.updated.name);assert.equal(unchanged.length,346);
+ assert.equal(hash(JSON.stringify(unchanged.map(({name,file,sha256})=>({name,file,sha256})))),audit.unchangedFingerprint);
+ const old=await loadArtwork({entries:[audit.original]},audit.original.name);assert.equal(hash(old.bytes),audit.original.sha256);
+ const{bytes}=await loadArtwork(catalog,audit.updated.name),meta=await sharp(bytes).metadata(),alpha=await sharp(bytes).extractChannel(3).raw().toBuffer();
+ assert.equal(hash(bytes),audit.updated.sha256);assert.ok(meta.hasAlpha&&alpha.includes(0)&&alpha.includes(255));
+ for(const i of [0,meta.width-1,(meta.height-1)*meta.width,meta.width*meta.height-1])assert.equal(alpha[i],0);
+ assert.equal(audit.review.spellingChecked,true);assert.equal(audit.updated.ocr.text,'גברי-אל ישי בראל');
+ assert.equal(selectArtwork(catalog,'אריאל בן-שאנן').name,'אריאל בן שאנן');
+});

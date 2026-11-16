@@ -25,7 +25,17 @@ export async function beforeNameCorrections(entries){
 }
 
 export async function beforeArielRestore(entries){
+ entries=await beforeGabrielRefresh(entries);
  const update=JSON.parse(await readFile('data/name-artwork/updates/2026-11-16-ariel-shaanan.json','utf8'));
+ return entries.map(entry=>{
+  if(entry.name!==update.updated.name)return entry;
+  assert.equal(entry.sha256,update.updated.sha256);
+  return update.original;
+ });
+}
+
+export async function beforeGabrielRefresh(entries){
+ const update=JSON.parse(await readFile('data/name-artwork/updates/2026-11-16-gabriel-refresh.json','utf8'));
  return entries.map(entry=>{
   if(entry.name!==update.updated.name)return entry;
   assert.equal(entry.sha256,update.updated.sha256);

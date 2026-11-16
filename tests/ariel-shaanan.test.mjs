@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import sharp from 'sharp';
 import {releaseCatalog,selectArtwork,loadArtwork} from '../server/name-artwork.mjs';
 import {loadNameRoster,validateRosterCoverage} from '../server/name-roster.mjs';
+import {beforeGabrielRefresh} from './catalog-history.mjs';
 const hash=x=>createHash('sha256').update(x).digest('hex');
 test('user-authorized Ariel restoration preserves 346 other names and historical artwork',async()=>{
  const audit=JSON.parse(await readFile('data/name-artwork/updates/2026-11-16-ariel-shaanan.json','utf8'));
@@ -14,7 +15,7 @@ test('user-authorized Ariel restoration preserves 346 other names and historical
  assert.deepEqual(selectArtwork(catalog,'אריאל בן-שאנן'),audit.updated);
  assert.throws(()=>selectArtwork(catalog,'אריאל בן שושן'));
  assert.deepEqual(roster.records.find(r=>r.name==='אריאל בן-שאנן'),audit.updatedRosterRow);
- const unchanged=catalog.entries.filter(e=>e.name!==audit.updated.name);assert.equal(unchanged.length,346);
+ const unchanged=(await beforeGabrielRefresh(catalog.entries)).filter(e=>e.name!==audit.updated.name);assert.equal(unchanged.length,346);
  assert.equal(hash(JSON.stringify(unchanged.map(({name,file,sha256})=>({name,file,sha256})))),audit.unchangedFingerprint);
  const old=await loadArtwork({entries:[audit.original]},audit.original.name);assert.equal(hash(old.bytes),audit.original.sha256);
  const {bytes}=await loadArtwork(catalog,audit.updated.name);assert.equal(hash(bytes),audit.updated.sha256);

@@ -3149,21 +3149,39 @@
     },
     {
       "name": "גברי-אל ישי בראל",
-      "file": "302b4b855ef48c987e4c.png",
-      "sha256": "302b4b855ef48c987e4c23a7130bcb6f78841fb1ad7c9cc2abd46f5448b0be09",
+      "file": "89bdc4d2ebb22a14b525.png",
+      "sha256": "89bdc4d2ebb22a14b5254167a22ebede5b24f025dd17fe8d402421ea905b83c0",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
-      "style": 8,
+      "style": 1,
       "ocr": {
-        "sha256": "302b4b855ef48c987e4c23a7130bcb6f78841fb1ad7c9cc2abd46f5448b0be09",
+        "sha256": "89bdc4d2ebb22a14b5254167a22ebede5b24f025dd17fe8d402421ea905b83c0",
         "status": "matched",
         "text": "גברי-אל ישי בראל",
+        "characters": [
+          "ג",
+          "ב",
+          "ר",
+          "י",
+          "-",
+          "א",
+          "ל",
+          " ",
+          "י",
+          "ש",
+          "י",
+          " ",
+          "ב",
+          "ר",
+          "א",
+          "ל"
+        ],
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-11-16T07:23:18.107Z"
+        "checkedAt": "2026-11-16T11:36:17.619Z"
       }
     },
     {

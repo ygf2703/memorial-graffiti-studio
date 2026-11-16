@@ -15,7 +15,7 @@ test("workbook roster covers exactly 347 distinct sources and distinct designs",
   assert.equal(actual.records.length,347); assert.equal(result.names.length,347); assert.equal(Object.keys(result.aliases).length,21);
   assert.deepEqual(actual.retiredNames,["אורי משה בורנשטיין","סיון שדה","אלון פרנקס","מעוז מורל"]);
   assert.ok(result.names.includes("אלון פרקס")); assert.ok(!result.names.includes("אלון פרנקס"));
-  for(const name of ["אריאל בן שושן","לידור מועלם","נתנאל בוכריס","גיא לאו","יוסף חיים אשרף","עמית אריה רגב","עינבר אברהם קב"]) assert.ok(result.names.includes(name));
+  for(const name of ["אריאל בן שאנן","לידור מועלם","נתנאל בוכריס","גיא לאו","יוסף חיים אשרף","עמית אריה רגב","עינבר אברהם קב"]) assert.ok(result.names.includes(name));
 });
 
 test("explicit aliases preserve approved artwork spelling and cannot fuzzy-match", () => {

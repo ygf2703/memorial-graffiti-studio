@@ -5,13 +5,19 @@ import {createHash} from 'node:crypto';
 import sharp from 'sharp';
 import {releaseCatalog,selectArtwork,loadArtwork,compositeArtwork} from '../server/name-artwork.mjs';
 import {loadNameRoster,validateRosterCoverage} from '../server/name-roster.mjs';
+import {beforeArielRestore} from './catalog-history.mjs';
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const audit=JSON.parse(await readFile('data/name-artwork/updates/2026-11-16-table-corrections.json','utf8'));
+const restoration=JSON.parse(await readFile('data/name-artwork/updates/2026-11-16-ariel-shaanan.json','utf8'));
+async function tableSnapshot(){
+ const catalog=await releaseCatalog();
+ return {...catalog,entries:await beforeArielRestore(catalog.entries),aliases:restoration.originalAliases};
+}
 
 test('39 user-approved corrections retain all 347 roster records and 308 untouched assets',async()=>{
- const catalog=await releaseCatalog(),roster=await loadNameRoster();
+ const current=await releaseCatalog(),roster=await loadNameRoster(),catalog=await tableSnapshot();
  assert.equal(audit.replacements.length,39);assert.equal(new Set(audit.replacements.map(r=>r.pdfNumber)).size,39);
- assert.equal(catalog.entries.length,347);assert.equal(validateRosterCoverage(catalog,roster),true);
+ assert.equal(catalog.entries.length,347);assert.equal(validateRosterCoverage(current,roster),true);
  assert.deepEqual(roster.records.map(({row,name})=>({row,name})),audit.previousRosterMappings.map(({row,name})=>({row,name})));
  const changed=new Set(audit.replacements.map(r=>r.updated.name));
  const unchanged=catalog.entries.filter(e=>!changed.has(e.name));assert.equal(unchanged.length,308);
@@ -23,7 +29,7 @@ test('39 user-approved corrections retain all 347 roster records and 308 untouch
 });
 
 test('new PNGs match approved hashes, retain alpha and render at 1080 without changing inscription pixels',async()=>{
- const catalog=await releaseCatalog();
+ const catalog=await tableSnapshot();
  for(const row of audit.replacements){
   const {bytes}=await loadArtwork(catalog,row.updated.name);assert.equal(hash(bytes),row.updated.sha256);
   const metadata=await sharp(bytes).metadata(),alpha=await sharp(bytes).extractChannel(3).raw().toBuffer();
@@ -40,7 +46,7 @@ test('new PNGs match approved hashes, retain alpha and render at 1080 without ch
 });
 
 test('final-kaf and stray-apostrophe fixes publish their second versions and exact requested spellings',async()=>{
- const catalog=await releaseCatalog();
+ const catalog=await tableSnapshot();
  for(const [number,name]of [[337,'עידו ברוך'],[96,'בן כובאני']]){
   const row=audit.replacements.find(r=>r.pdfNumber===number);assert.ok(row.revisionPrompt);assert.equal(selectArtwork(catalog,name).sha256,row.updated.sha256);
   assert.equal(row.blindReading.status,'matched');assert.equal(row.blindReading.reading.text,name);

@@ -1,4 +1,5 @@
 export const caption = "אחים ואחיות לסמל לא שוכחים";
+export const MAX_BATCH_FILES = 20;
 export const MAX_FILE_BYTES = 20 * 1024 * 1024;
 export function resolveArtworkName(name, aliases = {}, available = []) {
   if (Object.hasOwn(aliases, name)) return aliases[name];
@@ -21,7 +22,7 @@ export function validName(name) {
 export function validateFiles(files, checkNames = true) {
   const errors = [];
   const names = new Set();
-  if (files.length > 10) errors.push("אפשר להעלות עד 10 תמונות בכל אצווה.");
+  if (files.length > MAX_BATCH_FILES) errors.push(`אפשר להעלות עד ${MAX_BATCH_FILES} תמונות בכל אצווה.`);
   for (const file of files) {
     const name = nameFromFile(file);
     if (checkNames && !validName(name)) errors.push(`יש לתת לקובץ ${file.name} שם מלא, ללא מספרי תמונה או תאריכים.`);

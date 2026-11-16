@@ -95,8 +95,8 @@ test("poster renderer paints exact RTL name and both caption lines, using loaded
     if (savedFont) Object.defineProperty(globalThis, "FontFace", savedFont); else delete globalThis.FontFace;
   }
 });
-test("ten named photos pass; eleven are rejected", () => {
-  const files = Array.from("אבגדהוזחטי", (x) => photo(`שם ${x}.jpg`));
+test("twenty named photos pass; twenty-one are rejected", () => {
+  const files = Array.from("אבגדהוזחטיכלמנסעפצקר", (x) => photo(`שם ${x}.jpg`));
   assert.deepEqual(validateFiles(files), []);
   assert.ok(validateFiles([...files, photo("שם נוסף.jpg")]).length);
 });

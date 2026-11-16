@@ -1,4 +1,4 @@
-import { nameFromFile, validateFiles, validName, readJson, batchSummary, resolveArtworkName, processBatch } from "./batch.js";
+import { MAX_BATCH_FILES, nameFromFile, validateFiles, validName, readJson, batchSummary, resolveArtworkName, processBatch } from "./batch.js";
 import { POSTER_LAYOUT, paintExactText } from "./poster.js";
 import { SPRAY_LAYOUT, CAPTION_LAYOUT, COMPOSITED_LAYOUT, EXACT_NAME_LAYOUT, requiresApproval } from "./design.js";
 import { paintFixedCaption } from "./captions.js";
@@ -70,7 +70,7 @@ async function checkConnection() {
   return ready;
 }
 function renderBatch() {
-  count.textContent = `${batch.length} / 10`;
+  count.textContent = `${batch.length} / ${MAX_BATCH_FILES}`;
   photoList.replaceChildren();
   photoList.classList.toggle("empty-state", !batch.length);
   if (!batch.length) photoList.textContent = "עדיין לא נבחרו תמונות.";
@@ -104,7 +104,7 @@ fileInput.addEventListener("change", () => {
   for (const item of batch) URL.revokeObjectURL(item.preview);
   const files = [...fileInput.files], errors = validateFiles(files, false);
   invalid = errors.length > 0;
-  batch = files.slice(0, 10).map((file) => ({ file, name: validName(nameFromFile(file)) ? nameFromFile(file) : "", preview: URL.createObjectURL(file) }));
+  batch = files.slice(0, MAX_BATCH_FILES).map((file) => ({ file, name: validName(nameFromFile(file)) ? nameFromFile(file) : "", preview: URL.createObjectURL(file) }));
   validation.textContent = errors.join(" ");
   renderBatch();
 });

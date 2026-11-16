@@ -23,17 +23,23 @@ async function wallBackdrop(){
  return backdrop;
 }
 
-export function wallRecoveryPlan(width,height,captionHeight,detection){
+export function wallRecoveryPlan(width,height,captionHeight,detection,options={}){
  if(![width,height,captionHeight].every(Number.isFinite)||width<=0||height<=0||captionHeight<=0||captionHeight>290)throw new Error("Invalid wall layout dimensions");
- const titleScale=Math.min(1008/width,240/height);
+ const titleScale=Math.min(1008/width,(options.maximumNameHeight||240)/height);
  const name={width:Math.max(1,Math.floor(width*titleScale)),height:Math.max(1,Math.floor(height*titleScale)),top:24};
  name.left=Math.round((1080-name.width)/2);
  const top=name.top+name.height+24,captionTop=1030-captionHeight,bottom=captionTop-16;
- let protectedBox={left:0,top:0,right:1080,bottom:1080},wholeMuralProtected=true;
+ let protectedBox={left:0,top:0,right:1080,bottom:1080},wholeMuralProtected=true,individualBoxes=[];
  if(detection?.uncertain===false){
   try{
   const head=pixelBox(detection.head),star=pixelBox(detection.star,16);
+  if(options.protectFlag){
+   const flag=pixelBox(detection.flag,16),rawFlag=pixelBox(detection.flag,0),rawStar=pixelBox(detection.star,0);
+   if(rawStar.left<rawFlag.left||rawStar.right>rawFlag.right||rawStar.top<rawFlag.top||rawStar.bottom>rawFlag.bottom)throw Error("Invalid full flag bounds");
+   star.left=Math.min(star.left,flag.left);star.right=Math.max(star.right,flag.right);star.top=Math.min(star.top,flag.top);star.bottom=Math.max(star.bottom,flag.bottom);
+  }
   protectedBox={left:Math.min(head.left,star.left),top:Math.min(head.top,star.top),right:Math.max(head.right,star.right),bottom:Math.max(head.bottom,star.bottom)};
+  individualBoxes=[head,star];
   wholeMuralProtected=false;
   }catch{/* Invalid vision bounds: preserve the entire mural instead. */}
  }
@@ -44,13 +50,14 @@ export function wallRecoveryPlan(width,height,captionHeight,detection){
  const transform={width:size,height:size,left:Math.round(540-(protectedBox.left+protectedBox.right)/2*actualScale),top:Math.ceil(top-protectedBox.top*actualScale)};
  const protectedRegion={left:Math.floor(transform.left+protectedBox.left*actualScale),top:Math.floor(transform.top+protectedBox.top*actualScale),right:Math.ceil(transform.left+protectedBox.right*actualScale),bottom:Math.ceil(transform.top+protectedBox.bottom*actualScale)};
  if(protectedRegion.top<name.top+name.height+20||protectedRegion.bottom>captionTop-12||protectedRegion.left<0||protectedRegion.right>1080)throw new Error("Unsafe wall layout");
- return {name,transform,protectedRegion,captionTop,wholeMuralProtected};
+ const protectedBoxes=individualBoxes.map(box=>({left:Math.floor(transform.left+box.left*actualScale),top:Math.floor(transform.top+box.top*actualScale),right:Math.ceil(transform.left+box.right*actualScale),bottom:Math.ceil(transform.top+box.bottom*actualScale)}));
+ return {name,transform,protectedRegion,protectedBoxes,captionTop,wholeMuralProtected};
 }
 
-export async function composeWallRecovery(bytes,artwork,captionVariant,detection){
+export async function composeWallRecovery(bytes,artwork,captionVariant,detection,options={}){
  const name=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer({resolveWithObject:true});
- const caption=await captionAsset(captionVariant);
- const plan=wallRecoveryPlan(name.info.width,name.info.height,caption.info.height,detection);
+ const caption=await captionAsset(captionVariant,options.captionMaximumHeight||290);
+ const plan=wallRecoveryPlan(name.info.width,name.info.height,caption.info.height,detection,options);
  const t=plan.transform;
  const resized=await sharp(bytes).resize(t.width,t.height).flatten({background:"#ffffff"}).removeAlpha().raw().toBuffer({resolveWithObject:true});
  const channels=resized.info.channels,rgba=Buffer.alloc(t.width*t.height*4);
@@ -58,7 +65,7 @@ export async function composeWallRecovery(bytes,artwork,captionVariant,detection
   const offset=(y*t.width+x),i=offset*4,j=offset*channels,gx=t.left+x,gy=t.top+y,p=plan.protectedRegion;
   // Retain every protected pixel. Feather only outer wall/body into the wall;
   // no transparent face, hard photo frame, or blurred background portrait copy.
-  const protectedPixel=gx>=p.left-8&&gx<=p.right+8&&gy>=p.top-8&&gy<=p.bottom+8;
+  const protectedPixel=(options.protectFlag&&plan.protectedBoxes.length?plan.protectedBoxes:[p]).some(b=>gx>=b.left-8&&gx<=b.right+8&&gy>=b.top-8&&gy<=b.bottom+8);
   const edge=Math.min(x,y,t.width-1-x,t.height-1-y)/96;
   rgba[i]=resized.data[j];rgba[i+1]=resized.data[j+1];rgba[i+2]=resized.data[j+2];rgba[i+3]=protectedPixel?255:Math.round(255*Math.min(1,Math.max(0,edge)));
  }
@@ -66,5 +73,5 @@ export async function composeWallRecovery(bytes,artwork,captionVariant,detection
  const mural=await sharp(rgba,{raw:{width:t.width,height:t.height,channels:4}}).extract({left:left-t.left,top:top-t.top,width:right-left,height:bottom-top}).png().toBuffer();
  const paint=await sharp(name.data).resize(plan.name.width,plan.name.height).png().toBuffer();
  const result=await sharp(await wallBackdrop()).composite([{input:mural,left,top},{input:paint,left:plan.name.left,top:plan.name.top}]).png().toBuffer();
- return {bytes:result,placement:{...plan.name,source:"prebuilt-wall-reflow",protectedRegion:plan.protectedRegion,transform:t,captionTop:plan.captionTop,wholeMuralProtected:plan.wholeMuralProtected},detection:detection||null,recovered:true};
+ return {bytes:result,placement:{...plan.name,source:"prebuilt-wall-reflow",protectedRegion:plan.protectedRegion,transform:t,captionTop:plan.captionTop,wholeMuralProtected:plan.wholeMuralProtected,faceSafeRecovery:options.protectFlag===true},detection:detection||null,recovered:true};
 }

@@ -1,4 +1,5 @@
 import sharp from "sharp";
+import {composeWallRecovery} from "./wall-recovery.mjs";
 import {nameSizing} from "./name-sizing.mjs";
 import {pixelBox,planNamePlacement} from "./name-placement.mjs";
 import {compositeNameLayer} from "./exact-name.mjs";
@@ -60,21 +61,16 @@ export async function composeDominantWall(bytes,artwork,detection,context={}){
  nameSizing(context.nameScaleVersion);
  const name=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer({resolveWithObject:true});
  const base=await sharp(bytes).resize(1080,1080).png().toBuffer();
- let plan,manualRequired=false;
+ let plan;
  try{plan=dominantWallPlan(name.info.width,name.info.height,detection,220,context.seed,context.protectFlag===true,context.nameScaleVersion);}
  catch{
-  // Do not silently shrink the illustration when vision is unavailable. Keep
-  // the complete full-wall image; the blind final review and human approval
-  // must check this unverified title position, with no claim of face safety.
-  const sizing=nameSizing(context.nameScaleVersion);
-  const scale=Math.min(sizing.maximumWidth/name.info.width,sizing.fallbackMaximumHeight/name.info.height),width=Math.max(1,Math.floor(name.info.width*scale)),height=Math.max(1,Math.floor(name.info.height*scale));
-  plan={frame:{left:0,top:0,width:1080,height:1080},placement:{left:sideFor(context.seed)<540?36:1044-width,top:24,width,height},sourceFrameCoverage:1};
-  manualRequired=true;
+  // No guessed coordinates: separate protected mural pixels from lettering.
+  return composeWallRecovery(bytes,artwork,context.captionVariant||9,detection,{protectFlag:context.protectFlag===true,maximumNameHeight:nameSizing(context.nameScaleVersion).maximumHeight,captionMaximumHeight:220});
  }
  const painted=await backgroundGraffiti(await sharp(base).extract(plan.frame).resize(1080,1080).png().toBuffer(),plan.detection,context.seed,context.wallPaintVersion);
  const mural=context.graphicFinish?await graphicPortrait(painted,plan.detection):context.preserveFacialDetail?painted:await stencilPortrait(painted,plan.detection);
  const paint=await sharp(name.data).resize(plan.placement.width,plan.placement.height).png().toBuffer();
  const layer=await sharp({create:{width:1080,height:1080,channels:4,background:"#00000000"}}).composite([{input:paint,left:plan.placement.left,top:plan.placement.top}]).png().toBuffer();
  const {head:protectedFace,...position}=plan.placement;
- return {bytes:await compositeNameLayer(mural,layer,true),placement:{...position,...(protectedFace?{protectedFace}:{}),source:"prebuilt-dominant-wall",frame:plan.frame,sourceFrameCoverage:1,manualRequired,protection:"face"},detection:plan.detection||null,recovered:true};
+ return {bytes:await compositeNameLayer(mural,layer,true),placement:{...position,...(protectedFace?{protectedFace}:{}),source:"prebuilt-dominant-wall",frame:plan.frame,sourceFrameCoverage:1,manualRequired:false,protection:"face"},detection:plan.detection||null,recovered:true};
 }

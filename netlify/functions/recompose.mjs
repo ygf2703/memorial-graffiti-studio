@@ -10,7 +10,7 @@ export default async request=>{
   if(!base)return json({error:"כתובת שירות הרקע לא הוגדרה."},503);
   let queued;
   try{queued=await queueRecompose(getStore({name:"graffiti-jobs",consistency:"strong"}),id);}
-  catch{return json({error:"אפשר לסדר מחדש כשל מיקום או תוצאה מהפריסה הלבנה הקודמת, כאשר תמונת הבסיס נשמרה."},409);}
+  catch{return json({error:"אפשר לסדר מחדש כשל מיקום, שם שמסתיר פנים או תוצאה מהפריסה הלבנה הקודמת, כאשר תמונת הבסיס נשמרה."},409);}
   try{
     if(queued.status==="queued"){
       const r=await fetch(new URL("/.netlify/functions/render-background",base),{method:"POST",headers:{"content-type":"application/json","x-worker-token":workerToken(queued.id)},body:JSON.stringify({id:queued.id}),signal:AbortSignal.timeout(10000)});

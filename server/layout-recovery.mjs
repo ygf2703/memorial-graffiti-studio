@@ -43,7 +43,10 @@ export async function placeCatalogueWithRecovery(input,deps={}){
  if(recoveryVersion===3){
   let measured;
   try{measured=await (deps.detect||((b)=>detectPortraitLayout(b,fetch,true)))(bytes);}catch{/* Final review must check unverified layout. */}
-  return composeDominantWall(bytes,artwork,measured,context);
+  if(!measured&&!deps.detect){
+   try{measured=await detectPortraitLayout(bytes,fetch,true,true);}catch{/* Separate the entire source when geometry remains unknown. */}
+  }
+  return composeDominantWall(bytes,artwork,measured,{...context,captionVariant});
  }
  let detection;
  try{

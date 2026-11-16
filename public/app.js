@@ -178,6 +178,7 @@ function showResult(name, { poster, job }) {
   if(job.namePlacement?.source==="prebuilt-reflow") card.append(node("p","השם סודר באזור עליון נפרד. התמונה השלמה הוקטנה מתחתיו ללא חיתוך או יצירת דיוקן נוספת.","review-note"));
   if([1,2].includes(job.layoutRecoveryVersion)&&["prebuilt-reflow","prebuilt-wall-reflow"].includes(job.namePlacement?.source)) appendRecompose(card,name,job.id,"הגדלת ציור הקיר — ללא יצירת דיוקן נוספת");
   if(job.namePlacement?.source==="prebuilt-wall-reflow") card.append(node("p","השם שולב בקיר רציף. בדקו את הדמות, חיבור מרקמי הקיר וקריאות הכיתוב לפני אישור.","review-note"));
+  if(job.layoutRecoveryVersion===3&&(job.namePlacement?.manualRequired===true||job.review?.namePlacement==="overlap")) appendRecompose(card,name,job.id,"סידור השם בלי הסתרת פנים — ללא יצירת דיוקן נוספת");
   if(job.namePlacement?.manualRequired) card.append(node("p","מיקום הכיתוב לא אומת. הציור נשמר בגודל מלא; בדקו שהשם והסלוגן אינם מכסים אף חלק מהפנים לפני אישור.","review-note"));
   if (requiresApproval(job)) {
     // Review is an editorial safeguard, not an access-control boundary.

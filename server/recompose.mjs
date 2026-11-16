@@ -5,14 +5,13 @@ import {LAYOUT_RECOVERY_VERSION} from "./layout-recovery.mjs";
 export async function queueRecompose(store,parentId){
   const parent=await store.get(parentId,{type:"json"});
   const legacyWhite=parent?.status==="completed"&&[1,2].includes(parent.layoutRecoveryVersion)&&["prebuilt-reflow","prebuilt-wall-reflow"].includes(parent.namePlacement?.source);
-  const unsafeTitle=parent?.status==="completed"&&parent.layoutRecoveryVersion===3&&(parent.namePlacement?.manualRequired===true||parent.review?.namePlacement==="overlap");
   const failed=parent?.status==="failed"&&!parent.recomposeOnly&&parent.error?.startsWith("לא נמצא מיקום בטוח");
-  if(!parent?.nameArtwork||(!legacyWhite&&!failed&&!unsafeTitle))throw new Error("Not a repairable layout");
+  if(!parent?.nameArtwork||(!legacyWhite&&!failed))throw new Error("Not a repairable layout");
   const base=await store.get(parentId+"/base",{type:"arrayBuffer"});
   if(!base?.byteLength)throw new Error("Missing saved base");
   // A failed repair from the older placement policy must not pin the new button
   // to that same failed child. Keep both claims/results; one child per policy.
-  const key=parentId+(unsafeTitle?"/recompose-safe-title-2":"/recompose-layout-"+LAYOUT_RECOVERY_VERSION);
+  const key=parentId+"/recompose-layout-"+LAYOUT_RECOVERY_VERSION;
   await store.setJSON(key,{id:randomUUID()},{onlyIfNew:true});
   const claim=await store.get(key,{type:"json"});
   const existing=await store.get(claim.id,{type:"json"});

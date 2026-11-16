@@ -48,12 +48,12 @@ test("rendered illustration fills every corner; no wall template or inset is add
  assert.equal((await captionAsset(9,220)).info.height,220);
 });
 
-test("vision uncertainty separates the whole source from lettering instead of guessing coordinates",async()=>{
+test("vision uncertainty retains full size and never claims verified face placement",async()=>{
  const result=await placeCatalogueWithRecovery({bytes:source,artwork:art,recoveryVersion:3,context:{seed:"test",catalogueOnly:true}},{detect:async()=>{throw Error("Unavailable");}});
- assert.equal(result.placement.source,"prebuilt-wall-reflow");assert.equal(result.placement.wholeMuralProtected,true);
- assert.ok(result.placement.protectedRegion.top>=result.placement.top+result.placement.height+20);
+ assert.equal(result.placement.source,"prebuilt-dominant-wall");assert.equal(result.placement.manualRequired,true);
+ assert.equal(result.placement.sourceFrameCoverage,1);assert.equal(result.placement.frame.width,1080);
  const reading={status:"needs_review",namePlacement:"overlap"};
- assert.equal(reviewWithLayoutProof(reading,result).namePlacement,"clear_above");assert.equal(reading.namePlacement,"overlap");assert.equal(reviewWithLayoutProof(reading,result).status,"needs_review");
+ assert.equal(reviewWithLayoutProof(reading,result),reading);
 });
 
 test("stencil finish uses flat paint tones inside the portrait and leaves outer wall pixels intact",async()=>{

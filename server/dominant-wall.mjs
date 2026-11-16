@@ -1,4 +1,5 @@
 import sharp from "sharp";
+import {nameSizing} from "./name-sizing.mjs";
 import {pixelBox,planNamePlacement} from "./name-placement.mjs";
 import {compositeNameLayer} from "./exact-name.mjs";
 import {stencilPortrait,graphicPortrait} from "./stencil-portrait.mjs";
@@ -13,7 +14,7 @@ function remapBox(box,frame){
  return {x:clamp(x,0,1000),y:clamp(y,0,1000),width:clamp(right,0,1000)-clamp(x,0,1000),height:clamp(bottom,0,1000)-clamp(y,0,1000)};
 }
 
-export function dominantWallPlan(width,height,detection,captionHeight=220,seed="",protectFlag=false){
+export function dominantWallPlan(width,height,detection,captionHeight=220,seed="",protectFlag=false,nameScaleVersion){
  if(detection?.uncertain!==false)throw new Error("Uncertain face layout");
  const rawHead=pixelBox(detection.head,0),rawFace=pixelBox(detection.face,0);
  if(rawFace.left<rawHead.left||rawFace.top<rawHead.top||rawFace.right>rawHead.right||rawFace.bottom>rawHead.bottom)throw new Error("Face outside head bounds");
@@ -43,7 +44,7 @@ export function dominantWallPlan(width,height,detection,captionHeight=220,seed="
    const transformedFace=pixelBox(mapped.face),transformedStar=pixelBox(mapped.star,16);
    if(Math.max(transformedFace.bottom,transformedStar.bottom,...(protectFlag?[pixelBox(mapped.flag,16).bottom]:[]))>1030-captionHeight-12)continue;
    for(const minimumWidth of [360,180])try{
-    const placement=planNamePlacement(width,height,mapped,minimumWidth,false,{faceOnly:true,maximumHeight:240,protectFlag});
+    const placement=planNamePlacement(width,height,mapped,minimumWidth,false,{faceOnly:true,maximumHeight:nameSizing(nameScaleVersion).maximumHeight,protectFlag});
     const offCenter=Math.abs((transformedFace.left+transformedFace.right)/2-540);
     const score=(1080/size)*1000+Math.min(offCenter,160)+placement.width*.03;
     if(!best||score>best.score)best={frame,detection:mapped,placement,score,sourceFrameCoverage:1,offCenter};
@@ -56,15 +57,17 @@ export function dominantWallPlan(width,height,detection,captionHeight=220,seed="
 }
 
 export async function composeDominantWall(bytes,artwork,detection,context={}){
+ nameSizing(context.nameScaleVersion);
  const name=await sharp(artwork).trim({background:"#00000000",threshold:0}).png().toBuffer({resolveWithObject:true});
  const base=await sharp(bytes).resize(1080,1080).png().toBuffer();
  let plan,manualRequired=false;
- try{plan=dominantWallPlan(name.info.width,name.info.height,detection,220,context.seed,context.protectFlag===true);}
+ try{plan=dominantWallPlan(name.info.width,name.info.height,detection,220,context.seed,context.protectFlag===true,context.nameScaleVersion);}
  catch{
   // Do not silently shrink the illustration when vision is unavailable. Keep
   // the complete full-wall image; the blind final review and human approval
   // must check this unverified title position, with no claim of face safety.
-  const scale=Math.min(900/name.info.width,200/name.info.height),width=Math.max(1,Math.floor(name.info.width*scale)),height=Math.max(1,Math.floor(name.info.height*scale));
+  const sizing=nameSizing(context.nameScaleVersion);
+  const scale=Math.min(sizing.maximumWidth/name.info.width,sizing.fallbackMaximumHeight/name.info.height),width=Math.max(1,Math.floor(name.info.width*scale)),height=Math.max(1,Math.floor(name.info.height*scale));
   plan={frame:{left:0,top:0,width:1080,height:1080},placement:{left:sideFor(context.seed)<540?36:1044-width,top:24,width,height},sourceFrameCoverage:1};
   manualRequired=true;
  }

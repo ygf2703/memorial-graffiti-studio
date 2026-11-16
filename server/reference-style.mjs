@@ -7,6 +7,7 @@ import {identityInstruction,graffitiIdentityInstruction,validatePortraitIdentity
 import {intactFlagInstruction,validateFlagIntegrityVersion} from "./flag-integrity.mjs";
 import {richWallPaintInstruction,validateWallPaintVersion} from './wall-paint.mjs';
 
+import {nameSizing,largeNameInstruction} from "./name-sizing.mjs";
 export const REFERENCE_STYLE_VERSION=1;
 export const NAME_SIZE_VERSION=1;
 export const referenceBoard=()=>readFile(resolve("netlify/functions/references/approved-graphic-board.png"));
@@ -59,6 +60,8 @@ export function referenceCompositionInstruction(style){
 }
 
 export function referenceGenerationPrompt(seed,style){
+ nameSizing(style.nameScaleVersion);
+ if(style.nameScaleVersion)return referenceGenerationPrompt(seed,{...style,nameScaleVersion:undefined})+" "+largeNameInstruction;
  validateFlagIntegrityVersion(style.flagIntegrityVersion);
  if(style.flagIntegrityVersion)return referenceGenerationPrompt(seed,{...style,flagIntegrityVersion:undefined})+" "+intactFlagInstruction;
  validatePortraitIdentityVersion(style.portraitIdentityVersion);
@@ -74,6 +77,8 @@ export function referenceGenerationPrompt(seed,style){
 }
 
 export function referenceRefinementPrompt(style){
+ nameSizing(style.nameScaleVersion);
+ if(style.nameScaleVersion)return referenceRefinementPrompt({...style,nameScaleVersion:undefined})+" "+largeNameInstruction;
  validateFlagIntegrityVersion(style.flagIntegrityVersion);
  if(style.flagIntegrityVersion)return referenceRefinementPrompt({...style,flagIntegrityVersion:undefined})+" "+intactFlagInstruction;
  validatePortraitIdentityVersion(style.portraitIdentityVersion);

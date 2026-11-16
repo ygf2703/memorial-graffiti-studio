@@ -36,6 +36,7 @@ export async function queueCorrection(store, parentId, input, reason) {
     ...(parent.captionMix ? { captionMix: parent.captionMix } : {}),
     ...(parent.visualVersion ? { visualVersion: parent.visualVersion } : {}),
     ...(parent.paletteVersion !== undefined ? { paletteVersion: parent.paletteVersion } : {}),
+    ...(parent.nameScaleVersion !== undefined ? { nameScaleVersion: parent.nameScaleVersion } : {}),
     ...(parent.nameSizeVersion !== undefined ? { nameSizeVersion: parent.nameSizeVersion } : {}),
     ...(parent.layoutRecoveryVersion !== undefined ? { layoutRecoveryVersion: [1,2].includes(parent.layoutRecoveryVersion)?LAYOUT_RECOVERY_VERSION:parent.layoutRecoveryVersion } : {}),
     ...(parent.referenceStyleVersion ? { referenceStyleVersion: parent.referenceStyleVersion } : {}),

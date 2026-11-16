@@ -1,3 +1,4 @@
+import {nameSizing} from "./name-sizing.mjs";
 import { requestImageEdit } from "./core.mjs";
 import { imageBaseForJob } from "./recompose.mjs";
 import {referenceBoard,paintSwatchBoard,referenceRefinementPrompt} from "./reference-style.mjs";
@@ -37,6 +38,7 @@ export async function refinePortrait(portrait, mural, fetcher = fetch, reference
 
 // The worker's durable claim surrounds BOTH paid calls. Never retry either call here.
 export async function preparePortraitBase(job, portrait, previous, {generate, refine=refinePortrait, saveDraft=async()=>{}, onStage=async()=>{},referenceStyle=null}) {
+  nameSizing(job.nameScaleVersion);
   validatePortraitIdentityVersion(job.portraitIdentityVersion);
   validateFlagIntegrityVersion(job.flagIntegrityVersion);
   validateWallPaintVersion(job.wallPaintVersion);

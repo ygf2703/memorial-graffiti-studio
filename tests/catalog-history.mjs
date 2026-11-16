@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 export async function beforeUpdates(entries,files){
- let snapshot=entries;
+ let snapshot=await beforeNameCorrections(entries);
  for(const file of files){
   const update=JSON.parse(await readFile(`data/name-artwork/updates/${file}`,'utf8'));
   snapshot=snapshot.map(entry=>{
@@ -11,4 +11,14 @@ export async function beforeUpdates(entries,files){
   });
  }
  return snapshot;
+}
+
+export async function beforeNameCorrections(entries){
+ const update=JSON.parse(await readFile('data/name-artwork/updates/2026-11-16-table-corrections.json','utf8'));
+ return entries.map(entry=>{
+  const row=update.replacements.find(row=>row.updated.name===entry.name);
+  if(!row)return entry;
+  assert.equal(entry.sha256,row.updated.sha256);
+  return row.original;
+ });
 }

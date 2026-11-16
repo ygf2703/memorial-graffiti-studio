@@ -7996,5 +7996,787 @@
       "version": "blind-artwork-v4-sol-light-wall",
       "checkedAt": "2026-11-15T12:27:41.080Z"
     }
+  },
+  {
+    "name": "עומרי-חיים אלמקייס-יעקובוביץ",
+    "sha256": "fa157db2eb5ad1f7861edbabac21c0f7f9d46d34b3138ccc27f67630cfea09d4",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "להוריד את הפסיק בין שני שמות המשפחה",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "fa157db2eb5ad1f7861edbabac21c0f7f9d46d34b3138ccc27f67630cfea09d4",
+      "status": "matched",
+      "text": "עומרי-חיים אלמקייס-יעקובוביץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:19:58.826Z"
+    }
+  },
+  {
+    "name": "רן-נתן דולב חיימוביץ",
+    "sha256": "8ee5f2d0209939dc8148dc73c70a39916c84e70943652e19bb047186fd301a42",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "חיימוביץ. יש שיבוש בכתובת בשם המשפחה",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "8ee5f2d0209939dc8148dc73c70a39916c84e70943652e19bb047186fd301a42",
+      "status": "matched",
+      "text": "רן-נתן דולב חיימוביץ",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:19:47.700Z"
+    }
+  },
+  {
+    "name": "ערן אלכאוי",
+    "sha256": "64892718c775ca4b5937aeaa33c777d52e0f8dd80009a90ffd57637227cce21f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "רשום אילכאוי",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "64892718c775ca4b5937aeaa33c777d52e0f8dd80009a90ffd57637227cce21f",
+      "status": "matched",
+      "text": "ערן אלכאוי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:19:30.217Z"
+    }
+  },
+  {
+    "name": "שמשון רוזי",
+    "sha256": "8f31a67499a2935856631f828b8e449e42b36f3626e37e85fde2ae5408227c83",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "הצטרף גרש ל ן' בשמשון ואחרי הו' ברוזי",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "8f31a67499a2935856631f828b8e449e42b36f3626e37e85fde2ae5408227c83",
+      "status": "matched",
+      "text": "שמשון רוזי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:20:28.499Z"
+    }
+  },
+  {
+    "name": "מאיר מנדלסון",
+    "sha256": "efc1521145215238d04456ea97aa67bb0fd5e3c4eaa9785ca3e7b42ff9e09c69",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "הס' נראית כמו ט'",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "efc1521145215238d04456ea97aa67bb0fd5e3c4eaa9785ca3e7b42ff9e09c69",
+      "status": "matched",
+      "text": "מאיר מנדלסון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:20:10.855Z"
+    }
+  },
+  {
+    "name": "אורן מנצור",
+    "sha256": "3a924d2d9a363c9ca8a0a453936fa833955121eb8297d2858ae6276ef6460c48",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "יש תוספות גרש מעל הו' ומעל הנ של המילה מנצור",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "3a924d2d9a363c9ca8a0a453936fa833955121eb8297d2858ae6276ef6460c48",
+      "status": "matched",
+      "text": "אורן מנצור",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:20:23.860Z"
+    }
+  },
+  {
+    "name": "שחר רוזנברג",
+    "sha256": "e2620f655def82bdae3e17c40a3fe4008c2cc8dc9c420af7975db405af058191",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "להוריד את התוספת מעל הר' ברוזנברג",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "e2620f655def82bdae3e17c40a3fe4008c2cc8dc9c420af7975db405af058191",
+      "status": "matched",
+      "text": "שחר רוזנברג",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:20:48.251Z"
+    }
+  },
+  {
+    "name": "אבישי בן חמו",
+    "sha256": "91e9aeb617fb548da8385b0cb2d26dfcdf1f451f57a46f5c499e56f402364132",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "הש' משובשת",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "91e9aeb617fb548da8385b0cb2d26dfcdf1f451f57a46f5c499e56f402364132",
+      "status": "matched",
+      "text": "אבישי בן חמו",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:20:41.973Z"
+    }
+  },
+  {
+    "name": "משה דגן",
+    "sha256": "6a99950d7616da2a7b55f456ddcca2ab14021cdd911d6661139b0597c12a60d0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "המ' משובשת",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "6a99950d7616da2a7b55f456ddcca2ab14021cdd911d6661139b0597c12a60d0",
+      "status": "needs_review",
+      "text": "משה זגן",
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:21:36.237Z",
+      "overrideReason": "נבדק חזותית מול האיות המילולי בטבלת המשתמש, אות-אות ובכלל זה אותיות חוזרות, גרש ומקף. המשתמש אישר את כלל הסקיצות ב־16.11 לאחר תיקון שתי ההערות האחרונות. הקריאה העיוורת המקורית נשמרה ללא שינוי; איננה הוכחת איות."
+    }
+  },
+  {
+    "name": "נפתלי בן-ציון לנצקרון",
+    "sha256": "8cb988b234b06d707661c7bc7ddabb81e8e6399c3cefedac29b3d45620296a3c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "59 גרש ב ל של נפתלי וצ של ציון",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "8cb988b234b06d707661c7bc7ddabb81e8e6399c3cefedac29b3d45620296a3c",
+      "status": "matched",
+      "text": "נפתלי בן-ציון לנצקרון",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:21:19.021Z"
+    }
+  },
+  {
+    "name": "רועי ניסים",
+    "sha256": "16da452e5c6af1ce2a7d68be4d102dcd73827306a93b7b7d96d5b25659ec3d10",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "גרש בע של רועי",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "16da452e5c6af1ce2a7d68be4d102dcd73827306a93b7b7d96d5b25659ec3d10",
+      "status": "matched",
+      "text": "רועי ניסים",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:21:24.079Z"
+    }
+  },
+  {
+    "name": "איתי אילוז",
+    "sha256": "6e9ed8553afc89c15c498b673d76aebd9a25d4694fa52e26c12830d41400aab0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "גרש באילוז בין הל' ל ו'",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "6e9ed8553afc89c15c498b673d76aebd9a25d4694fa52e26c12830d41400aab0",
+      "status": "matched",
+      "text": "איתי אילוז",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:21:40.587Z"
+    }
+  },
+  {
+    "name": "טיגטו-גיא אברה",
+    "sha256": "0325f0eefb900fc3000738760160a9869982f7ca4e1845d8385fd9c7813d26e5",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "גרש ועוד גרש באברה",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "0325f0eefb900fc3000738760160a9869982f7ca4e1845d8385fd9c7813d26e5",
+      "status": "matched",
+      "text": "טיגטו-גיא אברה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:22:14.842Z"
+    }
+  },
+  {
+    "name": "אריאל בן שושן",
+    "sha256": "8b5e501a26a8b899270cca3a99adba9db07ed31200325d575cd4199d640a3a5b",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לתקן את ה ל",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "8b5e501a26a8b899270cca3a99adba9db07ed31200325d575cd4199d640a3a5b",
+      "status": "matched",
+      "text": "אריאל בן שושן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:21:52.203Z"
+    }
+  },
+  {
+    "name": "בן כובאני",
+    "sha256": "ee1c90bc70c91704c162e3d8c806567533dd5015d5cdf884e9efc7ebb82b9f60",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "גרש ב כובאני",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "ee1c90bc70c91704c162e3d8c806567533dd5015d5cdf884e9efc7ebb82b9f60",
+      "status": "matched",
+      "text": "בן כובאני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:22:01.753Z"
+    }
+  },
+  {
+    "name": "אילן סביאטקובסקי",
+    "sha256": "77d5b10b8fd991f1d2c290f02f68f636b0541ff6d75db1fb39c7d74c841c16c0",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "סביאטקובסקי עם גרש",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "77d5b10b8fd991f1d2c290f02f68f636b0541ff6d75db1fb39c7d74c841c16c0",
+      "status": "matched",
+      "text": "אילן סביאטקובסקי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:22:26.254Z"
+    }
+  },
+  {
+    "name": "עמית יצחק",
+    "sha256": "afec27167e9cc172babe97c2c19c9c1b49000de59c0d7b99b8ccf6eb7a7f4371",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "גרש ב יצחק",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "afec27167e9cc172babe97c2c19c9c1b49000de59c0d7b99b8ccf6eb7a7f4371",
+      "status": "matched",
+      "text": "עמית יצחק",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:22:14.793Z"
+    }
+  },
+  {
+    "name": "בניה רובל",
+    "sha256": "1aad04a1aeb0ebf434fa801a243013eeb4f55853e19ebed91d77200df19327f6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לתקן ל ברובל",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "1aad04a1aeb0ebf434fa801a243013eeb4f55853e19ebed91d77200df19327f6",
+      "status": "matched",
+      "text": "בניה רובל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:22:53.088Z"
+    }
+  },
+  {
+    "name": "יאיר אשכנזי",
+    "sha256": "7f02904948c710a350ef5f980f1f8a51a5153cd6b679eee72bb8ca73c91cdb08",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לתקן א",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "7f02904948c710a350ef5f980f1f8a51a5153cd6b679eee72bb8ca73c91cdb08",
+      "status": "matched",
+      "text": "יאיר אשכנזי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:22:38.031Z"
+    }
+  },
+  {
+    "name": "אמיר מימוני",
+    "sha256": "fbeb3c2959ce87b2b29eb51ed878b1de22a7da3290ec4e64fc2c685ed8216d61",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לתקן מימוני",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "fbeb3c2959ce87b2b29eb51ed878b1de22a7da3290ec4e64fc2c685ed8216d61",
+      "status": "matched",
+      "text": "אמיר מימוני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:22:38.569Z"
+    }
+  },
+  {
+    "name": "אריאל הרוש",
+    "sha256": "2d0e8c63a9d4d97abecbc5ebf56eebca588f383781b9f8f99a976a2120e7af8e",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לתקן א",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "2d0e8c63a9d4d97abecbc5ebf56eebca588f383781b9f8f99a976a2120e7af8e",
+      "status": "matched",
+      "text": "אריאל הרוש",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:22:51.601Z"
+    }
+  },
+  {
+    "name": "עידו אבן",
+    "sha256": "aa89b9ceb2290b5d4310ac91483f8a40a3d380b9b45c552b16f4903ff7e12f88",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לבדק אבן",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "aa89b9ceb2290b5d4310ac91483f8a40a3d380b9b45c552b16f4903ff7e12f88",
+      "status": "matched",
+      "text": "עידו אבן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:23:05.044Z"
+    }
+  },
+  {
+    "name": "אלון אבן",
+    "sha256": "a6eee6de0616210d05c9d72d6af93cc397ce0cb59025ed578faa407ac77cc97f",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "שני גרש אחד בכל מילה",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "a6eee6de0616210d05c9d72d6af93cc397ce0cb59025ed578faa407ac77cc97f",
+      "status": "matched",
+      "text": "אלון אבן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:23:02.242Z"
+    }
+  },
+  {
+    "name": "חן בוכריס",
+    "sha256": "a4b2e7fcedef09bfaf551444933d25441c2cfb25a9a641fe692a819091b0aacb",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "גרש ב י",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "a4b2e7fcedef09bfaf551444933d25441c2cfb25a9a641fe692a819091b0aacb",
+      "status": "matched",
+      "text": "חן בוכריס",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:23:23.541Z"
+    }
+  },
+  {
+    "name": "גברי-אל ישי בראל",
+    "sha256": "302b4b855ef48c987e4c23a7130bcb6f78841fb1ad7c9cc2abd46f5448b0be09",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לתקן שם ושם משפחה",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "302b4b855ef48c987e4c23a7130bcb6f78841fb1ad7c9cc2abd46f5448b0be09",
+      "status": "matched",
+      "text": "גברי-אל ישי בראל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:23:18.107Z"
+    }
+  },
+  {
+    "name": "סהר טל",
+    "sha256": "66bee8ccbb79e5e23e90cde5e618bf95d123193ea50d3bb815ab2907dd2bf8a6",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לתקן ל'",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "66bee8ccbb79e5e23e90cde5e618bf95d123193ea50d3bb815ab2907dd2bf8a6",
+      "status": "matched",
+      "text": "סהר טל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:23:17.991Z"
+    }
+  },
+  {
+    "name": "אוהד כהן",
+    "sha256": "617d78f2d8a5090aeb6b7353161a8bdac7d6cbe028a110e9bdb5e09ce4896bab",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "הכ נראית כמו ב",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "617d78f2d8a5090aeb6b7353161a8bdac7d6cbe028a110e9bdb5e09ce4896bab",
+      "status": "matched",
+      "text": "אוהד כהן",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:23:38.062Z"
+    }
+  },
+  {
+    "name": "מרדכי נווה",
+    "sha256": "aaa491cb128ff11aa2e198f6b860e9e988dd310a9ac322e4e88b4c9f57796458",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "י כפולה",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "aaa491cb128ff11aa2e198f6b860e9e988dd310a9ac322e4e88b4c9f57796458",
+      "status": "matched",
+      "text": "מרדכי נווה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:24:01.066Z"
+    }
+  },
+  {
+    "name": "שרון רחמני",
+    "sha256": "b3dfd3a5907590908c348b83f9328439966495ceaa1b98cb1eeb8780863bb34c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לבדןק מ",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "b3dfd3a5907590908c348b83f9328439966495ceaa1b98cb1eeb8780863bb34c",
+      "status": "matched",
+      "text": "שרון רחמני",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:23:57.560Z"
+    }
+  },
+  {
+    "name": "עומר בלוה",
+    "sha256": "bb7f0a58dc1b4057e10f34884695668ac256af0700c2abf18d3ad1717c4c2fe8",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "כתוב בלווה",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "bb7f0a58dc1b4057e10f34884695668ac256af0700c2abf18d3ad1717c4c2fe8",
+      "status": "matched",
+      "text": "עומר בלוה",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:23:54.768Z"
+    }
+  },
+  {
+    "name": "איל מאיר ברקוביץ'",
+    "sha256": "ce05d3d6659009b1361f8dac1f7f7740232b8fe46ab3bee7dbb814454f6ee445",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "כתוב אייל",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "ce05d3d6659009b1361f8dac1f7f7740232b8fe46ab3bee7dbb814454f6ee445",
+      "status": "matched",
+      "text": "איל מאיר ברקוביץ'",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:24:16.712Z"
+    }
+  },
+  {
+    "name": "רועי מלדסי",
+    "sha256": "4c41a96500c34a760ba4ca8245a91ac58c87ba11aec205b3692bd0e4c7185916",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "מלדסי ולא מלידסי",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "4c41a96500c34a760ba4ca8245a91ac58c87ba11aec205b3692bd0e4c7185916",
+      "status": "matched",
+      "text": "רועי מלדסי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:24:25.455Z"
+    }
+  },
+  {
+    "name": "אלון שמריז",
+    "sha256": "3219005e0c83069baddb0a4de2310b813a595263277d866d4c819fdbcc508f97",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לתקן ש ",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "3219005e0c83069baddb0a4de2310b813a595263277d866d4c819fdbcc508f97",
+      "status": "matched",
+      "text": "אלון שמריז",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:24:32.043Z"
+    }
+  },
+  {
+    "name": "אריאל מרדכי וולפסטל",
+    "sha256": "0c6f95c96cfc11800560451520ed4b5d47401969beb7d8de8c8deb7a11c2e0da",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לבדוק את הא' ולהוסיף רווח בין מרדכי לוולפסטל",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "0c6f95c96cfc11800560451520ed4b5d47401969beb7d8de8c8deb7a11c2e0da",
+      "status": "matched",
+      "text": "אריאל מרדכי וולפסטל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:24:42.876Z"
+    }
+  },
+  {
+    "name": "נצר שמחי",
+    "sha256": "75bb15fa76338e28333a9a861959c93d380ed6e58e5ceffa49f74418e75d294c",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לבדוק ש",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "75bb15fa76338e28333a9a861959c93d380ed6e58e5ceffa49f74418e75d294c",
+      "status": "matched",
+      "text": "נצר שמחי",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:24:58.980Z"
+    }
+  },
+  {
+    "name": "נתנאל הרשקוביץ",
+    "sha256": "f3b0d957e9e5ddbd96a3b4700a5b5196426a41237e27596a08732d5eeacfa3d3",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "הרשקוביץ יש שני ר",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "f3b0d957e9e5ddbd96a3b4700a5b5196426a41237e27596a08732d5eeacfa3d3",
+      "status": "unavailable",
+      "text": null,
+      "uncertain": true,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:26:02.196Z",
+      "overrideReason": "נבדק חזותית מול האיות המילולי בטבלת המשתמש, אות-אות ובכלל זה אותיות חוזרות, גרש ומקף. המשתמש אישר את כלל הסקיצות ב־16.11 לאחר תיקון שתי ההערות האחרונות. הקריאה העיוורת המקורית נשמרה ללא שינוי; איננה הוכחת איות."
+    }
+  },
+  {
+    "name": "אליה אליהו אילוז",
+    "sha256": "33004dff3a411b8d944bb11149327e5773eb15561ad937ac8158512e2b9d1539",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "אילוז ולא איליוז",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "33004dff3a411b8d944bb11149327e5773eb15561ad937ac8158512e2b9d1539",
+      "status": "matched",
+      "text": "אליה אליהו אילוז",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:24:57.086Z"
+    }
+  },
+  {
+    "name": "עידו ברוך",
+    "sha256": "dcf2f45c9f42211406bbd2d71d8cb2526bd81d185d0ad29fbf25d23f5f70dd00",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לבדןק ך",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "dcf2f45c9f42211406bbd2d71d8cb2526bd81d185d0ad29fbf25d23f5f70dd00",
+      "status": "matched",
+      "text": "עידו ברוך",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:25:50.618Z"
+    }
+  },
+  {
+    "name": "גלעד הראל",
+    "sha256": "a91b4142f66f04a057930bb2b474ce928494e11de7fbd82fa40c6a829461fc06",
+    "spellingChecked": true,
+    "visualChecked": true,
+    "renderChecked": true,
+    "reviewedBy": "codex-visual-review-and-user",
+    "reviewSession": "approved-table-corrections-2026-11-16",
+    "notes": "לבדןק ל",
+    "userApproval": "User approved all 39 after final-kaf and stray-apostrophe fixes for PDF337/PDF096",
+    "ocr": {
+      "sha256": "a91b4142f66f04a057930bb2b474ce928494e11de7fbd82fa40c6a829461fc06",
+      "status": "matched",
+      "text": "גלעד הראל",
+      "uncertain": false,
+      "model": "gpt-6.1-sol",
+      "version": "blind-artwork-v4-sol-light-wall",
+      "checkedAt": "2026-11-16T07:25:08.655Z"
+    }
   }
 ]

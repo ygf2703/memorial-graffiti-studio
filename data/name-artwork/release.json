@@ -62,22 +62,21 @@
     },
     {
       "name": "שמשון רוזי",
-      "file": "ac0525a223bacc1deaed.png",
-      "sha256": "ac0525a223bacc1deaed777cd6135c28618e62b61eca513cf1ba9bdbb295aa08",
+      "file": "8f31a67499a293585663.png",
+      "sha256": "8f31a67499a2935856631f828b8e449e42b36f3626e37e85fde2ae5408227c83",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "ac0525a223bacc1deaed777cd6135c28618e62b61eca513cf1ba9bdbb295aa08",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "8f31a67499a2935856631f828b8e449e42b36f3626e37e85fde2ae5408227c83",
+        "status": "matched",
+        "text": "שמשון רוזי",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T13:41:06.612Z",
-        "overrideReason": "שמשון כולל שתי ש' ון סופית ארוכה; רוזי כולל ו' וז' נפרדות ומסתיים בי' קצרה. שתי המילים נקראו ללא השלמה."
+        "checkedAt": "2026-11-16T07:20:28.499Z"
       }
     },
     {
@@ -177,21 +176,21 @@
     },
     {
       "name": "מאיר מנדלסון",
-      "file": "f94ef1b9204ac19f600a.png",
-      "sha256": "f94ef1b9204ac19f600a6069e1d9ce18b3f19b46a44f33fc1cf2b7d0203e70a1",
+      "file": "efc1521145215238d044.png",
+      "sha256": "efc1521145215238d04456ea97aa67bb0fd5e3c4eaa9785ca3e7b42ff9e09c69",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 1,
       "ocr": {
-        "sha256": "f94ef1b9204ac19f600a6069e1d9ce18b3f19b46a44f33fc1cf2b7d0203e70a1",
+        "sha256": "efc1521145215238d04456ea97aa67bb0fd5e3c4eaa9785ca3e7b42ff9e09c69",
         "status": "matched",
         "text": "מאיר מנדלסון",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:40:08.972Z"
+        "checkedAt": "2026-11-16T07:20:10.855Z"
       }
     },
     {
@@ -557,42 +556,40 @@
     },
     {
       "name": "אורן מנצור",
-      "file": "926eb3865676174ca99b.png",
-      "sha256": "926eb3865676174ca99b51aef22f48e37f57c02754e15615785d51b8ef13a5d9",
+      "file": "3a924d2d9a363c9ca8a0.png",
+      "sha256": "3a924d2d9a363c9ca8a0a453936fa833955121eb8297d2858ae6276ef6460c48",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "926eb3865676174ca99b51aef22f48e37f57c02754e15615785d51b8ef13a5d9",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "3a924d2d9a363c9ca8a0a453936fa833955121eb8297d2858ae6276ef6460c48",
+        "status": "matched",
+        "text": "אורן מנצור",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:48:21.898Z",
-        "overrideReason": "אורן מסתיים בן סופית, ומנצור מכיל צ' וו' נפרדות ור' בסוף. שתי המילים נקראו מול המקור."
+        "checkedAt": "2026-11-16T07:20:23.860Z"
       }
     },
     {
       "name": "ערן אלכאוי",
-      "file": "69063e8a95e410f506d0.png",
-      "sha256": "69063e8a95e410f506d07c90a7e1b346bb0751b01164b9b227d1e480c6c6506a",
+      "file": "64892718c775ca4b5937.png",
+      "sha256": "64892718c775ca4b5937aeaa33c777d52e0f8dd80009a90ffd57637227cce21f",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "69063e8a95e410f506d07c90a7e1b346bb0751b01164b9b227d1e480c6c6506a",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "64892718c775ca4b5937aeaa33c777d52e0f8dd80009a90ffd57637227cce21f",
+        "status": "matched",
+        "text": "ערן אלכאוי",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:41:11.790Z",
-        "overrideReason": "ערן כולל ן סופית יורדת, ואלכאוי מסתיים בו' ארוכה ואז י' קצרה. נבדק האיות הלא שגרתי ללא תיקון אוטומטי."
+        "checkedAt": "2026-11-16T07:19:30.217Z"
       }
     },
     {
@@ -749,41 +746,40 @@
     },
     {
       "name": "שחר רוזנברג",
-      "file": "71fce1f511195ade96ae.png",
-      "sha256": "71fce1f511195ade96ae5811855a94a6f8558ec73bb9397c74436e4e4ed3d112",
+      "file": "e2620f655def82bdae3e.png",
+      "sha256": "e2620f655def82bdae3e17c40a3fe4008c2cc8dc9c420af7975db405af058191",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 5,
       "ocr": {
-        "sha256": "71fce1f511195ade96ae5811855a94a6f8558ec73bb9397c74436e4e4ed3d112",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "e2620f655def82bdae3e17c40a3fe4008c2cc8dc9c420af7975db405af058191",
+        "status": "matched",
+        "text": "שחר רוזנברג",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:43:58.705Z",
-        "overrideReason": "שחר כולל ח' ולא ה'; רוזנברג נקרא בר', ו', ז', נ', ב', ר', ג' ואין אות נוספת במעבר בין נ' לב'."
+        "checkedAt": "2026-11-16T07:20:48.251Z"
       }
     },
     {
       "name": "אבישי בן חמו",
-      "file": "7a77c9ab1b4a50908505.png",
-      "sha256": "7a77c9ab1b4a509085052675ad296f1593dc4fce81228a156bb464089819e4e6",
+      "file": "91e9aeb617fb548da838.png",
+      "sha256": "91e9aeb617fb548da8385b0cb2d26dfcdf1f451f57a46f5c499e56f402364132",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 3,
       "ocr": {
-        "sha256": "7a77c9ab1b4a509085052675ad296f1593dc4fce81228a156bb464089819e4e6",
+        "sha256": "91e9aeb617fb548da8385b0cb2d26dfcdf1f451f57a46f5c499e56f402364132",
         "status": "matched",
         "text": "אבישי בן חמו",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T13:39:09.274Z"
+        "checkedAt": "2026-11-16T07:20:41.973Z"
       }
     },
     {
@@ -1092,41 +1088,41 @@
     },
     {
       "name": "משה דגן",
-      "file": "48a63d19ad08adf62a09.png",
-      "sha256": "48a63d19ad08adf62a09818cf6a497e5fb6d45e1cde2d68e1c0a5aeed49ddf40",
+      "file": "6a99950d7616da2a7b55.png",
+      "sha256": "6a99950d7616da2a7b55f456ddcca2ab14021cdd911d6661139b0597c12a60d0",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "48a63d19ad08adf62a09818cf6a497e5fb6d45e1cde2d68e1c0a5aeed49ddf40",
-        "status": "matched",
-        "text": "משה דגן",
-        "uncertain": false,
-        "model": "gpt-6.1-sol",
-        "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:16:24.173Z"
-      }
-    },
-    {
-      "name": "נפתלי בן ציון לנצקרון",
-      "file": "ea780dd04637b9a19f85.png",
-      "sha256": "ea780dd04637b9a19f85b1446c30afb92f20a53318dfd3e3777d9a59e791afdc",
-      "status": "verified",
-      "spellingChecked": true,
-      "visualChecked": true,
-      "renderChecked": true,
-      "style": 10,
-      "ocr": {
-        "sha256": "ea780dd04637b9a19f85b1446c30afb92f20a53318dfd3e3777d9a59e791afdc",
-        "status": "unavailable",
-        "text": "",
+        "sha256": "6a99950d7616da2a7b55f456ddcca2ab14021cdd911d6661139b0597c12a60d0",
+        "status": "needs_review",
+        "text": "משה זגן",
         "uncertain": true,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:12:37.576Z",
-        "overrideReason": "נבדקו ארבע המילים נפתלי בן ציון לנצקרון, כולל נ' וצ' בתחילת שם המשפחה ון סופית. אין קיצור של השם הארוך."
+        "checkedAt": "2026-11-16T07:21:36.237Z",
+        "overrideReason": "נבדק חזותית מול האיות המילולי בטבלת המשתמש, אות-אות ובכלל זה אותיות חוזרות, גרש ומקף. המשתמש אישר את כלל הסקיצות ב־16.11 לאחר תיקון שתי ההערות האחרונות. הקריאה העיוורת המקורית נשמרה ללא שינוי; איננה הוכחת איות."
+      }
+    },
+    {
+      "name": "נפתלי בן-ציון לנצקרון",
+      "file": "8cb988b234b06d707661.png",
+      "sha256": "8cb988b234b06d707661c7bc7ddabb81e8e6399c3cefedac29b3d45620296a3c",
+      "status": "verified",
+      "spellingChecked": true,
+      "visualChecked": true,
+      "renderChecked": true,
+      "style": 10,
+      "ocr": {
+        "sha256": "8cb988b234b06d707661c7bc7ddabb81e8e6399c3cefedac29b3d45620296a3c",
+        "status": "matched",
+        "text": "נפתלי בן-ציון לנצקרון",
+        "uncertain": false,
+        "model": "gpt-6.1-sol",
+        "version": "blind-artwork-v4-sol-light-wall",
+        "checkedAt": "2026-11-16T07:21:19.021Z"
       }
     },
     {
@@ -1455,61 +1451,59 @@
     },
     {
       "name": "רועי ניסים",
-      "file": "1a5c816b029f14a29993.png",
-      "sha256": "1a5c816b029f14a29993b18598737689d27dc6d0970e0fd000678a212e87379d",
+      "file": "16da452e5c6af1ce2a7d.png",
+      "sha256": "16da452e5c6af1ce2a7d68be4d102dcd73827306a93b7b7d96d5b25659ec3d10",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "1a5c816b029f14a29993b18598737689d27dc6d0970e0fd000678a212e87379d",
+        "sha256": "16da452e5c6af1ce2a7d68be4d102dcd73827306a93b7b7d96d5b25659ec3d10",
         "status": "matched",
         "text": "רועי ניסים",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T13:36:42.190Z"
+        "checkedAt": "2026-11-16T07:21:24.079Z"
       }
     },
     {
       "name": "איתי אילוז",
-      "file": "b306a733e6db8540ab17.png",
-      "sha256": "b306a733e6db8540ab17afd6a951ee059e8da593fb370fc03b9c00d634ec0aaa",
+      "file": "6e9ed8553afc89c15c49.png",
+      "sha256": "6e9ed8553afc89c15c498b673d76aebd9a25d4694fa52e26c12830d41400aab0",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "b306a733e6db8540ab17afd6a951ee059e8da593fb370fc03b9c00d634ec0aaa",
-        "status": "needs_review",
+        "sha256": "6e9ed8553afc89c15c498b673d76aebd9a25d4694fa52e26c12830d41400aab0",
+        "status": "matched",
         "text": "איתי אילוז",
-        "uncertain": true,
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:41:27.473Z",
-        "overrideReason": "איתי מופיע בשתי י' קצרות משני צדי ת'; אילוז כולל י' קצרה וו' ארוכה נפרדות. התמלול תואם אך סומן כספק."
+        "checkedAt": "2026-11-16T07:21:40.587Z"
       }
     },
     {
       "name": "טיגטו-גיא אברה",
-      "file": "bcedd5db2ee9d3256a3d.png",
-      "sha256": "bcedd5db2ee9d3256a3dc7f91115df1bb69d2abc510fb126d29e8a8bbaa6f324",
+      "file": "0325f0eefb900fc30007.png",
+      "sha256": "0325f0eefb900fc3000738760160a9869982f7ca4e1845d8385fd9c7813d26e5",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "bcedd5db2ee9d3256a3dc7f91115df1bb69d2abc510fb126d29e8a8bbaa6f324",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "0325f0eefb900fc3000738760160a9869982f7ca4e1845d8385fd9c7813d26e5",
+        "status": "matched",
+        "text": "טיגטו-גיא אברה",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:34:19.141Z",
-        "overrideReason": "נבדקו טיגטו-גיא עם מקף ועם שתי ט', ואברה בארבע אותיות. סדר האותיות הלא שכיח נשמר."
+        "checkedAt": "2026-11-16T07:22:14.842Z"
       }
     },
     {
@@ -1580,22 +1574,22 @@
       }
     },
     {
-      "name": "אריאל בן-שאנן",
-      "file": "85d1fce8c640b280fd88.png",
-      "sha256": "85d1fce8c640b280fd8859b23516992d4a9b05da036e3520fc636cd2d65a765d",
+      "name": "אריאל בן שושן",
+      "file": "8b5e501a26a8b899270c.png",
+      "sha256": "8b5e501a26a8b899270cca3a99adba9db07ed31200325d575cd4199d640a3a5b",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "85d1fce8c640b280fd8859b23516992d4a9b05da036e3520fc636cd2d65a765d",
+        "sha256": "8b5e501a26a8b899270cca3a99adba9db07ed31200325d575cd4199d640a3a5b",
         "status": "matched",
-        "text": "אריאל בן-שאנן",
+        "text": "אריאל בן שושן",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-17T05:12:50.377Z"
+        "checkedAt": "2026-11-16T07:21:52.203Z"
       }
     },
     {
@@ -1656,22 +1650,22 @@
       }
     },
     {
-      "name": "עומרי חיים יעקובוביץ, אלמקייס",
-      "file": "bd1c948ce8b0f6211313.png",
-      "sha256": "bd1c948ce8b0f62113135db8f1f70e6ec042833ff05319d221067ced95dfaf0d",
+      "name": "עומרי-חיים אלמקייס-יעקובוביץ",
+      "file": "fa157db2eb5ad1f7861e.png",
+      "sha256": "fa157db2eb5ad1f7861edbabac21c0f7f9d46d34b3138ccc27f67630cfea09d4",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 7,
       "ocr": {
-        "sha256": "bd1c948ce8b0f62113135db8f1f70e6ec042833ff05319d221067ced95dfaf0d",
+        "sha256": "fa157db2eb5ad1f7861edbabac21c0f7f9d46d34b3138ccc27f67630cfea09d4",
         "status": "matched",
-        "text": "עומרי חיים יעקובוביץ, אלמקייס",
+        "text": "עומרי-חיים אלמקייס-יעקובוביץ",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:28:59.474Z"
+        "checkedAt": "2026-11-16T07:19:58.826Z"
       }
     },
     {
@@ -1829,21 +1823,21 @@
     },
     {
       "name": "בן כובאני",
-      "file": "9cb660aa7ac066f4ffa9.png",
-      "sha256": "9cb660aa7ac066f4ffa9551944e96b2ddca60bc1bcd23567fb744a9bcdb32d47",
+      "file": "ee1c90bc70c91704c162.png",
+      "sha256": "ee1c90bc70c91704c162e3d8c806567533dd5015d5cdf884e9efc7ebb82b9f60",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 1,
       "ocr": {
-        "sha256": "9cb660aa7ac066f4ffa9551944e96b2ddca60bc1bcd23567fb744a9bcdb32d47",
+        "sha256": "ee1c90bc70c91704c162e3d8c806567533dd5015d5cdf884e9efc7ebb82b9f60",
         "status": "matched",
         "text": "בן כובאני",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:16:30.339Z"
+        "checkedAt": "2026-11-16T07:22:01.753Z"
       }
     },
     {
@@ -1943,21 +1937,21 @@
     },
     {
       "name": "אילן סביאטקובסקי",
-      "file": "a38205748301ccd8fbf5.png",
-      "sha256": "a38205748301ccd8fbf58c70d2b752e996fadde8578ea38dfe03fe2987205763",
+      "file": "77d5b10b8fd991f1d2c2.png",
+      "sha256": "77d5b10b8fd991f1d2c290f02f68f636b0541ff6d75db1fb39c7d74c841c16c0",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 7,
       "ocr": {
-        "sha256": "a38205748301ccd8fbf58c70d2b752e996fadde8578ea38dfe03fe2987205763",
+        "sha256": "77d5b10b8fd991f1d2c290f02f68f636b0541ff6d75db1fb39c7d74c841c16c0",
         "status": "matched",
         "text": "אילן סביאטקובסקי",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T16:56:46.46Z"
+        "checkedAt": "2026-11-16T07:22:26.254Z"
       }
     },
     {
@@ -2037,22 +2031,21 @@
     },
     {
       "name": "רן-נתן דולב חיימוביץ",
-      "file": "d34defdfa7aa6d5f3279.png",
-      "sha256": "d34defdfa7aa6d5f32796526c77f5d50495557248fee92f722561f5816da39ae",
+      "file": "8ee5f2d0209939dc8148.png",
+      "sha256": "8ee5f2d0209939dc8148dc73c70a39916c84e70943652e19bb047186fd301a42",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "d34defdfa7aa6d5f32796526c77f5d50495557248fee92f722561f5816da39ae",
-        "status": "unavailable",
-        "text": null,
-        "uncertain": true,
+        "sha256": "8ee5f2d0209939dc8148dc73c70a39916c84e70943652e19bb047186fd301a42",
+        "status": "matched",
+        "text": "רן-נתן דולב חיימוביץ",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T18:07:02.344Z",
-        "overrideReason": "הקורא לא החזיר תשובה. המקור v3 נבדק בהגדלה ובשכבת היישום: רן-נתן כולל ר׳ פתוחה, מקף ושתי ן סופיות יורדות; חיימוביץ כולל ח-י-י-מ-ו-ב-י-ץ עם ץ סופית מסועפת ויורדת, ללא אות נוספת."
+        "checkedAt": "2026-11-16T07:19:47.700Z"
       }
     },
     {
@@ -2133,21 +2126,21 @@
     },
     {
       "name": "עמית יצחק",
-      "file": "8edebacc276a7019f051.png",
-      "sha256": "8edebacc276a7019f051d1249a669fa0e42a3882d46e29628398cdfb599b05d9",
+      "file": "afec27167e9cc172babe.png",
+      "sha256": "afec27167e9cc172babe97c2c19c9c1b49000de59c0d7b99b8ccf6eb7a7f4371",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "8edebacc276a7019f051d1249a669fa0e42a3882d46e29628398cdfb599b05d9",
+        "sha256": "afec27167e9cc172babe97c2c19c9c1b49000de59c0d7b99b8ccf6eb7a7f4371",
         "status": "matched",
         "text": "עמית יצחק",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:44:46.983Z"
+        "checkedAt": "2026-11-16T07:22:14.793Z"
       }
     },
     {
@@ -2172,21 +2165,21 @@
     },
     {
       "name": "בניה רובל",
-      "file": "08a022d56dd4ebe41ff5.png",
-      "sha256": "08a022d56dd4ebe41ff553434ffd9c14e493a8d33ac487225088a86912ff6f60",
+      "file": "1aad04a1aeb0ebf434fa.png",
+      "sha256": "1aad04a1aeb0ebf434fa801a243013eeb4f55853e19ebed91d77200df19327f6",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "08a022d56dd4ebe41ff553434ffd9c14e493a8d33ac487225088a86912ff6f60",
+        "sha256": "1aad04a1aeb0ebf434fa801a243013eeb4f55853e19ebed91d77200df19327f6",
         "status": "matched",
         "text": "בניה רובל",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:50:13.216Z"
+        "checkedAt": "2026-11-16T07:22:53.088Z"
       }
     },
     {
@@ -2268,31 +2261,31 @@
     },
     {
       "name": "יאיר אשכנזי",
-      "file": "7388c225022328a6c764.png",
-      "sha256": "7388c225022328a6c764b758fa2d90d174e1b775fb496000c13c9e4d3c67c8f9",
-      "composition": "side-two-line-v1",
-      "layoutReview": {
-        "sha256": "7388c225022328a6c764b758fa2d90d174e1b775fb496000c13c9e4d3c67c8f9",
-        "lines": [
-          "יאיר",
-          "אשכנזי"
-        ],
-        "checkedAt": "2026-10-24",
-        "notes": "Original approved transparent artwork visually checked: given name above family name; immutable source unchanged."
-      },
+      "file": "7f02904948c710a350ef.png",
+      "sha256": "7f02904948c710a350ef5f980f1f8a51a5153cd6b679eee72bb8ca73c91cdb08",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "7388c225022328a6c764b758fa2d90d174e1b775fb496000c13c9e4d3c67c8f9",
+        "sha256": "7f02904948c710a350ef5f980f1f8a51a5153cd6b679eee72bb8ca73c91cdb08",
         "status": "matched",
         "text": "יאיר אשכנזי",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:37:29.253Z"
+        "checkedAt": "2026-11-16T07:22:38.031Z"
+      },
+      "composition": "side-two-line-v1",
+      "layoutReview": {
+        "sha256": "7f02904948c710a350ef5f980f1f8a51a5153cd6b679eee72bb8ca73c91cdb08",
+        "lines": [
+          "יאיר",
+          "אשכנזי"
+        ],
+        "checkedAt": "2026-10-24",
+        "notes": "Original approved transparent artwork visually checked: given name above family name; immutable source unchanged."
       }
     },
     {
@@ -2489,21 +2482,21 @@
     },
     {
       "name": "אמיר מימוני",
-      "file": "3ba5a3dc29200c8f9262.png",
-      "sha256": "3ba5a3dc29200c8f9262d3bc91ea0f425d3a7969e276862342d8f83098be24a2",
+      "file": "fbeb3c2959ce87b2b29e.png",
+      "sha256": "fbeb3c2959ce87b2b29eb51ed878b1de22a7da3290ec4e64fc2c685ed8216d61",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 6,
       "ocr": {
-        "sha256": "3ba5a3dc29200c8f9262d3bc91ea0f425d3a7969e276862342d8f83098be24a2",
+        "sha256": "fbeb3c2959ce87b2b29eb51ed878b1de22a7da3290ec4e64fc2c685ed8216d61",
         "status": "matched",
         "text": "אמיר מימוני",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T13:25:15.021Z"
+        "checkedAt": "2026-11-16T07:22:38.569Z"
       }
     },
     {
@@ -2527,21 +2520,21 @@
     },
     {
       "name": "אריאל הרוש",
-      "file": "8ec0c4382214fbf3f3d6.png",
-      "sha256": "8ec0c4382214fbf3f3d65080c0cae630ca4f96267b4e0c58b0ee73dc5a015896",
+      "file": "2d0e8c63a9d4d97abecb.png",
+      "sha256": "2d0e8c63a9d4d97abecbc5ebf56eebca588f383781b9f8f99a976a2120e7af8e",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "8ec0c4382214fbf3f3d65080c0cae630ca4f96267b4e0c58b0ee73dc5a015896",
+        "sha256": "2d0e8c63a9d4d97abecbc5ebf56eebca588f383781b9f8f99a976a2120e7af8e",
         "status": "matched",
         "text": "אריאל הרוש",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T17:42:10.469Z"
+        "checkedAt": "2026-11-16T07:22:51.601Z"
       }
     },
     {
@@ -2875,41 +2868,40 @@
     },
     {
       "name": "עידו אבן",
-      "file": "7ad8e7972e434b2ce4f9.png",
-      "sha256": "7ad8e7972e434b2ce4f90a66e8360fdeee867f70387393c3c68f5a83c34a0c0c",
+      "file": "aa89b9ceb2290b5d4310.png",
+      "sha256": "aa89b9ceb2290b5d4310ac91483f8a40a3d380b9b45c552b16f4903ff7e12f88",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "7ad8e7972e434b2ce4f90a66e8360fdeee867f70387393c3c68f5a83c34a0c0c",
-        "status": "needs_review",
+        "sha256": "aa89b9ceb2290b5d4310ac91483f8a40a3d380b9b45c552b16f4903ff7e12f88",
+        "status": "matched",
         "text": "עידו אבן",
-        "uncertain": true,
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T17:38:17.421Z",
-        "overrideReason": "התמלול תואם אך הקורא סימן ספק. במקור המוגדל ד׳ בעידו בעלת גג מחובר לרגל ימין; באבן נראים א-ב-ן והן׳ יורדת מתחת לשורה. נבדקה גם הקריאות לאחר הרינדור."
+        "checkedAt": "2026-11-16T07:23:05.044Z"
       }
     },
     {
       "name": "אלון אבן",
-      "file": "28e62284729988a652ba.png",
-      "sha256": "28e62284729988a652ba474a9f45cf39514e9c855a5ff3262194c601f1a36070",
+      "file": "a6eee6de0616210d05c9.png",
+      "sha256": "a6eee6de0616210d05c9d72d6af93cc397ce0cb59025ed578faa407ac77cc97f",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "28e62284729988a652ba474a9f45cf39514e9c855a5ff3262194c601f1a36070",
+        "sha256": "a6eee6de0616210d05c9d72d6af93cc397ce0cb59025ed578faa407ac77cc97f",
         "status": "matched",
         "text": "אלון אבן",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:46:36.041Z"
+        "checkedAt": "2026-11-16T07:23:02.242Z"
       }
     },
     {
@@ -3009,21 +3001,21 @@
     },
     {
       "name": "חן בוכריס",
-      "file": "a13e08f0b03e4b42a43e.png",
-      "sha256": "a13e08f0b03e4b42a43ee31c5ca9076d1d2c65f2ff3429da30209fc4bd8eb2cb",
+      "file": "a4b2e7fcedef09bfaf55.png",
+      "sha256": "a4b2e7fcedef09bfaf551444933d25441c2cfb25a9a641fe692a819091b0aacb",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "a13e08f0b03e4b42a43ee31c5ca9076d1d2c65f2ff3429da30209fc4bd8eb2cb",
+        "sha256": "a4b2e7fcedef09bfaf551444933d25441c2cfb25a9a641fe692a819091b0aacb",
         "status": "matched",
         "text": "חן בוכריס",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:07:43.511Z"
+        "checkedAt": "2026-11-16T07:23:23.541Z"
       }
     },
     {
@@ -3142,21 +3134,21 @@
     },
     {
       "name": "גברי-אל ישי בראל",
-      "file": "55c9bc22a551e93906e7.png",
-      "sha256": "55c9bc22a551e93906e7fa7c1acfae9e00577f5756b3d45305dae189c6e3ff53",
+      "file": "302b4b855ef48c987e4c.png",
+      "sha256": "302b4b855ef48c987e4c23a7130bcb6f78841fb1ad7c9cc2abd46f5448b0be09",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 8,
       "ocr": {
-        "sha256": "55c9bc22a551e93906e7fa7c1acfae9e00577f5756b3d45305dae189c6e3ff53",
+        "sha256": "302b4b855ef48c987e4c23a7130bcb6f78841fb1ad7c9cc2abd46f5448b0be09",
         "status": "matched",
         "text": "גברי-אל ישי בראל",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:28:47.942Z"
+        "checkedAt": "2026-11-16T07:23:18.107Z"
       }
     },
     {
@@ -3523,21 +3515,21 @@
     },
     {
       "name": "סהר טל",
-      "file": "c9343999d867cd9f7e90.png",
-      "sha256": "c9343999d867cd9f7e90be668438e4954f27e908c0ed8a30df2255bc670f1906",
+      "file": "66bee8ccbb79e5e23e90.png",
+      "sha256": "66bee8ccbb79e5e23e90cde5e618bf95d123193ea50d3bb815ab2907dd2bf8a6",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 7,
       "ocr": {
-        "sha256": "c9343999d867cd9f7e90be668438e4954f27e908c0ed8a30df2255bc670f1906",
+        "sha256": "66bee8ccbb79e5e23e90cde5e618bf95d123193ea50d3bb815ab2907dd2bf8a6",
         "status": "matched",
         "text": "סהר טל",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:56:18.278Z"
+        "checkedAt": "2026-11-16T07:23:17.991Z"
       }
     },
     {
@@ -3677,22 +3669,21 @@
     },
     {
       "name": "אוהד כהן",
-      "file": "b5bbf44232d8068ffac3.png",
-      "sha256": "b5bbf44232d8068ffac32511b44b1adad6289e019a93848b76cbb704ee6c360b",
+      "file": "617d78f2d8a5090aeb6b.png",
+      "sha256": "617d78f2d8a5090aeb6b7353161a8bdac7d6cbe028a110e9bdb5e09ce4896bab",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "b5bbf44232d8068ffac32511b44b1adad6289e019a93848b76cbb704ee6c360b",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "617d78f2d8a5090aeb6b7353161a8bdac7d6cbe028a110e9bdb5e09ce4896bab",
+        "status": "matched",
+        "text": "אוהד כהן",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:10:37.572Z",
-        "overrideReason": "אוהד מכיל ה' עם רגל נפרדת; כהן מסתיים בן ארוכה. שתי המילים נקראות בבירור אף ששירות הקריאה לא החזיר תמלול."
+        "checkedAt": "2026-11-16T07:23:38.062Z"
       }
     },
     {
@@ -3888,22 +3879,21 @@
     },
     {
       "name": "מרדכי נווה",
-      "file": "b569124dbc8726d7f3aa.png",
-      "sha256": "b569124dbc8726d7f3aadba2d106672c357e937ab029ec2590506cc9bdb65f6e",
+      "file": "aaa491cb128ff11aa2e1.png",
+      "sha256": "aaa491cb128ff11aa2e198f6b860e9e988dd310a9ac322e4e88b4c9f57796458",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "b569124dbc8726d7f3aadba2d106672c357e937ab029ec2590506cc9bdb65f6e",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "aaa491cb128ff11aa2e198f6b860e9e988dd310a9ac322e4e88b4c9f57796458",
+        "status": "matched",
+        "text": "מרדכי נווה",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:32:28.915Z",
-        "overrideReason": "מרדכי נקרא בסדר ר' לפני ד', בהתאם למקור המסוים הזה; נווה מכיל שתי ו' נפרדות לפני ה'. אין שינוי איות."
+        "checkedAt": "2026-11-16T07:24:01.066Z"
       }
     },
     {
@@ -4208,21 +4198,21 @@
     },
     {
       "name": "שרון רחמני",
-      "file": "1ed3d16d0513bfc158a6.png",
-      "sha256": "1ed3d16d0513bfc158a6aeb1f2566ddc8e4c199ba62170fdd2300eb0751b618b",
+      "file": "b3dfd3a5907590908c34.png",
+      "sha256": "b3dfd3a5907590908c348b83f9328439966495ceaa1b98cb1eeb8780863bb34c",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 8,
       "ocr": {
-        "sha256": "1ed3d16d0513bfc158a6aeb1f2566ddc8e4c199ba62170fdd2300eb0751b618b",
+        "sha256": "b3dfd3a5907590908c348b83f9328439966495ceaa1b98cb1eeb8780863bb34c",
         "status": "matched",
         "text": "שרון רחמני",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T13:29:10.580Z"
+        "checkedAt": "2026-11-16T07:23:57.560Z"
       }
     },
     {
@@ -4475,22 +4465,22 @@
       }
     },
     {
-      "name": "עומר בלווה",
-      "file": "aa5873948353acc71f42.png",
-      "sha256": "aa5873948353acc71f4292387ef6895d505818863b089af5ab73a77727b8a3a2",
+      "name": "עומר בלוה",
+      "file": "bb7f0a58dc1b4057e10f.png",
+      "sha256": "bb7f0a58dc1b4057e10f34884695668ac256af0700c2abf18d3ad1717c4c2fe8",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 9,
       "ocr": {
-        "sha256": "aa5873948353acc71f4292387ef6895d505818863b089af5ab73a77727b8a3a2",
+        "sha256": "bb7f0a58dc1b4057e10f34884695668ac256af0700c2abf18d3ad1717c4c2fe8",
         "status": "matched",
-        "text": "עומר בלווה",
+        "text": "עומר בלוה",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T13:41:35.671Z"
+        "checkedAt": "2026-11-16T07:23:54.768Z"
       }
     },
     {
@@ -4741,22 +4731,22 @@
       }
     },
     {
-      "name": "אייל מאיר ברקוביץ",
-      "file": "441212a31b0cffbd3ae9.png",
-      "sha256": "441212a31b0cffbd3ae9d4195ed45ef0c5204cf6bf95e5c7fd1a8553c2cf0a3c",
+      "name": "איל מאיר ברקוביץ'",
+      "file": "ce05d3d6659009b1361f.png",
+      "sha256": "ce05d3d6659009b1361f8dac1f7f7740232b8fe46ab3bee7dbb814454f6ee445",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 1,
       "ocr": {
-        "sha256": "441212a31b0cffbd3ae9d4195ed45ef0c5204cf6bf95e5c7fd1a8553c2cf0a3c",
+        "sha256": "ce05d3d6659009b1361f8dac1f7f7740232b8fe46ab3bee7dbb814454f6ee445",
         "status": "matched",
-        "text": "אייל מאיר ברקוביץ",
+        "text": "איל מאיר ברקוביץ'",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:38:28.617Z"
+        "checkedAt": "2026-11-16T07:24:16.712Z"
       }
     },
     {
@@ -4876,22 +4866,21 @@
     },
     {
       "name": "רועי מלדסי",
-      "file": "e822c8173da87b3fc1e3.png",
-      "sha256": "e822c8173da87b3fc1e3099430451ef8ef635f8d5f93656805fb39c251cb4b1f",
+      "file": "4c41a96500c34a760ba4.png",
+      "sha256": "4c41a96500c34a760ba4ca8245a91ac58c87ba11aec205b3692bd0e4c7185916",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "e822c8173da87b3fc1e3099430451ef8ef635f8d5f93656805fb39c251cb4b1f",
-        "status": "unavailable",
-        "text": null,
-        "uncertain": true,
+        "sha256": "4c41a96500c34a760ba4ca8245a91ac58c87ba11aec205b3692bd0e4c7185916",
+        "status": "matched",
+        "text": "רועי מלדסי",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T18:07:19.933Z",
-        "overrideReason": "הקורא לא החזיר תשובה. בהגדלת v3 נבדקו ר-ו-ע-י ומ-ל-ד-ס-י: אין י׳ נוספת בין ל׳ לד׳, וס׳ סגורה ומובחנת. אותו רצף נשאר קריא בשכבת היישום."
+        "checkedAt": "2026-11-16T07:24:25.455Z"
       }
     },
     {
@@ -4915,21 +4904,21 @@
     },
     {
       "name": "אלון שמריז",
-      "file": "3ae7a3f95c281143c975.png",
-      "sha256": "3ae7a3f95c281143c975b0639affd457b7822910caaa9235463517275c14ffe4",
+      "file": "3219005e0c83069baddb.png",
+      "sha256": "3219005e0c83069baddb0a4de2310b813a595263277d866d4c819fdbcc508f97",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "3ae7a3f95c281143c975b0639affd457b7822910caaa9235463517275c14ffe4",
+        "sha256": "3219005e0c83069baddb0a4de2310b813a595263277d866d4c819fdbcc508f97",
         "status": "matched",
         "text": "אלון שמריז",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:45:45.138Z"
+        "checkedAt": "2026-11-16T07:24:32.043Z"
       }
     },
     {
@@ -5315,21 +5304,21 @@
     },
     {
       "name": "אריאל מרדכי וולפסטל",
-      "file": "66fdd64581a07e0c6c11.png",
-      "sha256": "66fdd64581a07e0c6c1130a86571441c387a31694744d3f44b65536027802cd7",
+      "file": "0c6f95c96cfc11800560.png",
+      "sha256": "0c6f95c96cfc11800560451520ed4b5d47401969beb7d8de8c8deb7a11c2e0da",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 2,
       "ocr": {
-        "sha256": "66fdd64581a07e0c6c1130a86571441c387a31694744d3f44b65536027802cd7",
+        "sha256": "0c6f95c96cfc11800560451520ed4b5d47401969beb7d8de8c8deb7a11c2e0da",
         "status": "matched",
         "text": "אריאל מרדכי וולפסטל",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:50:57.556Z"
+        "checkedAt": "2026-11-16T07:24:42.876Z"
       }
     },
     {
@@ -5392,22 +5381,21 @@
     },
     {
       "name": "נצר שמחי",
-      "file": "1043a2fe288cf6e04a53.png",
-      "sha256": "1043a2fe288cf6e04a533e49a9972a9347506d94949efd2e841a53343b9c1fb4",
+      "file": "75bb15fa76338e28333a.png",
+      "sha256": "75bb15fa76338e28333a9a861959c93d380ed6e58e5ceffa49f74418e75d294c",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 8,
       "ocr": {
-        "sha256": "1043a2fe288cf6e04a533e49a9972a9347506d94949efd2e841a53343b9c1fb4",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "75bb15fa76338e28333a9a861959c93d380ed6e58e5ceffa49f74418e75d294c",
+        "status": "matched",
+        "text": "נצר שמחי",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:47:53.531Z",
-        "overrideReason": "נצר כולל צ' אמצעית ור' פתוחה; שמחי מסתיים בי' קצרה. כל שבע האותיות נקראו ללא השלמה."
+        "checkedAt": "2026-11-16T07:24:58.980Z"
       }
     },
     {
@@ -6017,22 +6005,22 @@
     },
     {
       "name": "נתנאל הרשקוביץ",
-      "file": "9466225e0463c2570cd7.png",
-      "sha256": "9466225e0463c2570cd700cec5e5bbf0ca5ef98bcce4bf2c9c6d3c966569335c",
+      "file": "f3b0d957e9e5ddbd96a3.png",
+      "sha256": "f3b0d957e9e5ddbd96a3b4700a5b5196426a41237e27596a08732d5eeacfa3d3",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "9466225e0463c2570cd700cec5e5bbf0ca5ef98bcce4bf2c9c6d3c966569335c",
+        "sha256": "f3b0d957e9e5ddbd96a3b4700a5b5196426a41237e27596a08732d5eeacfa3d3",
         "status": "unavailable",
-        "text": "",
+        "text": null,
         "uncertain": true,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T07:15:13.639Z",
-        "overrideReason": "נתנאל נקרא בחמש אותיות; הרשקוביץ מסתיים בי' וץ סופית. כל הרצף הושווה חזותית, ללא הסרת אותיות."
+        "checkedAt": "2026-11-16T07:26:02.196Z",
+        "overrideReason": "נבדק חזותית מול האיות המילולי בטבלת המשתמש, אות-אות ובכלל זה אותיות חוזרות, גרש ומקף. המשתמש אישר את כלל הסקיצות ב־16.11 לאחר תיקון שתי ההערות האחרונות. הקריאה העיוורת המקורית נשמרה ללא שינוי; איננה הוכחת איות."
       }
     },
     {
@@ -6457,22 +6445,21 @@
     },
     {
       "name": "אליה אליהו אילוז",
-      "file": "bee01f0ebbdac77916d2.png",
-      "sha256": "bee01f0ebbdac77916d2ae0ee5dddb1af5daf7143ad52bdbfed6d320e615ada7",
+      "file": "33004dff3a411b8d944b.png",
+      "sha256": "33004dff3a411b8d944bb11149327e5773eb15561ad937ac8158512e2b9d1539",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 6,
       "ocr": {
-        "sha256": "bee01f0ebbdac77916d2ae0ee5dddb1af5daf7143ad52bdbfed6d320e615ada7",
-        "status": "unavailable",
-        "text": "",
-        "uncertain": true,
+        "sha256": "33004dff3a411b8d944bb11149327e5773eb15561ad937ac8158512e2b9d1539",
+        "status": "matched",
+        "text": "אליה אליהו אילוז",
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:37:11.340Z",
-        "overrideReason": "בבדיקה המוגדלת נקראו שלוש המילים אליה, אליהו ואילוז; ההבדל בין י' הקצרה לו' הארוכה נשמר, ללא אות חסרה."
+        "checkedAt": "2026-11-16T07:24:57.086Z"
       }
     },
     {
@@ -6534,22 +6521,21 @@
     },
     {
       "name": "עידו ברוך",
-      "file": "bd84cfc21a3cb5bee7a4.png",
-      "sha256": "bd84cfc21a3cb5bee7a482792011841693137e8d5354994aaf108b133e0c1072",
+      "file": "dcf2f45c9f42211406bb.png",
+      "sha256": "dcf2f45c9f42211406bbd2d71d8cb2526bd81d185d0ad29fbf25d23f5f70dd00",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 10,
       "ocr": {
-        "sha256": "bd84cfc21a3cb5bee7a482792011841693137e8d5354994aaf108b133e0c1072",
-        "status": "needs_review",
+        "sha256": "dcf2f45c9f42211406bbd2d71d8cb2526bd81d185d0ad29fbf25d23f5f70dd00",
+        "status": "matched",
         "text": "עידו ברוך",
-        "uncertain": true,
+        "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:46:09.889Z",
-        "overrideReason": "עידו נקרא בארבע אותיות, וברוך כולל ר' פתוחה וך סופית יורדת. לא נמצאה סטייה למרות דגל הספק."
+        "checkedAt": "2026-11-16T07:25:50.618Z"
       }
     },
     {
@@ -6573,21 +6559,21 @@
     },
     {
       "name": "גלעד הראל",
-      "file": "36fa974b50b4c75cfe05.png",
-      "sha256": "36fa974b50b4c75cfe054085315aac185f346437ec3080ba98d6a25ae30d5bbc",
+      "file": "a91b4142f66f04a05793.png",
+      "sha256": "a91b4142f66f04a057930bb2b474ce928494e11de7fbd82fa40c6a829461fc06",
       "status": "verified",
       "spellingChecked": true,
       "visualChecked": true,
       "renderChecked": true,
       "style": 5,
       "ocr": {
-        "sha256": "36fa974b50b4c75cfe054085315aac185f346437ec3080ba98d6a25ae30d5bbc",
+        "sha256": "a91b4142f66f04a057930bb2b474ce928494e11de7fbd82fa40c6a829461fc06",
         "status": "matched",
         "text": "גלעד הראל",
         "uncertain": false,
         "model": "gpt-6.1-sol",
         "version": "blind-artwork-v4-sol-light-wall",
-        "checkedAt": "2026-10-16T06:54:09.254Z"
+        "checkedAt": "2026-11-16T07:25:08.655Z"
       }
     },
     {
@@ -6748,10 +6734,12 @@
     "דוד ברגר": "דוד (דודיק) ברגר",
     "שמאי טייכר": "שמאי טיכר",
     "ניר-ניסים זלאיט": "ניר זלאיט",
+    "נפתלי בן ציון לנצקרון": "נפתלי בן-ציון לנצקרון",
     "גד יצחק (גדי) עזרא": "גד עזרא",
+    "אריאל בן-שאנן": "אריאל בן שושן",
+    "עומרי חיים יעקובוביץ, אלמקייס": "עומרי-חיים אלמקייס-יעקובוביץ",
     "תומר יעקב מזרחי": "תומר מזרחי",
-    "עומר בלוה": "עומר בלווה",
-    "איל מאיר ברקוביץ": "אייל מאיר ברקוביץ",
+    "איל מאיר ברקוביץ": "איל מאיר ברקוביץ'",
     "מאור איזנקוט כהן": "מאור כהן איזנקוט",
     "אלון (לולו) שמריז": "אלון שמריז",
     "רותם (יוסף) לוי": "רותם לוי",

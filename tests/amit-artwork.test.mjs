@@ -14,7 +14,7 @@ test("Amit uses distinct reviewed bubble graffiti while the old file and all 346
  assert.equal(current.name,update.original.name);assert.equal(current.sha256,update.updated.sha256);
  assert.notEqual(current.sha256,update.original.sha256);assert.equal(current.style,1);assert.equal(update.original.style,8);
  assert.equal(current.ocr.sha256,current.sha256);assert.equal(current.ocr.text,current.name);assert.equal(current.ocr.uncertain,false);
- assert.equal(catalog.entries.length,347);assert.equal(Object.keys(catalog.aliases).length,19);
+ assert.equal(catalog.entries.length,347);assert.equal(Object.keys(catalog.aliases).length,21);
  assert.equal(update.original.sha256,"fc923599d934d110d7c940ff59f02e79fbf85b781572ab5b3863ed4008f27c82");
  const old=await loadArtwork({entries:[update.original]},current.name);assert.equal(hash(old.bytes),update.original.sha256);
  const unchanged=(await beforeUpdates(catalog.entries,["2026-11-15-ron.json"])).filter(entry=>entry.name!==current.name);
